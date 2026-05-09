@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { render } from "../email/template.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROMPTS_DIR = path.resolve(__dirname, "../prompts");
@@ -39,15 +40,54 @@ const response = await anthropic.messages.create({
     {
       name: "submit_digest",
       description:
-        "Submit the final compiled digest. Call this exactly once after research is complete. The fields are sent directly to the email provider.",
+        "Submit the final compiled digest as structured data. Call this exactly once after research is complete. Do NOT write HTML — a separate template file renders the email.",
       input_schema: {
         type: "object",
         properties: {
-          subject: { type: "string", description: "Email subject line." },
-          html: { type: "string", description: "Full HTML email body." },
-          text: { type: "string", description: "Plain-text fallback body." },
+          subject: { type: "string", description: "Email subject line, e.g. '🤖 AI × PM Daily — Sat 9 May'." },
+          date_label: { type: "string", description: "Short date label, e.g. 'Sat 9 May'." },
+          greeting: { type: "string", description: "Opening greeting line, e.g. 'Good morning John,'." },
+          intro: { type: "string", description: "One-line scene-setter under the greeting." },
+          stories: {
+            type: "array",
+            minItems: 3,
+            maxItems: 5,
+            items: {
+              type: "object",
+              properties: {
+                headline: {
+                  type: "string",
+                  description: "Story headline. Include emoji + author/medium when relevant, e.g. '🎙 Lenny\\'s Podcast: …' or '🐦 Shreyas Doshi: …'.",
+                },
+                body_html: {
+                  type: "string",
+                  description: "The story body as an HTML fragment (no <p> wrappers needed — the template adds them). Use only inline tags: <strong>, <em>, <a>, <code>. 3–5 sentences. Substance over fluff.",
+                },
+                sources: {
+                  type: "array",
+                  minItems: 1,
+                  description: "Real URLs from web_search results. Never invent URLs.",
+                  items: {
+                    type: "object",
+                    properties: {
+                      url: { type: "string" },
+                      label: { type: "string", description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'." },
+                    },
+                    required: ["url", "label"],
+                  },
+                },
+                try_it: {
+                  type: "string",
+                  description: "One-sentence hands-on task. Action verb + tool + specific thing. No explanation.",
+                },
+              },
+              required: ["headline", "body_html", "sources", "try_it"],
+            },
+          },
+          reflection: { type: "string", description: "Closing 'Worth sitting with' question or observation." },
+          sign_off: { type: "string", description: "Sign-off, e.g. 'Stay curious,\\nYour AI Digest'." },
         },
-        required: ["subject", "html", "text"],
+        required: ["subject", "date_label", "greeting", "intro", "stories", "reflection", "sign_off"],
       },
     },
   ],
@@ -66,17 +106,19 @@ if (!submitBlock) {
 
 const digest = submitBlock.input;
 
-console.log(`Parsed digest. Subject: ${digest.subject}`);
+console.log(`Parsed digest. Subject: ${digest.subject} (${digest.stories?.length} stories)`);
+
+const { html, text } = render(digest);
 
 const dryRun = process.argv.includes("--dry-run");
 
 if (dryRun) {
-  console.log("\n=== DRY RUN — digest output (skipping email send) ===\n");
+  console.log("\n=== DRY RUN — rendered email (skipping send) ===\n");
   console.log("SUBJECT:", digest.subject);
   console.log("\n--- HTML ---\n");
-  console.log(digest.html);
+  console.log(html);
   console.log("\n--- PLAIN TEXT ---\n");
-  console.log(digest.text);
+  console.log(text);
   process.exit(0);
 }
 
@@ -92,8 +134,8 @@ const resendRes = await fetch("https://api.resend.com/emails", {
     from: process.env.FROM_EMAIL,
     to: [process.env.TO_EMAIL],
     subject: digest.subject,
-    html: digest.html,
-    text: digest.text,
+    html,
+    text,
   }),
 });
 
