@@ -34,7 +34,7 @@ const response = await anthropic.messages.create({
     {
       type: "web_search_20250305",
       name: "web_search",
-      max_uses: 8,
+      max_uses: 15,
     },
   ],
   messages: [{ role: "user", content: prompt }],
@@ -64,6 +64,19 @@ try {
 }
 
 console.log(`Parsed digest. Subject: ${digest.subject}`);
+
+const dryRun = process.argv.includes("--dry-run");
+
+if (dryRun) {
+  console.log("\n=== DRY RUN — digest output (skipping email send) ===\n");
+  console.log("SUBJECT:", digest.subject);
+  console.log("\n--- HTML ---\n");
+  console.log(digest.html);
+  console.log("\n--- PLAIN TEXT ---\n");
+  console.log(digest.text);
+  process.exit(0);
+}
+
 console.log("Sending via Resend...");
 
 const resendRes = await fetch("https://api.resend.com/emails", {

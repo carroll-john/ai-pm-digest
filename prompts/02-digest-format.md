@@ -14,8 +14,8 @@ Here's what's moving in AI for Product Managers today.
 
 ---
 
-[STORY 1 HEADLINE]
-[2–3 sentence summary of what happened and why it matters for PMs]
+[STORY 1 HEADLINE — include the author and medium when relevant, e.g. "🎙 Lenny's Podcast: Why AI Won't Kill the PM Role" or "🎥 Claire Vo: The AI-Native PM Stack" or "🐦 Shreyas Doshi: A Thread on AI Spec Writing"]
+[2–3 sentence summary of what happened and why it matters for PMs. For podcast/YouTube stories include the key takeaway from the episode, not just its existence. For X/Twitter threads, include the core argument.]
 
 🎯 Try it: [hands-on task — see try-it-tasks guidelines]
 
