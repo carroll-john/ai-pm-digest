@@ -59,7 +59,8 @@ let digest;
 try {
   digest = extractJson(finalText);
 } catch (err) {
-  console.error("Failed to parse digest JSON. Raw model output:\n", finalText);
+  console.error("Failed to parse digest JSON:", err.message);
+  console.error("Raw model output:\n", finalText);
   process.exit(1);
 }
 
