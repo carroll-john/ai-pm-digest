@@ -15,7 +15,7 @@
  *     greeting:    string,                  // e.g. "Good morning John,"
  *     intro:       string,                  // one-line scene-setter
  *     stories:     Array<{
- *       headline:  string,                  // may include emoji + author/medium
+ *       headline:  string,                  // plain text, may name author/medium
  *       body_html: string,                  // inline-formatted HTML fragment
  *       sources:   Array<{ url, label }>,
  *       try_it:    string,                  // one sentence
