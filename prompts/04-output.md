@@ -1,23 +1,16 @@
-## Step 3: Output the digest as JSON
+## Step 3: Submit the digest
 
-Do **not** send the email yourself. Your entire final response must be **only** a single fenced JSON code block — no text before or after it:
+Do **not** send the email yourself. Once the digest is fully compiled, call the `submit_digest` tool exactly once with three arguments:
 
-```json
-{
-  "subject": "🤖 AI × PM Daily — Mon 4 May",
-  "html": "<the HTML digest from Step 2>",
-  "text": "<the plain-text fallback from Step 2>"
-}
-```
+- `subject` — the email subject line (e.g. `"🤖 AI × PM Daily — Sat 9 May"`)
+- `html` — the complete HTML email body
+- `text` — the plain-text fallback
 
-Rules:
-- The code block must start with ` ```json ` on its own line and end with ` ``` ` on its own line.
-- No prose, no preamble, no "Here is the digest:" — the JSON block is the entire response.
-- The calling script extracts JSON from this fenced block and will fail if anything else is present.
+The tool call is your final action. Do not output any text after calling it. The calling script reads the tool input directly and sends it via Resend.
 
 ## Success criteria
 
 - 3–5 stories, all from the last 48 hours, all genuinely relevant to a PM's daily work
-- Every story has a specific, actionable "Try it" task that follows the guidelines
-- Output is a single, valid JSON object with `subject`, `html`, and `text` fields
-- The closing reflection question is thought-provoking and non-generic
+- Every story has a one-sentence "Try it" task
+- The closing reflection is sharp, not generic
+- The digest is delivered via a single `submit_digest` tool call

@@ -36,33 +36,35 @@ const response = await anthropic.messages.create({
       name: "web_search",
       max_uses: 15,
     },
+    {
+      name: "submit_digest",
+      description:
+        "Submit the final compiled digest. Call this exactly once after research is complete. The fields are sent directly to the email provider.",
+      input_schema: {
+        type: "object",
+        properties: {
+          subject: { type: "string", description: "Email subject line." },
+          html: { type: "string", description: "Full HTML email body." },
+          text: { type: "string", description: "Plain-text fallback body." },
+        },
+        required: ["subject", "html", "text"],
+      },
+    },
   ],
   messages: [{ role: "user", content: prompt }],
 });
 
-const finalText = response.content
-  .filter((b) => b.type === "text")
-  .map((b) => b.text)
-  .join("\n")
-  .trim();
+const submitBlock = response.content.find(
+  (b) => b.type === "tool_use" && b.name === "submit_digest",
+);
 
-function extractJson(text) {
-  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const candidate = (fenced ? fenced[1] : text).trim();
-  const start = candidate.indexOf("{");
-  const end = candidate.lastIndexOf("}");
-  if (start === -1 || end === -1) throw new Error("No JSON object found in model output");
-  return JSON.parse(candidate.slice(start, end + 1));
-}
-
-let digest;
-try {
-  digest = extractJson(finalText);
-} catch (err) {
-  console.error("Failed to parse digest JSON:", err.message);
-  console.error("Raw model output:\n", finalText);
+if (!submitBlock) {
+  console.error("Model did not call submit_digest. Stop reason:", response.stop_reason);
+  console.error("Response content:\n", JSON.stringify(response.content, null, 2));
   process.exit(1);
 }
+
+const digest = submitBlock.input;
 
 console.log(`Parsed digest. Subject: ${digest.subject}`);
 
