@@ -1,15 +1,13 @@
 ## Guidelines for "Try it" tasks
 
-Each story must include a "🎯 Try it:" task. These are the rules:
+One sentence. Action verb → tool → specific thing to do. Nothing else.
 
-- Must be completable in under 15 minutes
-- Must use a real, accessible tool (Claude, ChatGPT, Perplexity, a specific website, etc.)
-- Must be directly connected to the story — not generic AI advice
-- Should produce a tangible output John can see or share (a plan, a critique, a summary, a prototype, etc.)
-- Vary the tools across stories — don't use Claude for every task
-- Be specific — name the tool, URL, or exact action
+Rules:
+- Under 15 minutes to complete
+- Real, accessible tool (Claude, ChatGPT, a specific URL, etc.)
+- Directly tied to the story — not generic AI advice
+- Vary tools across stories
+- No explanation of why — the story already covered that
 
-Good examples:
-- "Go to claude.ai, paste your current sprint backlog and ask it to identify the highest-risk item and explain why."
-- "Open ChatGPT and ask it to critique your most recent PRD for missing edge cases."
-- "Spin up a v0.dev prototype of a settings page from a one-line description and screenshot the result."
+Good: "Paste your current sprint backlog into Claude and ask: 'What's the highest-risk item and why?'"
+Bad: "Open Claude, paste your sprint backlog, and ask it to identify the highest-risk item — this will help you apply the prioritisation framework from the story above to your actual work."

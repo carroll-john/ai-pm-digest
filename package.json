@@ -2,6 +2,14 @@
   "name": "ai-pm-digest",
   "type": "module",
   "private": true,
+  "scripts": {
+    "send": "node scripts/send-digest.mjs",
+    "fetch": "node scripts/send-digest.mjs --dry-run",
+    "preview": "node scripts/send-digest.mjs --sample --preview && open cache/preview.html",
+    "preview:cached": "node scripts/send-digest.mjs --from-cache --preview && open cache/preview.html",
+    "preview:fresh": "node scripts/send-digest.mjs --preview && open cache/preview.html",
+    "send:cache": "node scripts/send-digest.mjs --from-cache"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
   }

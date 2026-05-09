@@ -1,0 +1,58 @@
+{
+  "subject": "AI × PM Daily — Sat 9 May",
+  "date_label": "Sat 9 May",
+  "greeting": "Good morning, John",
+  "intro": "Simon Willison on the new bottleneck; Anthropic ships Opus 4.7; vibe-coded apps start breaching in production; LinkedIn replaces its APM program.",
+  "stories": [
+    {
+      "headline": "Lenny's Podcast: The bottleneck has moved — and it's now on you",
+      "body_html": "Simon Willison — co-creator of Django, coiner of <em>prompt injection</em> and <em>agentic engineering</em> — spent 100 minutes with Lenny laying out what's actually changed since November 2025. His core argument: AI coding agents crossed a reliability threshold where they went from <em>mostly works</em> to <em>almost always does what you told it to do</em>, and that shift relocated the hard problem. Writing code is now cheap. Deciding <strong>what</strong> to build, writing tests first so agents have something to aim at, and verifying outputs — those are the new bottlenecks, and they're squarely PM-shaped skills. Willison flags the <em>dark factory</em> pattern (AI writes, tests, and QAs its own code with no human in the loop) as the next leap.",
+      "sources": [
+        {
+          "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
+          "label": "Lenny's Podcast — An AI state of the union (YouTube)"
+        }
+      ],
+      "try_it": "Open a doc for your next feature, write the acceptance criteria first, then ask Claude: 'If an agent used only these criteria, what would it get wrong?'"
+    },
+    {
+      "headline": "Anthropic ships Claude Opus 4.7 — self-correcting and built for the hard stuff",
+      "body_html": "Anthropic released Claude Opus 4.7 as a generally available upgrade to its top-tier model. The headline improvement is on the hardest software engineering tasks, where early testers report confidently handing off work that previously needed close supervision. Opus 4.7 catches its own logical faults during planning and verifies outputs before reporting back — meaningful if you lean on Claude for PRDs, research synthesis, or spec review. Vision is substantially upgraded, and pricing matches Opus 4.6: <code>$5</code> in / <code>$25</code> out per million tokens.",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "label": "Anthropic — Introducing Claude Opus 4.7"
+        }
+      ],
+      "try_it": "Paste your most complex half-finished PRD into Opus 4.7 and ask: 'List every assumption that isn't backed by evidence — flag the two most likely to invalidate this feature.'"
+    },
+    {
+      "headline": "Vibe-coded apps are breaching in production — and PMs own the risk posture",
+      "body_html": "AI-generated code security has stopped being theoretical. In a single week in April, three platforms were breached: Lovable left source code, database credentials, and AI chat histories exposed for 48 days through a basic API flaw; Vercel was breached via a compromised AI eval tool; a supply chain attack hunted credentials for Claude, Cursor, and Codex CLI. Georgia Tech's Vibe Security Radar tracked <strong>35 CVEs</strong> directly caused by AI-generated code in March 2026, up from 6 in January. The pattern: AI optimises for making features <em>work</em>, not making them <em>safe</em>. If your team uses Lovable, Bolt, Replit, or any prompt-to-app tool in anything touching production data, this is your security review trigger.",
+      "sources": [
+        {
+          "url": "https://www.theregister.com/2026/05/06/lovable_breach/",
+          "label": "The Register — Lovable exposes user data for 48 days"
+        },
+        {
+          "url": "https://vibesecurity.gatech.edu/radar",
+          "label": "Georgia Tech — Vibe Security Radar"
+        }
+      ],
+      "try_it": "Ask your engineering lead to pull the last three AI-assisted PRs and confirm each was reviewed for exposed credentials, open DB permissions, and input validation."
+    },
+    {
+      "headline": "Lenny's Podcast: LinkedIn's CPO killed the APM program — here's what replaced it",
+      "body_html": "Tomer Cohen, LinkedIn's former CPO, joined Lenny to explain a structural bet: scrapping the traditional Associate Product Manager program for an Associate Product Builder (APB) program that teaches coding, design, and PM together. Applications drop the resume — candidates submit a 60-second demo of a product they built that real people use. Cohen restructured teams into small cross-functional <em>pods</em> where people flex across roles rather than handing off, and explicitly automates everything except <strong>vision, empathy, creativity, and judgment</strong>. His claim: separating PM, engineer, and designer is a coordination tax in an era where AI has collapsed the cost of creation.",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/why-linkedin-is-replacing-pms",
+          "label": "Lenny's Newsletter — Why LinkedIn is replacing PMs"
+        }
+      ],
+      "try_it": "In your next sprint planning, take one deliverable that passes sequentially between PM, designer, and engineer — try doing it end-to-end with one person plus AI, and note what breaks."
+    }
+  ],
+  "reflection": "If the bottleneck has genuinely moved from building to judgment and verification — as both Simon Willison and LinkedIn's CPO argue from very different vantage points — then what does a PM actually spend their time on when there's nothing left to coordinate?",
+  "sign_off": "Stay curious,\nYour AI Digest"
+}
