@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROMPTS_DIR = path.resolve(__dirname, "../prompts");
 const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
+const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 
 const fromCache = process.argv.includes("--from-cache");
 const fromSample = process.argv.includes("--sample");
@@ -15,8 +16,6 @@ const dryRun = process.argv.includes("--dry-run");
 const preview = process.argv.includes("--preview");
 
 let digest;
-
-const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 
 if (fromSample) {
   console.log(`Loading sample digest from ${SAMPLE_PATH} (no API call).`);

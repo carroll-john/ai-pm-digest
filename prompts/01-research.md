@@ -43,4 +43,4 @@ Run searches in roughly this order, stopping once you have 5 strong stories. Not
 
 When you find relevant podcast episodes or YouTube videos, include a direct link and summarise the key takeaway — don't just mention the show exists. For X posts, quote or paraphrase the substance of the thread, not just the existence of a tweet.
 
-When a story comes from a named PM thought leader (Lenny Rachitsky, Claire Vo, Peter Yang, Shreyas Doshi, Gibson Biddle, Melissa Perri, Marty Cagan, or similar), flag the author and medium prominently — e.g. "🎙 Lenny's Podcast" or "🎥 Claire Vo on YouTube". Readers trust these voices and that context adds signal.
+When a story comes from a named PM thought leader (Lenny Rachitsky, Claire Vo, Peter Yang, Shreyas Doshi, Gibson Biddle, Melissa Perri, Marty Cagan, or similar), name the author and medium in the headline as plain prose — e.g. "Lenny's Podcast: …" or "Claire Vo on YouTube: …". No emojis. Readers trust these voices and that context adds signal.
