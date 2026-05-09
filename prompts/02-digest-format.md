@@ -1,9 +1,20 @@
 ## Step 2: Compile the Digest
 
-Write the digest as **HTML** suitable for an email body. Use simple, email-safe markup: `<h2>` for headlines, `<p>` for paragraphs, `<hr>` between stories, and `<strong>` for the "🎯 Try it:" labels. No external CSS, no images.
+Write the digest as **HTML** suitable for an email body. Use simple, email-safe markup: `<h2>` for headlines, `<p>` for paragraphs, `<hr>` between stories, `<strong>` for bold, `<em>` for italics. No external CSS, no images.
+
+**Voice and style:**
+- Cut everything that isn't signal. No hype, no "game-changer", no "landscape", no "this is huge".
+- Write like a smart colleague who read the thing so John doesn't have to.
+- Every story answers two questions in plain language: **what happened** and **so what for John** — not PMs in general, but John specifically: his workflow, his decisions, his team.
+- One short paragraph max per story. 3–5 sentences. If you can't explain why it matters in 3 sentences, the story isn't clear enough yet.
+
+**"Try it" tasks:**
+- One sentence. An action verb, a tool, a specific thing to do. That's it.
+- No explanation of why it's useful — the story already did that.
+- Bad: "Open Claude and paste your backlog, then ask it to identify the highest-risk item and explain its reasoning, which will help you think about…"
+- Good: "Paste your backlog into Claude and ask: 'What's the highest-risk item and why?'"
 
 Structure:
-
 
 ```
 Subject: 🤖 AI × PM Daily — [Day, Date e.g. "Mon 4 May"]
@@ -14,38 +25,22 @@ Here's what's moving in AI for Product Managers today.
 
 ---
 
-[STORY 1 HEADLINE — include the author and medium when relevant, e.g. "🎙 Lenny's Podcast: Why AI Won't Kill the PM Role" or "🎥 Claire Vo: The AI-Native PM Stack" or "🐦 Shreyas Doshi: A Thread on AI Spec Writing"]
-[2–3 sentence summary of what happened and why it matters for PMs. For podcast/YouTube stories include the key takeaway from the episode, not just its existence. For X/Twitter threads, include the core argument.]
+[HEADLINE — author + medium when relevant: "🎙 Lenny's Podcast: …" / "🎥 Claire Vo: …" / "🐦 Shreyas Doshi: …"]
 
-🎯 Try it: [hands-on task — see try-it-tasks guidelines]
+[What happened + why it matters for John. 3–5 sentences, no fluff.]
 
----
-
-[STORY 2 HEADLINE]
-...
-
-🎯 Try it: ...
+🎯 [One-sentence task.]
 
 ---
 
-[STORY 3 HEADLINE]
-...
-
-🎯 Try it: ...
+[Repeat for each story]
 
 ---
 
-[Optional STORY 4 and 5 if strong enough]
-
----
-
-One thing to reflect on this week:
-[A single provocative question or observation about where AI is taking product management — something worth sitting with, not necessarily requiring action]
+Worth sitting with: [One sharp question or uncomfortable observation — not a summary, something that lingers.]
 
 Stay curious,
 Your AI Digest
 ```
 
-
-
-Also produce a **plain-text version** of the same content as a fallback for the `text` field in the output.
+Also produce a **plain-text version** as a fallback for the `text` field in the output.
