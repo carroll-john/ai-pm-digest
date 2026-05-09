@@ -11,6 +11,7 @@ The tool call is your final action. Do not output any text after calling it. The
 ## Success criteria
 
 - 3–5 stories, all from the last 48 hours, all genuinely relevant to a PM's daily work
+- Every story has a `Source:` line with a real URL from web_search results (no invented links)
 - Every story has a one-sentence "Try it" task
 - The closing reflection is sharp, not generic
 - The digest is delivered via a single `submit_digest` tool call

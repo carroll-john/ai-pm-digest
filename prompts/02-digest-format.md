@@ -8,6 +8,14 @@ Write the digest as **HTML** suitable for an email body. Use simple, email-safe 
 - Every story answers two questions in plain language: **what happened** and **so what for John** — not PMs in general, but John specifically: his workflow, his decisions, his team.
 - One short paragraph max per story. 3–5 sentences. If you can't explain why it matters in 3 sentences, the story isn't clear enough yet.
 
+**Sources and links (required):**
+- Every story must end with a `Source:` line linking to the primary source(s) — the actual article, tweet, podcast episode, YouTube video, or release notes you summarised. No story without a link.
+- Use real URLs from your web_search results. Never invent or guess a URL.
+- For podcasts and videos, link to the episode/video itself, not the show's homepage.
+- If multiple sources back the story, link 2–3 (e.g. official announcement + analysis piece).
+- Format: `<p><strong>Source:</strong> <a href="URL">Publication or author — title</a></p>` (or multiple `<a>` tags separated by ` · `).
+- Inline links inside the summary are fine too — but the `Source:` line is mandatory regardless.
+
 **"Try it" tasks:**
 - One sentence. An action verb, a tool, a specific thing to do. That's it.
 - No explanation of why it's useful — the story already did that.
@@ -28,6 +36,8 @@ Here's what's moving in AI for Product Managers today.
 [HEADLINE — author + medium when relevant: "🎙 Lenny's Podcast: …" / "🎥 Claire Vo: …" / "🐦 Shreyas Doshi: …"]
 
 [What happened + why it matters for John. 3–5 sentences, no fluff.]
+
+Source: [Publication/author — title](URL) · [optional second source](URL)
 
 🎯 [One-sentence task.]
 
