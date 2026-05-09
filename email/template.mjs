@@ -27,18 +27,27 @@
 
 // ─── Style tokens — tweak these first ──────────────────────────────────────
 const TOKENS = {
-  bodyFont: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  bodyFont:
+    "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif",
   bodyColor: "#1a1a1a",
-  mutedColor: "#666",
-  accentColor: "#0066cc",
+  mutedColor: "#6b6b6b",
+  accentColor: "#7a1e1e", // deep maroon, a16z-style
   bgColor: "#ffffff",
-  maxWidth: "640px",
-  fontSizeBody: "16px",
+  maxWidth: "620px",
+
+  // Masthead
+  fontSizeMasthead: "36px",
+  fontSizeDeck: "20px",
+  fontSizeByline: "13px", // small caps label
+
+  // Body
+  fontSizeBody: "18px",
   fontSizeSmall: "14px",
-  fontSizeHeadline: "20px",
-  lineHeight: "1.55",
-  storyGap: "32px",
-  ruleColor: "#e5e5e5",
+  fontSizeHeadline: "26px",
+  lineHeight: "1.65",
+  storyGap: "44px",
+  ruleColor: "#d9d9d9",
+  ruleColorStrong: "#1a1a1a",
 };
 
 // ─── HTML rendering ────────────────────────────────────────────────────────
@@ -61,29 +70,48 @@ function renderSources(sources) {
   return `<p style="font-size: ${TOKENS.fontSizeSmall}; color: ${TOKENS.mutedColor}; margin: 8px 0 0;"><strong>Source:</strong> ${links}</p>`;
 }
 
-function renderStory(story) {
+function renderStory(story, isLast) {
+  const trailingRule = isLast
+    ? ""
+    : `<hr style="border: none; border-top: 1px solid ${TOKENS.ruleColor}; margin: 0 0 ${TOKENS.storyGap};">`;
   return `
     <section style="margin-bottom: ${TOKENS.storyGap};">
-      <h2 style="font-size: ${TOKENS.fontSizeHeadline}; font-weight: 600; margin: 0 0 12px; line-height: 1.3;">${escapeHtml(story.headline)}</h2>
-      <div style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 12px;">${story.body_html}</div>
+      <h2 style="font-size: ${TOKENS.fontSizeHeadline}; font-weight: 700; margin: 0 0 16px; line-height: 1.25; letter-spacing: -0.01em;">${escapeHtml(story.headline)}</h2>
+      <div style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 16px;">${story.body_html}</div>
       ${renderSources(story.sources)}
-      <p style="font-size: ${TOKENS.fontSizeBody}; margin: 16px 0 0;"><strong>🎯 Try it:</strong> ${escapeHtml(story.try_it)}</p>
+      <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 20px 0 0;"><strong>🎯 Try it:</strong> ${escapeHtml(story.try_it)}</p>
     </section>
-    <hr style="border: none; border-top: 1px solid ${TOKENS.ruleColor}; margin: 0 0 ${TOKENS.storyGap};">
+    ${trailingRule}
+  `;
+}
+
+function renderMasthead(d) {
+  return `
+    <header style="margin-bottom: ${TOKENS.storyGap};">
+      <h1 style="font-size: ${TOKENS.fontSizeMasthead}; font-weight: 800; margin: 0 0 12px; line-height: 1.15; letter-spacing: -0.02em;">${escapeHtml(d.greeting)}</h1>
+      <p style="font-size: ${TOKENS.fontSizeDeck}; line-height: 1.4; color: ${TOKENS.mutedColor}; margin: 0 0 24px; font-weight: 400;">${escapeHtml(d.intro)}</p>
+      <p style="font-size: ${TOKENS.fontSizeByline}; letter-spacing: 0.08em; text-transform: uppercase; color: ${TOKENS.mutedColor}; margin: 0; font-weight: 600;">AI × PM Daily &nbsp;·&nbsp; ${escapeHtml(d.date_label)}</p>
+    </header>
+    <hr style="border: none; border-top: 2px solid ${TOKENS.ruleColorStrong}; margin: 0 0 ${TOKENS.storyGap};">
   `;
 }
 
 function renderHtml(d) {
+  const stories = d.stories
+    .map((s, i) => renderStory(s, i === d.stories.length - 1))
+    .join("");
+
   return `<!DOCTYPE html>
 <html>
-<body style="margin: 0; padding: 24px; background: ${TOKENS.bgColor}; font-family: ${TOKENS.bodyFont}; color: ${TOKENS.bodyColor};">
+<body style="margin: 0; padding: 32px 24px; background: ${TOKENS.bgColor}; font-family: ${TOKENS.bodyFont}; color: ${TOKENS.bodyColor}; -webkit-font-smoothing: antialiased;">
   <div style="max-width: ${TOKENS.maxWidth}; margin: 0 auto;">
-    <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 8px;">${escapeHtml(d.greeting)}</p>
-    <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; color: ${TOKENS.mutedColor}; margin: 0 0 ${TOKENS.storyGap};">${escapeHtml(d.intro)}</p>
-    <hr style="border: none; border-top: 1px solid ${TOKENS.ruleColor}; margin: 0 0 ${TOKENS.storyGap};">
-    ${d.stories.map(renderStory).join("")}
-    <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 24px;"><strong>Worth sitting with:</strong> ${escapeHtml(d.reflection)}</p>
-    <p style="font-size: ${TOKENS.fontSizeBody}; color: ${TOKENS.mutedColor}; margin: 0; white-space: pre-line;">${escapeHtml(d.sign_off)}</p>
+    ${renderMasthead(d)}
+    ${stories}
+    <div style="background: #f7f7f5; border-left: 3px solid ${TOKENS.accentColor}; padding: 20px 24px; margin: 0 0 ${TOKENS.storyGap};">
+      <p style="font-size: ${TOKENS.fontSizeByline}; letter-spacing: 0.08em; text-transform: uppercase; color: ${TOKENS.mutedColor}; margin: 0 0 8px; font-weight: 600;">Worth sitting with</p>
+      <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0;">${escapeHtml(d.reflection)}</p>
+    </div>
+    <p style="font-size: ${TOKENS.fontSizeBody}; color: ${TOKENS.mutedColor}; line-height: ${TOKENS.lineHeight}; margin: 0; white-space: pre-line;">${escapeHtml(d.sign_off)}</p>
   </div>
 </body>
 </html>`;

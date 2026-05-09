@@ -10,14 +10,20 @@ const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
 
 const fromCache = process.argv.includes("--from-cache");
+const fromSample = process.argv.includes("--sample");
 const dryRun = process.argv.includes("--dry-run");
 const preview = process.argv.includes("--preview");
 
 let digest;
 
-if (fromCache) {
+const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
+
+if (fromSample) {
+  console.log(`Loading sample digest from ${SAMPLE_PATH} (no API call).`);
+  digest = JSON.parse(fs.readFileSync(SAMPLE_PATH, "utf8"));
+} else if (fromCache) {
   if (!fs.existsSync(CACHE_PATH)) {
-    console.error(`No cache at ${CACHE_PATH}. Run once without --from-cache to populate it.`);
+    console.error(`No cache at ${CACHE_PATH}. Run once without --from-cache to populate it, or use --sample for the bundled fixture.`);
     process.exit(1);
   }
   console.log(`Loading cached digest from ${CACHE_PATH} (no API call).`);
