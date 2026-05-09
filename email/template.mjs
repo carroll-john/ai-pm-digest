@@ -79,7 +79,10 @@ function renderStory(story, isLast) {
       <h2 style="font-size: ${TOKENS.fontSizeHeadline}; font-weight: 700; margin: 0 0 16px; line-height: 1.25; letter-spacing: -0.01em;">${escapeHtml(story.headline)}</h2>
       <div style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 16px;">${story.body_html}</div>
       ${renderSources(story.sources)}
-      <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 20px 0 0;"><strong>🎯 Try it:</strong> ${escapeHtml(story.try_it)}</p>
+      <div style="margin: 24px 0 0; padding: 16px 20px; background: #f7f7f5; border-left: 3px solid ${TOKENS.accentColor};">
+        <p style="font-size: ${TOKENS.fontSizeByline}; letter-spacing: 0.08em; text-transform: uppercase; color: ${TOKENS.mutedColor}; margin: 0 0 6px; font-weight: 600;">Try it</p>
+        <p style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0;">${escapeHtml(story.try_it)}</p>
+      </div>
     </section>
     ${trailingRule}
   `;
@@ -142,7 +145,7 @@ function renderText(d) {
         "",
         stripTags(s.body_html),
         sources ? `Source: ${sources}` : "",
-        `🎯 Try it: ${s.try_it}`,
+        `TRY IT: ${s.try_it}`,
       ]
         .filter(Boolean)
         .join("\n");

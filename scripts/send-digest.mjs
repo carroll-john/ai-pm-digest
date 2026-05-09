@@ -65,7 +65,7 @@ if (fromSample) {
         input_schema: {
           type: "object",
           properties: {
-            subject: { type: "string", description: "Email subject line, e.g. '🤖 AI × PM Daily — Sat 9 May'." },
+            subject: { type: "string", description: "Email subject line, e.g. 'AI × PM Daily — Sat 9 May'. No emojis." },
             date_label: { type: "string", description: "Short date label, e.g. 'Sat 9 May'." },
             greeting: { type: "string", description: "Opening greeting line, e.g. 'Good morning John,'." },
             intro: { type: "string", description: "One-line scene-setter under the greeting." },
@@ -78,7 +78,7 @@ if (fromSample) {
                 properties: {
                   headline: {
                     type: "string",
-                    description: "Story headline. Include emoji + author/medium when relevant, e.g. '🎙 Lenny\\'s Podcast: …' or '🐦 Shreyas Doshi: …'.",
+                    description: "Plain-text story headline. Include author and medium when relevant, e.g. \"Lenny's Podcast: …\" or \"Shreyas Doshi on X: …\". No emojis.",
                   },
                   body_html: {
                     type: "string",
