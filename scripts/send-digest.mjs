@@ -44,6 +44,22 @@ function readPrompt(name) {
   return fs.readFileSync(path.join(PROMPTS_DIR, name), "utf8").trim();
 }
 
+// The digest is delivered to a Melbourne reader, so the date label and subject
+// line must reflect Melbourne local time — not the runner's UTC clock.
+function melbourneDate(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-AU", {
+    timeZone: "Australia/Melbourne",
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).formatToParts(date);
+  const get = (type) => parts.find((p) => p.type === type)?.value;
+  const short = `${get("weekday")} ${get("day")} ${get("month")}`;
+  const full = `${short} ${get("year")}`;
+  return { short, full };
+}
+
 function findToolUse(response, name) {
   return response.content.find((b) => b.type === "tool_use" && b.name === name);
 }
@@ -75,9 +91,14 @@ if (fromSample) {
 } else {
   const anthropic = new Anthropic();
 
+  const today = melbourneDate();
+  const dateContext = `**Today's date in Melbourne:** ${today.full}. Use \`${today.short}\` as the \`date_label\` and \`AI × PM Daily — ${today.short}\` as the \`subject\`. "Last 24–48 hours" is relative to this date.`;
+  console.log(`Melbourne date: ${today.full}`);
+
   // ── Stage 1: Research with Haiku 4.5 ─────────────────────────────────────
   const researchPrompt = [
     readPrompt("00-system.md"),
+    dateContext,
     readPrompt("01-research.md"),
     RESEARCH_TOOL_INSTRUCTIONS,
   ].join("\n\n---\n\n");
@@ -201,6 +222,7 @@ if (fromSample) {
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
   const writePrompt = [
     readPrompt("00-system.md"),
+    dateContext,
     readPrompt("02-digest-format.md"),
     readPrompt("03-try-it-tasks.md"),
     readPrompt("04-output.md"),
