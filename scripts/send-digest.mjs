@@ -178,10 +178,24 @@ if (fromSample) {
 
   const research = researchBlock.input;
 
+  // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
+  // array. Parse it back so Stage 2 receives clean structured JSON rather than
+  // a string of escaped JSON-inside-JSON.
+  if (typeof research.candidates === "string") {
+    try {
+      research.candidates = JSON.parse(research.candidates);
+      console.log("Stage 1 note: parsed candidates string back into an array.");
+    } catch (err) {
+      console.error("Stage 1 emitted candidates as a non-JSON string. Aborting.");
+      console.error("First 500 chars:", research.candidates.slice(0, 500));
+      process.exit(1);
+    }
+  }
+
   fs.mkdirSync(CACHE_DIR, { recursive: true });
   fs.writeFileSync(RESEARCH_CACHE_PATH, JSON.stringify(research, null, 2));
   console.log(
-    `Stage 1 complete: ${research.candidates?.length ?? 0} candidate stories. Cached to ${RESEARCH_CACHE_PATH}`,
+    `Stage 1 complete: ${Array.isArray(research.candidates) ? research.candidates.length : 0} candidate stories. Cached to ${RESEARCH_CACHE_PATH}`,
   );
 
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
