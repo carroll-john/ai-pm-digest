@@ -10,8 +10,10 @@ const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
 const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
 const HISTORY_PATH = path.join(CACHE_DIR, "history.json");
-const HISTORY_WINDOW_DAYS = 14;
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
+const HISTORY_WINDOW_DAYS = 14;
+const HISTORY_WINDOW_MS = HISTORY_WINDOW_DAYS * 86400000;
+const TRACKING_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "ref_src"];
 
 const fromCache = process.argv.includes("--from-cache");
 const fromResearchCache = process.argv.includes("--from-research-cache");
@@ -47,10 +49,7 @@ const SOURCE_ITEM_SCHEMA = {
   type: "object",
   properties: {
     url: { type: "string" },
-    label: {
-      type: "string",
-      description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'.",
-    },
+    label: { type: "string", description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'." },
     published_date: {
       type: "string",
       description:
@@ -60,40 +59,18 @@ const SOURCE_ITEM_SCHEMA = {
   required: ["url", "label"],
 };
 
-function readPrompt(name) {
-  return fs.readFileSync(path.join(PROMPTS_DIR, name), "utf8").trim();
-}
+const readPrompt = (name) => fs.readFileSync(path.join(PROMPTS_DIR, name), "utf8").trim();
 
 // The digest is delivered to a Melbourne reader, so the date label and subject
 // line must reflect Melbourne local time — not the runner's UTC clock.
 function melbourneDate(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en-AU", {
     timeZone: "Australia/Melbourne",
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-    year: "numeric",
+    weekday: "short", day: "numeric", month: "short", year: "numeric",
   }).formatToParts(date);
   const get = (type) => parts.find((p) => p.type === type)?.value;
   const short = `${get("weekday")} ${get("day")} ${get("month")}`;
-  const full = `${short} ${get("year")}`;
-  return { short, full };
-}
-
-function findToolUse(response, name) {
-  return response.content.find((b) => b.type === "tool_use" && b.name === name);
-}
-
-function logUsage(label, response) {
-  const u = response.usage || {};
-  const parts = [
-    `input=${u.input_tokens ?? "?"}`,
-    `output=${u.output_tokens ?? "?"}`,
-  ];
-  if (u.server_tool_use?.web_search_requests != null) {
-    parts.push(`web_search=${u.server_tool_use.web_search_requests}`);
-  }
-  console.log(`${label} usage: ${parts.join(", ")}`);
+  return { short, full: `${short} ${get("year")}` };
 }
 
 // Normalize URLs so the dedup filter survives trailing slashes, hash fragments,
@@ -102,39 +79,30 @@ function normalizeUrl(url) {
   try {
     const u = new URL(url);
     u.hash = "";
-    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "ref_src"].forEach(
-      (p) => u.searchParams.delete(p),
-    );
-    let s = u.toString();
-    if (s.endsWith("/")) s = s.slice(0, -1);
-    return s;
+    TRACKING_PARAMS.forEach((p) => u.searchParams.delete(p));
+    return u.toString().replace(/\/$/, "");
   } catch {
     return url;
   }
+}
+
+function withinHistoryWindow(entries) {
+  const cutoff = Date.now() - HISTORY_WINDOW_MS;
+  return entries.filter((e) => {
+    const t = new Date(e.shipped_at).getTime();
+    return Number.isFinite(t) && t >= cutoff;
+  });
 }
 
 function loadHistory() {
   if (!fs.existsSync(HISTORY_PATH)) return [];
   try {
     const entries = JSON.parse(fs.readFileSync(HISTORY_PATH, "utf8"));
-    if (!Array.isArray(entries)) return [];
-    const cutoff = Date.now() - HISTORY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
-    return entries.filter((e) => {
-      const t = new Date(e.shipped_at).getTime();
-      return Number.isFinite(t) && t >= cutoff;
-    });
+    return Array.isArray(entries) ? withinHistoryWindow(entries) : [];
   } catch (err) {
     console.warn(`Could not read history at ${HISTORY_PATH}: ${err.message}`);
     return [];
   }
-}
-
-function historyUrlSet(history) {
-  const urls = new Set();
-  for (const entry of history) {
-    for (const url of entry.urls || []) urls.add(normalizeUrl(url));
-  }
-  return urls;
 }
 
 function renderHistoryContext(history) {
@@ -151,10 +119,7 @@ function renderHistoryContext(history) {
     .sort(([, a], [, b]) => (b[0].shipped_at || "").localeCompare(a[0].shipped_at || ""))
     .map(([label, entries]) => {
       const stories = entries
-        .map((e) => {
-          const urls = (e.urls || []).map((u) => `    - ${u}`).join("\n");
-          return `  - ${e.headline}${urls ? `\n${urls}` : ""}`;
-        })
+        .map((e) => `  - ${e.headline}${(e.urls || []).map((u) => `\n    - ${u}`).join("")}`)
         .join("\n");
       return `- ${label}\n${stories}`;
     })
@@ -166,19 +131,38 @@ These stories and source URLs have already gone out. Do **not** propose anything
 ${days}`;
 }
 
-function appendToHistory(history, digest, shippedAt) {
-  const newEntries = (digest.stories || []).map((s) => ({
-    shipped_at: shippedAt,
-    date_label: digest.date_label,
-    headline: s.headline,
-    urls: (s.sources || []).map((src) => normalizeUrl(src.url)),
-  }));
-  const cutoff = Date.now() - HISTORY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
-  const kept = history.filter((e) => {
-    const t = new Date(e.shipped_at).getTime();
-    return Number.isFinite(t) && t >= cutoff;
+function logUsage(label, r) {
+  const u = r.usage || {};
+  const ws = u.server_tool_use?.web_search_requests;
+  const tail = ws != null ? `, web_search=${ws}` : "";
+  console.log(`${label} usage: input=${u.input_tokens ?? "?"}, output=${u.output_tokens ?? "?"}${tail}`);
+}
+
+async function runStage(client, label, model, prompt, tools, toolName) {
+  console.log(`${label} (${model}): prompt ${prompt.length} chars`);
+  const r = await client.messages.create({
+    model,
+    max_tokens: 5000,
+    tools,
+    messages: [{ role: "user", content: prompt }],
   });
-  return [...kept, ...newEntries];
+  logUsage(label, r);
+  const block = r.content.find((b) => b.type === "tool_use" && b.name === toolName);
+  if (!block) {
+    console.error(`${label} did not call ${toolName}. Stop reason:`, r.stop_reason);
+    console.error("Response content:\n", JSON.stringify(r.content, null, 2));
+    process.exit(1);
+  }
+  return block.input;
+}
+
+function loadJson(p, label) {
+  if (!fs.existsSync(p)) {
+    console.error(`No ${label} at ${p}. Run once without the corresponding flag to populate it.`);
+    process.exit(1);
+  }
+  console.log(`Loading ${label} from ${p} (no API call).`);
+  return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -189,12 +173,7 @@ if (fromSample) {
   console.log(`Loading sample digest from ${SAMPLE_PATH} (no API call).`);
   digest = JSON.parse(fs.readFileSync(SAMPLE_PATH, "utf8"));
 } else if (fromCache) {
-  if (!fs.existsSync(CACHE_PATH)) {
-    console.error(`No cache at ${CACHE_PATH}. Run once without --from-cache to populate it, or use --sample for the bundled fixture.`);
-    process.exit(1);
-  }
-  console.log(`Loading cached digest from ${CACHE_PATH} (no API call).`);
-  digest = JSON.parse(fs.readFileSync(CACHE_PATH, "utf8"));
+  digest = loadJson(CACHE_PATH, "cached digest");
 } else {
   const anthropic = new Anthropic();
 
@@ -205,7 +184,7 @@ if (fromSample) {
   const systemPrompt = readPrompt("00-system.md");
 
   const history = loadHistory();
-  const historyUrls = historyUrlSet(history);
+  const historyUrls = new Set(history.flatMap((e) => (e.urls || []).map(normalizeUrl)));
   console.log(
     `History: ${history.length} prior stories across ${new Set(history.map((e) => e.date_label)).size} days; ${historyUrls.size} unique URLs to exclude.`,
   );
@@ -213,115 +192,75 @@ if (fromSample) {
   // ── Stage 1: Research with Haiku 4.5 ─────────────────────────────────────
   let research;
   if (fromResearchCache) {
-    if (!fs.existsSync(RESEARCH_CACHE_PATH)) {
-      console.error(`No research cache at ${RESEARCH_CACHE_PATH}. Run once without --from-research-cache to populate it.`);
-      process.exit(1);
-    }
-    console.log(`Loading cached research from ${RESEARCH_CACHE_PATH} (skipping Stage 1).`);
-    research = JSON.parse(fs.readFileSync(RESEARCH_CACHE_PATH, "utf8"));
+    research = loadJson(RESEARCH_CACHE_PATH, "cached research");
   } else {
     const researchPrompt = [
-      systemPrompt,
-      dateContext,
-      readPrompt("01-research.md"),
-      renderHistoryContext(history),
-      RESEARCH_TOOL_INSTRUCTIONS,
+      systemPrompt, dateContext, readPrompt("01-research.md"),
+      renderHistoryContext(history), RESEARCH_TOOL_INSTRUCTIONS,
     ].join("\n\n---\n\n");
 
-    console.log(
-      `Stage 1 (research, ${RESEARCH_MODEL}): prompt ${researchPrompt.length} chars, web_search cap ${WEB_SEARCH_MAX_USES}`,
-    );
-
-    const researchResponse = await anthropic.messages.create({
-      model: RESEARCH_MODEL,
-      max_tokens: 5000,
-      tools: [
-        {
-          type: "web_search_20250305",
-          name: "web_search",
-          max_uses: WEB_SEARCH_MAX_USES,
-        },
-        {
-          name: "submit_research",
-          description:
-            "Submit candidate stories as raw structured data for a downstream writer model. Call this exactly once after research is complete.",
-          input_schema: {
-            type: "object",
-            properties: {
-              candidates: {
-                type: "array",
-                minItems: 4,
-                maxItems: 10,
-                items: {
-                  type: "object",
-                  properties: {
-                    headline_draft: {
-                      type: "string",
-                      description:
-                        "Plain factual headline. Include author/medium where relevant, e.g. \"Lenny's Podcast: …\", \"Anthropic ships …\". No emojis.",
-                    },
-                    summary: {
-                      type: "string",
-                      description: "4–6 sentences. What happened, concrete and factual. No hype.",
-                    },
-                    why_pm: {
-                      type: "string",
-                      description: "1–2 sentences on why this matters to a Product Manager.",
-                    },
-                    key_facts: {
-                      type: "array",
-                      minItems: 1,
-                      description: "Short bullet-point facts: numbers, names, decisions, claims.",
-                      items: { type: "string" },
-                    },
-                    quotes: {
-                      type: "array",
-                      description:
-                        "Direct quotes or close paraphrases (especially for podcasts, X posts, newsletter pieces). Optional but useful.",
-                      items: { type: "string" },
-                    },
-                    sources: {
-                      type: "array",
-                      minItems: 1,
-                      description: "Real URLs from web_search results. Never invent URLs.",
-                      items: SOURCE_ITEM_SCHEMA,
-                    },
+    research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, [
+      { type: "web_search_20250305", name: "web_search", max_uses: WEB_SEARCH_MAX_USES },
+      {
+        name: "submit_research",
+        description:
+          "Submit candidate stories as raw structured data for a downstream writer model. Call this exactly once after research is complete.",
+        input_schema: {
+          type: "object",
+          properties: {
+            candidates: {
+              type: "array",
+              minItems: 4,
+              maxItems: 10,
+              items: {
+                type: "object",
+                properties: {
+                  headline_draft: {
+                    type: "string",
+                    description:
+                      "Plain factual headline. Include author/medium where relevant, e.g. \"Lenny's Podcast: …\", \"Anthropic ships …\". No emojis.",
                   },
-                  required: ["headline_draft", "summary", "why_pm", "key_facts", "sources"],
+                  summary: { type: "string", description: "4–6 sentences. What happened, concrete and factual. No hype." },
+                  why_pm: { type: "string", description: "1–2 sentences on why this matters to a Product Manager." },
+                  key_facts: {
+                    type: "array",
+                    minItems: 1,
+                    description: "Short bullet-point facts: numbers, names, decisions, claims.",
+                    items: { type: "string" },
+                  },
+                  quotes: {
+                    type: "array",
+                    description:
+                      "Direct quotes or close paraphrases (especially for podcasts, X posts, newsletter pieces). Optional but useful.",
+                    items: { type: "string" },
+                  },
+                  sources: {
+                    type: "array",
+                    minItems: 1,
+                    description: "Real URLs from web_search results. Never invent URLs.",
+                    items: SOURCE_ITEM_SCHEMA,
+                  },
                 },
-              },
-              themes: {
-                type: "string",
-                description:
-                  "1–2 sentences on common threads across the candidates — helps the writer craft the intro and reflection.",
+                required: ["headline_draft", "summary", "why_pm", "key_facts", "sources"],
               },
             },
-            required: ["candidates", "themes"],
+            themes: {
+              type: "string",
+              description: "1–2 sentences on common threads across the candidates — helps the writer craft the intro and reflection.",
+            },
           },
+          required: ["candidates", "themes"],
         },
-      ],
-      messages: [{ role: "user", content: researchPrompt }],
-    });
-
-    logUsage("Stage 1", researchResponse);
-
-    const researchBlock = findToolUse(researchResponse, "submit_research");
-    if (!researchBlock) {
-      console.error("Stage 1 model did not call submit_research. Stop reason:", researchResponse.stop_reason);
-      console.error("Response content:\n", JSON.stringify(researchResponse.content, null, 2));
-      process.exit(1);
-    }
-
-    research = researchBlock.input;
+      },
+    ], "submit_research");
 
     // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
-    // array. Parse it back so Stage 2 receives clean structured JSON rather than
-    // a string of escaped JSON-inside-JSON.
+    // array. Parse it back so Stage 2 receives clean structured JSON.
     if (typeof research.candidates === "string") {
       try {
         research.candidates = JSON.parse(research.candidates);
         console.log("Stage 1 note: parsed candidates string back into an array.");
-      } catch (err) {
+      } catch {
         console.error("Stage 1 emitted candidates as a non-JSON string. Aborting.");
         console.error("First 500 chars:", research.candidates.slice(0, 500));
         process.exit(1);
@@ -340,110 +279,74 @@ if (fromSample) {
   // whose stories have since gone out.
   if (Array.isArray(research.candidates) && historyUrls.size > 0) {
     const before = research.candidates.length;
-    const dropped = [];
     research.candidates = research.candidates.filter((c) => {
-      const urls = (c.sources || []).map((s) => normalizeUrl(s.url));
-      const hit = urls.find((u) => historyUrls.has(u));
-      if (hit) {
-        dropped.push({ headline: c.headline_draft, url: hit });
-        return false;
-      }
-      return true;
+      const hit = (c.sources || []).map((s) => normalizeUrl(s.url)).find((u) => historyUrls.has(u));
+      if (hit) console.log(`  drop: "${c.headline_draft}" → ${hit}`);
+      return !hit;
     });
-    if (dropped.length > 0) {
-      console.log(`Filtered ${dropped.length}/${before} candidates as already-shipped:`);
-      for (const d of dropped) console.log(`  - "${d.headline}" → ${d.url}`);
-    }
-    if (research.candidates.length < 3) {
-      console.warn(
-        `Only ${research.candidates.length} candidates remain after history filter. Stage 2 will likely struggle to hit the 3–5 story minimum.`,
-      );
-    }
+    const after = research.candidates.length;
+    if (before !== after) console.log(`History filter: ${before - after}/${before} candidates dropped`);
+    if (after < 3) console.warn(`Only ${after} candidates after filter — Stage 2 may struggle to hit 3–5 stories.`);
   }
 
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
   const writePrompt = [
-    systemPrompt,
-    dateContext,
-    readPrompt("02-digest-format.md"),
-    readPrompt("03-try-it-tasks.md"),
-    readPrompt("04-output.md"),
+    systemPrompt, dateContext,
+    readPrompt("02-digest-format.md"), readPrompt("03-try-it-tasks.md"), readPrompt("04-output.md"),
     `${WRITE_INPUT_PREAMBLE}\n\n\`\`\`json\n${JSON.stringify(research, null, 2)}\n\`\`\``,
   ].join("\n\n---\n\n");
 
-  console.log(`Stage 2 (write, ${WRITE_MODEL}): prompt ${writePrompt.length} chars`);
-
-  const writeResponse = await anthropic.messages.create({
-    model: WRITE_MODEL,
-    max_tokens: 5000,
-    tools: [
-      {
-        name: "submit_digest",
-        description:
-          "Submit the final compiled digest as structured data. Call this exactly once. Do NOT write HTML — a separate template file renders the email.",
-        input_schema: {
-          type: "object",
-          properties: {
-            subject: {
-              type: "string",
-              description: "Email subject line, e.g. 'AI × PM Daily — Sat 9 May'. No emojis.",
-            },
-            date_label: { type: "string", description: "Short date label, e.g. 'Sat 9 May'." },
-            greeting: { type: "string", description: "Opening greeting line, e.g. 'Good morning John,'." },
-            intro: { type: "string", description: "One-line scene-setter under the greeting." },
-            stories: {
-              type: "array",
-              minItems: 3,
-              maxItems: 5,
-              items: {
-                type: "object",
-                properties: {
-                  headline: {
-                    type: "string",
-                    description:
-                      "Plain-text story headline. Include author and medium when relevant, e.g. \"Lenny's Podcast: …\" or \"Shreyas Doshi on X: …\". No emojis.",
-                  },
-                  body_html: {
-                    type: "string",
-                    description:
-                      "The story body as an HTML fragment (no <p> wrappers needed — the template adds them). Use only inline tags: <strong>, <em>, <a>, <code>. 3–5 sentences. Substance over fluff.",
-                  },
-                  sources: {
-                    type: "array",
-                    minItems: 1,
-                    description:
-                      "Use the source URLs from the research findings exactly as given. Never invent or modify URLs. Preserve `published_date` when the research provided one.",
-                    items: SOURCE_ITEM_SCHEMA,
-                  },
-                  try_it: {
-                    type: "string",
-                    description:
-                      "One-sentence hands-on task. Action verb + tool + specific thing. No explanation.",
-                  },
+  digest = await runStage(anthropic, "Stage 2", WRITE_MODEL, writePrompt, [
+    {
+      name: "submit_digest",
+      description:
+        "Submit the final compiled digest as structured data. Call this exactly once. Do NOT write HTML — a separate template file renders the email.",
+      input_schema: {
+        type: "object",
+        properties: {
+          subject: { type: "string", description: "Email subject line, e.g. 'AI × PM Daily — Sat 9 May'. No emojis." },
+          date_label: { type: "string", description: "Short date label, e.g. 'Sat 9 May'." },
+          greeting: { type: "string", description: "Opening greeting line, e.g. 'Good morning John,'." },
+          intro: { type: "string", description: "One-line scene-setter under the greeting." },
+          stories: {
+            type: "array",
+            minItems: 3,
+            maxItems: 5,
+            items: {
+              type: "object",
+              properties: {
+                headline: {
+                  type: "string",
+                  description:
+                    "Plain-text story headline. Include author and medium when relevant, e.g. \"Lenny's Podcast: …\" or \"Shreyas Doshi on X: …\". No emojis.",
                 },
-                required: ["headline", "body_html", "sources", "try_it"],
+                body_html: {
+                  type: "string",
+                  description:
+                    "The story body as an HTML fragment (no <p> wrappers needed — the template adds them). Use only inline tags: <strong>, <em>, <a>, <code>. 3–5 sentences. Substance over fluff.",
+                },
+                sources: {
+                  type: "array",
+                  minItems: 1,
+                  description:
+                    "Use the source URLs from the research findings exactly as given. Never invent or modify URLs. Preserve `published_date` when the research provided one.",
+                  items: SOURCE_ITEM_SCHEMA,
+                },
+                try_it: {
+                  type: "string",
+                  description: "One-sentence hands-on task. Action verb + tool + specific thing. No explanation.",
+                },
               },
+              required: ["headline", "body_html", "sources", "try_it"],
             },
-            reflection: { type: "string", description: "Closing 'Worth sitting with' question or observation." },
-            sign_off: { type: "string", description: "Sign-off, e.g. 'Stay curious,\\nYour AI Digest'." },
           },
-          required: ["subject", "date_label", "greeting", "intro", "stories", "reflection", "sign_off"],
+          reflection: { type: "string", description: "Closing 'Worth sitting with' question or observation." },
+          sign_off: { type: "string", description: "Sign-off, e.g. 'Stay curious,\\nYour AI Digest'." },
         },
+        required: ["subject", "date_label", "greeting", "intro", "stories", "reflection", "sign_off"],
       },
-    ],
-    messages: [{ role: "user", content: writePrompt }],
-  });
-
-  logUsage("Stage 2", writeResponse);
-
-  const submitBlock = findToolUse(writeResponse, "submit_digest");
-  if (!submitBlock) {
-    console.error("Stage 2 model did not call submit_digest. Stop reason:", writeResponse.stop_reason);
-    console.error("Response content:\n", JSON.stringify(writeResponse.content, null, 2));
-    process.exit(1);
-  }
-
-  digest = submitBlock.input;
+    },
+  ], "submit_digest");
 
   fs.writeFileSync(CACHE_PATH, JSON.stringify(digest, null, 2));
   console.log(`Stage 2 complete: cached digest to ${CACHE_PATH}`);
@@ -456,18 +359,15 @@ const { html, text } = render(digest);
 if (preview) {
   const previewPath = path.join(CACHE_DIR, "preview.html");
   fs.writeFileSync(previewPath, html);
-  console.log(`Preview written to ${previewPath}`);
-  console.log(`Open with:  open ${previewPath}`);
+  console.log(`Preview written to ${previewPath}\nOpen with:  open ${previewPath}`);
   process.exit(0);
 }
 
 if (dryRun) {
   console.log("\n=== DRY RUN — rendered email (skipping send) ===\n");
   console.log("SUBJECT:", digest.subject);
-  console.log("\n--- HTML ---\n");
-  console.log(html);
-  console.log("\n--- PLAIN TEXT ---\n");
-  console.log(text);
+  console.log(`\n--- HTML ---\n\n${html}`);
+  console.log(`\n--- PLAIN TEXT ---\n\n${text}`);
   process.exit(0);
 }
 
@@ -475,10 +375,7 @@ console.log("Sending via Resend...");
 
 const resendRes = await fetch("https://api.resend.com/emails", {
   method: "POST",
-  headers: {
-    Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-    "Content-Type": "application/json",
-  },
+  headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
   body: JSON.stringify({
     from: process.env.FROM_EMAIL,
     to: [process.env.TO_EMAIL],
@@ -489,8 +386,7 @@ const resendRes = await fetch("https://api.resend.com/emails", {
 });
 
 if (!resendRes.ok) {
-  const errBody = await resendRes.text();
-  console.error(`Resend failed (${resendRes.status}):`, errBody);
+  console.error(`Resend failed (${resendRes.status}):`, await resendRes.text());
   console.error("Digest content was:\n", JSON.stringify(digest, null, 2));
   process.exit(1);
 }
@@ -507,7 +403,13 @@ console.log(`Sent. Resend message ID: ${resendBody.id}`);
 // rolling exclusion list. --from-research-cache still produces a fresh digest
 // from cached research and gets persisted normally.
 if (!fromCache && !fromSample) {
-  const updated = appendToHistory(loadHistory(), digest, new Date().toISOString());
+  const newEntries = (digest.stories || []).map((s) => ({
+    shipped_at: new Date().toISOString(),
+    date_label: digest.date_label,
+    headline: s.headline,
+    urls: (s.sources || []).map((src) => normalizeUrl(src.url)),
+  }));
+  const updated = [...withinHistoryWindow(loadHistory()), ...newEntries];
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(updated, null, 2));
   console.log(`History updated: ${updated.length} entries within ${HISTORY_WINDOW_DAYS}-day window → ${HISTORY_PATH}`);
 }
