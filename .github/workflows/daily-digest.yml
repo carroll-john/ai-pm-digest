@@ -10,6 +10,9 @@ jobs:
   send-digest:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # Needed so the post-send step can commit cache/history.json back to main.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -23,3 +26,15 @@ jobs:
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
           TO_EMAIL: ${{ secrets.TO_EMAIL }}
         run: node scripts/send-digest.mjs
+      - name: Persist digest history
+        if: success()
+        run: |
+          if [ -n "$(git status --porcelain cache/history.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add cache/history.json
+            git commit -m "chore: update digest history $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No history change to commit."
+          fi

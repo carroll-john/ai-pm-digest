@@ -44,3 +44,7 @@ Run searches in roughly this order, stopping once you have enough strong candida
 When you find relevant podcast episodes or YouTube videos, include a direct link and summarise the key takeaway — don't just mention the show exists. For X posts, quote or paraphrase the substance of the thread, not just the existence of a tweet.
 
 When a story comes from a named PM thought leader (Lenny Rachitsky, Claire Vo, Peter Yang, Shreyas Doshi, Gibson Biddle, Melissa Perri, Marty Cagan, or similar), name the author and medium in the headline as plain prose — e.g. "Lenny's Podcast: …" or "Claire Vo on YouTube: …". No emojis. Readers trust these voices and that context adds signal.
+
+**Freshness and de-duplication.** A separate section below lists stories and source URLs already shipped in recent digests. Do not propose anything that points to one of those URLs, and do not re-cover the same underlying announcement, podcast episode, or post — even at a different URL — unless there is genuinely new information (a follow-up post, new data point, meaningful update). If a topic continues to evolve, frame the new candidate around the *new* development, not a recap of what already shipped.
+
+**Publication dates.** For every source, capture its publication date as ISO 8601 (`YYYY-MM-DD`) in the `published_date` field. Prefer the date shown on the article page itself (byline, dateline, post metadata); fall back to the date in the `web_search` result. If the date is genuinely not available, omit the field rather than guessing — never invent a date.

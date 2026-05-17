@@ -10,7 +10,8 @@
       "sources": [
         {
           "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
-          "label": "Lenny's Podcast — An AI state of the union (YouTube)"
+          "label": "Lenny's Podcast — An AI state of the union (YouTube)",
+          "published_date": "2026-05-08"
         }
       ],
       "try_it": "Open a doc for your next feature, write the acceptance criteria first, then ask Claude: 'If an agent used only these criteria, what would it get wrong?'"
@@ -21,7 +22,8 @@
       "sources": [
         {
           "url": "https://www.anthropic.com/news/claude-opus-4-7",
-          "label": "Anthropic — Introducing Claude Opus 4.7"
+          "label": "Anthropic — Introducing Claude Opus 4.7",
+          "published_date": "2026-05-09"
         }
       ],
       "try_it": "Paste your most complex half-finished PRD into Opus 4.7 and ask: 'List every assumption that isn't backed by evidence — flag the two most likely to invalidate this feature.'"
@@ -32,11 +34,13 @@
       "sources": [
         {
           "url": "https://www.theregister.com/2026/05/06/lovable_breach/",
-          "label": "The Register — Lovable exposes user data for 48 days"
+          "label": "The Register — Lovable exposes user data for 48 days",
+          "published_date": "2026-05-06"
         },
         {
           "url": "https://vibesecurity.gatech.edu/radar",
-          "label": "Georgia Tech — Vibe Security Radar"
+          "label": "Georgia Tech — Vibe Security Radar",
+          "published_date": "2026-05-07"
         }
       ],
       "try_it": "Ask your engineering lead to pull the last three AI-assisted PRs and confirm each was reviewed for exposed credentials, open DB permissions, and input validation."
@@ -47,7 +51,8 @@
       "sources": [
         {
           "url": "https://www.lennysnewsletter.com/p/why-linkedin-is-replacing-pms",
-          "label": "Lenny's Newsletter — Why LinkedIn is replacing PMs"
+          "label": "Lenny's Newsletter — Why LinkedIn is replacing PMs",
+          "published_date": "2026-05-08"
         }
       ],
       "try_it": "In your next sprint planning, take one deliverable that passes sequentially between PM, designer, and engineer — try doing it end-to-end with one person plus AI, and note what breaks."

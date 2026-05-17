@@ -13,7 +13,7 @@ You are submitting **structured content**, not formatted HTML. A separate templa
 
 - **`headline`** — punchy and plain. Include the author and medium when relevant in plain text: `Lenny's Podcast: …`, `Claire Vo on YouTube: …`, `Shreyas Doshi on X: …`, `Anthropic ships …`. No emojis.
 - **`body_html`** — the story as a short HTML fragment. **No `<p>` wrappers** (the template adds those). Use only inline tags: `<strong>` for emphasis, `<em>` for titles or terms, `<a href="…">` for inline links, `<code>` for technical strings. 3–5 sentences.
-- **`sources`** — at least one entry, each `{url, label}`. URLs must come from your web_search results — never invent a URL. Labels should read like "Publication — title" or "Author on YouTube — episode title". For podcast/video stories link directly to the episode.
+- **`sources`** — at least one entry, each `{url, label, published_date?}`. URLs must come from the research findings — never invent or modify a URL. Labels should read like "Publication — title" or "Author on YouTube — episode title". For podcast/video stories link directly to the episode. Preserve the `published_date` (ISO `YYYY-MM-DD`) from the research findings exactly when present; omit it if the research did not provide one.
 - **`try_it`** — one sentence. Action verb → tool → specific thing. Plain text, no HTML, no explanation of why.
 
 **Top-level fields:**

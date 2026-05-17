@@ -78,14 +78,27 @@ function safeBodyHtml(html) {
   return html;
 }
 
+function formatSourceDate(iso) {
+  if (!iso) return "";
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat("en-AU", {
+    timeZone: "UTC",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(d);
+}
+
 function renderSources(sources) {
   if (!sources || sources.length === 0) return "";
   const links = sources
-    .map(
-      (s) =>
-        `<a href="${escapeHtml(s.url)}" style="color: ${TOKENS.accentColor}; text-decoration: underline;">${escapeHtml(s.label)}</a>`,
-    )
-    .join(" · ");
+    .map((s) => {
+      const link = `<a href="${escapeHtml(s.url)}" style="color: ${TOKENS.accentColor}; text-decoration: underline;">${escapeHtml(s.label)}</a>`;
+      const date = formatSourceDate(s.published_date);
+      return date ? `${link}, ${escapeHtml(date)}` : link;
+    })
+    .join(" &nbsp;·&nbsp; ");
   return `<p style="font-size: ${TOKENS.fontSizeSmall}; color: ${TOKENS.mutedColor}; margin: 8px 0 0;"><strong>Source:</strong> ${links}</p>`;
 }
 
@@ -183,7 +196,11 @@ function renderText(d) {
   const stories = d.stories
     .map((s) => {
       const sources = (s.sources || [])
-        .map((src) => `${src.label} (${src.url})`)
+        .map((src) => {
+          const date = formatSourceDate(src.published_date);
+          const labelWithDate = date ? `${src.label}, ${date}` : src.label;
+          return `${labelWithDate} (${src.url})`;
+        })
         .join(" · ");
       return [
         s.headline,

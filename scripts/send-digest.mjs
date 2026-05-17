@@ -9,6 +9,8 @@ const PROMPTS_DIR = path.resolve(__dirname, "../prompts");
 const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
 const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
+const HISTORY_PATH = path.join(CACHE_DIR, "history.json");
+const HISTORY_WINDOW_DAYS = 14;
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 
 const fromCache = process.argv.includes("--from-cache");
@@ -48,6 +50,11 @@ const SOURCE_ITEM_SCHEMA = {
     label: {
       type: "string",
       description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'.",
+    },
+    published_date: {
+      type: "string",
+      description:
+        "Publication date in ISO 8601 (YYYY-MM-DD). In Stage 1, extract from the article page or web_search metadata. In Stage 2, copy exactly from the research source. Omit the field rather than guessing.",
     },
   },
   required: ["url", "label"],
@@ -89,6 +96,91 @@ function logUsage(label, response) {
   console.log(`${label} usage: ${parts.join(", ")}`);
 }
 
+// Normalize URLs so the dedup filter survives trailing slashes, hash fragments,
+// and common tracking parameters that don't change the underlying article.
+function normalizeUrl(url) {
+  try {
+    const u = new URL(url);
+    u.hash = "";
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "ref_src"].forEach(
+      (p) => u.searchParams.delete(p),
+    );
+    let s = u.toString();
+    if (s.endsWith("/")) s = s.slice(0, -1);
+    return s;
+  } catch {
+    return url;
+  }
+}
+
+function loadHistory() {
+  if (!fs.existsSync(HISTORY_PATH)) return [];
+  try {
+    const entries = JSON.parse(fs.readFileSync(HISTORY_PATH, "utf8"));
+    if (!Array.isArray(entries)) return [];
+    const cutoff = Date.now() - HISTORY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+    return entries.filter((e) => {
+      const t = new Date(e.shipped_at).getTime();
+      return Number.isFinite(t) && t >= cutoff;
+    });
+  } catch (err) {
+    console.warn(`Could not read history at ${HISTORY_PATH}: ${err.message}`);
+    return [];
+  }
+}
+
+function historyUrlSet(history) {
+  const urls = new Set();
+  for (const entry of history) {
+    for (const url of entry.urls || []) urls.add(normalizeUrl(url));
+  }
+  return urls;
+}
+
+function renderHistoryContext(history) {
+  if (history.length === 0) {
+    return `## Already-shipped history (last ${HISTORY_WINDOW_DAYS} days)\n\nNo prior digests on record yet — no exclusions.`;
+  }
+  const grouped = new Map();
+  for (const entry of history) {
+    const key = entry.date_label || entry.shipped_at?.slice(0, 10) || "unknown";
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key).push(entry);
+  }
+  const days = Array.from(grouped.entries())
+    .sort(([, a], [, b]) => (b[0].shipped_at || "").localeCompare(a[0].shipped_at || ""))
+    .map(([label, entries]) => {
+      const stories = entries
+        .map((e) => {
+          const urls = (e.urls || []).map((u) => `    - ${u}`).join("\n");
+          return `  - ${e.headline}${urls ? `\n${urls}` : ""}`;
+        })
+        .join("\n");
+      return `- ${label}\n${stories}`;
+    })
+    .join("\n");
+  return `## Already-shipped history (last ${HISTORY_WINDOW_DAYS} days)
+
+These stories and source URLs have already gone out. Do **not** propose anything that points to one of these URLs, and avoid re-covering the same underlying announcement, podcast episode, or post — even at a different URL — unless there is genuinely new information (e.g. a follow-up post, a new data point, a meaningful update). If a topic continues to evolve, frame the new candidate around the *new* development, not a recap.
+
+${days}`;
+}
+
+function appendToHistory(history, digest, shippedAt) {
+  const newEntries = (digest.stories || []).map((s) => ({
+    shipped_at: shippedAt,
+    date_label: digest.date_label,
+    headline: s.headline,
+    urls: (s.sources || []).map((src) => normalizeUrl(src.url)),
+  }));
+  const cutoff = Date.now() - HISTORY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+  const kept = history.filter((e) => {
+    const t = new Date(e.shipped_at).getTime();
+    return Number.isFinite(t) && t >= cutoff;
+  });
+  return [...kept, ...newEntries];
+}
+
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 
 let digest;
@@ -112,6 +204,12 @@ if (fromSample) {
 
   const systemPrompt = readPrompt("00-system.md");
 
+  const history = loadHistory();
+  const historyUrls = historyUrlSet(history);
+  console.log(
+    `History: ${history.length} prior stories across ${new Set(history.map((e) => e.date_label)).size} days; ${historyUrls.size} unique URLs to exclude.`,
+  );
+
   // ── Stage 1: Research with Haiku 4.5 ─────────────────────────────────────
   let research;
   if (fromResearchCache) {
@@ -126,6 +224,7 @@ if (fromSample) {
       systemPrompt,
       dateContext,
       readPrompt("01-research.md"),
+      renderHistoryContext(history),
       RESEARCH_TOOL_INSTRUCTIONS,
     ].join("\n\n---\n\n");
 
@@ -235,6 +334,33 @@ if (fromSample) {
     );
   }
 
+  // Drop any candidate that points to a URL we've already shipped. Belt-and-
+  // braces — the prompt told Haiku to avoid these, but models drift, and this
+  // also catches the case where --from-research-cache replays older research
+  // whose stories have since gone out.
+  if (Array.isArray(research.candidates) && historyUrls.size > 0) {
+    const before = research.candidates.length;
+    const dropped = [];
+    research.candidates = research.candidates.filter((c) => {
+      const urls = (c.sources || []).map((s) => normalizeUrl(s.url));
+      const hit = urls.find((u) => historyUrls.has(u));
+      if (hit) {
+        dropped.push({ headline: c.headline_draft, url: hit });
+        return false;
+      }
+      return true;
+    });
+    if (dropped.length > 0) {
+      console.log(`Filtered ${dropped.length}/${before} candidates as already-shipped:`);
+      for (const d of dropped) console.log(`  - "${d.headline}" → ${d.url}`);
+    }
+    if (research.candidates.length < 3) {
+      console.warn(
+        `Only ${research.candidates.length} candidates remain after history filter. Stage 2 will likely struggle to hit the 3–5 story minimum.`,
+      );
+    }
+  }
+
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
   const writePrompt = [
     systemPrompt,
@@ -286,7 +412,7 @@ if (fromSample) {
                     type: "array",
                     minItems: 1,
                     description:
-                      "Use the source URLs from the research findings exactly as given. Never invent or modify URLs.",
+                      "Use the source URLs from the research findings exactly as given. Never invent or modify URLs. Preserve `published_date` when the research provided one.",
                     items: SOURCE_ITEM_SCHEMA,
                   },
                   try_it: {
@@ -375,3 +501,13 @@ if (!resendBody?.id) {
   process.exit(1);
 }
 console.log(`Sent. Resend message ID: ${resendBody.id}`);
+
+// Only persist history on a real send. --from-cache and --sample re-emit a
+// digest that already shipped (or a fixture), so they must not pollute the
+// rolling exclusion list. --from-research-cache still produces a fresh digest
+// from cached research and gets persisted normally.
+if (!fromCache && !fromSample) {
+  const updated = appendToHistory(loadHistory(), digest, new Date().toISOString());
+  fs.writeFileSync(HISTORY_PATH, JSON.stringify(updated, null, 2));
+  console.log(`History updated: ${updated.length} entries within ${HISTORY_WINDOW_DAYS}-day window → ${HISTORY_PATH}`);
+}
