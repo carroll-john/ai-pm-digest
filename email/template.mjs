@@ -59,6 +59,25 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
+// Tags allowed inside `body_html`. The model is instructed to use only these,
+// but a stray <p> or unclosed tag from the model would otherwise break the
+// surrounding email layout. If anything else appears, fall back to plain text.
+const ALLOWED_BODY_TAGS = new Set(["strong", "em", "a", "code"]);
+
+function safeBodyHtml(html) {
+  const tagRegex = /<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>/g;
+  let match;
+  while ((match = tagRegex.exec(String(html))) !== null) {
+    if (!ALLOWED_BODY_TAGS.has(match[1].toLowerCase())) {
+      console.warn(
+        `template: disallowed tag <${match[1]}> in body_html — escaping fragment to plain text.`,
+      );
+      return escapeHtml(html);
+    }
+  }
+  return html;
+}
+
 function renderSources(sources) {
   if (!sources || sources.length === 0) return "";
   const links = sources
@@ -77,7 +96,7 @@ function renderStory(story, isLast) {
   return `
     <section style="margin-bottom: ${TOKENS.storyGap};">
       <h2 style="font-size: ${TOKENS.fontSizeHeadline}; font-weight: 700; margin: 0 0 16px; line-height: 1.25; letter-spacing: -0.01em;">${escapeHtml(story.headline)}</h2>
-      <div style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 16px;">${story.body_html}</div>
+      <div style="font-size: ${TOKENS.fontSizeBody}; line-height: ${TOKENS.lineHeight}; margin: 0 0 16px;">${safeBodyHtml(story.body_html)}</div>
       ${renderSources(story.sources)}
       <div style="margin: 24px 0 0; padding: 16px 20px; background: #f7f7f5; border-left: 3px solid ${TOKENS.accentColor};">
         <p style="font-size: ${TOKENS.fontSizeByline}; letter-spacing: 0.08em; text-transform: uppercase; color: ${TOKENS.mutedColor}; margin: 0 0 6px; font-weight: 600;">Try it</p>
@@ -121,15 +140,41 @@ function renderHtml(d) {
 }
 
 // ─── Plain-text rendering ──────────────────────────────────────────────────
+const NAMED_ENTITIES = {
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+  nbsp: " ",
+  mdash: "—",
+  ndash: "–",
+  hellip: "…",
+  lsquo: "‘",
+  rsquo: "’",
+  ldquo: "“",
+  rdquo: "”",
+  copy: "©",
+  reg: "®",
+  trade: "™",
+  times: "×",
+};
+
+function decodeEntities(s) {
+  return s
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(parseInt(n, 10)))
+    .replace(/&([a-zA-Z]+);/g, (m, name) =>
+      Object.prototype.hasOwnProperty.call(NAMED_ENTITIES, name) ? NAMED_ENTITIES[name] : m,
+    );
+}
+
 function stripTags(html) {
-  return String(html)
-    .replace(/<a [^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/gi, "$2 ($1)")
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&nbsp;/g, " ")
+  return decodeEntities(
+    String(html)
+      .replace(/<a [^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/gis, "$2 ($1)")
+      .replace(/<[^>]+>/g, ""),
+  )
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 }
