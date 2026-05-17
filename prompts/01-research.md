@@ -8,9 +8,9 @@ Use the web_search tool to find AI news and developments from the last 24–48 h
 - Practical tutorials or experiments in the PM + AI space
 - Insights, experiments, or frameworks from product leaders who are actively building with or thinking about AI
 
-Aim for 3–5 distinct stories. Prioritise things that are new (last 24–48 hrs), concrete, and actionable. Skip pure funding/valuation news unless there's a product angle.
+Cast a wide net — a downstream writer model will pick the final 3–5. Prioritise things that are new (last 24–48 hrs), concrete, and actionable. Skip pure funding/valuation news unless there's a product angle.
 
-Run searches in roughly this order, stopping once you have 5 strong stories. Not every search needs to be run — use judgment.
+Run searches in roughly this order, stopping once you have enough strong candidates (see Step 2 for the target count). Not every search needs to be run — use judgment.
 
 **General AI × PM news (run 2–3 of these):**
 - "AI product management news today"

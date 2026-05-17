@@ -12,6 +12,7 @@ const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 
 const fromCache = process.argv.includes("--from-cache");
+const fromResearchCache = process.argv.includes("--from-research-cache");
 const fromSample = process.argv.includes("--sample");
 const dryRun = process.argv.includes("--dry-run");
 const preview = process.argv.includes("--preview");
@@ -39,6 +40,18 @@ After calling \`submit_research\`, do not output further text.`;
 const WRITE_INPUT_PREAMBLE = `## Research findings
 
 A research stage has gathered candidate stories from the web. You do **not** have web access — work only from these findings. Pick the **3–5 strongest** stories, write each story body in your voice using the facts and quotes provided, and keep source URLs **exactly as given** (do not invent or modify URLs).`;
+
+const SOURCE_ITEM_SCHEMA = {
+  type: "object",
+  properties: {
+    url: { type: "string" },
+    label: {
+      type: "string",
+      description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'.",
+    },
+  },
+  required: ["url", "label"],
+};
 
 function readPrompt(name) {
   return fs.readFileSync(path.join(PROMPTS_DIR, name), "utf8").trim();
@@ -76,6 +89,8 @@ function logUsage(label, response) {
   console.log(`${label} usage: ${parts.join(", ")}`);
 }
 
+fs.mkdirSync(CACHE_DIR, { recursive: true });
+
 let digest;
 
 if (fromSample) {
@@ -95,133 +110,134 @@ if (fromSample) {
   const dateContext = `**Today's date in Melbourne:** ${today.full}. Use \`${today.short}\` as the \`date_label\` and \`AI × PM Daily — ${today.short}\` as the \`subject\`. "Last 24–48 hours" is relative to this date.`;
   console.log(`Melbourne date: ${today.full}`);
 
+  const systemPrompt = readPrompt("00-system.md");
+
   // ── Stage 1: Research with Haiku 4.5 ─────────────────────────────────────
-  const researchPrompt = [
-    readPrompt("00-system.md"),
-    dateContext,
-    readPrompt("01-research.md"),
-    RESEARCH_TOOL_INSTRUCTIONS,
-  ].join("\n\n---\n\n");
-
-  console.log(
-    `Stage 1 (research, ${RESEARCH_MODEL}): prompt ${researchPrompt.length} chars, web_search cap ${WEB_SEARCH_MAX_USES}`,
-  );
-
-  const researchResponse = await anthropic.messages.create({
-    model: RESEARCH_MODEL,
-    max_tokens: 8000,
-    tools: [
-      {
-        type: "web_search_20250305",
-        name: "web_search",
-        max_uses: WEB_SEARCH_MAX_USES,
-      },
-      {
-        name: "submit_research",
-        description:
-          "Submit candidate stories as raw structured data for a downstream writer model. Call this exactly once after research is complete.",
-        input_schema: {
-          type: "object",
-          properties: {
-            candidates: {
-              type: "array",
-              minItems: 4,
-              maxItems: 10,
-              items: {
-                type: "object",
-                properties: {
-                  headline_draft: {
-                    type: "string",
-                    description:
-                      "Plain factual headline. Include author/medium where relevant, e.g. \"Lenny's Podcast: …\", \"Anthropic ships …\". No emojis.",
-                  },
-                  summary: {
-                    type: "string",
-                    description: "4–6 sentences. What happened, concrete and factual. No hype.",
-                  },
-                  why_pm: {
-                    type: "string",
-                    description: "1–2 sentences on why this matters to a Product Manager.",
-                  },
-                  key_facts: {
-                    type: "array",
-                    minItems: 1,
-                    description: "Short bullet-point facts: numbers, names, decisions, claims.",
-                    items: { type: "string" },
-                  },
-                  quotes: {
-                    type: "array",
-                    description:
-                      "Direct quotes or close paraphrases (especially for podcasts, X posts, newsletter pieces). Optional but useful.",
-                    items: { type: "string" },
-                  },
-                  sources: {
-                    type: "array",
-                    minItems: 1,
-                    description: "Real URLs from web_search results. Never invent URLs.",
-                    items: {
-                      type: "object",
-                      properties: {
-                        url: { type: "string" },
-                        label: {
-                          type: "string",
-                          description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'.",
-                        },
-                      },
-                      required: ["url", "label"],
-                    },
-                  },
-                },
-                required: ["headline_draft", "summary", "why_pm", "key_facts", "sources"],
-              },
-            },
-            themes: {
-              type: "string",
-              description:
-                "1–2 sentences on common threads across the candidates — helps the writer craft the intro and reflection.",
-            },
-          },
-          required: ["candidates", "themes"],
-        },
-      },
-    ],
-    messages: [{ role: "user", content: researchPrompt }],
-  });
-
-  logUsage("Stage 1", researchResponse);
-
-  const researchBlock = findToolUse(researchResponse, "submit_research");
-  if (!researchBlock) {
-    console.error("Stage 1 model did not call submit_research. Stop reason:", researchResponse.stop_reason);
-    console.error("Response content:\n", JSON.stringify(researchResponse.content, null, 2));
-    process.exit(1);
-  }
-
-  const research = researchBlock.input;
-
-  // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
-  // array. Parse it back so Stage 2 receives clean structured JSON rather than
-  // a string of escaped JSON-inside-JSON.
-  if (typeof research.candidates === "string") {
-    try {
-      research.candidates = JSON.parse(research.candidates);
-      console.log("Stage 1 note: parsed candidates string back into an array.");
-    } catch (err) {
-      console.error("Stage 1 emitted candidates as a non-JSON string. Aborting.");
-      console.error("First 500 chars:", research.candidates.slice(0, 500));
+  let research;
+  if (fromResearchCache) {
+    if (!fs.existsSync(RESEARCH_CACHE_PATH)) {
+      console.error(`No research cache at ${RESEARCH_CACHE_PATH}. Run once without --from-research-cache to populate it.`);
       process.exit(1);
     }
-  }
+    console.log(`Loading cached research from ${RESEARCH_CACHE_PATH} (skipping Stage 1).`);
+    research = JSON.parse(fs.readFileSync(RESEARCH_CACHE_PATH, "utf8"));
+  } else {
+    const researchPrompt = [
+      systemPrompt,
+      dateContext,
+      readPrompt("01-research.md"),
+      RESEARCH_TOOL_INSTRUCTIONS,
+    ].join("\n\n---\n\n");
 
-  fs.mkdirSync(CACHE_DIR, { recursive: true });
-  fs.writeFileSync(RESEARCH_CACHE_PATH, JSON.stringify(research, null, 2));
-  console.log(
-    `Stage 1 complete: ${Array.isArray(research.candidates) ? research.candidates.length : 0} candidate stories. Cached to ${RESEARCH_CACHE_PATH}`,
-  );
+    console.log(
+      `Stage 1 (research, ${RESEARCH_MODEL}): prompt ${researchPrompt.length} chars, web_search cap ${WEB_SEARCH_MAX_USES}`,
+    );
+
+    const researchResponse = await anthropic.messages.create({
+      model: RESEARCH_MODEL,
+      max_tokens: 5000,
+      tools: [
+        {
+          type: "web_search_20250305",
+          name: "web_search",
+          max_uses: WEB_SEARCH_MAX_USES,
+        },
+        {
+          name: "submit_research",
+          description:
+            "Submit candidate stories as raw structured data for a downstream writer model. Call this exactly once after research is complete.",
+          input_schema: {
+            type: "object",
+            properties: {
+              candidates: {
+                type: "array",
+                minItems: 4,
+                maxItems: 10,
+                items: {
+                  type: "object",
+                  properties: {
+                    headline_draft: {
+                      type: "string",
+                      description:
+                        "Plain factual headline. Include author/medium where relevant, e.g. \"Lenny's Podcast: …\", \"Anthropic ships …\". No emojis.",
+                    },
+                    summary: {
+                      type: "string",
+                      description: "4–6 sentences. What happened, concrete and factual. No hype.",
+                    },
+                    why_pm: {
+                      type: "string",
+                      description: "1–2 sentences on why this matters to a Product Manager.",
+                    },
+                    key_facts: {
+                      type: "array",
+                      minItems: 1,
+                      description: "Short bullet-point facts: numbers, names, decisions, claims.",
+                      items: { type: "string" },
+                    },
+                    quotes: {
+                      type: "array",
+                      description:
+                        "Direct quotes or close paraphrases (especially for podcasts, X posts, newsletter pieces). Optional but useful.",
+                      items: { type: "string" },
+                    },
+                    sources: {
+                      type: "array",
+                      minItems: 1,
+                      description: "Real URLs from web_search results. Never invent URLs.",
+                      items: SOURCE_ITEM_SCHEMA,
+                    },
+                  },
+                  required: ["headline_draft", "summary", "why_pm", "key_facts", "sources"],
+                },
+              },
+              themes: {
+                type: "string",
+                description:
+                  "1–2 sentences on common threads across the candidates — helps the writer craft the intro and reflection.",
+              },
+            },
+            required: ["candidates", "themes"],
+          },
+        },
+      ],
+      messages: [{ role: "user", content: researchPrompt }],
+    });
+
+    logUsage("Stage 1", researchResponse);
+
+    const researchBlock = findToolUse(researchResponse, "submit_research");
+    if (!researchBlock) {
+      console.error("Stage 1 model did not call submit_research. Stop reason:", researchResponse.stop_reason);
+      console.error("Response content:\n", JSON.stringify(researchResponse.content, null, 2));
+      process.exit(1);
+    }
+
+    research = researchBlock.input;
+
+    // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
+    // array. Parse it back so Stage 2 receives clean structured JSON rather than
+    // a string of escaped JSON-inside-JSON.
+    if (typeof research.candidates === "string") {
+      try {
+        research.candidates = JSON.parse(research.candidates);
+        console.log("Stage 1 note: parsed candidates string back into an array.");
+      } catch (err) {
+        console.error("Stage 1 emitted candidates as a non-JSON string. Aborting.");
+        console.error("First 500 chars:", research.candidates.slice(0, 500));
+        process.exit(1);
+      }
+    }
+
+    fs.writeFileSync(RESEARCH_CACHE_PATH, JSON.stringify(research, null, 2));
+    console.log(
+      `Stage 1 complete: ${Array.isArray(research.candidates) ? research.candidates.length : 0} candidate stories. Cached to ${RESEARCH_CACHE_PATH}`,
+    );
+  }
 
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
   const writePrompt = [
-    readPrompt("00-system.md"),
+    systemPrompt,
     dateContext,
     readPrompt("02-digest-format.md"),
     readPrompt("03-try-it-tasks.md"),
@@ -271,17 +287,7 @@ if (fromSample) {
                     minItems: 1,
                     description:
                       "Use the source URLs from the research findings exactly as given. Never invent or modify URLs.",
-                    items: {
-                      type: "object",
-                      properties: {
-                        url: { type: "string" },
-                        label: {
-                          type: "string",
-                          description: "e.g. 'Lenny's Newsletter — Why LinkedIn killed the APM program'.",
-                        },
-                      },
-                      required: ["url", "label"],
-                    },
+                    items: SOURCE_ITEM_SCHEMA,
                   },
                   try_it: {
                     type: "string",
@@ -322,7 +328,6 @@ console.log(`Digest ready: "${digest.subject}" (${digest.stories?.length} storie
 const { html, text } = render(digest);
 
 if (preview) {
-  fs.mkdirSync(CACHE_DIR, { recursive: true });
   const previewPath = path.join(CACHE_DIR, "preview.html");
   fs.writeFileSync(previewPath, html);
   console.log(`Preview written to ${previewPath}`);
@@ -364,5 +369,9 @@ if (!resendRes.ok) {
   process.exit(1);
 }
 
-const { id } = await resendRes.json();
-console.log(`Sent. Resend message ID: ${id}`);
+const resendBody = await resendRes.json();
+if (!resendBody?.id) {
+  console.error("Resend returned 2xx but no message id:", JSON.stringify(resendBody));
+  process.exit(1);
+}
+console.log(`Sent. Resend message ID: ${resendBody.id}`);
