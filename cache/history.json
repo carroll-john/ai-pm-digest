@@ -1,0 +1,45 @@
+[
+  {
+    "shipped_at": "2026-05-19T23:10:31.623Z",
+    "date_label": "Wed 20 May",
+    "headline": "Cursor ships Composer 2.5: frontier-competitive coding agent at one-tenth the cost",
+    "urls": [
+      "https://cursor.com/blog/composer-2-5",
+      "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-19T23:10:31.625Z",
+    "date_label": "Wed 20 May",
+    "headline": "Anthropic's enterprise play shifts from models to agent orchestration",
+    "urls": [
+      "https://venturebeat.com/orchestration/claudes-next-enterprise-battle-is-not-models-its-the-agent-control-plane"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-19T23:10:31.625Z",
+    "date_label": "Wed 20 May",
+    "headline": "Anthropic launches Claude for Small Business: 15 pre-built workflows, no extra cost",
+    "urls": [
+      "https://www.anthropic.com/news/claude-for-small-business",
+      "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-19T23:10:31.625Z",
+    "date_label": "Wed 20 May",
+    "headline": "Userpilot: the PM job market is splitting, and AI specialists earn double",
+    "urls": [
+      "https://userpilot.com/blog/product-management-trends"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-19T23:10:31.625Z",
+    "date_label": "Wed 20 May",
+    "headline": "OpenAI Workspace Agents turn ChatGPT into persistent team automation",
+    "urls": [
+      "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+      "https://venturebeat.com/orchestration/openai-unveils-workspace-agents-a-successor-to-custom-gpts-for-enterprises-that-can-plug-directly-into-slack-salesforce-and-more"
+    ]
+  }
+]
