@@ -138,11 +138,11 @@ function logUsage(label, r) {
   console.log(`${label} usage: input=${u.input_tokens ?? "?"}, output=${u.output_tokens ?? "?"}${tail}`);
 }
 
-async function runStage(client, label, model, prompt, tools, toolName) {
+async function runStage(client, label, model, prompt, tools, toolName, maxTokens = 5000) {
   console.log(`${label} (${model}): prompt ${prompt.length} chars`);
   const r = await client.messages.create({
     model,
-    max_tokens: 5000,
+    max_tokens: maxTokens,
     tools,
     messages: [{ role: "user", content: prompt }],
   });
@@ -154,6 +154,44 @@ async function runStage(client, label, model, prompt, tools, toolName) {
     process.exit(1);
   }
   return block.input;
+}
+
+// When Haiku stringifies `candidates` AND the string gets truncated by
+// max_tokens, JSON.parse fails on the dangling tail. Walk the array tracking
+// brace depth + string state, find the end of the last complete object inside
+// the outer `[...]`, and parse that prefix with a synthetic closing `]`.
+function tryParseTruncatedArray(s) {
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  let arrayStarted = false;
+  const completeObjectEnds = [];
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (escape) { escape = false; continue; }
+    if (inString) {
+      if (c === "\\") escape = true;
+      else if (c === '"') inString = false;
+      continue;
+    }
+    if (c === '"') { inString = true; continue; }
+    if (!arrayStarted) {
+      if (c === "[") { arrayStarted = true; depth = 1; }
+      continue;
+    }
+    if (c === "{" || c === "[") depth++;
+    else if (c === "}" || c === "]") {
+      depth--;
+      if (c === "}" && depth === 1) completeObjectEnds.push(i + 1);
+    }
+  }
+  if (completeObjectEnds.length === 0) return null;
+  const cutoff = completeObjectEnds[completeObjectEnds.length - 1];
+  try {
+    return JSON.parse(s.slice(0, cutoff) + "]");
+  } catch {
+    return null;
+  }
 }
 
 function loadJson(p, label) {
@@ -199,6 +237,9 @@ if (fromSample) {
       renderHistoryContext(history), RESEARCH_TOOL_INSTRUCTIONS,
     ].join("\n\n---\n\n");
 
+    // Haiku tends to stringify the `candidates` array (every quote/brace gets
+    // escaped), roughly doubling token cost. 16k leaves plenty of headroom so
+    // the response isn't truncated mid-JSON on a heavy research day.
     research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, [
       { type: "web_search_20250305", name: "web_search", max_uses: WEB_SEARCH_MAX_USES },
       {
@@ -252,7 +293,7 @@ if (fromSample) {
           required: ["candidates", "themes"],
         },
       },
-    ], "submit_research");
+    ], "submit_research", 16000);
 
     // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
     // array. Parse it back so Stage 2 receives clean structured JSON.
@@ -261,9 +302,15 @@ if (fromSample) {
         research.candidates = JSON.parse(research.candidates);
         console.log("Stage 1 note: parsed candidates string back into an array.");
       } catch {
-        console.error("Stage 1 emitted candidates as a non-JSON string. Aborting.");
-        console.error("First 500 chars:", research.candidates.slice(0, 500));
-        process.exit(1);
+        const salvaged = tryParseTruncatedArray(research.candidates);
+        if (salvaged && salvaged.length >= 3) {
+          console.warn(`Stage 1 note: candidates string was truncated; salvaged ${salvaged.length} complete entries.`);
+          research.candidates = salvaged;
+        } else {
+          console.error("Stage 1 emitted candidates as a non-JSON string and could not be salvaged. Aborting.");
+          console.error("First 500 chars:", research.candidates.slice(0, 500));
+          process.exit(1);
+        }
       }
     }
 
