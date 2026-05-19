@@ -31,9 +31,8 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
           TO_EMAIL: ${{ secrets.TO_EMAIL }}
-        # tee captures the script's output; pipefail (set at job level via
-        # `defaults.run.shell: bash`) preserves node's exit code so a failure
-        # actually flows through to the notification step below.
+        # tee + pipefail keeps the original exit code while capturing output
+        # for the failure-notification step below.
         run: node scripts/send-digest.mjs 2>&1 | tee digest.log
       - name: Persist digest history
         if: success()
