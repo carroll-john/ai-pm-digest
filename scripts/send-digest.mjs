@@ -10,6 +10,7 @@ const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
 const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
 const HISTORY_PATH = path.join(CACHE_DIR, "history.json");
+const LAST_FAILURE_PATH = path.join(CACHE_DIR, "last-failure.json");
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 const HISTORY_WINDOW_DAYS = 14;
 const HISTORY_WINDOW_MS = HISTORY_WINDOW_DAYS * 86400000;
@@ -138,6 +139,129 @@ function logUsage(label, r) {
   console.log(`${label} usage: input=${u.input_tokens ?? "?"}, output=${u.output_tokens ?? "?"}${tail}`);
 }
 
+// Writes a structured failure record so notify-failure.mjs can surface a
+// specific subject prefix and actionable "What to do" hint, instead of the
+// recipient having to read the log tail and reverse-engineer the cause.
+function recordFailure({ kind, subjectTag, stage, summary, hint, detail }) {
+  const payload = {
+    kind,
+    subject_tag: subjectTag,
+    stage,
+    summary,
+    hint,
+    detail,
+    occurred_at: new Date().toISOString(),
+  };
+  try {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+    fs.writeFileSync(LAST_FAILURE_PATH, JSON.stringify(payload, null, 2));
+  } catch (err) {
+    console.error(`Could not write ${LAST_FAILURE_PATH}: ${err.message}`);
+  }
+  console.error(`FAILURE [${kind}]${stage ? ` (${stage})` : ""}: ${summary}`);
+  if (hint) console.error(`HINT: ${hint}`);
+  if (detail) console.error(`DETAIL: ${detail}`);
+  process.exit(1);
+}
+
+// Maps an @anthropic-ai/sdk error onto the structured failure shape. Status
+// codes drive the category; the credit-balance message is the only string we
+// pattern-match on because Anthropic returns it as a generic 400 rather than a
+// dedicated error type.
+function classifyAnthropicError(err, stage) {
+  const status = err?.status;
+  const apiError = err?.error?.error ?? err?.error ?? {};
+  const message = apiError.message ?? err?.message ?? String(err);
+  const type = apiError.type ?? err?.name ?? "unknown";
+  const detail = `${type}: ${message}`;
+  const lower = message.toLowerCase();
+
+  if (status == null) {
+    return {
+      kind: "ANTHROPIC_NETWORK", subjectTag: "NETWORK", stage, detail,
+      summary: `${stage} failed: could not reach Anthropic.`,
+      hint: "Likely a transient network/DNS issue. Re-dispatch the workflow.",
+    };
+  }
+  if (status === 400 && lower.includes("credit balance")) {
+    return {
+      kind: "ANTHROPIC_CREDIT", subjectTag: "CREDIT", stage, detail,
+      summary: `${stage} failed: Anthropic credit balance is exhausted.`,
+      hint: "Top up at https://console.anthropic.com/settings/billing, then re-dispatch the workflow from the Actions tab.",
+    };
+  }
+  if (status === 401) {
+    return {
+      kind: "ANTHROPIC_AUTH", subjectTag: "AUTH", stage, detail,
+      summary: `${stage} failed: Anthropic rejected the API key.`,
+      hint: "Generate a new key at https://console.anthropic.com/settings/keys, update the ANTHROPIC_API_KEY GitHub secret, then re-dispatch.",
+    };
+  }
+  if (status === 403) {
+    return {
+      kind: "ANTHROPIC_PERMISSION", subjectTag: "AUTH", stage, detail,
+      summary: `${stage} failed: Anthropic denied access (${type}).`,
+      hint: "Check that the API key has permission for the model in use. Update the ANTHROPIC_API_KEY secret if needed, then re-dispatch.",
+    };
+  }
+  if (status === 429) {
+    return {
+      kind: "ANTHROPIC_RATE", subjectTag: "RATE", stage, detail,
+      summary: `${stage} failed: Anthropic rate-limited the request.`,
+      hint: "Wait 1–5 minutes and re-dispatch. Persistent rate-limits: see https://console.anthropic.com/settings/limits.",
+    };
+  }
+  if (status >= 500) {
+    return {
+      kind: "ANTHROPIC_SERVER", subjectTag: "OUTAGE", stage, detail,
+      summary: `${stage} failed: Anthropic returned ${status} (${type}).`,
+      hint: "Check https://status.anthropic.com. Re-dispatch once the incident clears.",
+    };
+  }
+  return {
+    kind: "ANTHROPIC_OTHER", subjectTag: "API", stage, detail,
+    summary: `${stage} failed: Anthropic returned ${status} (${type}).`,
+    hint: "Check the log tail and https://status.anthropic.com, then re-dispatch.",
+  };
+}
+
+function classifyResendError(status, bodyText) {
+  const detail = `HTTP ${status}: ${bodyText}`;
+  if (status === 401) {
+    return {
+      kind: "RESEND_AUTH", subjectTag: "AUTH", stage: "Resend send", detail,
+      summary: "Resend rejected the API key.",
+      hint: "Generate a new key at https://resend.com/api-keys, update the RESEND_API_KEY GitHub secret, then re-dispatch.",
+    };
+  }
+  if (status === 403) {
+    return {
+      kind: "RESEND_FORBIDDEN", subjectTag: "RESEND", stage: "Resend send", detail,
+      summary: "Resend denied the send (403).",
+      hint: "Most often the FROM_EMAIL domain isn't verified. Check https://resend.com/domains and update FROM_EMAIL if needed, then re-dispatch.",
+    };
+  }
+  if (status === 422) {
+    return {
+      kind: "RESEND_VALIDATION", subjectTag: "RESEND", stage: "Resend send", detail,
+      summary: "Resend rejected the email payload (422).",
+      hint: "Check FROM_EMAIL / TO_EMAIL format and that the from-domain is verified at https://resend.com/domains.",
+    };
+  }
+  if (status === 429) {
+    return {
+      kind: "RESEND_RATE", subjectTag: "RATE", stage: "Resend send", detail,
+      summary: "Resend rate-limited the send.",
+      hint: "Wait a few minutes and re-dispatch. Check https://resend.com/api-keys for plan limits.",
+    };
+  }
+  return {
+    kind: "RESEND_OTHER", subjectTag: "RESEND", stage: "Resend send", detail,
+    summary: `Resend send failed (${status}).`,
+    hint: "Check https://resend.com and the log tail. Re-dispatch to retry.",
+  };
+}
+
 async function runStage(client, label, model, prompt, tools, toolName, maxTokens = 5000) {
   console.log(`${label} (${model}): prompt ${prompt.length} chars`);
   const r = await client.messages.create({
@@ -149,9 +273,14 @@ async function runStage(client, label, model, prompt, tools, toolName, maxTokens
   logUsage(label, r);
   const block = r.content.find((b) => b.type === "tool_use" && b.name === toolName);
   if (!block) {
-    console.error(`${label} did not call ${toolName}. Stop reason:`, r.stop_reason);
-    console.error("Response content:\n", JSON.stringify(r.content, null, 2));
-    process.exit(1);
+    recordFailure({
+      kind: label.startsWith("Stage 1") ? "STAGE1_INVALID_OUTPUT" : "STAGE2_INVALID_OUTPUT",
+      subjectTag: "BUG",
+      stage: label,
+      summary: `${label} did not call the ${toolName} tool (stop_reason: ${r.stop_reason}).`,
+      hint: "The model returned text instead of a structured tool call. Re-dispatch the workflow once; if it persists, the prompt or schema may need adjusting.",
+      detail: `Response content: ${JSON.stringify(r.content)}`,
+    });
   }
   return block.input;
 }
@@ -240,7 +369,8 @@ if (fromSample) {
     // Haiku tends to stringify the `candidates` array (every quote/brace gets
     // escaped), roughly doubling token cost. 16k leaves plenty of headroom so
     // the response isn't truncated mid-JSON on a heavy research day.
-    research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, [
+    try {
+      research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, [
       { type: "web_search_20250305", name: "web_search", max_uses: WEB_SEARCH_MAX_USES },
       {
         name: "submit_research",
@@ -294,6 +424,9 @@ if (fromSample) {
         },
       },
     ], "submit_research", 16000);
+    } catch (err) {
+      recordFailure(classifyAnthropicError(err, "Stage 1"));
+    }
 
     // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
     // array. Parse it back so Stage 2 receives clean structured JSON.
@@ -307,9 +440,12 @@ if (fromSample) {
           console.warn(`Stage 1 note: candidates string was truncated; salvaged ${salvaged.length} complete entries.`);
           research.candidates = salvaged;
         } else {
-          console.error("Stage 1 emitted candidates as a non-JSON string and could not be salvaged. Aborting.");
-          console.error("First 500 chars:", research.candidates.slice(0, 500));
-          process.exit(1);
+          recordFailure({
+            kind: "STAGE1_INVALID_OUTPUT", subjectTag: "BUG", stage: "Stage 1",
+            summary: "Stage 1 emitted candidates as a string the script could not parse or salvage.",
+            hint: "Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.",
+            detail: `First 500 chars of candidates string: ${research.candidates.slice(0, 500)}`,
+          });
         }
       }
     }
@@ -343,7 +479,8 @@ if (fromSample) {
     `${WRITE_INPUT_PREAMBLE}\n\n\`\`\`json\n${JSON.stringify(research, null, 2)}\n\`\`\``,
   ].join("\n\n---\n\n");
 
-  digest = await runStage(anthropic, "Stage 2", WRITE_MODEL, writePrompt, [
+  try {
+    digest = await runStage(anthropic, "Stage 2", WRITE_MODEL, writePrompt, [
     {
       name: "submit_digest",
       description:
@@ -394,6 +531,9 @@ if (fromSample) {
       },
     },
   ], "submit_digest");
+  } catch (err) {
+    recordFailure(classifyAnthropicError(err, "Stage 2"));
+  }
 
   fs.writeFileSync(CACHE_PATH, JSON.stringify(digest, null, 2));
   console.log(`Stage 2 complete: cached digest to ${CACHE_PATH}`);
@@ -433,15 +573,20 @@ const resendRes = await fetch("https://api.resend.com/emails", {
 });
 
 if (!resendRes.ok) {
-  console.error(`Resend failed (${resendRes.status}):`, await resendRes.text());
+  const bodyText = await resendRes.text();
+  console.error(`Resend failed (${resendRes.status}):`, bodyText);
   console.error("Digest content was:\n", JSON.stringify(digest, null, 2));
-  process.exit(1);
+  recordFailure(classifyResendError(resendRes.status, bodyText));
 }
 
 const resendBody = await resendRes.json();
 if (!resendBody?.id) {
-  console.error("Resend returned 2xx but no message id:", JSON.stringify(resendBody));
-  process.exit(1);
+  recordFailure({
+    kind: "RESEND_NO_ID", subjectTag: "RESEND", stage: "Resend send",
+    summary: "Resend returned 2xx but no message ID — the email may not have been queued.",
+    hint: "Check the Resend dashboard at https://resend.com/emails. Re-dispatch if no email appeared.",
+    detail: `Response body: ${JSON.stringify(resendBody)}`,
+  });
 }
 console.log(`Sent. Resend message ID: ${resendBody.id}`);
 
