@@ -41,5 +41,39 @@
       "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
       "https://venturebeat.com/orchestration/openai-unveils-workspace-agents-a-successor-to-custom-gpts-for-enterprises-that-can-plug-directly-into-slack-salesforce-and-more"
     ]
+  },
+  {
+    "shipped_at": "2026-05-20T23:18:56.739Z",
+    "date_label": "Thu 21 May",
+    "headline": "Google I/O 2026: Gemini 3.5 and Antigravity 2.0 signal Google's shift from chatbot to agent ecosystem",
+    "urls": [
+      "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote",
+      "https://techcrunch.com/2026/05/19/google-updates-its-gemini-app-to-take-on-chatgpt-and-claude-at-io-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-20T23:18:56.739Z",
+    "date_label": "Thu 21 May",
+    "headline": "Anthropic's Code with Claude conference: Opus 4.7, Claude Design, and production playbooks from Asana, GitHub, and Vercel",
+    "urls": [
+      "https://releasebot.io/updates/anthropic",
+      "https://www.anthropic.com/news/claude-opus-4-7"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-20T23:18:56.739Z",
+    "date_label": "Thu 21 May",
+    "headline": "Tom Leung in Fireside PM: \"The PM of the future is more hedge fund manager than builder\"",
+    "urls": [
+      "https://firesidepm.substack.com/p/the-pm-of-the-future-is-more-hedge"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-20T23:18:56.739Z",
+    "date_label": "Thu 21 May",
+    "headline": "Lenny's Podcast: Max Schoening (Notion) — agency beats skills in an AI-accelerated team",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more"
+    ]
   }
 ]
