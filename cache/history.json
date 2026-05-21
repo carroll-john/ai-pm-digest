@@ -75,5 +75,32 @@
     "urls": [
       "https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more"
     ]
+  },
+  {
+    "shipped_at": "2026-05-21T23:07:59.144Z",
+    "date_label": "Fri 22 May",
+    "headline": "Notion launches Developer Platform: workspace becomes agent orchestration layer",
+    "urls": [
+      "https://www.notion.com/blog/introducing-developer-platform",
+      "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-21T23:07:59.144Z",
+    "date_label": "Fri 22 May",
+    "headline": "62% of enterprises are running AI agents — but most are still pilots, not production",
+    "urls": [
+      "https://www.cflowapps.com/ai-workflow-automation-trends",
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-21T23:07:59.144Z",
+    "date_label": "Fri 22 May",
+    "headline": "Replit Agent 4 and Claude Code: non-technical PMs shipping working prototypes without engineers",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://blog.replit.com/best-ai-tools-for-product-managers"
+    ]
   }
 ]
