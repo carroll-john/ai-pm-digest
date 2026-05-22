@@ -102,5 +102,46 @@
       "https://releasebot.io/updates/anthropic/claude-code",
       "https://blog.replit.com/best-ai-tools-for-product-managers"
     ]
+  },
+  {
+    "shipped_at": "2026-05-22T23:08:46.956Z",
+    "date_label": "Sat 23 May",
+    "headline": "Every: Claude Code for Product Managers — one solo PM runs a full product without writing a single spec",
+    "urls": [
+      "https://every.to/source-code/claude-code-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-22T23:08:46.957Z",
+    "date_label": "Sat 23 May",
+    "headline": "Anthropic's Code with Claude conference: Dreaming, managed multi-agent orchestration, and doubled rate limits",
+    "urls": [
+      "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-22T23:08:46.957Z",
+    "date_label": "Sat 23 May",
+    "headline": "Userpilot: The PM role splits three ways in 2026 — coordination work disappears, senior and strategic roles grow",
+    "urls": [
+      "https://userpilot.com/blog/what-is-product-management"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-22T23:08:46.957Z",
+    "date_label": "Sat 23 May",
+    "headline": "Lenny's Newsletter: PM openings at a 3-year high, design jobs flat, AI roles growing exponentially",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/state-of-the-product-job-market-in-ee9"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-22T23:08:46.957Z",
+    "date_label": "Sat 23 May",
+    "headline": "Google Cloud: AI agents are becoming digital assembly lines — what that means for how PMs scope work",
+    "urls": [
+      "https://cloud.google.com/resources/content/ai-agent-trends-2026"
+    ]
   }
 ]
