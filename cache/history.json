@@ -143,5 +143,40 @@
     "urls": [
       "https://cloud.google.com/resources/content/ai-agent-trends-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-05-23T22:58:23.393Z",
+    "date_label": "Sun 24 May",
+    "headline": "Anthropic ships self-hosted sandboxes and MCP tunnels — enterprise agents finally clear the security perimeter",
+    "urls": [
+      "https://www.infoq.com/news/2026/05/claude-mcp-tunnels",
+      "https://dev.to/devtoolpicks/anthropic-launches-self-hosted-claude-agents-what-indie-hackers-need-to-know-1nee"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-23T22:58:23.394Z",
+    "date_label": "Sun 24 May",
+    "headline": "Salesforce Agentforce Coworker: AI agents live in the search bar, not a separate app",
+    "urls": [
+      "https://www.salesforceben.com/salesforce-announces-agentforce-coworker-ai-in-every-search-bar",
+      "https://www.salesforceblogger.com/2026/05/10/how-to-setup-agentforce-coworker-a-new-search-experience-for-salesforce"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-23T22:58:23.394Z",
+    "date_label": "Sun 24 May",
+    "headline": "Claire Vo on ChatPRD: a hands-on verdict on Google I/O 2026 — what works now, what broke at launch",
+    "urls": [
+      "https://www.chatprd.ai/how-i-ai/google-io-new-ai-tools-gemini-35-flash-to-omni-video"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-23T22:58:23.394Z",
+    "date_label": "Sun 24 May",
+    "headline": "Camunda launches ProcessOS — four AI agents that discover, redesign, and deploy enterprise workflows from scratch",
+    "urls": [
+      "https://www.businesswire.com/news/home/20260520352437/en/Camunda-announces-ProcessOS-an-agentic-operating-system-for-AI-first-enterprise-transformation",
+      "https://www.siliconsnark.com/camunda-built-an-operating-system-for-business-processes"
+    ]
   }
 ]
