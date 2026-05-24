@@ -178,5 +178,37 @@
       "https://www.businesswire.com/news/home/20260520352437/en/Camunda-announces-ProcessOS-an-agentic-operating-system-for-AI-first-enterprise-transformation",
       "https://www.siliconsnark.com/camunda-built-an-operating-system-for-business-processes"
     ]
+  },
+  {
+    "shipped_at": "2026-05-24T23:03:36.755Z",
+    "date_label": "Mon 25 May",
+    "headline": "OpenAI ships Codex to ChatGPT mobile — coding agents now run in the background from your phone",
+    "urls": [
+      "https://medium.com/@davidakpovi/ai-news-week-of-may-18-to-may-24-2026-6cb451ecb766"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-24T23:03:36.755Z",
+    "date_label": "Mon 25 May",
+    "headline": "SaaStr replaces 10 sales reps with 20 AI agents — same revenue, 1.2 humans managing the system",
+    "urls": [
+      "https://www.saastr.com/jason-lenny-are-back-the-real-future-of-ai-in-sales"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-24T23:03:36.755Z",
+    "date_label": "Mon 25 May",
+    "headline": "ChatPRD + Replit: write a spec, click a button, get a deployed app",
+    "urls": [
+      "https://blog.replit.com/chatprd"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-24T23:03:36.755Z",
+    "date_label": "Mon 25 May",
+    "headline": "Zoë on Bootcamp: what 284 episodes of Lenny's Podcast actually say about where PM is headed",
+    "urls": [
+      "https://medium.com/design-bootcamp/what-284-episodes-of-lennys-podcast-reveal-about-where-product-management-is-headed-99d46cacb7d3"
+    ]
   }
 ]
