@@ -210,5 +210,46 @@
     "urls": [
       "https://medium.com/design-bootcamp/what-284-episodes-of-lennys-podcast-reveal-about-where-product-management-is-headed-99d46cacb7d3"
     ]
+  },
+  {
+    "shipped_at": "2026-05-25T23:13:17.364Z",
+    "date_label": "Tue 26 May",
+    "headline": "MIT Technology Review on Code with Claude: the bottleneck has moved from engineering to evaluation",
+    "urls": [
+      "https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-25T23:13:17.364Z",
+    "date_label": "Tue 26 May",
+    "headline": "Claire Vo on Lenny's Newsletter: Google I/O 2026 and Gemini 3.5 Flash — where Google is catching up and where it isn't",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-i-ai-how-the-engineer-behind"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-25T23:13:17.364Z",
+    "date_label": "Tue 26 May",
+    "headline": "OpenAI ships GPT-5.5: fewer tokens, same speed, and multi-step tasks that don't need babysitting",
+    "urls": [
+      "https://openai.com/index/introducing-gpt-5-5"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-25T23:13:17.364Z",
+    "date_label": "Tue 26 May",
+    "headline": "Andrej Karpathy joins Anthropic to accelerate Claude pretraining — including using Claude to build Claude",
+    "urls": [
+      "https://www.axios.com/2026/05/19/anthropic-openai-karpathy-andrej-claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-05-25T23:13:17.364Z",
+    "date_label": "Tue 26 May",
+    "headline": "The PM role in 2026: AI handles the information, you own the decisions",
+    "urls": [
+      "https://medium.com/@aimoneyproofficial/how-ai-is-changing-product-management-8e68cd83539c",
+      "https://www.productleadership.com/blog/future-of-product-management-ai"
+    ]
   }
 ]
