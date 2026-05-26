@@ -15,6 +15,20 @@ const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 const HISTORY_WINDOW_DAYS = 14;
 const HISTORY_WINDOW_MS = HISTORY_WINDOW_DAYS * 86400000;
 const TRACKING_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "ref_src"];
+// Server-side dedup + freshness controls. The Stage 1 prompt asks for the last
+// 24–48 hours, but the model drifts; this is the backstop.
+const MAX_AGE_HOURS = 72;
+const TITLE_OVERLAP_THRESHOLD = 0.3;
+const TITLE_STOPWORDS = new Set([
+  "a", "an", "the", "and", "or", "but", "for", "nor", "so", "yet",
+  "of", "in", "on", "at", "by", "to", "from", "with", "into", "onto", "via",
+  "is", "are", "was", "were", "be", "been", "being", "am",
+  "it", "its", "this", "that", "these", "those",
+  "as", "if", "while", "when", "than", "then",
+  "has", "have", "had", "do", "does", "did",
+  "will", "would", "could", "should", "may", "might", "can",
+  "new", "today", "now", "just",
+]);
 
 const fromCache = process.argv.includes("--from-cache");
 const fromResearchCache = process.argv.includes("--from-research-cache");
@@ -85,6 +99,40 @@ function normalizeUrl(url) {
   } catch {
     return url;
   }
+}
+
+// Token-set for fuzzy headline-overlap dedup. Lowercase, strip punctuation,
+// drop short tokens and stopwords. The remaining tokens carry the topic
+// signal that Jaccard similarity is meant to compare.
+function titleTokens(s) {
+  return new Set(
+    String(s ?? "")
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]+/g, " ")
+      .split(/\s+/)
+      .filter((t) => t.length > 1 && !TITLE_STOPWORDS.has(t)),
+  );
+}
+
+function jaccard(a, b) {
+  if (a.size === 0 || b.size === 0) return 0;
+  let intersection = 0;
+  for (const t of a) if (b.has(t)) intersection++;
+  return intersection / (a.size + b.size - intersection);
+}
+
+// Returns the newest parseable `published_date` across a candidate's sources,
+// or null if none parse. Used by the freshness filter — a candidate is as
+// fresh as its newest source.
+function newestSourceDate(sources) {
+  if (!Array.isArray(sources)) return null;
+  let newest = null;
+  for (const s of sources) {
+    if (!s?.published_date) continue;
+    const t = new Date(s.published_date).getTime();
+    if (Number.isFinite(t) && (newest === null || t > newest)) newest = t;
+  }
+  return newest;
 }
 
 function withinHistoryWindow(entries) {
@@ -456,20 +504,77 @@ if (fromSample) {
     );
   }
 
-  // Drop any candidate that points to a URL we've already shipped. Belt-and-
-  // braces — the prompt told Haiku to avoid these, but models drift, and this
-  // also catches the case where --from-research-cache replays older research
-  // whose stories have since gone out.
+  // Three server-side filters between Stage 1 and Stage 2. The Stage 1 prompt
+  // already asks for fresh, non-duplicate stories, but models drift; these
+  // are the mechanical backstop. Every drop and every close-call is logged
+  // so the thresholds can be tuned against real output.
+
+  // 1. Freshness — drop candidates whose newest source is older than the
+  //    cutoff. Missing dates are kept (the prompt forbids inventing dates,
+  //    so absence is preferable to a guess).
+  if (Array.isArray(research.candidates)) {
+    const cutoff = Date.now() - MAX_AGE_HOURS * 3600000;
+    const before = research.candidates.length;
+    research.candidates = research.candidates.filter((c) => {
+      const newest = newestSourceDate(c.sources);
+      if (newest === null) {
+        console.log(`  no date — keeping: "${c.headline_draft}"`);
+        return true;
+      }
+      if (newest < cutoff) {
+        const ageH = Math.round((Date.now() - newest) / 3600000);
+        console.log(`  drop (stale ${ageH}h): "${c.headline_draft}"`);
+        return false;
+      }
+      return true;
+    });
+    const after = research.candidates.length;
+    if (before !== after) console.log(`Freshness filter: ${before - after}/${before} candidates dropped (age > ${MAX_AGE_HOURS}h)`);
+  }
+
+  // 2. Title overlap — Jaccard similarity of significant tokens against every
+  //    history headline. Catches the common case where the same underlying
+  //    story appears at a different URL on a different day.
+  if (Array.isArray(research.candidates) && history.length > 0) {
+    const histTokenSets = history.map((e) => ({ headline: e.headline, tokens: titleTokens(e.headline) }));
+    const before = research.candidates.length;
+    research.candidates = research.candidates.filter((c) => {
+      const ct = titleTokens(c.headline_draft);
+      let bestScore = 0;
+      let bestMatch = null;
+      for (const h of histTokenSets) {
+        const s = jaccard(ct, h.tokens);
+        if (s > bestScore) { bestScore = s; bestMatch = h.headline; }
+      }
+      if (bestScore >= TITLE_OVERLAP_THRESHOLD) {
+        console.log(`  drop (title overlap ${bestScore.toFixed(2)}): "${c.headline_draft}" ~~ "${bestMatch}"`);
+        return false;
+      }
+      if (bestScore >= TITLE_OVERLAP_THRESHOLD - 0.1) {
+        console.log(`  close call (${bestScore.toFixed(2)}): "${c.headline_draft}" ~~ "${bestMatch}"`);
+      }
+      return true;
+    });
+    const after = research.candidates.length;
+    if (before !== after) console.log(`Title-overlap filter: ${before - after}/${before} candidates dropped (Jaccard >= ${TITLE_OVERLAP_THRESHOLD})`);
+  }
+
+  // 3. URL match — exact-URL repeats from history. Cheap, deterministic;
+  //    catches the case where --from-research-cache replays research whose
+  //    stories have since gone out.
   if (Array.isArray(research.candidates) && historyUrls.size > 0) {
     const before = research.candidates.length;
     research.candidates = research.candidates.filter((c) => {
       const hit = (c.sources || []).map((s) => normalizeUrl(s.url)).find((u) => historyUrls.has(u));
-      if (hit) console.log(`  drop: "${c.headline_draft}" → ${hit}`);
+      if (hit) console.log(`  drop (URL repeat): "${c.headline_draft}" → ${hit}`);
       return !hit;
     });
     const after = research.candidates.length;
-    if (before !== after) console.log(`History filter: ${before - after}/${before} candidates dropped`);
-    if (after < 3) console.warn(`Only ${after} candidates after filter — Stage 2 may struggle to hit 3–5 stories.`);
+    if (before !== after) console.log(`URL filter: ${before - after}/${before} candidates dropped`);
+  }
+
+  if (Array.isArray(research.candidates) && research.candidates.length < 3) {
+    console.warn(`Only ${research.candidates.length} candidates after all filters — Stage 2 may struggle to hit 3–5 stories.`);
   }
 
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
