@@ -573,8 +573,22 @@ if (fromSample) {
     if (before !== after) console.log(`URL filter: ${before - after}/${before} candidates dropped`);
   }
 
-  if (Array.isArray(research.candidates) && research.candidates.length < 3) {
-    console.warn(`Only ${research.candidates.length} candidates after all filters — Stage 2 may struggle to hit 3–5 stories.`);
+  // Stage 2 needs at least 3 candidates to produce a valid digest. With fewer,
+  // it refuses to fabricate the rest and returns prose instead of calling
+  // submit_digest — wastes a Sonnet call and surfaces as a misleading
+  // STAGE2_INVALID_OUTPUT. Fail fast with a category that actually describes
+  // the situation: Stage 1 didn't deliver enough fresh material.
+  const candidateCount = Array.isArray(research.candidates) ? research.candidates.length : 0;
+  if (candidateCount < 3) {
+    recordFailure({
+      kind: "STAGE1_INSUFFICIENT_CANDIDATES",
+      subjectTag: "NO-NEWS",
+      stage: "Stage 1 → Stage 2 handoff",
+      summary: `Only ${candidateCount} candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.`,
+      hint: "Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.",
+      detail: `Candidates surviving filters: ${candidateCount}. See preceding log lines for what was dropped and why.`,
+    });
+    process.exit(1);
   }
 
   // ── Stage 2: Write with Sonnet 4.6 ───────────────────────────────────────
