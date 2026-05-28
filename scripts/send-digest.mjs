@@ -10,6 +10,7 @@ const CACHE_DIR = path.resolve(__dirname, "../cache");
 const CACHE_PATH = path.join(CACHE_DIR, "last-digest.json");
 const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
 const HISTORY_PATH = path.join(CACHE_DIR, "history.json");
+const HOLDOVER_PATH = path.join(CACHE_DIR, "holdover.json");
 const LAST_FAILURE_PATH = path.join(CACHE_DIR, "last-failure.json");
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 const HISTORY_WINDOW_DAYS = 14;
@@ -157,6 +158,29 @@ function loadHistory() {
   } catch (err) {
     console.warn(`Could not read history at ${HISTORY_PATH}: ${err.message}`);
     return [];
+  }
+}
+
+// Candidates that survived Stage 1 filtering on a previous run but never
+// shipped (NO-NEWS abort). The next run merges them into its candidate pool
+// before the freshness filter, giving them one more shot at the digest. The
+// freshness filter then drops anything that's now older than MAX_AGE_HOURS,
+// so the holdover expires naturally within ~24h.
+function loadHoldover() {
+  if (!fs.existsSync(HOLDOVER_PATH)) return [];
+  try {
+    const entries = JSON.parse(fs.readFileSync(HOLDOVER_PATH, "utf8"));
+    return Array.isArray(entries) ? entries : [];
+  } catch (err) {
+    console.warn(`Could not read holdover at ${HOLDOVER_PATH}: ${err.message}`);
+    return [];
+  }
+}
+
+function clearHoldover() {
+  if (fs.existsSync(HOLDOVER_PATH)) {
+    fs.rmSync(HOLDOVER_PATH);
+    console.log(`Cleared holdover at ${HOLDOVER_PATH}`);
   }
 }
 
@@ -526,6 +550,28 @@ if (fromSample) {
     );
   }
 
+  // Merge in any held-over candidates from a previous NO-NEWS abort. They go
+  // through the same filters as fresh candidates below; anything that's now
+  // older than MAX_AGE_HOURS drops off naturally. Dedup by primary URL so a
+  // holdover that re-surfaced today doesn't appear twice.
+  const holdover = loadHoldover();
+  if (holdover.length > 0 && Array.isArray(research.candidates)) {
+    const seenUrls = new Set(
+      research.candidates.flatMap((c) => (c.sources || []).map((s) => normalizeUrl(s?.url))).filter(Boolean),
+    );
+    const merged = [];
+    for (const h of holdover) {
+      const urls = (h.sources || []).map((s) => normalizeUrl(s?.url)).filter(Boolean);
+      if (urls.some((u) => seenUrls.has(u))) continue;
+      merged.push(h);
+      urls.forEach((u) => seenUrls.add(u));
+    }
+    if (merged.length > 0) {
+      research.candidates = [...research.candidates, ...merged];
+      console.log(`Merged ${merged.length} holdover candidate(s) from previous run.`);
+    }
+  }
+
   // Three server-side filters between Stage 1 and Stage 2. The Stage 1 prompt
   // already asks for fresh, non-duplicate stories, but models drift; these
   // are the mechanical backstop. Every drop and every close-call is logged
@@ -602,12 +648,20 @@ if (fromSample) {
   // the situation: Stage 1 didn't deliver enough fresh material.
   const candidateCount = Array.isArray(research.candidates) ? research.candidates.length : 0;
   if (candidateCount < 3) {
+    // Preserve the survivors for tomorrow's run. The freshness filter has
+    // already run, so we know these are < MAX_AGE_HOURS old today; tomorrow
+    // they get one more shot before the filter drops them on age.
+    if (candidateCount > 0) {
+      fs.mkdirSync(CACHE_DIR, { recursive: true });
+      fs.writeFileSync(HOLDOVER_PATH, JSON.stringify(research.candidates, null, 2));
+      console.log(`Wrote ${candidateCount} survivor(s) to ${HOLDOVER_PATH} for next run.`);
+    }
     recordFailure({
       kind: "STAGE1_INSUFFICIENT_CANDIDATES",
       subjectTag: "NO-NEWS",
       stage: "Stage 1 → Stage 2 handoff",
       summary: `Only ${candidateCount} candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.`,
-      hint: "Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.",
+      hint: `Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. ${candidateCount > 0 ? "The surviving candidate(s) have been held over to tomorrow's run." : ""} Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.`,
       detail: `Candidates surviving filters: ${candidateCount}. See preceding log lines for what was dropped and why.`,
     });
     process.exit(1);
@@ -745,4 +799,8 @@ if (!fromCache && !fromSample) {
   const updated = [...withinHistoryWindow(loadHistory()), ...newEntries];
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(updated, null, 2));
   console.log(`History updated: ${updated.length} entries within ${HISTORY_WINDOW_DAYS}-day window → ${HISTORY_PATH}`);
+  // A successful send means any holdover candidates from previous runs either
+  // shipped today or were dropped by the filters. Either way, clear the file
+  // so it doesn't get re-merged tomorrow.
+  clearHoldover();
 }

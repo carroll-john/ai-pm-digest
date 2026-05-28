@@ -26,6 +26,7 @@ jobs:
           node-version: "24"
       - run: npm ci
       - name: Generate and send digest
+        id: digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
@@ -34,27 +35,35 @@ jobs:
         # tee + pipefail keeps the original exit code while capturing output
         # for the failure-notification step below.
         run: node scripts/send-digest.mjs 2>&1 | tee digest.log
-      - name: Persist digest history
+      - name: Persist digest state
         id: persist
-        if: success()
-        # `git push` to main races with PR merges and parallel runs of this
-        # workflow. On rejection, fetch + rebase + retry — the rebase is clean
-        # because no other commit touches cache/history.json under normal use.
+        # Runs on both success and failure: on success commits history.json
+        # (and clears holdover); on a NO-NEWS abort commits the holdover file
+        # so tomorrow's run can re-merge today's survivor(s). `git push` to
+        # main races with PR merges and parallel runs of this workflow; on
+        # rejection, fetch + rebase + retry — the rebase is clean because no
+        # other commit touches these files under normal use.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cache/history.json
-          git diff --cached --quiet && echo "No history change to commit." && exit 0
-          git commit -m "chore: update digest history $(date -u +%Y-%m-%d)"
+          # -A stages additions, modifications, AND deletions — needed because
+          # clearHoldover() removes the file on a successful send.
+          git add -A cache/history.json cache/holdover.json
+          git diff --cached --quiet && echo "No cache state change to commit." && exit 0
+          git commit -m "chore: update digest cache $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
             if git push; then exit 0; fi
             echo "Push attempt $attempt rejected; fetching and rebasing main..."
-            git pull --rebase origin main || { echo "Rebase failed — main has a conflicting change to cache/history.json."; exit 1; }
+            git pull --rebase origin main || { echo "Rebase failed — main has a conflicting change to cache/."; exit 1; }
           done
           echo "Push failed after 3 attempts."
           exit 1
       - name: Capture persist failure
-        if: failure() && steps.persist.conclusion == 'failure'
+        # Only override last-failure.json when persist failed AFTER a
+        # successful digest. If the digest itself failed, its own
+        # recordFailure() output should win the failure email.
+        if: failure() && steps.digest.conclusion == 'success' && steps.persist.conclusion == 'failure'
         # Write a structured failure record so the notification email's subject
         # gets a `[PERSIST]` prefix and a banner explaining that the digest
         # itself shipped — without this, the email would just show the
