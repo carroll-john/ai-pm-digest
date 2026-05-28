@@ -85,7 +85,13 @@ function melbourneDate(date = new Date()) {
   }).formatToParts(date);
   const get = (type) => parts.find((p) => p.type === type)?.value;
   const short = `${get("weekday")} ${get("day")} ${get("month")}`;
-  return { short, full: `${short} ${get("year")}` };
+  const isoParts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Australia/Melbourne",
+    year: "numeric", month: "2-digit", day: "2-digit",
+  }).formatToParts(date);
+  const isoGet = (type) => isoParts.find((p) => p.type === type)?.value;
+  const iso = `${isoGet("year")}-${isoGet("month")}-${isoGet("day")}`;
+  return { short, full: `${short} ${get("year")}`, iso, monthYear: `${get("month")} ${get("year")}` };
 }
 
 // Normalize URLs so the dedup filter survives trailing slashes, hash fragments,
@@ -393,8 +399,15 @@ if (fromSample) {
   const anthropic = new Anthropic();
 
   const today = melbourneDate();
-  const dateContext = `**Today's date in Melbourne:** ${today.full}. Use \`${today.short}\` as the \`date_label\` and \`AI × PM Daily — ${today.short}\` as the \`subject\`. "Last 24–48 hours" is relative to this date.`;
-  console.log(`Melbourne date: ${today.full}`);
+  // Cutoff is "today minus 2 days" — the freshness backstop drops anything
+  // older than 48h, so anything dated on/after this should pass.
+  const cutoff = melbourneDate(new Date(Date.now() - 2 * 86400000));
+  const dateContext = [
+    `**Today's date in Melbourne:** ${today.full} (\`${today.iso}\`).`,
+    `Use \`${today.short}\` as the \`date_label\` and \`AI × PM Daily — ${today.short}\` as the \`subject\`.`,
+    `**Freshness floor: \`${cutoff.iso}\`.** Drop any web_search result whose publication date is earlier than this — do not include it as a candidate. Trust the date in the snippet; if no date is visible, search the article page before keeping it.`,
+  ].join(" ");
+  console.log(`Melbourne date: ${today.full}; freshness floor: ${cutoff.iso}`);
 
   const systemPrompt = readPrompt("00-system.md");
 
@@ -409,8 +422,17 @@ if (fromSample) {
   if (fromResearchCache) {
     research = loadJson(RESEARCH_CACHE_PATH, "cached research");
   } else {
+    // Inject the actual date into the prompt's literal placeholders so
+    // web_search receives concrete strings (e.g. "2026-05-27") instead of the
+    // model having to interpret "[today's date]" — relevance ranking otherwise
+    // wins over recency and surfaces stories from weeks ago.
+    const researchTemplate = readPrompt("01-research.md")
+      .replaceAll("[today's date]", today.iso)
+      .replaceAll("[this week OR this month]", `after:${cutoff.iso}`)
+      .replaceAll("[this week]", `after:${cutoff.iso}`)
+      .replaceAll("[today's month and year]", today.monthYear);
     const researchPrompt = [
-      systemPrompt, dateContext, readPrompt("01-research.md"),
+      systemPrompt, dateContext, researchTemplate,
       renderHistoryContext(history), RESEARCH_TOOL_INSTRUCTIONS,
     ].join("\n\n---\n\n");
 
