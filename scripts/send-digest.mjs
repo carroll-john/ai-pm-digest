@@ -12,6 +12,7 @@ const RESEARCH_CACHE_PATH = path.join(CACHE_DIR, "last-research.json");
 const HISTORY_PATH = path.join(CACHE_DIR, "history.json");
 const HOLDOVER_PATH = path.join(CACHE_DIR, "holdover.json");
 const LAST_FAILURE_PATH = path.join(CACHE_DIR, "last-failure.json");
+const LAST_FAILURE_LOG_PATH = path.join(CACHE_DIR, "last-failure.log");
 const SAMPLE_PATH = path.resolve(__dirname, "../email/sample-digest.json");
 const HISTORY_WINDOW_DAYS = 14;
 const HISTORY_WINDOW_MS = HISTORY_WINDOW_DAYS * 86400000;
@@ -181,6 +182,18 @@ function clearHoldover() {
   if (fs.existsSync(HOLDOVER_PATH)) {
     fs.rmSync(HOLDOVER_PATH);
     console.log(`Cleared holdover at ${HOLDOVER_PATH}`);
+  }
+}
+
+// On a successful send, sweep the failure record files so a stale failure
+// from a previous run doesn't get read as "current" the next time someone
+// pulls cache/ to diagnose. The persist step will then commit the deletion.
+function clearFailureRecord() {
+  for (const p of [LAST_FAILURE_PATH, LAST_FAILURE_LOG_PATH]) {
+    if (fs.existsSync(p)) {
+      fs.rmSync(p);
+      console.log(`Cleared failure record at ${p}`);
+    }
   }
 }
 
@@ -823,4 +836,5 @@ if (!fromCache && !fromSample) {
   // shipped today or were dropped by the filters. Either way, clear the file
   // so it doesn't get re-merged tomorrow.
   clearHoldover();
+  clearFailureRecord();
 }
