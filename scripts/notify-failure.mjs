@@ -8,7 +8,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const FAILURE_PATH = path.resolve(__dirname, "../cache/last-failure.json");
+const CACHE_DIR = path.resolve(__dirname, "../cache");
+const FAILURE_PATH = path.join(CACHE_DIR, "last-failure.json");
+const FAILURE_LOG_PATH = path.join(CACHE_DIR, "last-failure.log");
 const TAIL_LINES = 60;
 const logPath = process.argv[2] || "digest.log";
 
@@ -66,6 +68,17 @@ ${bannerText}Last ${TAIL_LINES} log lines:
 
 ${tail}
 `;
+
+// Mirror the same log tail and structured failure record into cache/ so the
+// persist step can commit them to main. That way the next conversation about
+// a failure can read these files directly instead of asking the user to copy
+// the email body.
+try {
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+  fs.writeFileSync(FAILURE_LOG_PATH, tail.endsWith("\n") ? tail : tail + "\n");
+} catch (err) {
+  console.warn(`Could not write ${FAILURE_LOG_PATH}: ${err.message}`);
+}
 
 const res = await fetch("https://api.resend.com/emails", {
   method: "POST",

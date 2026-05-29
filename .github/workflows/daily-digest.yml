@@ -48,8 +48,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # -A stages additions, modifications, AND deletions — needed because
-          # clearHoldover() removes the file on a successful send.
-          git add -A cache/history.json cache/holdover.json
+          # clearHoldover() and clearFailureRecord() remove their files on a
+          # successful send. Including the failure files here ensures yesterday's
+          # failure context gets cleared on today's green run; otherwise stale
+          # cache/last-failure.* would linger on main and lie about the state
+          # of the most recent run.
+          git add -A cache/history.json cache/holdover.json cache/last-failure.json cache/last-failure.log
           git diff --cached --quiet && echo "No cache state change to commit." && exit 0
           git commit -m "chore: update digest cache $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
@@ -89,3 +93,27 @@ jobs:
           RUN_NAME: ${{ github.workflow }}
           COMMIT_SHA: ${{ github.sha }}
         run: node scripts/notify-failure.mjs digest.log
+      - name: Persist failure context to main
+        # Commits cache/last-failure.json (categorised failure record from
+        # send-digest.mjs) and cache/last-failure.log (the 60-line tail
+        # written by notify-failure.mjs) so the next debugging conversation
+        # can read them straight out of git instead of asking for the email
+        # body to be pasted. Runs LAST so it picks up any override from the
+        # `Capture persist failure` step above.
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Pull in case the earlier persist step (history/holdover) pushed a
+          # commit during this same job.
+          git pull --rebase origin main || true
+          git add -A cache/last-failure.json cache/last-failure.log
+          git diff --cached --quiet && echo "No failure context to commit." && exit 0
+          git commit -m "chore: record failure context $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push attempt $attempt rejected; fetching and rebasing main..."
+            git pull --rebase origin main || { echo "Rebase failed."; exit 1; }
+          done
+          echo "Push failed after 3 attempts."
+          exit 1
