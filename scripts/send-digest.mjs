@@ -463,8 +463,7 @@ if (fromSample) {
     // Haiku tends to stringify the `candidates` array (every quote/brace gets
     // escaped), roughly doubling token cost. 16k leaves plenty of headroom so
     // the response isn't truncated mid-JSON on a heavy research day.
-    try {
-      research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, [
+    const stage1Tools = [
       { type: "web_search_20250305", name: "web_search", max_uses: WEB_SEARCH_MAX_USES },
       {
         name: "submit_research",
@@ -517,9 +516,30 @@ if (fromSample) {
           required: ["candidates", "themes"],
         },
       },
-    ], "submit_research", 16000);
-    } catch (err) {
-      recordFailure(classifyAnthropicError(err, "Stage 1"));
+    ];
+
+    // On a 429, retry once after a 65s pause with web_search max_uses halved.
+    // The per-minute rate limit (input tokens) clears in 60s; halving max_uses
+    // shrinks the search-result payload that web_search folds into the prompt,
+    // which is the dominant input-token cost. Floored at 3 — any lower and
+    // the candidate pool gets too thin for the dedup filters.
+    let stage1Attempt = 0;
+    while (true) {
+      try {
+        research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, stage1Tools, "submit_research", 16000);
+        break;
+      } catch (err) {
+        if (stage1Attempt === 0 && err?.status === 429 && stage1Tools[0].max_uses > 3) {
+          stage1Attempt++;
+          const previous = stage1Tools[0].max_uses;
+          stage1Tools[0].max_uses = Math.max(3, Math.floor(previous / 2));
+          console.warn(`Stage 1 rate-limited (429); waiting 65s then retrying with web_search max_uses=${stage1Tools[0].max_uses} (was ${previous}).`);
+          await new Promise((r) => setTimeout(r, 65000));
+          continue;
+        }
+        recordFailure(classifyAnthropicError(err, "Stage 1"));
+        break;
+      }
     }
 
     // Haiku sometimes emits `candidates` as a JSON-encoded string instead of an
