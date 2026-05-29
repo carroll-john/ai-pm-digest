@@ -48,8 +48,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # -A stages additions, modifications, AND deletions — needed because
-          # clearHoldover() removes the file on a successful send.
-          git add -A cache/history.json cache/holdover.json
+          # clearHoldover() and clearFailureRecord() remove their files on a
+          # successful send. Including the failure files here ensures yesterday's
+          # failure context gets cleared on today's green run; otherwise stale
+          # cache/last-failure.* would linger on main and lie about the state
+          # of the most recent run.
+          git add -A cache/history.json cache/holdover.json cache/last-failure.json cache/last-failure.log
           git diff --cached --quiet && echo "No cache state change to commit." && exit 0
           git commit -m "chore: update digest cache $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
