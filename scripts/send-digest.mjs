@@ -56,11 +56,15 @@ For each candidate, provide:
 - Key facts as short bullet points (numbers, names, decisions, claims)
 - Direct quotes or close paraphrases when the source is a person (podcaster, X post, newsletter author)
 
+After the candidate list, also provide a top-level \`themes\` string: **1–2 sentences identifying the common threads across the candidates.** The writer model uses this as the seed for the digest's \`intro\` and \`reflection\` — make it substantive (a concrete throughline, not a perfunctory category label).
+
 After calling \`submit_research\`, do not output further text.`;
 
 const WRITE_INPUT_PREAMBLE = `## Research findings
 
-A research stage has gathered candidate stories from the web. You do **not** have web access — work only from these findings. Pick the **3–5 strongest** stories, write each story body in your voice using the facts and quotes provided, and keep source URLs **exactly as given** (do not invent or modify URLs).`;
+A research stage has gathered candidate stories from the web. You do **not** have web access — work only from these findings. Pick the **3–5 strongest** stories, write each story body in your voice using the facts and quotes provided, and keep source URLs **exactly as given** (do not invent or modify URLs).
+
+The research's top-level \`themes\` string identifies the common threads the researcher saw across all candidates. Treat it as the seed for the digest's \`intro\` line and the \`reflection\` — your job is to translate that seed into a one-line scene-setter and a closing observation, not to write either from scratch.`;
 
 const SOURCE_ITEM_SCHEMA = {
   type: "object",
@@ -420,7 +424,12 @@ function loadJson(p, label) {
     process.exit(1);
   }
   console.log(`Loading ${label} from ${p} (no API call).`);
-  return JSON.parse(fs.readFileSync(p, "utf8"));
+  try {
+    return JSON.parse(fs.readFileSync(p, "utf8"));
+  } catch (err) {
+    console.error(`Failed to parse ${label} at ${p}: ${err.message}`);
+    process.exit(1);
+  }
 }
 
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -763,6 +772,22 @@ if (fromSample) {
     recordFailure(classifyAnthropicError(err, "Stage 2"));
   }
 
+  // Defence against a partial submit_digest call: Anthropic treats input_schema
+  // as advisory at the tool layer, so a misbehaving Stage 2 can return a
+  // tool_use block missing required fields. Without this check, the template
+  // would render literal "undefined" into the email body.
+  const requiredStringFields = ["subject", "date_label", "greeting", "intro", "reflection", "sign_off"];
+  const missing = requiredStringFields.filter((k) => typeof digest?.[k] !== "string" || digest[k].length === 0);
+  if (missing.length > 0 || !Array.isArray(digest?.stories) || digest.stories.length === 0) {
+    if (!Array.isArray(digest?.stories) || digest.stories.length === 0) missing.push("stories");
+    recordFailure({
+      kind: "STAGE2_INVALID_OUTPUT", subjectTag: "BUG", stage: "Stage 2",
+      summary: `Stage 2 called submit_digest but omitted required field(s): ${missing.join(", ")}.`,
+      hint: "The model returned a structured tool call with holes. Re-dispatch once; if persistent, tighten the Stage 2 prompts or the submit_digest schema descriptions.",
+      detail: `Received top-level fields: ${Object.keys(digest || {}).join(", ") || "(none)"}`,
+    });
+  }
+
   fs.writeFileSync(CACHE_PATH, JSON.stringify(digest, null, 2));
   console.log(`Stage 2 complete: cached digest to ${CACHE_PATH}`);
 }
@@ -807,7 +832,21 @@ if (!resendRes.ok) {
   recordFailure(classifyResendError(resendRes.status, bodyText));
 }
 
-const resendBody = await resendRes.json();
+let resendBody;
+try {
+  resendBody = await resendRes.json();
+} catch (err) {
+  // Resend has occasionally been observed to return 2xx with a non-JSON body
+  // (CDN/proxy error pages). Without this guard the unhandled SyntaxError
+  // kills the script before recordFailure can write last-failure.json, so the
+  // workflow reports a generic crash and the categorised email never arrives.
+  recordFailure({
+    kind: "RESEND_INVALID_JSON", subjectTag: "RESEND", stage: "Resend send",
+    summary: `Resend returned ${resendRes.status} but the response body was not valid JSON.`,
+    hint: "Likely a transient Resend or upstream-proxy issue. Re-dispatch the workflow; check the Resend dashboard if it persists.",
+    detail: `Parse error: ${err.message}`,
+  });
+}
 if (!resendBody?.id) {
   recordFailure({
     kind: "RESEND_NO_ID", subjectTag: "RESEND", stage: "Resend send",

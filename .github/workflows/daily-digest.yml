@@ -105,8 +105,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Pull in case the earlier persist step (history/holdover) pushed a
-          # commit during this same job.
-          git pull --rebase origin main || true
+          # commit during this same job. Fail loudly on a real rebase conflict
+          # rather than continuing on a half-rebased working tree — both
+          # persist steps touch disjoint paths, so a true conflict is a signal
+          # something unexpected raced us and we should investigate, not push
+          # whatever happens to be staged.
+          git pull --rebase origin main || { echo "Rebase failed before failure-context commit."; exit 1; }
           git add -A cache/last-failure.json cache/last-failure.log
           git diff --cached --quiet && echo "No failure context to commit." && exit 0
           git commit -m "chore: record failure context $(date -u +%Y-%m-%d)"

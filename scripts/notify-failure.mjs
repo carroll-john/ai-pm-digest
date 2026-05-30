@@ -39,7 +39,8 @@ const commit = (process.env.COMMIT_SHA || "").slice(0, 7);
 
 const tag = failure?.subject_tag || "FAILED";
 const subject = `[${tag}] ${runName} failed${commit ? ` (${commit})` : ""}`;
-const escapeHtml = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
+const escapeHtml = (s) =>
+  String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 const bannerHtml = failure ? `<div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:14px 16px;margin:0 0 20px;border-radius:4px;">
   <p style="margin:0 0 6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b6b;font-weight:600;">What happened</p>
@@ -50,7 +51,7 @@ const bannerHtml = failure ? `<div style="background:#fff8e1;border-left:4px sol
 ` : "";
 
 const html = `${bannerHtml}<p>The daily digest workflow failed${commit ? ` on commit <code>${commit}</code>` : ""}.</p>
-${runUrl ? `<p><a href="${runUrl}">View the full run logs</a></p>` : ""}
+${runUrl ? `<p><a href="${escapeHtml(runUrl)}">View the full run logs</a></p>` : ""}
 <p><strong>Last ${TAIL_LINES} log lines:</strong></p>
 <pre style="white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#f6f8fa;padding:12px;border-radius:6px;border:1px solid #d0d7de;">${escapeHtml(tail)}</pre>`;
 
