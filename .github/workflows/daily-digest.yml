@@ -104,9 +104,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Pull in case the earlier persist step (history/holdover) pushed a
-          # commit during this same job.
-          git pull --rebase origin main || true
+          # Commit locally BEFORE pulling. The previous design ran
+          # `git pull --rebase` first, but cache/last-failure.{json,log} sit
+          # as unstaged modifications at this point (recordFailure +
+          # notify-failure wrote them), so rebase would error with "cannot
+          # pull with rebase: You have unstaged changes" if remote also
+          # touched those paths. Committing first means rebase only ever
+          # replays committed work — same pattern as the success-path
+          # persist step.
           git add -A cache/last-failure.json cache/last-failure.log
           git diff --cached --quiet && echo "No failure context to commit." && exit 0
           git commit -m "chore: record failure context $(date -u +%Y-%m-%d)"

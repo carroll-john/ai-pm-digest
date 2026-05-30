@@ -37,11 +37,26 @@ function escapeHtml(s) {
 // fragment to plain text rather than breaking the surrounding email layout.
 const ALLOWED_BODY_TAGS = new Set(["strong", "em", "a", "code"]);
 
+// Only http(s) and mailto hrefs survive. javascript:, data:, vbscript:, etc.
+// are XSS vectors if a model ever emits them — Gmail-class clients often
+// neutralise them, but the trust boundary belongs here, not at the recipient.
+const SAFE_HREF = /^(https?:|mailto:)/i;
+
 function safeBodyHtml(html) {
   const tags = [...String(html).matchAll(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b/g)].map((m) => m[1].toLowerCase());
   const bad = tags.find((t) => !ALLOWED_BODY_TAGS.has(t));
   if (bad) {
     console.warn(`template: disallowed tag <${bad}> in body_html — escaping fragment to plain text.`);
+    return escapeHtml(html);
+  }
+  // Match all three href syntaxes — double-quoted, single-quoted, and
+  // unquoted (HTML5 valid) — so `<a href=javascript:...>` and
+  // `<a href='javascript:...'>` don't sneak past the double-quote check.
+  const hrefs = [...String(html).matchAll(/href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
+    .map((m) => m[1] ?? m[2] ?? m[3]);
+  const badHref = hrefs.find((h) => !SAFE_HREF.test(h));
+  if (badHref) {
+    console.warn(`template: disallowed href "${badHref}" in body_html — escaping fragment to plain text.`);
     return escapeHtml(html);
   }
   return html;
