@@ -49,7 +49,11 @@ function safeBodyHtml(html) {
     console.warn(`template: disallowed tag <${bad}> in body_html — escaping fragment to plain text.`);
     return escapeHtml(html);
   }
-  const hrefs = [...String(html).matchAll(/href\s*=\s*"([^"]*)"/gi)].map((m) => m[1]);
+  // Match all three href syntaxes — double-quoted, single-quoted, and
+  // unquoted (HTML5 valid) — so `<a href=javascript:...>` and
+  // `<a href='javascript:...'>` don't sneak past the double-quote check.
+  const hrefs = [...String(html).matchAll(/href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
+    .map((m) => m[1] ?? m[2] ?? m[3]);
   const badHref = hrefs.find((h) => !SAFE_HREF.test(h));
   if (badHref) {
     console.warn(`template: disallowed href "${badHref}" in body_html — escaping fragment to plain text.`);
