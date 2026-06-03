@@ -49,11 +49,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # -A stages additions, modifications, AND deletions — needed because
           # clearHoldover() and clearFailureRecord() remove their files on a
-          # successful send. Including the failure files here ensures yesterday's
+          # successful send. Staging the whole cache dir ensures yesterday's
           # failure context gets cleared on today's green run; otherwise stale
           # cache/last-failure.* would linger on main and lie about the state
           # of the most recent run.
-          git add -A cache/history.json cache/holdover.json cache/last-failure.json cache/last-failure.log
+          #
+          # Stage the dir rather than naming each file: an explicit pathspec for
+          # a file that doesn't exist (no holdover / no failure on a normal run)
+          # makes `git add` abort with "pathspec did not match" and fails this
+          # step on an otherwise-perfect run. `-A -- cache/` is a no-op for
+          # absent files; .gitignore keeps untracked junk out.
+          git add -A -- cache/
           git diff --cached --quiet && echo "No cache state change to commit." && exit 0
           git commit -m "chore: update digest cache $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
@@ -112,7 +118,7 @@ jobs:
           # touched those paths. Committing first means rebase only ever
           # replays committed work — same pattern as the success-path
           # persist step.
-          git add -A cache/last-failure.json cache/last-failure.log
+          git add -A -- cache/last-failure.json cache/last-failure.log
           git diff --cached --quiet && echo "No failure context to commit." && exit 0
           git commit -m "chore: record failure context $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3; do
