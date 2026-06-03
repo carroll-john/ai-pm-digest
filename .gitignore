@@ -2,5 +2,15 @@ node_modules/
 .env
 .DS_Store
 .claude/
+# Ignore the cache dir by default, then un-ignore exactly the files the
+# daily-digest workflow commits back to main. The "Persist digest state" step
+# stages the whole dir (`git add -A -- cache/`), which respects these rules —
+# so the local replay caches (last-digest.json, last-research.json) stay out of
+# main while the four state files below get tracked.
 cache/*
 !cache/history.json
+# holdover.json carries no-news survivors to tomorrow's run; last-failure.*
+# carry failure context for the next debugging session.
+!cache/holdover.json
+!cache/last-failure.json
+!cache/last-failure.log
