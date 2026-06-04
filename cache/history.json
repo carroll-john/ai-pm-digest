@@ -1,32 +1,5 @@
 [
   {
-    "shipped_at": "2026-05-21T23:07:59.144Z",
-    "date_label": "Fri 22 May",
-    "headline": "Notion launches Developer Platform: workspace becomes agent orchestration layer",
-    "urls": [
-      "https://www.notion.com/blog/introducing-developer-platform",
-      "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-21T23:07:59.144Z",
-    "date_label": "Fri 22 May",
-    "headline": "62% of enterprises are running AI agents — but most are still pilots, not production",
-    "urls": [
-      "https://www.cflowapps.com/ai-workflow-automation-trends",
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-21T23:07:59.144Z",
-    "date_label": "Fri 22 May",
-    "headline": "Replit Agent 4 and Claude Code: non-technical PMs shipping working prototypes without engineers",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code",
-      "https://blog.replit.com/best-ai-tools-for-product-managers"
-    ]
-  },
-  {
     "shipped_at": "2026-05-22T23:08:46.956Z",
     "date_label": "Sat 23 May",
     "headline": "Every: Claude Code for Product Managers — one solo PM runs a full product without writing a single spec",
@@ -207,6 +180,38 @@
     "headline": "Stackby adds MCP connector and AI agents, positioning as a no-code alternative to opinionated PM platforms",
     "urls": [
       "https://stackby.com/blog/ai-tools-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-04T23:14:30.298Z",
+    "date_label": "Fri 5 June",
+    "headline": "Anthropic: Claude now authors over 80% of the code merged into Anthropic's own codebase",
+    "urls": [
+      "https://llm-stats.com/ai-news"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-04T23:14:30.298Z",
+    "date_label": "Fri 5 June",
+    "headline": "Google's Agent Smith leak: async AI agents that run for hours before any human reviews them",
+    "urls": [
+      "https://productleadersdayindia.org/blogs/multi-agent-orchestration-news/google-ai-agent-news.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-04T23:14:30.298Z",
+    "date_label": "Fri 5 June",
+    "headline": "Cursor's $3B ARR forces a rethink of team size, pricing, and what a roadmap is actually worth",
+    "urls": [
+      "https://blog.mean.ceo/cursor-news-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-04T23:14:30.298Z",
+    "date_label": "Fri 5 June",
+    "headline": "Manifest AI: chatbot conversations become a real-time product research feed",
+    "urls": [
+      "https://blog.getmanifest.ai/manifest-ai-news-june26"
     ]
   }
 ]
