@@ -1,46 +1,5 @@
 [
   {
-    "shipped_at": "2026-05-22T23:08:46.956Z",
-    "date_label": "Sat 23 May",
-    "headline": "Every: Claude Code for Product Managers — one solo PM runs a full product without writing a single spec",
-    "urls": [
-      "https://every.to/source-code/claude-code-for-product-managers"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-22T23:08:46.957Z",
-    "date_label": "Sat 23 May",
-    "headline": "Anthropic's Code with Claude conference: Dreaming, managed multi-agent orchestration, and doubled rate limits",
-    "urls": [
-      "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
-      "https://releasebot.io/updates/anthropic/claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-22T23:08:46.957Z",
-    "date_label": "Sat 23 May",
-    "headline": "Userpilot: The PM role splits three ways in 2026 — coordination work disappears, senior and strategic roles grow",
-    "urls": [
-      "https://userpilot.com/blog/what-is-product-management"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-22T23:08:46.957Z",
-    "date_label": "Sat 23 May",
-    "headline": "Lenny's Newsletter: PM openings at a 3-year high, design jobs flat, AI roles growing exponentially",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/state-of-the-product-job-market-in-ee9"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-22T23:08:46.957Z",
-    "date_label": "Sat 23 May",
-    "headline": "Google Cloud: AI agents are becoming digital assembly lines — what that means for how PMs scope work",
-    "urls": [
-      "https://cloud.google.com/resources/content/ai-agent-trends-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-05-23T22:58:23.393Z",
     "date_label": "Sun 24 May",
     "headline": "Anthropic ships self-hosted sandboxes and MCP tunnels — enterprise agents finally clear the security perimeter",
@@ -212,6 +171,31 @@
     "headline": "Manifest AI: chatbot conversations become a real-time product research feed",
     "urls": [
       "https://blog.getmanifest.ai/manifest-ai-news-june26"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-05T23:15:55.646Z",
+    "date_label": "Sat 6 June",
+    "headline": "Stanford 2026 AI Index: agents jumped from 12% to 66% task success in one year — and almost nobody is capturing the value",
+    "urls": [
+      "https://www.packagingtechtoday.com/news-headlines/ai-agents-jumped-from-12-to-66-task-success-in-one-year"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-05T23:15:55.646Z",
+    "date_label": "Sat 6 June",
+    "headline": "Userpilot: AI compresses PM work by 15–25%, not 10x — and the gap goes to owning more surface area",
+    "urls": [
+      "https://userpilot.com/blog/what-is-product-management"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-05T23:15:55.646Z",
+    "date_label": "Sat 6 June",
+    "headline": "OpenAI ships ChatGPT memory with temporal awareness and Codex Goal mode goes generally available",
+    "urls": [
+      "https://openai.com/research/index/release",
+      "https://releasebot.io/updates/openai"
     ]
   }
 ]
