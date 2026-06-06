@@ -1,40 +1,5 @@
 [
   {
-    "shipped_at": "2026-05-23T22:58:23.393Z",
-    "date_label": "Sun 24 May",
-    "headline": "Anthropic ships self-hosted sandboxes and MCP tunnels — enterprise agents finally clear the security perimeter",
-    "urls": [
-      "https://www.infoq.com/news/2026/05/claude-mcp-tunnels",
-      "https://dev.to/devtoolpicks/anthropic-launches-self-hosted-claude-agents-what-indie-hackers-need-to-know-1nee"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-23T22:58:23.394Z",
-    "date_label": "Sun 24 May",
-    "headline": "Salesforce Agentforce Coworker: AI agents live in the search bar, not a separate app",
-    "urls": [
-      "https://www.salesforceben.com/salesforce-announces-agentforce-coworker-ai-in-every-search-bar",
-      "https://www.salesforceblogger.com/2026/05/10/how-to-setup-agentforce-coworker-a-new-search-experience-for-salesforce"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-23T22:58:23.394Z",
-    "date_label": "Sun 24 May",
-    "headline": "Claire Vo on ChatPRD: a hands-on verdict on Google I/O 2026 — what works now, what broke at launch",
-    "urls": [
-      "https://www.chatprd.ai/how-i-ai/google-io-new-ai-tools-gemini-35-flash-to-omni-video"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-23T22:58:23.394Z",
-    "date_label": "Sun 24 May",
-    "headline": "Camunda launches ProcessOS — four AI agents that discover, redesign, and deploy enterprise workflows from scratch",
-    "urls": [
-      "https://www.businesswire.com/news/home/20260520352437/en/Camunda-announces-ProcessOS-an-agentic-operating-system-for-AI-first-enterprise-transformation",
-      "https://www.siliconsnark.com/camunda-built-an-operating-system-for-business-processes"
-    ]
-  },
-  {
     "shipped_at": "2026-05-24T23:03:36.755Z",
     "date_label": "Mon 25 May",
     "headline": "OpenAI ships Codex to ChatGPT mobile — coding agents now run in the background from your phone",
@@ -196,6 +161,38 @@
     "urls": [
       "https://openai.com/research/index/release",
       "https://releasebot.io/updates/openai"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-06T23:10:08.089Z",
+    "date_label": "Sun 7 June",
+    "headline": "Mixpanel repositions as an AI-first decision platform, not a dashboard tool",
+    "urls": [
+      "https://blog.mean.ceo/mixpanel-news-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-06T23:10:08.089Z",
+    "date_label": "Sun 7 June",
+    "headline": "Amplitude doubles down on decision orchestration: one loop for analytics, experiments, and action",
+    "urls": [
+      "https://blog.mean.ceo/amplitude-news-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-06T23:10:08.089Z",
+    "date_label": "Sun 7 June",
+    "headline": "Linear at 33K teams and $100M revenue: speed is the real feature",
+    "urls": [
+      "https://blog.mean.ceo/linear-news-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-06T23:10:08.089Z",
+    "date_label": "Sun 7 June",
+    "headline": "Workday Agent Passport: AI agent security verification is becoming a procurement requirement",
+    "urls": [
+      "https://asanify.com/blog/news/ai-spend-management-june-6-2026"
     ]
   }
 ]
