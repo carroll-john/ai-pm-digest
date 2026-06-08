@@ -1,0 +1,17 @@
+Melbourne date: Tue 9 June 2026; freshness floor: 2026-06-07
+History: 19 prior stories across 5 days; 24 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 9609 chars
+Stage 1 usage: input=162535, output=4423, web_search=7
+Stage 1 note: candidates string was truncated; salvaged 6 complete entries.
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 383h): "Perspective AI's 2026 Customer Interview Benchmark: AI-moderated conversations now outpace surveys at 40–70% completion vs. 6–15% for email surveys"
+  drop (stale 167h): "Claude Code for Product Managers: A practical course teaches PMs to become agentic systems orchestrators, not just prompt writers"
+  drop (stale 95h): "AI Agents hit mainstream June 2026: AWS, Google, Microsoft, and Databricks now describe agents the same way—and the market stopped asking 'are they real?'"
+  drop (stale 503h): "Userpilot: AI compressed PM work by 15–25%, not 10x—and the gap is now ownership of more surface area"
+  drop (stale 167h): "Microsoft Build 2026: Agent 365 SDK goes GA—security and governance now embedded in developer workflows, not bolted on after launch"
+Freshness filter: 5/6 candidates dropped (age > 72h)
+  close call (0.21): "Anthropic's Claude Code adds Dynamic Workflows: Multi-agent orchestration now native to the agentic coding system" ~~ "Anthropic ships Claude Opus 4.8 with Dynamic Workflows and a 1M-token context window"
+Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
