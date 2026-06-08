@@ -1,0 +1,31 @@
+[
+  {
+    "headline_draft": "Anthropic's Claude Code adds Dynamic Workflows: Multi-agent orchestration now native to the agentic coding system",
+    "summary": "Anthropic announced Dynamic Workflows for Claude Code, a new capability that allows Claude to dynamically create multi-agent orchestration systems without manual configuration. The feature enables complex software engineering tasks like codebase-wide bug hunts, security audits, and large migrations by breaking work into subtasks, running them in parallel, and validating results before delivery. This moves the bottleneck from model capability to infrastructure for production agent systems. The system is fully auditable, showing each sub-agent's decisions and reasoning in Claude Console.",
+    "why_pm": "As a PM, understanding how AI coordinates work across multiple specialized agents is crucial because your own workflows will increasingly decompose the same way—research, analysis, synthesis, and decision-making can now run in parallel rather than sequentially, compressing your discovery cycle from weeks to days.",
+    "key_facts": [
+      "Dynamic Workflows handle tasks too complex for a single agent: bug hunts, migrations, security audits, performance reviews",
+      "Multi-agent execution runs in parallel with automatic task distribution and convergence verification",
+      "Available on Claude Code Max, Team, and API plans; Enterprise plans can enable/disable via admin settings",
+      "Early access shows use cases like codebase-wide refactors, hardening passes, and critical-path incident response",
+      "Fully auditable in Claude Console with visibility into sub-agent decisions and task ordering"
+    ],
+    "sources": [
+      {
+        "url": "https://www.infoq.com/news/2026/06/dynamic-workflows-claude-code/",
+        "label": "InfoQ: Claude Code Adds Dynamic Workflows for Parallel Agent Coordination",
+        "published_date": "2026-06-07"
+      },
+      {
+        "url": "https://www.anthropic.com/product/claude-code",
+        "label": "Anthropic: Claude Code Product Page",
+        "published_date": "2026-06-03"
+      },
+      {
+        "url": "https://www.mindstudio.ai/blog/code-with-claude-2026-new-agent-features",
+        "label": "MindStudio: 5 New Agent Features Anthropic Just Shipped",
+        "published_date": "2026-05-08"
+      }
+    ]
+  }
+]
