@@ -1,46 +1,5 @@
 [
   {
-    "shipped_at": "2026-05-25T23:13:17.364Z",
-    "date_label": "Tue 26 May",
-    "headline": "MIT Technology Review on Code with Claude: the bottleneck has moved from engineering to evaluation",
-    "urls": [
-      "https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-25T23:13:17.364Z",
-    "date_label": "Tue 26 May",
-    "headline": "Claire Vo on Lenny's Newsletter: Google I/O 2026 and Gemini 3.5 Flash — where Google is catching up and where it isn't",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-i-ai-how-the-engineer-behind"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-25T23:13:17.364Z",
-    "date_label": "Tue 26 May",
-    "headline": "OpenAI ships GPT-5.5: fewer tokens, same speed, and multi-step tasks that don't need babysitting",
-    "urls": [
-      "https://openai.com/index/introducing-gpt-5-5"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-25T23:13:17.364Z",
-    "date_label": "Tue 26 May",
-    "headline": "Andrej Karpathy joins Anthropic to accelerate Claude pretraining — including using Claude to build Claude",
-    "urls": [
-      "https://www.axios.com/2026/05/19/anthropic-openai-karpathy-andrej-claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-05-25T23:13:17.364Z",
-    "date_label": "Tue 26 May",
-    "headline": "The PM role in 2026: AI handles the information, you own the decisions",
-    "urls": [
-      "https://medium.com/@aimoneyproofficial/how-ai-is-changing-product-management-8e68cd83539c",
-      "https://www.productleadership.com/blog/future-of-product-management-ai"
-    ]
-  },
-  {
     "shipped_at": "2026-06-03T23:50:18.715Z",
     "date_label": "Thu 4 June",
     "headline": "Anthropic ships Claude Opus 4.8 with Dynamic Workflows and a 1M-token context window",
@@ -195,6 +154,41 @@
     "urls": [
       "https://blog.mean.ceo/on-device-ai-news-june-2026",
       "https://blog.mean.ceo/edge-ai-news-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-09T23:22:03.185Z",
+    "date_label": "Wed 10 June",
+    "headline": "Anthropic ships Claude Fable 5, its first public Mythos-class model",
+    "urls": [
+      "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous",
+      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+      "https://www.digitalapplied.com/blog/claude-fable-5-mythos-5-release-benchmarks-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-09T23:22:03.186Z",
+    "date_label": "Wed 10 June",
+    "headline": "Anthropic: Claude Code ships safe mode, directory switching, and enterprise policy controls",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://github.com/anthropics/claude-code/releases"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-09T23:22:03.186Z",
+    "date_label": "Wed 10 June",
+    "headline": "Andrew Ng on X: as coding gets cheaper, clear specs become the scarce input",
+    "urls": [
+      "https://x.com/AndrewYNg/status/1879939058211971420"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-09T23:22:03.186Z",
+    "date_label": "Wed 10 June",
+    "headline": "Gemini 3.5 Flash benchmarks at 284 tokens/second; Pro due this month",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026"
     ]
   }
 ]
