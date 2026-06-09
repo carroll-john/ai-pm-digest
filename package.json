@@ -13,6 +13,6 @@
     "send:research": "node scripts/send-digest.mjs --from-research-cache"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0"
+    "@anthropic-ai/sdk": "^0.102.0"
   }
 }
