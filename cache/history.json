@@ -190,5 +190,39 @@
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-06-10T23:40:19.873Z",
+    "date_label": "Thu 11 June",
+    "headline": "Anthropic: Claude Managed Agents now run on a schedule and store credentials in vaults",
+    "urls": [
+      "https://claude.com/blog/whats-new-in-claude-managed-agents",
+      "https://www.techtimes.com/articles/318163/20260610/claude-managed-agents-add-cron-schedules-credential-vaultsanthropic-beta-puts-agents-autopilot.htm"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-10T23:40:19.873Z",
+    "date_label": "Thu 11 June",
+    "headline": "Snap CEO: AI writes over 65% of new code, prompting layoffs of 1,000 and $500M in cost savings",
+    "urls": [
+      "https://simplywall.st/stocks/us/media/nyse-snap/snap/news/how-snaps-ai-driven-coding-and-cost-cuts-will-impact-snap-sn"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-10T23:40:19.873Z",
+    "date_label": "Thu 11 June",
+    "headline": "Claude Code ships dynamic workflows in general availability — agents now plan and execute multi-step tasks autonomously",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://blockchain.news/ainews/claude-managed-agents-add-scheduled-deployments"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-10T23:40:19.873Z",
+    "date_label": "Thu 11 June",
+    "headline": "Anthropic billing split on June 15: Agent SDK and claude -p move to separate metered credits",
+    "urls": [
+      "https://www.digitalapplied.com/blog/anthropic-claude-credit-overhaul-june-15-2026"
+    ]
   }
 ]
