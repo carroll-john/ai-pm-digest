@@ -224,5 +224,39 @@
     "urls": [
       "https://www.digitalapplied.com/blog/anthropic-claude-credit-overhaul-june-15-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-06-11T23:42:06.799Z",
+    "date_label": "Fri 12 June",
+    "headline": "Claude surges to 8.9% global AI traffic share as ChatGPT slides from 76% to 52.7% in 12 months",
+    "urls": [
+      "https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share",
+      "https://momenticmarketing.com/blog/top-ai-chatbots"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-11T23:42:06.799Z",
+    "date_label": "Fri 12 June",
+    "headline": "Moonshot AI ships Kimi Code CLI — MIT-licensed terminal agent at 42x cheaper token cost than Claude Code",
+    "urls": [
+      "https://lushbinary.com/blog/kimi-code-cli-developer-guide",
+      "https://medium.com/@chewloongnian/moonshot-cracked-claude-codes-playbook-with-an-mit-terminal-agent-and-a-0-60-model-6f0039a38339"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-11T23:42:06.799Z",
+    "date_label": "Fri 12 June",
+    "headline": "OpenAI embeds into Oracle Cloud: enterprise customers access GPT models through existing Oracle credits",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-11T23:42:06.799Z",
+    "date_label": "Fri 12 June",
+    "headline": "Gemini 3.5 Pro still in limited preview a month after Google's 'give us until next month' promise at I/O",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026"
+    ]
   }
 ]
