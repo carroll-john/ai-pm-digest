@@ -1,0 +1,28 @@
+[
+  {
+    "headline_draft": "Anthropic ships MCP Connector Observability: admins now monitor agent adoption, errors, and latency in real time (June 8-9)",
+    "summary": "Anthropic released a public beta observability dashboard and in-app directory submission process for developers building Model Context Protocol (MCP) connectors on June 8-9, 2026. The update lets admins and owners track adoption metrics (active users, tool calls, directory rank), diagnose errors and latency breakdowns, and submit MCP servers directly from Claude without leaving the platform. Over 300+ third-party connectors are already live in the directory, used by millions daily. This is the first time teams can see end-to-end performance of their agents' tool usage in production.",
+    "why_pm": "PMs shipping agent-powered products now have native observability into whether agents are actually using their integrations and where failures happen—critical for debugging agent reliability without blind spots.",
+    "key_facts": [
+      "Observability dashboard available in public beta, requires Admin/Owner access on Team or Enterprise plans",
+      "Metrics tracked: adoption (active users, tool calls, directory rank), errors, latency at per-tool level",
+      "In-app MCP directory submission launched alongside observability",
+      "300+ verified connectors already in directory as of June 2026"
+    ],
+    "quotes": [
+      "Published connectors in the directory now have a dashboard showing how they're performing across Claude product surfaces."
+    ],
+    "sources": [
+      {
+        "url": "https://claude.com/blog/observability-for-developers-building-connectors",
+        "label": "Anthropic: Observability for developers building connectors",
+        "published_date": "2026-06-09"
+      },
+      {
+        "url": "https://getaibook.com/news/tool-level-observability-hits-claude-mcp-connectors/",
+        "label": "AI Book: Tool-Level Observability Hits Claude MCP Connectors",
+        "published_date": "2026-06-11"
+      }
+    ]
+  }
+]
