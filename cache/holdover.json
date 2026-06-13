@@ -1,5 +1,26 @@
 [
   {
+    "headline_draft": "OpenAI acquires Ona: Codex Cloud agents arrive in response to Anthropic's Claude Code dominance",
+    "summary": "OpenAI announced on June 11, 2026 that it acquired Ona, signaling the imminent launch of Codex Cloud—a managed cloud agent runtime for developers. This mirrors Anthropic's strategy with Claude Code, which ships as a cloud agent rather than a local CLI. Both companies are betting that the future of AI coding isn't local tools but managed cloud agents that can run autonomously and scale across teams. The move represents a direct competitive response: while Anthropic's Claude Fable 5 already includes Claude Cowork with cloud agents built in, OpenAI is now positioning Codex to compete in the same managed agent space.",
+    "why_pm": "As a PM, you need to understand that the interface between developers and AI models is shifting from chat+CLI to persistent, managed agents. This affects how you think about build velocity, team size, and the real cost of AI tooling—and it's a leading indicator of how agents will reshape your own PM workflows.",
+    "key_facts": [
+      "OpenAI acquired Ona on June 11, 2026 to power Codex Cloud",
+      "Codex Cloud positions OpenAI's coding agent as a cloud-native competitor to Claude Code",
+      "Both Anthropic and OpenAI have moved away from local CLI interfaces to managed cloud agents",
+      "Claude Code already ships with Claude Fable 5; Codex Cloud is OpenAI's response"
+    ],
+    "quotes": [
+      "Both companies decided at roughly the same time that the future of AI coding isn't a local CLI—it's an agent in the cloud."
+    ],
+    "sources": [
+      {
+        "url": "https://andrew.ooo/answers/openai-codex-cloud-vs-anthropic-claude-cowork-june-2026/",
+        "label": "andrew.ooo: OpenAI Ona Acquisition & Codex Cloud vs Claude Cowork Comparison",
+        "published_date": "2026-06-12"
+      }
+    ]
+  },
+  {
     "headline_draft": "Anthropic ships MCP Connector Observability: admins now monitor agent adoption, errors, and latency in real time (June 8-9)",
     "summary": "Anthropic released a public beta observability dashboard and in-app directory submission process for developers building Model Context Protocol (MCP) connectors on June 8-9, 2026. The update lets admins and owners track adoption metrics (active users, tool calls, directory rank), diagnose errors and latency breakdowns, and submit MCP servers directly from Claude without leaving the platform. Over 300+ third-party connectors are already live in the directory, used by millions daily. This is the first time teams can see end-to-end performance of their agents' tool usage in production.",
     "why_pm": "PMs shipping agent-powered products now have native observability into whether agents are actually using their integrations and where failures happen—critical for debugging agent reliability without blind spots.",
