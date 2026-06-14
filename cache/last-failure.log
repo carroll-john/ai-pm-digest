@@ -1,17 +1,18 @@
-Melbourne date: Sun 14 June 2026; freshness floor: 2026-06-12
+Melbourne date: Mon 15 June 2026; freshness floor: 2026-06-13
 History: 31 prior stories across 8 days; 42 unique URLs to exclude.
 Stage 1 (claude-haiku-4-5): prompt 12427 chars
-Stage 1 usage: input=152347, output=4807, web_search=10
+Stage 1 usage: input=147333, output=6395, web_search=9
+Stage 1 note: candidates string was truncated; salvaged 7 complete entries.
 Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-Merged 1 holdover candidate(s) from previous run.
-  drop (stale 311h): "Abrar at Userpilot: AI compresses PM execution by 15–25%, not 10x—the gap goes to surface area"
-  drop (stale 2951h): "Peter Yang: Start prototyping AI products with Claude, v0, and Cursor—skip the docs"
-  drop (stale 1055h): "Shreyas Doshi: AI-polished feedback makes it harder to distinguish judgment from coherence"
-  drop (stale 119h): "Claude Fable 5 (Mythos-class) ships: Anthropic makes its most capable model generally available"
-  drop (stale 311h): "AI agents move from hype to production: 62% of enterprises scaling agentic AI in at least one function"
-Freshness filter: 5/8 candidates dropped (age > 72h)
-  drop (title overlap 0.53): "Claude surges to 8.9% global traffic share as ChatGPT loses 23.7 points in 12 months" ~~ "Claude surges to 8.9% global AI traffic share as ChatGPT slides from 76% to 52.7% in 12 months"
-Title-overlap filter: 1/3 candidates dropped (Jaccard >= 0.3)
+Merged 2 holdover candidate(s) from previous run.
+  drop (stale 143h): "Anthropic ships Claude Fable 5: Mythos-class model goes public with 10x speedup on protein design"
+  drop (stale 119h): "OpenCode breaks AI coding-tools incumbency: MIT-licensed open-source agent hits 7.5M monthly users, 160K GitHub stars"
+  drop (stale 167h): "Apple Xcode 27 integrates agentic coding natively into developer workflow"
+  drop (stale 119h): "GitHub Copilot shifts to usage-based billing with AI Credits; Fable 5 integration adds safeguard complexity"
+  drop (stale 1967h): "PM skill inflation: AI product sense becomes core interview loop at Meta; strategic clarity now separates builders"
+  drop (stale 335h): "June 2026 AI Launch Wave: Frontier labs converge on release timing; PM abstraction layers become risk management"
+  drop (stale 95h): "Anthropic ships MCP Connector Observability: admins now monitor agent adoption, errors, and latency in real time (June 8-9)"
+Freshness filter: 7/9 candidates dropped (age > 72h)
 Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
 FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
 HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
