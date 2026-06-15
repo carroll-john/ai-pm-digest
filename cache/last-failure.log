@@ -1,18 +1,17 @@
-Melbourne date: Mon 15 June 2026; freshness floor: 2026-06-13
+Melbourne date: Tue 16 June 2026; freshness floor: 2026-06-14
 History: 31 prior stories across 8 days; 42 unique URLs to exclude.
 Stage 1 (claude-haiku-4-5): prompt 12427 chars
-Stage 1 usage: input=147333, output=6395, web_search=9
-Stage 1 note: candidates string was truncated; salvaged 7 complete entries.
-Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+Stage 1 usage: input=148913, output=4675, web_search=10
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
 Merged 2 holdover candidate(s) from previous run.
-  drop (stale 143h): "Anthropic ships Claude Fable 5: Mythos-class model goes public with 10x speedup on protein design"
-  drop (stale 119h): "OpenCode breaks AI coding-tools incumbency: MIT-licensed open-source agent hits 7.5M monthly users, 160K GitHub stars"
-  drop (stale 167h): "Apple Xcode 27 integrates agentic coding natively into developer workflow"
-  drop (stale 119h): "GitHub Copilot shifts to usage-based billing with AI Credits; Fable 5 integration adds safeguard complexity"
-  drop (stale 1967h): "PM skill inflation: AI product sense becomes core interview loop at Meta; strategic clarity now separates builders"
-  drop (stale 335h): "June 2026 AI Launch Wave: Frontier labs converge on release timing; PM abstraction layers become risk management"
-  drop (stale 95h): "Anthropic ships MCP Connector Observability: admins now monitor agent adoption, errors, and latency in real time (June 8-9)"
-Freshness filter: 7/9 candidates dropped (age > 72h)
+  drop (stale 240h): "Claire Vo: testing Google Flow + Gemini Omni to generate podcast videos and AI avatars"
+  drop (stale 4032h): "Amy Mitchell: product explainability is now a design requirement for AI-mediated discovery"
+  drop (stale 96h): "OpenAI retires GPT-5.2 models, rolls out personalization to free tier as of June 9"
+  drop (stale 96h): "OpenAI acquires Ona: Codex Cloud agents arrive in response to Anthropic's Claude Code dominance"
+Freshness filter: 4/8 candidates dropped (age > 72h)
+  drop (title overlap 0.44): "Anthropic splits Claude Agent SDK billing on June 15: separate monthly credit instead of subscription subsidy" ~~ "Anthropic billing split on June 15: Agent SDK and claude -p move to separate metered credits"
+  drop (title overlap 0.31): "Anthropic ships Claude Fable 5, then loses Mythos models to US export control on June 12" ~~ "Anthropic ships Claude Fable 5, its first public Mythos-class model"
+Title-overlap filter: 2/4 candidates dropped (Jaccard >= 0.3)
 Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
 FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
 HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
