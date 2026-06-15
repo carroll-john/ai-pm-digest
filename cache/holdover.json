@@ -1,5 +1,27 @@
 [
   {
+    "headline_draft": "Perspective AI: running 100+ customer interviews per quarter without a dedicated researcher is now feasible",
+    "summary": "Perspective AI released a ranking of AI research-stack tools for PMs operating without dedicated researchers. The core insight: 70% of PMs now run discovery solo, and Perspective AI is the only tool in the research stack that conducts customer conversations autonomously (not just analyzing data collected elsewhere). The tool runs hundreds of interviews in parallel and ships a ranked synthesis the same day. This compression changes the economics of customer discovery: a PM can now cost-effectively run quarterly primary research at scale (100+ interviews) that previously required hiring a contractor or researcher. The research stack splits into four lanes: conversational discovery (Perspective AI), feedback aggregation (Enterpret, Anecdote), session replay (FullStory, LogRocket), and roadmap validation (Sprig, Maze).",
+    "why_pm": "Discovery velocity just became a competitive lever you control. If customer conversations are no longer a bottleneck, you can validate product ideas weekly instead of quarterly, run competitive research on demand, and reduce reliance on external research partners. The task shifts from 'finding time to talk to customers' to 'interpreting what the data tells you'—which is exactly where PM judgment should live.",
+    "key_facts": [
+      "70% of PMs in 2026 run discovery without dedicated researchers",
+      "Perspective AI autonomously conducts customer interviews and ships synthesis same day",
+      "Can run 100+ interviews per quarter within typical PM workload",
+      "Primary research no longer requires hiring contractors or researchers",
+      "Research stack splits into: conversational discovery, feedback aggregation, session replay, roadmap validation"
+    ],
+    "quotes": [
+      "Choose Perspective AI as your primary AI research tool if you are a product manager running discovery, validation, or PMF research without a dedicated researcher—which is the default situation for over 70% of PMs in 2026."
+    ],
+    "sources": [
+      {
+        "url": "https://getperspective.ai/blog/best-ai-tools-product-managers-in-2026-by-workflow-stage",
+        "label": "Perspective AI: Best AI Tools by Workflow Stage",
+        "published_date": "2026-06-13"
+      }
+    ]
+  },
+  {
     "headline_draft": "GPT-5.6 rumored for late June release: Prediction markets price 80-89% odds; DevEx implications for PM roadmapping",
     "summary": "As of June 14, 2026, GPT-5.6 remains unannounced by OpenAI but has become the subject of intense speculation. Polymarket traders are pricing 80-89% odds of a release by June 30, 2026. Evidence includes Codex backend log leaks referencing 'gpt-5.6' (with internal codenames 'ember-alpha' and 'beacon-alpha'), reports of ChatGPT Pro users testing versions with up to 1.5M token context (43% increase over GPT-5.5), and historical release cadence patterns suggesting a ~60-day iteration cycle. If confirmed, expected improvements include deeper long-context reasoning, better error recovery in agentic workflows, and improved performance on benchmarks like Terminal-Bench and GPQA. This creates a window of uncertainty for PMs building on GPT-5.5 or planning feature rollouts.",
     "why_pm": "If GPT-5.6 launches by June 30 as predicted, it could shift capability baselines mid-quarter and force feature decisions. PMs hardcoding GPT-5.5 into their products face technical debt if GPT-5.6 becomes the standard within weeks. The broader lesson: using model abstraction layers and version-agnostic routing is now a PM risk-management practice, not just an engineering elegance. Additionally, this release velocity (6 weeks between GPT-5.5 and 5.6) suggests frontier labs are in a race mode that will compress feature windows. Your roadmap needs to account for rapid model shifts.",
@@ -31,27 +53,6 @@
         "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026",
         "label": "Build Fast with AI: AI News Today - June 13, 2026",
         "published_date": "2026-06-13"
-      }
-    ]
-  },
-  {
-    "headline_draft": "OpenAI acquires Ona: Codex Cloud agents arrive in response to Anthropic's Claude Code dominance",
-    "summary": "OpenAI announced on June 11, 2026 that it acquired Ona, signaling the imminent launch of Codex Cloud—a managed cloud agent runtime for developers. This mirrors Anthropic's strategy with Claude Code, which ships as a cloud agent rather than a local CLI. Both companies are betting that the future of AI coding isn't local tools but managed cloud agents that can run autonomously and scale across teams. The move represents a direct competitive response: while Anthropic's Claude Fable 5 already includes Claude Cowork with cloud agents built in, OpenAI is now positioning Codex to compete in the same managed agent space.",
-    "why_pm": "As a PM, you need to understand that the interface between developers and AI models is shifting from chat+CLI to persistent, managed agents. This affects how you think about build velocity, team size, and the real cost of AI tooling—and it's a leading indicator of how agents will reshape your own PM workflows.",
-    "key_facts": [
-      "OpenAI acquired Ona on June 11, 2026 to power Codex Cloud",
-      "Codex Cloud positions OpenAI's coding agent as a cloud-native competitor to Claude Code",
-      "Both Anthropic and OpenAI have moved away from local CLI interfaces to managed cloud agents",
-      "Claude Code already ships with Claude Fable 5; Codex Cloud is OpenAI's response"
-    ],
-    "quotes": [
-      "Both companies decided at roughly the same time that the future of AI coding isn't a local CLI—it's an agent in the cloud."
-    ],
-    "sources": [
-      {
-        "url": "https://andrew.ooo/answers/openai-codex-cloud-vs-anthropic-claude-cowork-june-2026/",
-        "label": "andrew.ooo: OpenAI Ona Acquisition & Codex Cloud vs Claude Cowork Comparison",
-        "published_date": "2026-06-12"
       }
     ]
   }
