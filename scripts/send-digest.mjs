@@ -19,7 +19,7 @@ const HISTORY_WINDOW_MS = HISTORY_WINDOW_DAYS * 86400000;
 const TRACKING_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "ref_src"];
 // Server-side dedup + freshness controls. The Stage 1 prompt asks for the last
 // 24–48 hours, but the model drifts; this is the backstop.
-const MAX_AGE_HOURS = 72;
+const MAX_AGE_HOURS = 96;
 const TITLE_OVERLAP_THRESHOLD = 0.3;
 const TITLE_STOPWORDS = new Set([
   "a", "an", "the", "and", "or", "but", "for", "nor", "so", "yet",
