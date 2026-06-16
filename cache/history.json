@@ -258,5 +258,30 @@
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-06-16T23:27:52.222Z",
+    "date_label": "Wed 17 June",
+    "headline": "Anthropic's Fable 5 Pulled Globally After White House Export Order",
+    "urls": [
+      "https://www.androidheadlines.com/2026/06/anthropic-white-house-meetings-claude-fable-5-ai-export-ban.html",
+      "https://www.businesstoday.in/technology/artificial-intelligence/story/anthropic-had-90-minutes-to-restrict-claude-fable-5-as-white-house-feared-chinese-access-537095-2026-06-16"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-16T23:27:52.222Z",
+    "date_label": "Wed 17 June",
+    "headline": "How I AI (Claire Vo): What Fable 5 Actually Does — and Doesn't Do — for Product Work",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-i-ai-claude-fable-5-review-and"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-16T23:27:52.222Z",
+    "date_label": "Wed 17 June",
+    "headline": "Claude Code Ships Nested Sub-Agents and Safe Mode for Broken Workflow Recovery",
+    "urls": [
+      "https://releasebot.io/updates/anthropic"
+    ]
   }
 ]
