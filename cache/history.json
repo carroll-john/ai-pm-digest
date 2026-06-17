@@ -283,5 +283,29 @@
     "urls": [
       "https://releasebot.io/updates/anthropic"
     ]
+  },
+  {
+    "shipped_at": "2026-06-17T23:44:23.532Z",
+    "date_label": "Thu 18 June",
+    "headline": "Shreyas Doshi and Ankur Goyal (Braintrust): Stop Writing Specs for AI — Write Evals Instead",
+    "urls": [
+      "https://aakashgupta.medium.com/prds-dont-work-for-ai-products-the-ceo-of-braintrust-explains-what-does-0dbf4d99ab91"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-17T23:44:23.532Z",
+    "date_label": "Thu 18 June",
+    "headline": "Perplexity Reaches $20B Valuation With Zero Proprietary Models — Composition Is the Product",
+    "urls": [
+      "https://x.com/aakashgupta/status/2042655607195603251"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-17T23:44:23.532Z",
+    "date_label": "Thu 18 June",
+    "headline": "AI Agent Adoption: 62% of Orgs Experimenting or Scaling, 23% Already in Production",
+    "urls": [
+      "https://www.cflowapps.com/ai-workflow-automation-trends"
+    ]
   }
 ]
