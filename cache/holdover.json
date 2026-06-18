@@ -1,0 +1,46 @@
+[
+  {
+    "headline_draft": "Snowflake Ships Agentic ML Capabilities: Evaluation and Batch Inference at Scale — Making Agents Production-Grade",
+    "summary": "Snowflake's June 2026 AI Pulse announcement introduces agentic capabilities into Snowflake ML, focusing on scalable evaluation frameworks and batch inference optimization for data science and ML teams. The platform now bundles agent orchestration with data governance and cost controls, addressing the enterprise pain point of moving agents from experimentation to production without loss of visibility or spiraling token costs.",
+    "why_pm": "If your company uses Snowflake as the data warehouse, agent evaluation and cost governance just moved from a manual engineering problem to a platform feature. This shifts the PM conversation from 'can we build agents?' to 'which workflows can we afford to agentize?'",
+    "key_facts": [
+      "Snowflake Adaptive Compute automatically delivers performance and scale for AI/data workloads, eliminating complexity of managing compute",
+      "New agentic capabilities in Snowflake ML accelerate productivity for data science and ML teams",
+      "Deep dive into Snowpark workflows optimize batch inference, addressing production token-cost scaling",
+      "Live sessions on June 18 (Europe-friendly) and ongoing demos of newest AI features for immediate implementation",
+      "Bundles evaluation, governance, and domain grounding into the platform—addressing enterprise pain points in agent deployment"
+    ],
+    "quotes": [],
+    "sources": [
+      {
+        "url": "https://www.snowflake.com/en/ai-pulse/june-2026/",
+        "label": "Snowflake AI Pulse – June 2026 Product Announcements",
+        "published_date": "2026-06-19"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Voice AI Is the Real Sleeper Hit: Hosting, Booking, and Support Workflows Are Moving from Fantasy to Cash Flow",
+    "summary": "While everyone debates large language models, voice AI is quietly becoming the highest-ROI automation layer for small and mid-market businesses. Platforms like Telnyx-hosted LiveKit agents, Regal AI's self-improving voice agent builder, and Sendbird's Agent Steward are targeting sales, support, call routing, booking, and service workflows where labor cost is high and response time affects conversion. Voice products in 2026 are cheaper, faster, and easier to deploy than ever. A freelancer with ten inbound calls per day may not care, but a clinic, restaurant, repair service, or agency that's burning cash on missed calls should care deeply.",
+    "why_pm": "If your product serves SMBs or service businesses, voice AI agents may be a faster path to defensible value than chat. Voice workflows compress labor cost immediately and measurably—no wait for LLM reasoning improvements.",
+    "key_facts": [
+      "Telnyx-hosted LiveKit agents and Regal AI's self-improving voice agent builder are the leading platforms",
+      "Target workflows: sales, support, call routing, booking, service workflows where labor cost is high and response time affects conversion",
+      "Voice is one of the few interfaces where a small business can remove a lot of repetitive work quickly",
+      "Sendbird's Agent Steward shows a push toward customer support systems that can manage complex voice interactions",
+      "Cost: voice AI hosting is cheaper than proprietary IVR systems and faster to deploy than multi-month integrations",
+      "Key insight: a clinic, restaurant, repair service, or agency burning cash on missed calls already has ROI case for voice agents"
+    ],
+    "quotes": [
+      "Small teams should stop asking whether voice AI feels futuristic and start asking whether missed calls are burning cash. If the answer is yes, the use case is already real.",
+      "Voice products in 2026 are getting cheaper, faster, and easier to deploy."
+    ],
+    "sources": [
+      {
+        "url": "https://blog.mean.ceo/ai-product-launches-news-june-2026/",
+        "label": "Mean CEO: AI Product Launches News (June 2026 Startup Edition)",
+        "published_date": "2026-06-15"
+      }
+    ]
+  }
+]
