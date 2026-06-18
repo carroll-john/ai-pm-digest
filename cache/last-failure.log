@@ -1,0 +1,16 @@
+Melbourne date: Fri 19 June 2026; freshness floor: 2026-06-17
+History: 29 prior stories across 8 days; 39 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12216 chars
+Stage 1 usage: input=131871, output=5033, web_search=8
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 360h): "GitHub Copilot Shifts to Usage-Based Billing on June 1 2026 — Breaking the Seat-License Illusion"
+  drop (stale 768h): "Userpilot: AI Compresses PM Work by 15–25%, Not 10x — and the Gap Goes to Owning More Surface Area"
+Freshness filter: 2/6 candidates dropped (age > 96h)
+  drop (title overlap 0.41): "June 2026: The Month AI Agents Crossed from 'Are They Real?' to 'Which Workflow Gets Agentized First?'" ~~ "Mean CEO: AI Agents Hit the 'Which Workflow Gets Agentized First' Inflection"
+Title-overlap filter: 1/4 candidates dropped (Jaccard >= 0.3)
+  drop (URL repeat): "June 2026 AI Model Flood: GPT-5.6, Gemini 3.5 Pro, Claude 4.8 — Architecture Choices Now Matter More Than Model Picking" → https://www.lennysnewsletter.com/p/how-i-ai-claude-fable-5-review-and
+URL filter: 1/3 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
