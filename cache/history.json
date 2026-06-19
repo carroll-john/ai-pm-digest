@@ -1,71 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-03T23:50:18.715Z",
-    "date_label": "Thu 4 June",
-    "headline": "Anthropic ships Claude Opus 4.8 with Dynamic Workflows and a 1M-token context window",
-    "urls": [
-      "https://www.anthropic.com/news/claude-opus-4-8",
-      "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool",
-      "https://decodethefuture.org/en/claude-opus-4-8-explained"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-03T23:50:18.716Z",
-    "date_label": "Thu 4 June",
-    "headline": "Google kills Gemini CLI on June 18 — two weeks' notice, no grace period",
-    "urls": [
-      "https://www.aibuilderclub.com/blog/google-kills-gemini-cli-june-18-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-03T23:50:18.716Z",
-    "date_label": "Thu 4 June",
-    "headline": "Mean CEO: In June 2026, distribution beats capability — and PMs need to pick a side",
-    "urls": [
-      "https://blog.mean.ceo/ai-product-launches-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-03T23:50:18.716Z",
-    "date_label": "Thu 4 June",
-    "headline": "Stackby adds MCP connector and AI agents, positioning as a no-code alternative to opinionated PM platforms",
-    "urls": [
-      "https://stackby.com/blog/ai-tools-for-product-managers"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-04T23:14:30.298Z",
-    "date_label": "Fri 5 June",
-    "headline": "Anthropic: Claude now authors over 80% of the code merged into Anthropic's own codebase",
-    "urls": [
-      "https://llm-stats.com/ai-news"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-04T23:14:30.298Z",
-    "date_label": "Fri 5 June",
-    "headline": "Google's Agent Smith leak: async AI agents that run for hours before any human reviews them",
-    "urls": [
-      "https://productleadersdayindia.org/blogs/multi-agent-orchestration-news/google-ai-agent-news.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-04T23:14:30.298Z",
-    "date_label": "Fri 5 June",
-    "headline": "Cursor's $3B ARR forces a rethink of team size, pricing, and what a roadmap is actually worth",
-    "urls": [
-      "https://blog.mean.ceo/cursor-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-04T23:14:30.298Z",
-    "date_label": "Fri 5 June",
-    "headline": "Manifest AI: chatbot conversations become a real-time product research feed",
-    "urls": [
-      "https://blog.getmanifest.ai/manifest-ai-news-june26"
-    ]
-  },
-  {
     "shipped_at": "2026-06-05T23:15:55.646Z",
     "date_label": "Sat 6 June",
     "headline": "Stanford 2026 AI Index: agents jumped from 12% to 66% task success in one year — and almost nobody is capturing the value",
@@ -306,6 +240,31 @@
     "headline": "AI Agent Adoption: 62% of Orgs Experimenting or Scaling, 23% Already in Production",
     "urls": [
       "https://www.cflowapps.com/ai-workflow-automation-trends"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-19T23:04:15.744Z",
+    "date_label": "Sat 20 June",
+    "headline": "OpenAI ships spend controls and usage analytics for ChatGPT Enterprise",
+    "urls": [
+      "https://openai.com/index/chatgpt-enterprise-spend-controls",
+      "https://letsdatascience.com/news/openai-launches-enterprise-usage-analytics-and-spending-cont-a936e7b2"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-19T23:04:15.744Z",
+    "date_label": "Sat 20 June",
+    "headline": "Model Context Protocol solidifies as the interoperability standard for AI agents",
+    "urls": [
+      "https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-19T23:04:15.744Z",
+    "date_label": "Sat 20 June",
+    "headline": "Snowflake bundles agent evaluation and batch inference governance into its ML platform",
+    "urls": [
+      "https://www.snowflake.com/en/ai-pulse/june-2026"
     ]
   }
 ]
