@@ -1,96 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-05T23:15:55.646Z",
-    "date_label": "Sat 6 June",
-    "headline": "Stanford 2026 AI Index: agents jumped from 12% to 66% task success in one year — and almost nobody is capturing the value",
-    "urls": [
-      "https://www.packagingtechtoday.com/news-headlines/ai-agents-jumped-from-12-to-66-task-success-in-one-year"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-05T23:15:55.646Z",
-    "date_label": "Sat 6 June",
-    "headline": "Userpilot: AI compresses PM work by 15–25%, not 10x — and the gap goes to owning more surface area",
-    "urls": [
-      "https://userpilot.com/blog/what-is-product-management"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-05T23:15:55.646Z",
-    "date_label": "Sat 6 June",
-    "headline": "OpenAI ships ChatGPT memory with temporal awareness and Codex Goal mode goes generally available",
-    "urls": [
-      "https://openai.com/research/index/release",
-      "https://releasebot.io/updates/openai"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-06T23:10:08.089Z",
-    "date_label": "Sun 7 June",
-    "headline": "Mixpanel repositions as an AI-first decision platform, not a dashboard tool",
-    "urls": [
-      "https://blog.mean.ceo/mixpanel-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-06T23:10:08.089Z",
-    "date_label": "Sun 7 June",
-    "headline": "Amplitude doubles down on decision orchestration: one loop for analytics, experiments, and action",
-    "urls": [
-      "https://blog.mean.ceo/amplitude-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-06T23:10:08.089Z",
-    "date_label": "Sun 7 June",
-    "headline": "Linear at 33K teams and $100M revenue: speed is the real feature",
-    "urls": [
-      "https://blog.mean.ceo/linear-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-06T23:10:08.089Z",
-    "date_label": "Sun 7 June",
-    "headline": "Workday Agent Passport: AI agent security verification is becoming a procurement requirement",
-    "urls": [
-      "https://asanify.com/blog/news/ai-spend-management-june-6-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-07T23:12:49.069Z",
-    "date_label": "Mon 8 June",
-    "headline": "Mean CEO: AI Agents Hit the 'Which Workflow Gets Agentized First' Inflection",
-    "urls": [
-      "https://blog.mean.ceo/ai-agents-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-07T23:12:49.070Z",
-    "date_label": "Mon 8 June",
-    "headline": "Airtable Launches Omni: Databases as Agent Hosts, Not Just Structured Storage",
-    "urls": [
-      "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
-      "https://blog.mean.ceo/airtable-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-07T23:12:49.070Z",
-    "date_label": "Mon 8 June",
-    "headline": "Mean CEO: AI Regulation Is Now a Product Design Requirement, Not a Legal Footnote",
-    "urls": [
-      "https://blog.mean.ceo/ai-regulation-news-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-07T23:12:49.070Z",
-    "date_label": "Mon 8 June",
-    "headline": "Mean CEO: On-Device and Edge AI Shift from Feature to Architecture Decision",
-    "urls": [
-      "https://blog.mean.ceo/on-device-ai-news-june-2026",
-      "https://blog.mean.ceo/edge-ai-news-june-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-06-09T23:22:03.185Z",
     "date_label": "Wed 10 June",
     "headline": "Anthropic ships Claude Fable 5, its first public Mythos-class model",
@@ -265,6 +174,42 @@
     "headline": "Snowflake bundles agent evaluation and batch inference governance into its ML platform",
     "urls": [
       "https://www.snowflake.com/en/ai-pulse/june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-22T23:25:57.636Z",
+    "date_label": "Tue 23 June",
+    "headline": "Google makes Gemini 2.5 Flash the default across all consumer products — speed and cost win at scale",
+    "urls": [
+      "https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-22T23:25:57.636Z",
+    "date_label": "Tue 23 June",
+    "headline": "GPT-5.6 expected this week — bigger context window, alignment fixes, staged rollout",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026",
+      "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-22T23:25:57.637Z",
+    "date_label": "Tue 23 June",
+    "headline": "xAI ships Grok 4.3 on Amazon Bedrock — frontier reasoning inside the enterprise AWS stack",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-22T23:25:57.637Z",
+    "date_label": "Tue 23 June",
+    "headline": "Fable 5 government suspension exposes AI vendor concentration as an enterprise product risk",
+    "urls": [
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://www.fifthrow.com/blog/us-export-control-order-and-global-suspension-of-fable-5-mythos-5-operationalizing-compliance-as-a-live-mandate",
+      "https://www.gravitee.io/blog/fable-5-mythos-5-suspension-what-it-means-for-your-ai-architecture",
+      "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026"
     ]
   }
 ]
