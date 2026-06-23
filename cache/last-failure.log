@@ -1,0 +1,17 @@
+Melbourne date: Wed 24 June 2026; freshness floor: 2026-06-22
+History: 25 prior stories across 7 days; 36 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12061 chars
+Stage 1 usage: input=138917, output=5419, web_search=6
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 119h): "Anthropic's Claude Design overhaul: Design systems as guardrails, brand control as product"
+  drop (stale 119h): "Claude Code ships ultracode mode: dynamic workflows for codebase-wide bug hunts, migrations, and audits"
+  drop (stale 527h): "AI agents move from hype to production: Microsoft's Agent Control Spec standardizes governance across workflows"
+  drop (stale 335h): "Andrew Ng: Concrete examples are the new PRD—how PMs can specify AI products faster than writing specs"
+  drop (stale 671h): "2026 CPO Insights Report: The Product Builder emerges—hybrid PM-engineer roles surge 10x, PM role fractionalizes into specialists"
+Freshness filter: 5/7 candidates dropped (age > 96h)
+  drop (URL repeat): "Anthropic ships Opus 4.8, Claude Foundation Models on iOS 27, and Cowork Generalist product—expanding AI surface area across Apple devices and enterprise workflows" → https://releasebot.io/updates/anthropic/claude
+URL filter: 1/2 candidates dropped
+Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
