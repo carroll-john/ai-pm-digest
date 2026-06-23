@@ -1,0 +1,31 @@
+[
+  {
+    "headline_draft": "Lenny's Podcast: Fiona Fung (Anthropic Head of Engineering) on building the most AI-pilled team—8x code velocity, no CLIs, and the context-switching problem no one solved",
+    "summary": "In a recent episode of Lenny's Podcast, Fiona Fung, Head of Engineering at Anthropic, discussed how her team has evolved to ship 8x more code per quarter than they did in 2021–2025. She emphasized that the shift isn't simply 'more AI,' but rethinking team composition, hiring for creative builders and deep systems experts, and leveraging Claude 'routines' for management tasks. She also addressed unsolved problems: managing context-switching with 20+ AI agents running in parallel, the skill atrophy risk in an AI-native environment, and how PM and data science roles are transforming as execution velocity rises. Fung advocated for moving from six-month roadmaps to just-in-time monthly planning, aligning with the compressed feedback loop that AI agents enable.",
+    "why_pm": "Hear directly from an engineering leader navigating AI-native team dynamics: what hiring looks like, how manager workflows are changing, and why dogfooding (using your own product) is now a core PM skill. Fung's insights on context-switching and skill development are essential for PMs scaling agents in their orgs.",
+    "key_facts": [
+      "Anthropic engineers on average ship 8x as much code per quarter compared to 2021–2025 baseline",
+      "Team composition shifting: hiring for creative builders and deep systems experts, not generic engineers",
+      "Claude 'routines' are changing management workflows: structured, repeatable decision-making patterns",
+      "Context-switching problem with 20+ agents running: no solved solution yet",
+      "Shift from six-month roadmaps to just-in-time (JIT) monthly planning",
+      "PM and data science roles transforming as execution velocity increases"
+    ],
+    "quotes": [
+      "Today, Anthropic engineers on average ship 8x as much code per quarter as they did compared to 2021-2025",
+      "The context-switching problem no one has solved yet"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lennysnewsletter.com/p/building-the-most-ai-pilled-engineering",
+        "label": "Lenny's Podcast: Building the Most AI-Pilled Engineering Org with Fiona Fung",
+        "published_date": "2026-06-20"
+      },
+      {
+        "url": "https://open.spotify.com/show/2dR1MUZEHCOnz1LVfNac0j",
+        "label": "Lenny's Podcast on Spotify — Fiona Fung episode",
+        "published_date": "2026-06-20"
+      }
+    ]
+  }
+]
