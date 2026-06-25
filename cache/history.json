@@ -1,74 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-09T23:22:03.185Z",
-    "date_label": "Wed 10 June",
-    "headline": "Anthropic ships Claude Fable 5, its first public Mythos-class model",
-    "urls": [
-      "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous",
-      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
-      "https://www.digitalapplied.com/blog/claude-fable-5-mythos-5-release-benchmarks-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-09T23:22:03.186Z",
-    "date_label": "Wed 10 June",
-    "headline": "Anthropic: Claude Code ships safe mode, directory switching, and enterprise policy controls",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code",
-      "https://github.com/anthropics/claude-code/releases"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-09T23:22:03.186Z",
-    "date_label": "Wed 10 June",
-    "headline": "Andrew Ng on X: as coding gets cheaper, clear specs become the scarce input",
-    "urls": [
-      "https://x.com/AndrewYNg/status/1879939058211971420"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-09T23:22:03.186Z",
-    "date_label": "Wed 10 June",
-    "headline": "Gemini 3.5 Flash benchmarks at 284 tokens/second; Pro due this month",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-10T23:40:19.873Z",
-    "date_label": "Thu 11 June",
-    "headline": "Anthropic: Claude Managed Agents now run on a schedule and store credentials in vaults",
-    "urls": [
-      "https://claude.com/blog/whats-new-in-claude-managed-agents",
-      "https://www.techtimes.com/articles/318163/20260610/claude-managed-agents-add-cron-schedules-credential-vaultsanthropic-beta-puts-agents-autopilot.htm"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-10T23:40:19.873Z",
-    "date_label": "Thu 11 June",
-    "headline": "Snap CEO: AI writes over 65% of new code, prompting layoffs of 1,000 and $500M in cost savings",
-    "urls": [
-      "https://simplywall.st/stocks/us/media/nyse-snap/snap/news/how-snaps-ai-driven-coding-and-cost-cuts-will-impact-snap-sn"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-10T23:40:19.873Z",
-    "date_label": "Thu 11 June",
-    "headline": "Claude Code ships dynamic workflows in general availability — agents now plan and execute multi-step tasks autonomously",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude",
-      "https://blockchain.news/ainews/claude-managed-agents-add-scheduled-deployments"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-10T23:40:19.873Z",
-    "date_label": "Thu 11 June",
-    "headline": "Anthropic billing split on June 15: Agent SDK and claude -p move to separate metered credits",
-    "urls": [
-      "https://www.digitalapplied.com/blog/anthropic-claude-credit-overhaul-june-15-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-06-11T23:42:06.799Z",
     "date_label": "Fri 12 June",
     "headline": "Claude surges to 8.9% global AI traffic share as ChatGPT slides from 76% to 52.7% in 12 months",
@@ -210,6 +141,43 @@
       "https://www.fifthrow.com/blog/us-export-control-order-and-global-suspension-of-fable-5-mythos-5-operationalizing-compliance-as-a-live-mandate",
       "https://www.gravitee.io/blog/fable-5-mythos-5-suspension-what-it-means-for-your-ai-architecture",
       "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-25T23:24:09.036Z",
+    "date_label": "Fri 26 June",
+    "headline": "Anthropic ships Claude Tag: AI teammate now lives in your Slack channels",
+    "urls": [
+      "https://www.anthropic.com/news/introducing-claude-tag",
+      "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time",
+      "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-25T23:24:09.036Z",
+    "date_label": "Fri 26 June",
+    "headline": "June 2026: Enterprise AI agents move from pilots to production",
+    "urls": [
+      "https://blog.mean.ceo/ai-agents-news-june-2026",
+      "https://cogitx.ai/blog/ai-agents-complete-overview-2026",
+      "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-25T23:24:09.036Z",
+    "date_label": "Fri 26 June",
+    "headline": "The real AI moat in PM tools is data access, not model quality",
+    "urls": [
+      "https://dataconomy.com/2026/06/25/why-product-management-software-needs-a-unified-data-layer-in-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-25T23:24:09.036Z",
+    "date_label": "Fri 26 June",
+    "headline": "Google delays Gemini 3.5 Pro to July, leaving Claude Opus 4.8 and GPT-5.5 as the June frontier choice",
+    "urls": [
+      "https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026",
+      "https://inews.zoombangla.com/googles-gemini-3-5-pro-nears-general-availability-release"
     ]
   }
 ]
