@@ -1,0 +1,17 @@
+Melbourne date: Sat 27 June 2026; freshness floor: 2026-06-25
+History: 17 prior stories across 5 days; 27 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 10430 chars
+Stage 1 usage: input=171551, output=6353, web_search=8
+Stage 1 note: candidates string was truncated; salvaged 7 complete entries.
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 743h): "2026 CPO Insights Report: The Product Builder Role Grew 10x in a Year, Replacing Traditional Product Manager Jobs"
+  drop (stale 551h): "Claude Opus 4.8 Raises the Bar for Agentic AI with Better Judgment, Dynamic Workflows, and 61% Cost Reduction for Agent Tasks"
+  drop (stale 2927h): "AI Product Sense Is the New Core PM Skill: How Meta, Lenny Rachitsky, and Industry Leaders Are Reshaping PM Interviews"
+  drop (stale 1967h): "Claire Vo on ChatPRD and the Future of Product Work: 'AI Makes Product Documentation a Commodity—Build Judgment Instead'"
+  drop (stale 1127h): "Product Builders Are Here: Why PMs Must Learn Markdown Specs, Evals, and AI Prototyping to Stay Ahead"
+  drop (stale 1463h): "The AI Fragmentation Tax: 89% of Executives Say AI Sped Up Work, But Only 6% See Organization-Wide ROI"
+Freshness filter: 6/7 candidates dropped (age > 96h)
+Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
