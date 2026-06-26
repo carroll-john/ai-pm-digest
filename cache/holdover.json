@@ -1,0 +1,31 @@
+[
+  {
+    "headline_draft": "Alteryx Unlocks Enterprise AI Agents by Grounding Them in Business Logic with Agent Studio and MCP Server",
+    "summary": "<cite index=\"49-3,49-8,49-10\">Alteryx diagnosed a critical bottleneck: as companies scale AI, access to models is no longer the constraint—business context is. Most AI agents today query raw data directly with little understanding of how the business actually works.</cite> <cite index=\"49-20,49-21\">The company's new Agent Studio converts business logic, workflows, and rules teams already trust into autonomous AI agents, rather than asking enterprises to rebuild that logic inside a new platform.</cite> <cite index=\"49-4,49-5\">The Alteryx One MCP Server extends agents into Slack, Microsoft Teams, and external LLMs like Claude and OpenAI, with MCP becoming the connective tissue of enterprise AI.</cite> <cite index=\"49-6,49-1\">Agent Studio enters preview in June 2026.</cite>",
+    "why_pm": "<cite index=\"49-25,49-26,49-27,49-28\">For PMs evaluating agentic AI, this answers where business logic comes from: generic agents struggle with company rules and require extensive prompt engineering, but Alteryx embeds guardrails directly so agents run on logic already tested and approved by the business.</cite>",
+    "key_facts": [
+      "Agent Studio and MCP Server announced at Alteryx Inspire 2026 (May 20)",
+      "Agent Studio enters preview June 2026",
+      "Converts existing workflows, datasets, and business logic into autonomous agents",
+      "MCP Server connects agents to Slack, Teams, Claude, ChatGPT, Gemini",
+      "Addresses governance: visible, understandable, repeatable, auditable AI",
+      "Analysts and business teams (not IT) own and maintain business logic"
+    ],
+    "quotes": [
+      "As companies scale AI, the bottleneck is no longer access to models—it is the business context those models run on.",
+      "The logic that would make their answers trustworthy often lives in prompts that are difficult to audit, verify, or update."
+    ],
+    "sources": [
+      {
+        "url": "https://enterprisedna.co/resources/news/alteryx-agent-studio-inspire-2026-analytics-ai-agents/",
+        "label": "Enterprise DNA: Alteryx Agent Studio at Inspire 2026",
+        "published_date": "2026-05-24"
+      },
+      {
+        "url": "https://releasebot.io/updates/alteryx",
+        "label": "Alteryx Release Notes: Agent Studio & MCP Server Previews",
+        "published_date": "2026-06-24"
+      }
+    ]
+  }
+]
