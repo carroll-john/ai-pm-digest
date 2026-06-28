@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { render } from "../email/template.mjs";
+import { redactFailureRecord, redactPii } from "./redact-pii.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROMPTS_DIR = path.resolve(__dirname, "../prompts");
@@ -41,6 +42,11 @@ const preview = process.argv.includes("--preview");
 const RESEARCH_MODEL = "claude-haiku-4-5";
 const WRITE_MODEL = "claude-sonnet-4-6";
 const WEB_SEARCH_MAX_USES = 10;
+// Per-call timeouts so a hung API call fails before the 10-minute GHA job
+// timeout — otherwise `if: failure()` alert/persist steps never run.
+const STAGE1_TIMEOUT_MS = 180_000;
+const STAGE2_TIMEOUT_MS = 120_000;
+const RESEND_TIMEOUT_MS = 60_000;
 
 const RESEARCH_TOOL_INSTRUCTIONS = `## Step 2: Submit research findings
 
@@ -238,7 +244,7 @@ function logUsage(label, r) {
 // specific subject prefix and actionable "What to do" hint, instead of the
 // recipient having to read the log tail and reverse-engineer the cause.
 function recordFailure({ kind, subjectTag, stage, summary, hint, detail }) {
-  const payload = {
+  const payload = redactFailureRecord({
     kind,
     subject_tag: subjectTag,
     stage,
@@ -246,7 +252,7 @@ function recordFailure({ kind, subjectTag, stage, summary, hint, detail }) {
     hint,
     detail,
     occurred_at: new Date().toISOString(),
-  };
+  });
   try {
     fs.mkdirSync(CACHE_DIR, { recursive: true });
     fs.writeFileSync(LAST_FAILURE_PATH, JSON.stringify(payload, null, 2));
@@ -263,6 +269,13 @@ function recordFailure({ kind, subjectTag, stage, summary, hint, detail }) {
 // codes drive the category; the credit-balance message is the only string we
 // pattern-match on because Anthropic returns it as a generic 400 rather than a
 // dedicated error type.
+function isTimeoutError(err) {
+  const name = err?.name ?? err?.cause?.name;
+  if (name === "AbortError" || name === "TimeoutError") return true;
+  const msg = String(err?.message ?? "");
+  return /aborted|timeout/i.test(msg);
+}
+
 function classifyAnthropicError(err, stage) {
   const status = err?.status;
   const apiError = err?.error?.error ?? err?.error ?? {};
@@ -271,6 +284,13 @@ function classifyAnthropicError(err, stage) {
   const detail = `${type}: ${message}`;
   const lower = message.toLowerCase();
 
+  if (isTimeoutError(err)) {
+    return {
+      kind: "ANTHROPIC_TIMEOUT", subjectTag: "TIMEOUT", stage, detail,
+      summary: `${stage} timed out before completing.`,
+      hint: "The API call exceeded its per-stage timeout. Re-dispatch once; if it persists, check https://status.anthropic.com or reduce web_search load.",
+    };
+  }
   if (status == null) {
     return {
       kind: "ANTHROPIC_NETWORK", subjectTag: "NETWORK", stage, detail,
@@ -320,7 +340,15 @@ function classifyAnthropicError(err, stage) {
   };
 }
 
-function classifyResendError(status, bodyText) {
+function classifyResendError(status, bodyText, err) {
+  if (err && isTimeoutError(err)) {
+    return {
+      kind: "RESEND_TIMEOUT", subjectTag: "TIMEOUT", stage: "Resend send",
+      detail: `timeout: ${err.message}`,
+      summary: "Resend send timed out.",
+      hint: "Likely a transient network issue. Re-dispatch the workflow once; check https://resend.com if it persists.",
+    };
+  }
   const detail = `HTTP ${status}: ${bodyText}`;
   if (status === 401) {
     return {
@@ -357,14 +385,14 @@ function classifyResendError(status, bodyText) {
   };
 }
 
-async function runStage(client, label, model, prompt, tools, toolName, maxTokens = 5000) {
+async function runStage(client, label, model, prompt, tools, toolName, maxTokens = 5000, timeoutMs = STAGE2_TIMEOUT_MS) {
   console.log(`${label} (${model}): prompt ${prompt.length} chars`);
   const r = await client.messages.create({
     model,
     max_tokens: maxTokens,
     tools,
     messages: [{ role: "user", content: prompt }],
-  });
+  }, { signal: AbortSignal.timeout(timeoutMs) });
   logUsage(label, r);
   const block = r.content.find((b) => b.type === "tool_use" && b.name === toolName);
   if (!block) {
@@ -548,7 +576,7 @@ if (fromSample) {
     let stage1Attempt = 0;
     while (true) {
       try {
-        research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, stage1Tools, "submit_research", 16000);
+        research = await runStage(anthropic, "Stage 1", RESEARCH_MODEL, researchPrompt, stage1Tools, "submit_research", 16000, STAGE1_TIMEOUT_MS);
         break;
       } catch (err) {
         if (stage1Attempt === 0 && err?.status === 429 && stage1Tools[0].max_uses > 3) {
@@ -767,7 +795,7 @@ if (fromSample) {
         required: ["subject", "date_label", "greeting", "intro", "stories", "reflection", "sign_off"],
       },
     },
-  ], "submit_digest");
+  ], "submit_digest", 5000, STAGE2_TIMEOUT_MS);
   } catch (err) {
     recordFailure(classifyAnthropicError(err, "Stage 2"));
   }
@@ -813,22 +841,28 @@ if (dryRun) {
 
 console.log("Sending via Resend...");
 
-const resendRes = await fetch("https://api.resend.com/emails", {
-  method: "POST",
-  headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
-  body: JSON.stringify({
-    from: process.env.FROM_EMAIL,
-    to: [process.env.TO_EMAIL],
-    subject: digest.subject,
-    html,
-    text,
-  }),
-});
+let resendRes;
+try {
+  resendRes = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: process.env.FROM_EMAIL,
+      to: [process.env.TO_EMAIL],
+      subject: digest.subject,
+      html,
+      text,
+    }),
+    signal: AbortSignal.timeout(RESEND_TIMEOUT_MS),
+  });
+} catch (err) {
+  recordFailure(classifyResendError(null, "", err));
+}
 
 if (!resendRes.ok) {
   const bodyText = await resendRes.text();
-  console.error(`Resend failed (${resendRes.status}):`, bodyText);
-  console.error("Digest content was:\n", JSON.stringify(digest, null, 2));
+  console.error(`Resend failed (${resendRes.status}):`, redactPii(bodyText));
+  console.error(`Digest subject: "${digest.subject}" (${digest.stories?.length ?? 0} stories — content omitted from log)`);
   recordFailure(classifyResendError(resendRes.status, bodyText));
 }
 

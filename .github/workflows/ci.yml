@@ -6,6 +6,8 @@ on:
     branches: [main]
 
 jobs:
+  # Job name `validate` is referenced by branch-protection guidance in CLAUDE.md —
+  # keep it stable so auto-merge waits on this check.
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -23,6 +25,7 @@ jobs:
         run: |
           node --check scripts/send-digest.mjs
           node --check scripts/notify-failure.mjs
+          node --check scripts/redact-pii.mjs
           node --check email/template.mjs
 
       - name: YAML lint workflows

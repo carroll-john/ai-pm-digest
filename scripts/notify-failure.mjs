@@ -6,19 +6,25 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { redactPii } from "./redact-pii.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CACHE_DIR = path.resolve(__dirname, "../cache");
 const FAILURE_PATH = path.join(CACHE_DIR, "last-failure.json");
 const FAILURE_LOG_PATH = path.join(CACHE_DIR, "last-failure.log");
 const TAIL_LINES = 60;
+const RESEND_TIMEOUT_MS = 60_000;
 const logPath = process.argv[2] || "digest.log";
 
 let tail = "(no log captured — the failure happened before the digest step ran)";
+let rawTail = tail;
 try {
   const raw = fs.readFileSync(logPath, "utf8").trimEnd();
   const lines = raw.length ? raw.split("\n") : [];
-  if (lines.length) tail = lines.slice(-TAIL_LINES).join("\n");
+  if (lines.length) {
+    rawTail = lines.slice(-TAIL_LINES).join("\n");
+    tail = rawTail;
+  }
 } catch (err) {
   if (err.code !== "ENOENT") tail = `(could not read ${logPath}: ${err.message})`;
 }
@@ -74,30 +80,42 @@ ${tail}
 // persist step can commit them to main. That way the next conversation about
 // a failure can read these files directly instead of asking the user to copy
 // the email body.
+// Committed to main — redact PII; the email above keeps full context for the recipient.
 try {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
-  fs.writeFileSync(FAILURE_LOG_PATH, tail.endsWith("\n") ? tail : tail + "\n");
+  const committedTail = redactPii(rawTail);
+  fs.writeFileSync(FAILURE_LOG_PATH, committedTail.endsWith("\n") ? committedTail : committedTail + "\n");
 } catch (err) {
   console.warn(`Could not write ${FAILURE_LOG_PATH}: ${err.message}`);
 }
 
-const res = await fetch("https://api.resend.com/emails", {
-  method: "POST",
-  headers: {
-    Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    from: process.env.FROM_EMAIL,
-    to: [process.env.TO_EMAIL],
-    subject,
-    html,
-    text,
-  }),
-});
+let res;
+try {
+  res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: process.env.FROM_EMAIL,
+      to: [process.env.TO_EMAIL],
+      subject,
+      html,
+      text,
+    }),
+    signal: AbortSignal.timeout(RESEND_TIMEOUT_MS),
+  });
+} catch (err) {
+  if (err?.name === "AbortError") {
+    console.error("Failure-notification send timed out before completing.");
+    process.exit(1);
+  }
+  throw err;
+}
 
 if (!res.ok) {
-  console.error(`Failure-notification send failed (${res.status}):`, await res.text());
+  console.error(`Failure-notification send failed (${res.status}):`, redactPii(await res.text()));
   process.exit(1);
 }
 const body = await res.json();
