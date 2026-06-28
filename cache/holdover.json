@@ -1,5 +1,34 @@
 [
   {
+    "headline_draft": "Claude Fable 5 Suspension Reshuffles June 2026 Model Landscape: GPT-5.6 Delayed, Gemini 3.5 Pro Still Pending",
+    "summary": "The June 2026 AI model race took an unexpected turn. Anthropic's Claude Fable 5 was globally suspended on June 12 after a White House export control directive, leaving teams with only 90 minutes to restrict access. Simultaneously, prediction markets for OpenAI's GPT-5.6 collapsed from 83% to 18% probability for June release—now expected in July. Google's Gemini 3.5 Pro remains \"next month\" with no public API ID yet. The net result: Claude Opus 4.8 is now the practical flagship for teams who needed Fable 5's reasoning, GPT-5.5 holds the omnimodal generalist position, and Gemini 3.5 Flash ($1.50/$9 per million) is resetting cost expectations.",
+    "why_pm": "If you wired Fable 5 into production, swap to Opus 4.8 immediately using the same cost/capability profile. Don't wait for GPT-5.6 or Gemini 3.5 Pro—neither has a firm date. Focus your engineering effort on building flexible model-routing (not single-model) architectures so you can swap providers on a day's notice.",
+    "key_facts": [
+      "Claude Fable 5 suspended globally June 12, 2026 by US government export control order",
+      "Anthropic had 90 minutes to restrict access after government request",
+      "GPT-5.6 release window slipped from June (83% odds) to July (94% odds)",
+      "Gemini 3.5 Pro announced for 'next month' at Google I/O, still no release date or API ID",
+      "Opus 4.8 ($5/$25) is now the Fable 5 fallback with comparable reasoning capability",
+      "Gemini 3.5 Flash ($1.50/$9) resets cost floor for frontier-grade reasoning"
+    ],
+    "quotes": [
+      "Anthropic had 90 minutes to restrict Claude Fable 5 as White House feared Chinese access.",
+      "If you wired Fable 5 into a production agent, the fastest fallback is to swap the model identifier to claude-opus-4-8 and keep moving."
+    ],
+    "sources": [
+      {
+        "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+        "label": "Build Fast with AI: AI News Today June 27 2026—15 Biggest Stories",
+        "published_date": "2026-06-27"
+      },
+      {
+        "url": "https://www.totalum.app/blog/claude-opus-4-8-totalum",
+        "label": "Totalum: Claude Opus 4.8 in 2026—Fable 5 Suspension Context",
+        "published_date": "2026-06-13"
+      }
+    ]
+  },
+  {
     "headline_draft": "Claude Code vs Codex: The June 2026 Reckoning as Fable 5 Exits Flat Plans and Pricing Models Collide",
     "summary": "By late June 2026, Claude Code and Codex have converged on the same agentic coding blueprint but diverged sharply on pricing, model ceiling, and workflow philosophy. Anthropic's Fable 5 (95% SWE-bench Verified) had a free-tier window through June 22, then moved to per-use credits. OpenAI embedded GPT-5.5 into Codex as default and added computer use and browser automation. Claude Code optimizes for consistency and long-context reasoning; Codex optimizes for speed and cross-surface continuity. The real decision is terminal-first depth (Claude Code) vs managed workspace breadth (Codex). Many developers now use both tools on the same project via AGENTS.md handoff logs.",
     "why_pm": "This is the decision your engineering team is making right now. Understanding the tradeoff between reasoning depth (Claude) and operational breadth (Codex) directly affects how your team ships product—speed to prototype vs quality of long-running autonomous work. PMs building AI-native products need to track which tool matches their workflow and when switching costs more than staying put.",
@@ -25,35 +54,6 @@
         "url": "https://www.developersdigest.tech/blog/codex-vs-claude-code-june-2026",
         "label": "Developers Digest: Codex vs Claude Code in June 2026",
         "published_date": "2026-06-25"
-      }
-    ]
-  },
-  {
-    "headline_draft": "Alteryx Unlocks Enterprise AI Agents by Grounding Them in Business Logic with Agent Studio and MCP Server",
-    "summary": "<cite index=\"49-3,49-8,49-10\">Alteryx diagnosed a critical bottleneck: as companies scale AI, access to models is no longer the constraint—business context is. Most AI agents today query raw data directly with little understanding of how the business actually works.</cite> <cite index=\"49-20,49-21\">The company's new Agent Studio converts business logic, workflows, and rules teams already trust into autonomous AI agents, rather than asking enterprises to rebuild that logic inside a new platform.</cite> <cite index=\"49-4,49-5\">The Alteryx One MCP Server extends agents into Slack, Microsoft Teams, and external LLMs like Claude and OpenAI, with MCP becoming the connective tissue of enterprise AI.</cite> <cite index=\"49-6,49-1\">Agent Studio enters preview in June 2026.</cite>",
-    "why_pm": "<cite index=\"49-25,49-26,49-27,49-28\">For PMs evaluating agentic AI, this answers where business logic comes from: generic agents struggle with company rules and require extensive prompt engineering, but Alteryx embeds guardrails directly so agents run on logic already tested and approved by the business.</cite>",
-    "key_facts": [
-      "Agent Studio and MCP Server announced at Alteryx Inspire 2026 (May 20)",
-      "Agent Studio enters preview June 2026",
-      "Converts existing workflows, datasets, and business logic into autonomous agents",
-      "MCP Server connects agents to Slack, Teams, Claude, ChatGPT, Gemini",
-      "Addresses governance: visible, understandable, repeatable, auditable AI",
-      "Analysts and business teams (not IT) own and maintain business logic"
-    ],
-    "quotes": [
-      "As companies scale AI, the bottleneck is no longer access to models—it is the business context those models run on.",
-      "The logic that would make their answers trustworthy often lives in prompts that are difficult to audit, verify, or update."
-    ],
-    "sources": [
-      {
-        "url": "https://enterprisedna.co/resources/news/alteryx-agent-studio-inspire-2026-analytics-ai-agents/",
-        "label": "Enterprise DNA: Alteryx Agent Studio at Inspire 2026",
-        "published_date": "2026-05-24"
-      },
-      {
-        "url": "https://releasebot.io/updates/alteryx",
-        "label": "Alteryx Release Notes: Agent Studio & MCP Server Previews",
-        "published_date": "2026-06-24"
       }
     ]
   }
