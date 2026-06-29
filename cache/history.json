@@ -1,39 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-11T23:42:06.799Z",
-    "date_label": "Fri 12 June",
-    "headline": "Claude surges to 8.9% global AI traffic share as ChatGPT slides from 76% to 52.7% in 12 months",
-    "urls": [
-      "https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share",
-      "https://momenticmarketing.com/blog/top-ai-chatbots"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-11T23:42:06.799Z",
-    "date_label": "Fri 12 June",
-    "headline": "Moonshot AI ships Kimi Code CLI — MIT-licensed terminal agent at 42x cheaper token cost than Claude Code",
-    "urls": [
-      "https://lushbinary.com/blog/kimi-code-cli-developer-guide",
-      "https://medium.com/@chewloongnian/moonshot-cracked-claude-codes-playbook-with-an-mit-terminal-agent-and-a-0-60-model-6f0039a38339"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-11T23:42:06.799Z",
-    "date_label": "Fri 12 June",
-    "headline": "OpenAI embeds into Oracle Cloud: enterprise customers access GPT models through existing Oracle credits",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-11T23:42:06.799Z",
-    "date_label": "Fri 12 June",
-    "headline": "Gemini 3.5 Pro still in limited preview a month after Google's 'give us until next month' promise at I/O",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-06-16T23:27:52.222Z",
     "date_label": "Wed 17 June",
     "headline": "Anthropic's Fable 5 Pulled Globally After White House Export Order",
@@ -178,6 +144,41 @@
     "urls": [
       "https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026",
       "https://inews.zoombangla.com/googles-gemini-3-5-pro-nears-general-availability-release"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-29T23:03:53.225Z",
+    "date_label": "Tue 30 June",
+    "headline": "Frontier Model Access Is Now a Regulatory Variable, Not Just a Technology One",
+    "urls": [
+      "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
+      "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-29T23:03:53.226Z",
+    "date_label": "Tue 30 June",
+    "headline": "Claude Lands on Microsoft Foundry with Azure-Native Controls and US Data Residency",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-29T23:03:53.226Z",
+    "date_label": "Tue 30 June",
+    "headline": "Claude Code Ships Dynamic Workflows, Okta Permissions, and a 37% CPU Drop",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-06-29T23:03:53.226Z",
+    "date_label": "Tue 30 June",
+    "headline": "Claude Code vs Codex: The Split Your Engineering Team Is Already Making",
+    "urls": [
+      "https://www.morphllm.com/comparisons/codex-vs-claude-code",
+      "https://www.developersdigest.tech/blog/codex-vs-claude-code-june-2026"
     ]
   }
 ]
