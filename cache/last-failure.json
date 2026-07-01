@@ -1,9 +1,0 @@
-{
-  "kind": "STAGE1_INVALID_OUTPUT",
-  "subject_tag": "BUG",
-  "stage": "Stage 1",
-  "summary": "Stage 1 emitted candidates as a string the script could not parse or salvage.",
-  "hint": "Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.",
-  "detail": "First 500 chars of candidates string: [\n  {\n    \"headline_draft\": \"Anthropic Ships Claude Sonnet 5 and Claude Science for Agentic Workflows and Research Labs\",\n    \"summary\": \"Anthropic released Claude Sonnet 5 on June 30, 2026, positioning it as the most agentic Sonnet model yet, capable of making plans, using tools, and running autonomously at capabilities previously requiring larger models. The release includes introductory pricing of $2/$10 per million tokens through August 31, then $3/$15 standard. Simultaneously, Anthropic lau",
-  "occurred_at": "2026-06-30T23:18:37.566Z"
-}

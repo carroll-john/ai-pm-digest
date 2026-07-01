@@ -1,30 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-16T23:27:52.222Z",
-    "date_label": "Wed 17 June",
-    "headline": "Anthropic's Fable 5 Pulled Globally After White House Export Order",
-    "urls": [
-      "https://www.androidheadlines.com/2026/06/anthropic-white-house-meetings-claude-fable-5-ai-export-ban.html",
-      "https://www.businesstoday.in/technology/artificial-intelligence/story/anthropic-had-90-minutes-to-restrict-claude-fable-5-as-white-house-feared-chinese-access-537095-2026-06-16"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-16T23:27:52.222Z",
-    "date_label": "Wed 17 June",
-    "headline": "How I AI (Claire Vo): What Fable 5 Actually Does — and Doesn't Do — for Product Work",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-i-ai-claude-fable-5-review-and"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-16T23:27:52.222Z",
-    "date_label": "Wed 17 June",
-    "headline": "Claude Code Ships Nested Sub-Agents and Safe Mode for Broken Workflow Recovery",
-    "urls": [
-      "https://releasebot.io/updates/anthropic"
-    ]
-  },
-  {
     "shipped_at": "2026-06-17T23:44:23.532Z",
     "date_label": "Thu 18 June",
     "headline": "Shreyas Doshi and Ankur Goyal (Braintrust): Stop Writing Specs for AI — Write Evals Instead",
@@ -179,6 +154,35 @@
     "urls": [
       "https://www.morphllm.com/comparisons/codex-vs-claude-code",
       "https://www.developersdigest.tech/blog/codex-vs-claude-code-june-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-01T23:21:16.974Z",
+    "date_label": "Thu 2 July",
+    "headline": "Anthropic ships Claude Sonnet 5 and restores Fable 5 globally",
+    "urls": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-at-a-steep-discount-to-its-top-model-as-the-company-races-toward-a-blockbuster-ipo"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-01T23:21:16.974Z",
+    "date_label": "Thu 2 July",
+    "headline": "Regulatory risk hit the AI roadmap in June — and it wasn't theoretical",
+    "urls": [
+      "https://www.marketscale.com/industries/software-and-technology/fable-5-and-mythos-5-are-back-what-the-19-day-shutdown-taught-every-enterprise-about-ai-as-infrastructure",
+      "https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it",
+      "https://www.anthropic.com/news/redeploying-fable-5"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-01T23:21:16.974Z",
+    "date_label": "Thu 2 July",
+    "headline": "Choosing a model in 2026 means choosing model and reasoning effort — not just brand",
+    "urls": [
+      "https://bravenewcoin.com/insights/what-ai-model-should-i-use-the-2026-guide-to-chatgpt-claude-gemini-and-grok",
+      "https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored"
     ]
   }
 ]
