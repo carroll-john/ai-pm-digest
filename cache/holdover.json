@@ -1,0 +1,68 @@
+[
+  {
+    "headline_draft": "Model Context Protocol 2026-07-28 Release Candidate: Stateless Core, Enterprise Governance, Agent-to-Agent Standards",
+    "summary": "The Model Context Protocol published a release candidate for its largest revision since launch, shipping July 28, 2026. The update delivers a stateless core that allows MCP servers to run behind plain load balancers without sticky sessions, introduces MCP Apps for interactive UIs in sandboxed iframes, and formalizes the Tasks extension for long-running work. Authorization now aligns with OAuth and OpenID Connect, and distributed tracing is locked into the spec. The change enables MCP servers (now ~10,000 public registries) to scale horizontally on commodity HTTP infrastructure. Anthropic, OpenAI, Google, Microsoft, and AWS have all formally backed MCP governance under the Linux Foundation's Agentic AI Foundation.",
+    "why_pm": "MCP is becoming the infrastructure standard for enterprise AI agent deployment. As a PM, you need to understand whether your product roadmap requires an MCP server to remain discoverable to agents, how your data sources will be exposed safely through MCP, and what governance controls your organization needs to manage agent-to-system integrations at scale.",
+    "key_facts": [
+      "Release candidate locked as of May 21, 2026; final spec ships July 28, 2026",
+      "Largest revision since MCP launch in November 2024",
+      "Stateless core allows servers to run behind round-robin load balancers without session stickiness",
+      "MCP Apps (SEP-1865) allow servers to ship interactive HTML interfaces in sandboxed iframes",
+      "Tasks extension now formally part of spec for long-running work",
+      "~10,000 active public MCP servers; 97 million monthly SDK downloads as of March 2026",
+      "Ten-week validation window for Tier 1 SDK maintainers and client implementers"
+    ],
+    "quotes": [
+      "The practical effect on a production deployment is immediate. A remote MCP server that previously needed sticky sessions, a shared session store, and deep packet inspection at the gateway can now run behind a plain round-robin load balancer, route traffic on an Mcp-Method header, and let clients cache tools/list responses for as long as the server's ttlMs permits.",
+      "It is the largest revision of the protocol since launch and delivers on the 2026 roadmap: a stateless core that scales on ordinary HTTP infrastructure, extensions including server-rendered UIs through MCP Apps and long-running work through the Tasks extension, authorization that aligns more closely with OAuth and OpenID Connect deployments, and a formal deprecation policy so the protocol can evolve without breaking what you've built."
+    ],
+    "sources": [
+      {
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+        "label": "Model Context Protocol Blog: The 2026-07-28 Release Candidate",
+        "published_date": "2026-07-02"
+      },
+      {
+        "url": "https://truto.one/blog/what-is-mcp-model-context-protocol-the-2026-guide-for-saas-pms/",
+        "label": "Truto: What is MCP? The 2026 Guide for SaaS PMs",
+        "published_date": "2026-04-03"
+      },
+      {
+        "url": "https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol",
+        "label": "Digital Applied: MCP Adoption Statistics 2026",
+        "published_date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Mean CEO's July 2026 AI Market: Winners Are Built on Workflow Discipline, Not Model Prestige",
+    "summary": "Violetta Bonenkamp (Mean CEO) published analysis of July 2026 AI product launches and market dynamics, arguing that the market is shifting decisively from flashy model announcements to tools that reduce friction and fit into daily work. Key winners: OpenAI Flex processing (cost segmentation for batch vs. real-time tasks), Willow.ai Atlas-1 (speech-to-text as a business layer), and discipline around what actually wins. The analysis emphasizes that small teams gain power when they build structured workflows, not when they chase the loudest AI branding. Governance, cost control, and embedding AI into existing tools matter more than raw model capability.",
+    "why_pm": "This is a critical market signal for product strategy in 2026. If you're building AI features, Bonenkamp's framework challenges you to move past novelty metrics and into outcome-driven measurement: time saved, errors reduced, margin impact. For PMs at non-AI companies, it signals that your customers are asking not \"Do you have AI?\" but \"Does your AI fit into my workflow and save me money?\"",
+    "key_facts": [
+      "July 2026 shows market shift from model announcements to cost-saving, friction-reducing tools",
+      "OpenAI Flex processing: splits fast tasks from slow tasks for better margin protection",
+      "Willow.ai Atlas-1: speech-to-text positioned as business layer for sales, support, meetings, compliance",
+      "Winners are companies that make AI cheaper, more usable, and harder to ignore inside real workflows",
+      "Losers are companies with loudest claims but no workflow fit or transparent economics",
+      "Market is digesting late-spring and early-summer releases; budget decisions happen weeks after launch date",
+      "Founders should treat AI launches through outcome lens, not benchmark bragging"
+    ],
+    "quotes": [
+      "AI Product Launches news in July 2026 tells a very clear story: the market is shifting from flashy model announcements to tools that save money, reduce friction, and fit into daily work.",
+      "The winners in this cycle are not the companies with the loudest claims. The winners are the ones that make AI cheaper, more usable, and harder to ignore inside real workflows.",
+      "The biggest win for you is not a flashy new model, but cheaper task routing, better speech tools, and AI built into the software you already use."
+    ],
+    "sources": [
+      {
+        "url": "https://blog.mean.ceo/ai-product-launches-news-july-2026/",
+        "label": "Mean CEO: AI Product Launches News | July 2026 (Startup Edition)",
+        "published_date": "2026-07-02"
+      },
+      {
+        "url": "https://blog.mean.ceo/latest-ai-trends-july-2026/",
+        "label": "Mean CEO: Latest AI Trends | July 2026 (Startup Edition)",
+        "published_date": "2026-07-01"
+      }
+    ]
+  }
+]
