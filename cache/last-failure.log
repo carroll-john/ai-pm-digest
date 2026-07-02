@@ -1,0 +1,16 @@
+Melbourne date: Fri 3 July 2026; freshness floor: 2026-07-01
+History: 18 prior stories across 5 days; 33 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 11148 chars
+Stage 1 usage: input=197357, output=4903, web_search=8
+Stage 1 note: candidates string was truncated; salvaged 5 complete entries.
+Stage 1 complete: 5 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  close call (0.25): "Claude Code's Dynamic Workflows: From Multi-Agent Demos to Production Parallel Engineering" ~~ "Claude Code Ships Dynamic Workflows, Okta Permissions, and a 37% CPU Drop"
+  close call (0.22): "Model Effort Levels Are Now a Product Lever: Claude, GPT, Grok All Shipping Reasoning Knobs in July 2026" ~~ "Choosing a model in 2026 means choosing model and reasoning effort — not just brand"
+  drop (URL repeat): "Claude Code's Dynamic Workflows: From Multi-Agent Demos to Production Parallel Engineering" → https://releasebot.io/updates/anthropic/claude
+  drop (URL repeat): "AI Agents Are Now Moving from Demos to Workflow Replacement — Companies Testing Real Cost and Time Outcomes" → https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025
+  drop (URL repeat): "Model Effort Levels Are Now a Product Lever: Claude, GPT, Grok All Shipping Reasoning Knobs in July 2026" → https://bravenewcoin.com/insights/what-ai-model-should-i-use-the-2026-guide-to-chatgpt-claude-gemini-and-grok
+URL filter: 3/5 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
