@@ -1,9 +1,9 @@
 {
-  "kind": "STAGE1_INSUFFICIENT_CANDIDATES",
-  "subject_tag": "NO-NEWS",
-  "stage": "Stage 1 → Stage 2 handoff",
-  "summary": "Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.",
-  "hint": "Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.",
-  "detail": "Candidates surviving filters: 2. See preceding log lines for what was dropped and why.",
-  "occurred_at": "2026-07-02T23:14:05.616Z"
+  "kind": "STAGE2_INVALID_OUTPUT",
+  "subject_tag": "BUG",
+  "stage": "Stage 2",
+  "summary": "Stage 2 called submit_digest but omitted required field(s): stories.",
+  "hint": "The model returned a structured tool call with holes. Re-dispatch once; if persistent, tighten the Stage 2 prompts or the submit_digest schema descriptions.",
+  "detail": "Received top-level fields: subject, date_label, greeting, intro, stories, reflection, sign_off",
+  "occurred_at": "2026-07-03T23:11:38.455Z"
 }
