@@ -1,54 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-17T23:44:23.532Z",
-    "date_label": "Thu 18 June",
-    "headline": "Shreyas Doshi and Ankur Goyal (Braintrust): Stop Writing Specs for AI — Write Evals Instead",
-    "urls": [
-      "https://aakashgupta.medium.com/prds-dont-work-for-ai-products-the-ceo-of-braintrust-explains-what-does-0dbf4d99ab91"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-17T23:44:23.532Z",
-    "date_label": "Thu 18 June",
-    "headline": "Perplexity Reaches $20B Valuation With Zero Proprietary Models — Composition Is the Product",
-    "urls": [
-      "https://x.com/aakashgupta/status/2042655607195603251"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-17T23:44:23.532Z",
-    "date_label": "Thu 18 June",
-    "headline": "AI Agent Adoption: 62% of Orgs Experimenting or Scaling, 23% Already in Production",
-    "urls": [
-      "https://www.cflowapps.com/ai-workflow-automation-trends"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-19T23:04:15.744Z",
-    "date_label": "Sat 20 June",
-    "headline": "OpenAI ships spend controls and usage analytics for ChatGPT Enterprise",
-    "urls": [
-      "https://openai.com/index/chatgpt-enterprise-spend-controls",
-      "https://letsdatascience.com/news/openai-launches-enterprise-usage-analytics-and-spending-cont-a936e7b2"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-19T23:04:15.744Z",
-    "date_label": "Sat 20 June",
-    "headline": "Model Context Protocol solidifies as the interoperability standard for AI agents",
-    "urls": [
-      "https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-19T23:04:15.744Z",
-    "date_label": "Sat 20 June",
-    "headline": "Snowflake bundles agent evaluation and batch inference governance into its ML platform",
-    "urls": [
-      "https://www.snowflake.com/en/ai-pulse/june-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-06-22T23:25:57.636Z",
     "date_label": "Tue 23 June",
     "headline": "Google makes Gemini 2.5 Flash the default across all consumer products — speed and cost win at scale",
@@ -183,6 +134,40 @@
     "urls": [
       "https://bravenewcoin.com/insights/what-ai-model-should-i-use-the-2026-guide-to-chatgpt-claude-gemini-and-grok",
       "https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-04T23:03:45.624Z",
+    "date_label": "Sun 5 July",
+    "headline": "Anthropic ships dynamic workflows in Claude Code: 10–100+ parallel subagents from a single prompt",
+    "urls": [
+      "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "https://code.claude.com/docs/en/workflows"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-04T23:03:45.624Z",
+    "date_label": "Sun 5 July",
+    "headline": "Model Context Protocol 2026-07-28 release candidate: stateless core, OAuth alignment, agent-to-agent standards",
+    "urls": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate",
+      "https://truto.one/blog/what-is-mcp-model-context-protocol-the-2026-guide-for-saas-pms"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-04T23:03:45.625Z",
+    "date_label": "Sun 5 July",
+    "headline": "xAI deploys Grok 4.5 privately at SpaceX and Tesla, citing near-Opus performance on real engineering tasks",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-04T23:03:45.625Z",
+    "date_label": "Sun 5 July",
+    "headline": "Tosea.ai (via Cat Wu, Lenny's Podcast): the PM's scarce skill in 2026 is judgment, not execution speed",
+    "urls": [
+      "https://tosea.ai/blog/ai-product-management-2026-playbook"
     ]
   }
 ]

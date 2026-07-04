@@ -1,9 +1,0 @@
-{
-  "kind": "STAGE2_INVALID_OUTPUT",
-  "subject_tag": "BUG",
-  "stage": "Stage 2",
-  "summary": "Stage 2 called submit_digest but omitted required field(s): stories.",
-  "hint": "The model returned a structured tool call with holes. Re-dispatch once; if persistent, tighten the Stage 2 prompts or the submit_digest schema descriptions.",
-  "detail": "Received top-level fields: subject, date_label, greeting, intro, stories, reflection, sign_off",
-  "occurred_at": "2026-07-03T23:11:38.455Z"
-}
