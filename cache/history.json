@@ -169,5 +169,50 @@
     "urls": [
       "https://tosea.ai/blog/ai-product-management-2026-playbook"
     ]
+  },
+  {
+    "shipped_at": "2026-07-05T23:06:47.038Z",
+    "date_label": "Mon 6 July",
+    "headline": "OpenAI ships Flex processing: 50% cost cut for async workloads",
+    "urls": [
+      "https://developers.openai.com/api/docs/guides/flex-processing",
+      "https://blog.mean.ceo/ai-product-launches-news-july-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-05T23:06:47.038Z",
+    "date_label": "Mon 6 July",
+    "headline": "Shreyas Doshi: AI lowers execution cost but raises the value of judgment",
+    "urls": [
+      "https://x.com/shreyas/status/1943689228313067545",
+      "https://maven.com/shreyas-doshi/taste"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-05T23:06:47.038Z",
+    "date_label": "Mon 6 July",
+    "headline": "AI agents shift from demos to workflow replacement — and the metrics have changed",
+    "urls": [
+      "https://blog.mean.ceo/ai-agents-news-july-2026",
+      "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-05T23:06:47.038Z",
+    "date_label": "Mon 6 July",
+    "headline": "PM tool stacks in 2026: accelerate existing workflows or eliminate them?",
+    "urls": [
+      "https://onehorizon.ai/blog/best-ai-product-management-tools",
+      "https://learn.g2.com/ai-tools-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-05T23:06:47.038Z",
+    "date_label": "Mon 6 July",
+    "headline": "Lenny's Newsletter: AI-Native Builder course starts July 13 for non-technical PMs",
+    "urls": [
+      "https://www.ababnews.com/news/506ecb50-e28d-4e44-a1b9-d624ca2a7240",
+      "https://www.lennysnewsletter.com"
+    ]
   }
 ]
