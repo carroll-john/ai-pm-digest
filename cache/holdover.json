@@ -1,0 +1,58 @@
+[
+  {
+    "headline_draft": "GPT-5.6 family (Sol, Terra, Luna) expected to open to broad API access in July, contingent on White House AI standards framework announcement",
+    "summary": "OpenAI's GPT-5.6 Sol, Terra, and Luna remain limited to approximately 20 government-vetted partner organizations as of July 6. The White House is expected to announce a voluntary AI standards framework around July 7 that will define conditions for broader release. If the framework validates OpenAI's pre-release government coordination process, it sets a precedent for both OpenAI and Anthropic to release future frontier models under the framework. Analyst consensus places broad ChatGPT and API rollout in the July 7-21 window. The three-tier structure positions Terra ($2.50/$15) as the most likely to see immediate adoption due to price parity with Claude Sonnet 4.6 and near-GPT-5.5 performance. Luna ($1/$6) opens a new budget tier below any current OpenAI production model.",
+    "why_pm": "PMs should plan for GPT-5.6 availability in mid-July and prepare cost-comparison workflows before broad access opens. The three-tier structure (Sol for frontier reasoning, Terra for general-purpose, Luna for volume) signals that OpenAI is moving the same \"effort level\" playbook that Claude and Gemini adopted—multiple models for different task profiles. This is the baseline for how to think about model economics going forward.",
+    "key_facts": [
+      "GPT-5.6 Sol, Terra, Luna currently limited to ~20 government-vetted partners",
+      "White House AI standards framework expected announcement around July 7",
+      "Broad API rollout expected July 7-21 window (contingent on framework)",
+      "Sol: $5/$30 (frontier reasoning), matches GPT-5.5 pricing with higher coding capability",
+      "Terra: $2.50/$15 (general-purpose, price parity with Claude Sonnet 4.6)",
+      "Luna: $1/$6 (budget tier, lowest OpenAI production pricing)",
+      "Three-tier structure mirrors Claude and Gemini multi-model strategies"
+    ],
+    "quotes": [],
+    "sources": [
+      {
+        "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026",
+        "label": "BuildFastWithAI: AI News Today July 6 2026",
+        "published_date": "2026-07-06"
+      },
+      {
+        "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026",
+        "label": "BuildFastWithAI: AI News Today July 3 2026",
+        "published_date": "2026-07-03"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Anthropic ships Claude Science beta: AI workbench for researchers with auditable artifacts and computational-resource access",
+    "summary": "On July 2, Anthropic released Claude Science in beta, a customizable multi-agent AI workbench aimed at scientific laboratories and pharmaceutical research teams. The product integrates tools and packages researchers commonly use, produces auditable artifacts (not black-box outputs), and provides flexible access to computing resources. Anthropic CEO Dario Amodei positioned Claude Science as a follow-up to Claude Code's impact on programming, predicting similar disruption for life sciences. The Claude Science AI for Science grants program (applications close July 15) offers $30,000 in free credits to 50 research projects. This signals a new vertical: industry-specific AI workbenches that are not generic assistants but task-specific platforms with guardrails and workflow integration.",
+    "why_pm": "PMs building AI products in regulated or research-heavy verticals should study how Anthropic is approaching Claude Science: focus on auditability (not just accuracy), integration of existing tools (not replacement), and access to compute. This is the playbook for enterprise AI that actually ships in production without triggering compliance reviews. The emphasis on \"auditable artifacts\" is a clue that trustworthiness, not intelligence, is the constraint in high-stakes domains.",
+    "key_facts": [
+      "Claude Science released July 2, 2026 in beta",
+      "Integrates researcher-specific tools and packages",
+      "Produces auditable artifacts, not black-box outputs",
+      "Customizable for different research workflows",
+      "Claude Science grants program: $30K credits to 50 projects; applications close July 15",
+      "Dario Amodei: \"Claude Science will do the same [for life sciences] that Claude Code did for programming\"",
+      "Targets pharmaceutical and academic research operations"
+    ],
+    "quotes": [
+      "Last year, Claude Code fundamentally upended programming industry. Anthropic CEO Dario Amodei believes Claude Science will do the same for life sciences"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marktechpost.com/2026/07/04/anthropic-launches-claude-science-beta/",
+        "label": "MarkTechPost: Anthropic Launches Claude Science Beta",
+        "published_date": "2026-07-04"
+      },
+      {
+        "url": "https://www.statnews.com/2026/06/30/anthropic-release-claude-science-ceo-dario-amodei/",
+        "label": "StatNews: Anthropic releases Claude Science, a product aimed at researchers",
+        "published_date": "2026-06-30"
+      }
+    ]
+  }
+]
