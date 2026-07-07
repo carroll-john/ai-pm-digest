@@ -1,41 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-22T23:25:57.636Z",
-    "date_label": "Tue 23 June",
-    "headline": "Google makes Gemini 2.5 Flash the default across all consumer products — speed and cost win at scale",
-    "urls": [
-      "https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-22T23:25:57.636Z",
-    "date_label": "Tue 23 June",
-    "headline": "GPT-5.6 expected this week — bigger context window, alignment fixes, staged rollout",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026",
-      "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-22T23:25:57.637Z",
-    "date_label": "Tue 23 June",
-    "headline": "xAI ships Grok 4.3 on Amazon Bedrock — frontier reasoning inside the enterprise AWS stack",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-22T23:25:57.637Z",
-    "date_label": "Tue 23 June",
-    "headline": "Fable 5 government suspension exposes AI vendor concentration as an enterprise product risk",
-    "urls": [
-      "https://www.anthropic.com/news/fable-mythos-access",
-      "https://www.fifthrow.com/blog/us-export-control-order-and-global-suspension-of-fable-5-mythos-5-operationalizing-compliance-as-a-live-mandate",
-      "https://www.gravitee.io/blog/fable-5-mythos-5-suspension-what-it-means-for-your-ai-architecture",
-      "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-06-25T23:24:09.036Z",
     "date_label": "Fri 26 June",
     "headline": "Anthropic ships Claude Tag: AI teammate now lives in your Slack channels",
@@ -213,6 +177,30 @@
     "urls": [
       "https://www.ababnews.com/news/506ecb50-e28d-4e44-a1b9-d624ca2a7240",
       "https://www.lennysnewsletter.com"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-07T23:08:12.520Z",
+    "date_label": "Wed 8 July",
+    "headline": "Memory is now the default: ChatGPT, Claude, and Gemini all remember you — what that means for products you build",
+    "urls": [
+      "https://www.notebookcheck.net/AI-that-remembers-ChatGPT-Gemini-and-Claude-compared.1336513.0.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-07T23:08:12.520Z",
+    "date_label": "Wed 8 July",
+    "headline": "Anthropic ships Claude Sonnet 5: near-Opus agentic behavior at mid-tier prices — and why cost-per-token is the wrong metric",
+    "urls": [
+      "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-07T23:08:12.520Z",
+    "date_label": "Wed 8 July",
+    "headline": "GPT-5.6 Sol, Terra, and Luna: OpenAI's three-tier model family is days away from broad API access",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026"
     ]
   }
 ]
