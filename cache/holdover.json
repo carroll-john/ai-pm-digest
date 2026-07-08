@@ -1,0 +1,45 @@
+[
+  {
+    "headline_draft": "Lenny's Newsletter: How tech workers are feeling in 2026—the workforce is splitting in two",
+    "summary": "Lenny Rachitsky published the results of a 2026 survey of tech workers showing a stark divide between those amplified by AI (41% energized, more capable and confident) and those diminished by it (feeling less valuable, unsure of their place). The AI divide is the single largest effect in the dataset, three times larger than any other factor including role, seniority, or company size. The key finding: whether AI has amplified or diminished someone's sense of their value predicts how they feel about their career far more than any demographic or structural measure.",
+    "why_pm": "This data directly shapes how you think about team morale, hiring, and retention in an AI-driven product org. The gap reveals that PM success in 2026 hinges not on universal AI adoption but on how you position your team to feel amplified rather than threatened by the tools.",
+    "key_facts": [
+      "41% of tech workers feel 'energized' by AI (excited, curious, hopeful)",
+      "The other half feels 'diminished'—less sure of their value",
+      "The AI divide effect size (d ≈ 1.55) is three times larger than the 'founder effect'",
+      "64% feel 'excited' but only 33% feel 'hopeful' about where AI is going",
+      "The dominant emotions are curious and overwhelmed—people are excited but also tired"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026",
+        "label": "Lenny's Newsletter: How tech workers are feeling in 2026",
+        "published_date": "2026-07-07"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Fable 5 now requires usage credits starting July 8—a $20 coding session now costs double Opus at $10, shifting economics for teams that built on frontier models",
+    "summary": "Anthropic shifted Fable 5 access from subscription-included to usage-credits-only as of July 8, 2026. For Pro, Max, Team, and select Enterprise subscribers, Fable 5 was included at 50% weekly usage through July 7 following the export control restoration. Now it costs $10 per million input tokens and $50 per million output—double the cost of Opus 4.8 ($5/$25). A medium-complexity multi-file refactor using 2 million tokens costs $20 in output credits alone, vs. $10 on Opus. This forces rapid cost-per-task analysis for any team that scaled workflows on Fable 5 after its July 1 return.",
+    "why_pm": "If your engineering or product org deployed Fable 5 workflows in the past week, today is your audit day. You need to re-evaluate whether those workflows actually require Fable 5's capability or can route to Opus 4.8 at half the cost. This is a live case study in model economics shifting faster than deployment.",
+    "key_facts": [
+      "Fable 5 subscription-included access ends July 7, 2026",
+      "From July 8: $10/$50 usage-credits pricing (vs. Opus 4.8 at $5/$25)",
+      "Medium complexity task (2M tokens): $20 on Fable 5 vs. $10 on Opus",
+      "The billing change was not a warning—it is the billing event",
+      "Enterprise teams that rebuilt on Fable 5 need immediate cost-per-task re-evaluation"
+    ],
+    "sources": [
+      {
+        "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-8-2026",
+        "label": "Build Fast with AI: AI News Today July 8, 2026",
+        "published_date": "2026-07-08"
+      },
+      {
+        "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-7-2026",
+        "label": "Build Fast with AI: AI News Today July 7, 2026",
+        "published_date": "2026-07-07"
+      }
+    ]
+  }
+]
