@@ -1,0 +1,18 @@
+Melbourne date: Thu 9 July 2026; freshness floor: 2026-07-07
+History: 23 prior stories across 6 days; 41 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 11969 chars
+Stage 1 usage: input=153654, output=4271, web_search=7
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 167h): "Claude Code expands to browser and agents with background notifications—engineering PMs now have one fewer manual coordination task"
+  drop (stale 4535h): "Product explainability is now a PM requirement—AI systems evaluate products before humans do, so your copy and metadata must be machine-readable"
+Freshness filter: 2/7 candidates dropped (age > 96h)
+  drop (title overlap 0.42): "Claude Sonnet 5 now defaults to agentic reasoning at mid-tier prices—cost per token no longer the right metric for agent workflows" ~~ "Anthropic ships Claude Sonnet 5: near-Opus agentic behavior at mid-tier prices — and why cost-per-token is the wrong metric"
+  close call (0.25): "The shift from PM-as-document-writer to PM-as-judgment-maker is now irreversible—judgment is the bottleneck, not execution speed" ~~ "Tosea.ai (via Cat Wu, Lenny's Podcast): the PM's scarce skill in 2026 is judgment, not execution speed"
+  drop (title overlap 0.36): "AI agents are now moving from demos to production—and the metrics have changed from clickthrough to cost and time saved" ~~ "AI agents shift from demos to workflow replacement — and the metrics have changed"
+Title-overlap filter: 2/5 candidates dropped (Jaccard >= 0.3)
+  drop (URL repeat): "The shift from PM-as-document-writer to PM-as-judgment-maker is now irreversible—judgment is the bottleneck, not execution speed" → https://tosea.ai/blog/ai-product-management-2026-playbook
+URL filter: 1/3 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
