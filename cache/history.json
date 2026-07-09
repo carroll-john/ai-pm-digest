@@ -202,5 +202,31 @@
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-07-09T23:17:56.246Z",
+    "date_label": "Fri 10 July",
+    "headline": "Anthropic ships Claude Cowork on web and mobile — and 90% of usage isn't code",
+    "urls": [
+      "https://claude.com/blog/cowork-web-mobile",
+      "https://woyable.com/en/posts/claude-cowork-web-mobile-expansion"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-09T23:17:56.246Z",
+    "date_label": "Fri 10 July",
+    "headline": "Lenny's Newsletter: The 2026 tech workforce is splitting in two — and the divide is AI",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-09T23:17:56.246Z",
+    "date_label": "Fri 10 July",
+    "headline": "Fable 5 moves to usage-credits-only from 8 July — double the cost of Opus 4.8",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-8-2026",
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-7-2026"
+    ]
   }
 ]
