@@ -1,42 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-25T23:24:09.036Z",
-    "date_label": "Fri 26 June",
-    "headline": "Anthropic ships Claude Tag: AI teammate now lives in your Slack channels",
-    "urls": [
-      "https://www.anthropic.com/news/introducing-claude-tag",
-      "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time",
-      "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-25T23:24:09.036Z",
-    "date_label": "Fri 26 June",
-    "headline": "June 2026: Enterprise AI agents move from pilots to production",
-    "urls": [
-      "https://blog.mean.ceo/ai-agents-news-june-2026",
-      "https://cogitx.ai/blog/ai-agents-complete-overview-2026",
-      "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-25T23:24:09.036Z",
-    "date_label": "Fri 26 June",
-    "headline": "The real AI moat in PM tools is data access, not model quality",
-    "urls": [
-      "https://dataconomy.com/2026/06/25/why-product-management-software-needs-a-unified-data-layer-in-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-25T23:24:09.036Z",
-    "date_label": "Fri 26 June",
-    "headline": "Google delays Gemini 3.5 Pro to July, leaving Claude Opus 4.8 and GPT-5.5 as the June frontier choice",
-    "urls": [
-      "https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026",
-      "https://inews.zoombangla.com/googles-gemini-3-5-pro-nears-general-availability-release"
-    ]
-  },
-  {
     "shipped_at": "2026-06-29T23:03:53.225Z",
     "date_label": "Tue 30 June",
     "headline": "Frontier Model Access Is Now a Regulatory Variable, Not Just a Technology One",
@@ -227,6 +190,32 @@
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-8-2026",
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-7-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-10T23:03:19.680Z",
+    "date_label": "Sat 11 July",
+    "headline": "OpenAI ships GPT-5.6 GA with three-tier pricing — Sol, Terra, Luna",
+    "urls": [
+      "https://www.digitalapplied.com/blog/gpt-5-6-sol-terra-luna-public-ga",
+      "https://emergent.sh/news/gpt-5-6-release-date",
+      "https://coursiv.io/blog/chatgpt-5-6"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-10T23:03:19.681Z",
+    "date_label": "Sat 11 July",
+    "headline": "Anthropic ships Claude Reflect: a usage dashboard that audits your own AI dependency",
+    "urls": [
+      "https://releasebot.io/updates/anthropic"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-10T23:03:19.681Z",
+    "date_label": "Sat 11 July",
+    "headline": "Lenny's Podcast: Fiona Fung on what AI-pilled engineering teams actually look like in 2026",
+    "urls": [
+      "https://podcasts.apple.com/us/podcast/lennys-podcast-product-career-growth/id1627920305"
     ]
   }
 ]
