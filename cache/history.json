@@ -217,5 +217,31 @@
     "urls": [
       "https://podcasts.apple.com/us/podcast/lennys-podcast-product-career-growth/id1627920305"
     ]
+  },
+  {
+    "shipped_at": "2026-07-11T22:56:39.415Z",
+    "date_label": "Sun 12 July",
+    "headline": "Free interactive Claude Code course teaches PMs to ship prototypes from a PRD in 20 minutes",
+    "urls": [
+      "https://ccforpms.com",
+      "https://claudeforpms.dev"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-11T22:56:39.415Z",
+    "date_label": "Sun 12 July",
+    "headline": "Agent frameworks cross into production: LangGraph, Claude Agent SDK, CrewAI ship durable primitives",
+    "urls": [
+      "https://alicelabs.ai/en/insights/best-ai-agent-frameworks-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-11T22:56:39.415Z",
+    "date_label": "Sun 12 July",
+    "headline": "Enterprise AI product launches show one pattern: agents embedded in a specific workflow, not generic assistants",
+    "urls": [
+      "https://agentic.ai/news",
+      "https://www.producthunt.com/categories/ai-agents"
+    ]
   }
 ]
