@@ -243,5 +243,33 @@
       "https://agentic.ai/news",
       "https://www.producthunt.com/categories/ai-agents"
     ]
+  },
+  {
+    "shipped_at": "2026-07-12T22:56:34.884Z",
+    "date_label": "Mon 13 July",
+    "headline": "OpenAI ships ChatGPT Work: AI moves from answering questions to finishing tasks",
+    "urls": [
+      "https://asanify.com/blog/news/agentic-workflow-automation-july-11-2026",
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-12T22:56:34.885Z",
+    "date_label": "Mon 13 July",
+    "headline": "OpenAI opens GPT-5.6 (Sol, Terra, Luna) to general availability with aggressive tier pricing",
+    "urls": [
+      "https://felloai.com/best-ai-models",
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-12T22:56:34.885Z",
+    "date_label": "Mon 13 July",
+    "headline": "The model-selection conversation is over — cost-per-finished-task is the new routing logic",
+    "urls": [
+      "https://costgoat.com/compare/llm-api",
+      "https://blog.exceeds.ai/ai-model-token-pricing-breakdown",
+      "https://www.layer3labs.io/ai-model-pricing"
+    ]
   }
 ]
