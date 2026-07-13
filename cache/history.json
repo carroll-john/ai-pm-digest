@@ -271,5 +271,31 @@
       "https://blog.exceeds.ai/ai-model-token-pricing-breakdown",
       "https://www.layer3labs.io/ai-model-pricing"
     ]
+  },
+  {
+    "shipped_at": "2026-07-13T23:00:25.716Z",
+    "date_label": "Tue 14 July",
+    "headline": "OpenAI acquires Northslope to sell embedded integration, not just models",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-13T23:00:25.717Z",
+    "date_label": "Tue 14 July",
+    "headline": "Anthropic extends Claude Fable 5 access to July 19 — the second extension in a week",
+    "urls": [
+      "https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release",
+      "https://www.digitalapplied.com/blog/anthropic-fable-5-access-extended-july-12-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-13T23:00:25.717Z",
+    "date_label": "Tue 14 July",
+    "headline": "Gemini 3.5 Pro targets July 17 after Google scrapped its original build — no official specs confirmed",
+    "urls": [
+      "https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm",
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
+    ]
   }
 ]
