@@ -1,0 +1,50 @@
+[
+  {
+    "headline_draft": "Scaler: AI in Product Management—How PMs Use AI in 2026 (Latest Guide)",
+    "summary": "Scaler published a comprehensive guide on how PMs are using AI across the full product lifecycle in 2026. The guide covers AI usage stage by stage across discovery, prioritization, documentation, and roadmapping. Key finding: AI is strongest at first-draft and high-volume work; PMs add value through editing, judgment, and context interpretation. Speed is the new baseline expectation—synthesis that took a week now takes hours. The guide emphasizes that AI fluency is now a genuine differentiator layered on top of PM fundamentals.",
+    "why_pm": "PMs who haven't adapted to AI-compressed timelines are starting to feel the gap. This guide provides a concrete stage-by-stage breakdown of where and how to apply AI, moving beyond theory into actionable workflow changes.",
+    "key_facts": [
+      "PMs already using AI weekly or daily for research, prioritization, writing",
+      "Speed pressure rising—synthesis that took one week now takes hours via AI",
+      "AI fluency has become a fastest-rising priority for PM roles, tracked across multiple reports",
+      "AI strongest at first-draft and high-volume work; PM value is in editing and judgment",
+      "Updated today (July 14): 'Last updated: July 14, 2026 6:48 pm'",
+      "Covers tools supporting each PM lifecycle stage with real use cases"
+    ],
+    "quotes": [
+      "Most product managers today aren't waiting for permission to use AI. They're already using it weekly, sometimes daily, to move faster through research, prioritization and writing.",
+      "What's changed isn't whether PMs use AI. It's how deeply it's woven into the actual product lifecycle now, from the first user interview to the release notes that ship months later."
+    ],
+    "sources": [
+      {
+        "url": "https://www.scaler.com/blog/ai-in-product-management-how-pms-use-ai/",
+        "label": "Scaler: AI in Product Management: How PMs Use AI in 2026",
+        "published_date": "2026-07-14"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Tech Workforce Split in Half: Lenny's Podcast with Noam Segal on AI Sentiment (July 12)",
+    "summary": "Lenny Rachitsky and Noam Segal released the second annual tech worker sentiment survey on July 12, and the headline is stark: AI has split the tech workforce almost exactly in half. One half is thriving (the Energized); the other is shaken (split between Conflicted, Disoriented, and Resentful). Burnout jumped 11 points in a single year—the highest in survey history. Strikingly, nobody in tech would recommend their job to someone entering the industry. Managers are flagged as the single biggest lever for employee well-being.",
+    "why_pm": "PMs are part of this divided workforce. Understanding the four emotional archetypes (Energized, Conflicted, Disoriented, Resentful) is critical for leading teams through 2026. The insight about manager impact is actionable: how PMs (often middle managers in product) respond to AI uncertainty directly shapes team resilience.",
+    "key_facts": [
+      "AI has split tech workforce almost exactly in half—thriving and struggling",
+      "Four emotional archetypes: Energized, Conflicted, Disoriented, Resentful",
+      "Burnout jumped 11 points year-on-year (highest in survey history)",
+      "Nobody in tech would recommend their job to someone entering industry",
+      "Managers are single biggest lever for employee well-being",
+      "Aired July 12 (within 48-hour window)",
+      "Annual sentiment survey with benchmarking"
+    ],
+    "quotes": [
+      "Why AI has split the tech workforce almost exactly in half—one half that's thriving, another that's shaken"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lennysnewsletter.com/p/how-tech-workers-actually-fe",
+        "label": "Lenny's Podcast: How tech workers actually feel about AI in 2026 | Annual AI sentiment survey",
+        "published_date": "2026-07-12"
+      }
+    ]
+  }
+]
