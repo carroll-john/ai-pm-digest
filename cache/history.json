@@ -1,40 +1,5 @@
 [
   {
-    "shipped_at": "2026-06-29T23:03:53.225Z",
-    "date_label": "Tue 30 June",
-    "headline": "Frontier Model Access Is Now a Regulatory Variable, Not Just a Technology One",
-    "urls": [
-      "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
-      "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-29T23:03:53.226Z",
-    "date_label": "Tue 30 June",
-    "headline": "Claude Lands on Microsoft Foundry with Azure-Native Controls and US Data Residency",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-29T23:03:53.226Z",
-    "date_label": "Tue 30 June",
-    "headline": "Claude Code Ships Dynamic Workflows, Okta Permissions, and a 37% CPU Drop",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code",
-      "https://releasebot.io/updates/anthropic/claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-06-29T23:03:53.226Z",
-    "date_label": "Tue 30 June",
-    "headline": "Claude Code vs Codex: The Split Your Engineering Team Is Already Making",
-    "urls": [
-      "https://www.morphllm.com/comparisons/codex-vs-claude-code",
-      "https://www.developersdigest.tech/blog/codex-vs-claude-code-june-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-07-01T23:21:16.974Z",
     "date_label": "Thu 2 July",
     "headline": "Anthropic ships Claude Sonnet 5 and restores Fable 5 globally",
@@ -296,6 +261,48 @@
     "urls": [
       "https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm",
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-15T23:02:19.384Z",
+    "date_label": "Thu 16 July",
+    "headline": "Anthropic ships Claude write access to Microsoft 365 — email, calendar, OneDrive, and SharePoint",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://support.claude.com/en/articles/12138966-release-notes"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-15T23:02:19.384Z",
+    "date_label": "Thu 16 July",
+    "headline": "Microsoft ships 40+ Copilot updates and adds Claude as a selectable model inside Copilot Chat",
+    "urls": [
+      "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/cowork-in-progress/4511672",
+      "https://inews.zoombangla.com/microsoft-copilot-40-updates-july-2026-claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-15T23:02:19.384Z",
+    "date_label": "Thu 16 July",
+    "headline": "Claude Cowork adds computer use in research preview — agents click, navigate, and run tools on your screen",
+    "urls": [
+      "https://support.claude.com/en/articles/12138966-release-notes"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-15T23:02:19.384Z",
+    "date_label": "Thu 16 July",
+    "headline": "Lenny's Podcast: Annual AI sentiment survey finds tech workforce split exactly in half",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-tech-workers-actually-fe"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-15T23:02:19.384Z",
+    "date_label": "Thu 16 July",
+    "headline": "Scaler: How PMs are actually using AI across the full product lifecycle in 2026",
+    "urls": [
+      "https://www.scaler.com/blog/ai-in-product-management-how-pms-use-ai"
     ]
   }
 ]
