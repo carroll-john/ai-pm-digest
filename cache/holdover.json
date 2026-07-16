@@ -1,0 +1,47 @@
+[
+  {
+    "headline_draft": "Ode with Anthropic: Betting $1.5B that enterprise AI adoption is about implementation, not just models",
+    "summary": "Anthropic and Blackstone launched Ode, a $1.5 billion joint-venture AI implementation company announced July 15, 2026, that deploys forward-deployed engineers inside enterprise customers. This follows OpenAI's similar move with The Deployment Company, signaling that frontier labs now believe the next trillion-dollar category is not better models but helping enterprises actually use them. The bet reflects a market realization that shipping capability is not the bottleneck anymore—translating it into business workflows is.",
+    "why_pm": "This matters to PMs because it reframes the entire AI product conversation: competitive advantage is shifting from having the best model to having the best implementation framework. If enterprises are now paying for dedicated implementation teams, your product roadmap should reflect what's actually expensive to deploy, not just what's technically impressive.",
+    "key_facts": [
+      "Ode is a $1.5B joint venture between Anthropic, Blackstone, Hellman & Friedman, Goldman Sachs, and others",
+      "Launched July 15, 2026",
+      "Deploys forward-deployed engineers into customer sites to accelerate AI adoption",
+      "Mirrors OpenAI's The Deployment Company model",
+      "Signals shift from model competition to implementation-as-business-value"
+    ],
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+        "label": "TechCrunch: Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
+        "published_date": "2026-07-15"
+      }
+    ],
+    "quotes": [
+      "Labs like Anthropic and OpenAI have spun up separate businesses dedicated to deploying AI engineers to their customers' offices — a bet that assisting businesses in figuring out how to use their AI models is the next trillion-dollar category."
+    ]
+  },
+  {
+    "headline_draft": "Dovetail launches AI agents and digital twins for customer intelligence: embedded automation meets research at scale",
+    "summary": "Dovetail announced a major platform expansion on July 14, 2026, introducing AI agents that operate autonomously in the background to monitor customer signals and route insights, plus synthetic digital twins built from real customer calls and tickets. The expansion also includes 30+ integrations with Salesforce, Qualtrics, Pendo, PostHog, Snowflake, and MCP connectors that push intelligence directly into Slack, Linear, Claude, and Microsoft Copilot. This represents a shift from research as a static input to a continuous, agent-driven loop.",
+    "why_pm": "If you're building or buying customer intelligence tools, this shows the pattern: the best products now combine real data (calls, tickets, surveys) with synthetic personas that teams can interact with. For PMs, it means customer research is no longer a periodic project—it's becoming a live, agentic system that feeds product decisions automatically.",
+    "key_facts": [
+      "Dovetail announced major expansion July 14, 2026",
+      "AI agents operate autonomously to monitor customer signals and surface insights",
+      "Digital Twins are synthetic personas built from real customer interactions",
+      "30+ integrations including Salesforce, Qualtrics, Pendo, PostHog, Snowflake",
+      "MCP connectors push intelligence into Slack, Linear, Claude, Microsoft Copilot",
+      "Trusted by 40% of Fortune 500"
+    ],
+    "sources": [
+      {
+        "url": "https://agilebrandguide.com/marketing-technology-ai-news-july-15-2026/",
+        "label": "Agile Brand Guide: Marketing Technology & AI News | July 15, 2026",
+        "published_date": "2026-07-15"
+      }
+    ],
+    "quotes": [
+      "AI Agents that operate autonomously in the background — monitoring customer signals, surfacing insights, and routing intelligence to the right teams — and category-defining Digital Twins built from real calls, tickets, and research that allow teams to interact directly with synthetic customer personas."
+    ]
+  }
+]
