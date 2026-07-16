@@ -1,0 +1,17 @@
+Melbourne date: Fri 17 July 2026; freshness floor: 2026-07-15
+History: 32 prior stories across 9 days; 50 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 13089 chars
+Stage 1 usage: input=193979, output=4593, web_search=7
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 4775h): "AI product explainability just became a PM competency: products are now evaluated by AI before people"
+  drop (stale 143h): "OpenAI ChatGPT Work is shipping agentic automation that produces finished assets, not instructions"
+Freshness filter: 2/7 candidates dropped (age > 96h)
+  drop (title overlap 0.40): "Gemini 3.5 Pro targets July 17 after Google scrapped its base model: the rebuilt flagship, explained for PMs" ~~ "Gemini 3.5 Pro targets July 17 after Google scrapped its original build — no official specs confirmed"
+  drop (title overlap 0.33): "From demos to workflow replacement: How AI agents are shifting PMs' go-to-market from theater to ROI" ~~ "AI agents shift from demos to workflow replacement — and the metrics have changed"
+Title-overlap filter: 2/5 candidates dropped (Jaccard >= 0.3)
+  drop (URL repeat): "Claude Code moves to production with strict workflow controls: how to build agentic systems your compliance team won't block" → https://releasebot.io/updates/anthropic/claude
+URL filter: 1/3 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
