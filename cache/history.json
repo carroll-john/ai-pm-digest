@@ -1,34 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-01T23:21:16.974Z",
-    "date_label": "Thu 2 July",
-    "headline": "Anthropic ships Claude Sonnet 5 and restores Fable 5 globally",
-    "urls": [
-      "https://www.anthropic.com/news/claude-sonnet-5",
-      "https://www.anthropic.com/news/redeploying-fable-5",
-      "https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-at-a-steep-discount-to-its-top-model-as-the-company-races-toward-a-blockbuster-ipo"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-01T23:21:16.974Z",
-    "date_label": "Thu 2 July",
-    "headline": "Regulatory risk hit the AI roadmap in June — and it wasn't theoretical",
-    "urls": [
-      "https://www.marketscale.com/industries/software-and-technology/fable-5-and-mythos-5-are-back-what-the-19-day-shutdown-taught-every-enterprise-about-ai-as-infrastructure",
-      "https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it",
-      "https://www.anthropic.com/news/redeploying-fable-5"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-01T23:21:16.974Z",
-    "date_label": "Thu 2 July",
-    "headline": "Choosing a model in 2026 means choosing model and reasoning effort — not just brand",
-    "urls": [
-      "https://bravenewcoin.com/insights/what-ai-model-should-i-use-the-2026-guide-to-chatgpt-claude-gemini-and-grok",
-      "https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored"
-    ]
-  },
-  {
     "shipped_at": "2026-07-04T23:03:45.624Z",
     "date_label": "Sun 5 July",
     "headline": "Anthropic ships dynamic workflows in Claude Code: 10–100+ parallel subagents from a single prompt",
@@ -303,6 +274,39 @@
     "headline": "Scaler: How PMs are actually using AI across the full product lifecycle in 2026",
     "urls": [
       "https://www.scaler.com/blog/ai-in-product-management-how-pms-use-ai"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-17T22:55:02.833Z",
+    "date_label": "Sat 18 July",
+    "headline": "Moonshot AI launches Kimi K3 — 2.8 trillion-parameter open model with 1-million-token context",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-17-2026",
+      "https://www.digitalapplied.com/blog/open-weight-model-wave-july-2026-momentum-tracker"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-17T22:55:02.833Z",
+    "date_label": "Sat 18 July",
+    "headline": "Anthropic and Blackstone launch Ode — a $1.5B bet that implementation beats model capability",
+    "urls": [
+      "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-17T22:55:02.833Z",
+    "date_label": "Sat 18 July",
+    "headline": "Dovetail launches AI agents and digital twins for continuous customer intelligence",
+    "urls": [
+      "https://agilebrandguide.com/marketing-technology-ai-news-july-15-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-17T22:55:02.833Z",
+    "date_label": "Sat 18 July",
+    "headline": "Google renames NotebookLM to Gemini Notebook — syncs across Gemini app and Search",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-17-2026"
     ]
   }
 ]
