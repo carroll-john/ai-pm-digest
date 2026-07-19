@@ -1,0 +1,25 @@
+[
+  {
+    "headline_draft": "Claude Code adds security stability update with tighter permissions and progress tracking for long-running tasks",
+    "summary": "Anthropic shipped a broad stability and safety update to Claude Code (July 19, 2026) featuring tighter permission checks, safer Bash and PowerShell handling, improved background session cleanup, and progress heartbeats for multi-step workflows. The update also adds an EndConversation tool and live MCP connector data for published artifacts, plus screen reader mode and expanded collaboration options. Claude Code now restricts auto-running of verification and code-review skills to explicit invocations only, reducing unnecessary overhead and improving trust in autonomous workflows.",
+    "why_pm": "For PMs building with AI agents or prototyping, tighter safety controls and explicit permission models reduce risk in production workflows. Progress heartbeats and better session management make long-running research or automation tasks more reliable, lowering the friction of delegating multi-step PM work to Claude Code.",
+    "key_facts": [
+      "Stability update released July 19, 2026",
+      "Tighter permission checks and safer shell handling",
+      "Progress heartbeats for long-running tasks",
+      "Explicit invocation required for /verify and /code-review",
+      "Improved background session cleanup and telemetry",
+      "Added EndConversation tool for session control"
+    ],
+    "quotes": [
+      "Claude Code changes /verify and /code-review to run only when invoked directly — no auto-running"
+    ],
+    "sources": [
+      {
+        "url": "https://releasebot.io/updates/anthropic/claude-code",
+        "label": "Releasebot: Claude Code Updates, July 2026",
+        "published_date": "2026-07-19"
+      }
+    ]
+  }
+]
