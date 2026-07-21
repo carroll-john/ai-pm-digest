@@ -1,84 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-04T23:03:45.624Z",
-    "date_label": "Sun 5 July",
-    "headline": "Anthropic ships dynamic workflows in Claude Code: 10–100+ parallel subagents from a single prompt",
-    "urls": [
-      "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
-      "https://code.claude.com/docs/en/workflows"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-04T23:03:45.624Z",
-    "date_label": "Sun 5 July",
-    "headline": "Model Context Protocol 2026-07-28 release candidate: stateless core, OAuth alignment, agent-to-agent standards",
-    "urls": [
-      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate",
-      "https://truto.one/blog/what-is-mcp-model-context-protocol-the-2026-guide-for-saas-pms"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-04T23:03:45.625Z",
-    "date_label": "Sun 5 July",
-    "headline": "xAI deploys Grok 4.5 privately at SpaceX and Tesla, citing near-Opus performance on real engineering tasks",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-04T23:03:45.625Z",
-    "date_label": "Sun 5 July",
-    "headline": "Tosea.ai (via Cat Wu, Lenny's Podcast): the PM's scarce skill in 2026 is judgment, not execution speed",
-    "urls": [
-      "https://tosea.ai/blog/ai-product-management-2026-playbook"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-05T23:06:47.038Z",
-    "date_label": "Mon 6 July",
-    "headline": "OpenAI ships Flex processing: 50% cost cut for async workloads",
-    "urls": [
-      "https://developers.openai.com/api/docs/guides/flex-processing",
-      "https://blog.mean.ceo/ai-product-launches-news-july-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-05T23:06:47.038Z",
-    "date_label": "Mon 6 July",
-    "headline": "Shreyas Doshi: AI lowers execution cost but raises the value of judgment",
-    "urls": [
-      "https://x.com/shreyas/status/1943689228313067545",
-      "https://maven.com/shreyas-doshi/taste"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-05T23:06:47.038Z",
-    "date_label": "Mon 6 July",
-    "headline": "AI agents shift from demos to workflow replacement — and the metrics have changed",
-    "urls": [
-      "https://blog.mean.ceo/ai-agents-news-july-2026",
-      "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-05T23:06:47.038Z",
-    "date_label": "Mon 6 July",
-    "headline": "PM tool stacks in 2026: accelerate existing workflows or eliminate them?",
-    "urls": [
-      "https://onehorizon.ai/blog/best-ai-product-management-tools",
-      "https://learn.g2.com/ai-tools-for-product-managers"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-05T23:06:47.038Z",
-    "date_label": "Mon 6 July",
-    "headline": "Lenny's Newsletter: AI-Native Builder course starts July 13 for non-technical PMs",
-    "urls": [
-      "https://www.ababnews.com/news/506ecb50-e28d-4e44-a1b9-d624ca2a7240",
-      "https://www.lennysnewsletter.com"
-    ]
-  },
-  {
     "shipped_at": "2026-07-07T23:08:12.520Z",
     "date_label": "Wed 8 July",
     "headline": "Memory is now the default: ChatGPT, Claude, and Gemini all remember you — what that means for products you build",
@@ -307,6 +228,39 @@
     "headline": "Google renames NotebookLM to Gemini Notebook — syncs across Gemini app and Search",
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-17-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-21T23:02:40.493Z",
+    "date_label": "Wed 22 July",
+    "headline": "Build Fast with AI: the industry stops benchmarking and starts measuring finished work",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026",
+      "https://www.zonetechify.com/blog/ai-news-july-2026-latest-ai-developments"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-21T23:02:40.493Z",
+    "date_label": "Wed 22 July",
+    "headline": "DeepSeek and Kimi K3 compress inference costs toward zero, forcing a build-vs-buy reset",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-21T23:02:40.493Z",
+    "date_label": "Wed 22 July",
+    "headline": "Frigade launches Skills: in-product AI agents that take actions, not just answer questions",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-21T23:02:40.493Z",
+    "date_label": "Wed 22 July",
+    "headline": "PwC and OpenAI ship packaged agentic solutions, signaling that domain expertise beats raw model access",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
     ]
   }
 ]
