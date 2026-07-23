@@ -1,9 +1,0 @@
-{
-  "kind": "STAGE1_INSUFFICIENT_CANDIDATES",
-  "subject_tag": "NO-NEWS",
-  "stage": "Stage 1 → Stage 2 handoff",
-  "summary": "Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.",
-  "hint": "Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.",
-  "detail": "Candidates surviving filters: 2. See preceding log lines for what was dropped and why.",
-  "occurred_at": "2026-07-22T23:09:31.976Z"
-}

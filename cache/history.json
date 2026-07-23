@@ -1,29 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-07T23:08:12.520Z",
-    "date_label": "Wed 8 July",
-    "headline": "Memory is now the default: ChatGPT, Claude, and Gemini all remember you — what that means for products you build",
-    "urls": [
-      "https://www.notebookcheck.net/AI-that-remembers-ChatGPT-Gemini-and-Claude-compared.1336513.0.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-07T23:08:12.520Z",
-    "date_label": "Wed 8 July",
-    "headline": "Anthropic ships Claude Sonnet 5: near-Opus agentic behavior at mid-tier prices — and why cost-per-token is the wrong metric",
-    "urls": [
-      "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-07T23:08:12.520Z",
-    "date_label": "Wed 8 July",
-    "headline": "GPT-5.6 Sol, Terra, and Luna: OpenAI's three-tier model family is days away from broad API access",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-07-09T23:17:56.246Z",
     "date_label": "Fri 10 July",
     "headline": "Anthropic ships Claude Cowork on web and mobile — and 90% of usage isn't code",
@@ -261,6 +237,39 @@
     "headline": "PwC and OpenAI ship packaged agentic solutions, signaling that domain expertise beats raw model access",
     "urls": [
       "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-23T23:02:01.172Z",
+    "date_label": "Fri 24 July",
+    "headline": "Agents move from experiment to enterprise category as Anthropic and OpenAI ship competing products",
+    "urls": [
+      "https://arrow-ai.us/blog/ai-news-july-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-23T23:02:01.172Z",
+    "date_label": "Fri 24 July",
+    "headline": "Anthropic ships Claude Fable 5 with usage-credit pricing — agentic cost models just got harder to ignore",
+    "urls": [
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://www.digitalapplied.com/blog/claude-fable-5-usage-credits-july-7-pricing-guide-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-23T23:02:01.172Z",
+    "date_label": "Fri 24 July",
+    "headline": "OpenAI launches Presence governance framework alongside a small-business ChatGPT program",
+    "urls": [
+      "https://openai.com/news"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-23T23:02:01.172Z",
+    "date_label": "Fri 24 July",
+    "headline": "Substack integrates Pangram AI detection so readers can see how much of a newsletter is human-written",
+    "urls": [
+      "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai"
     ]
   }
 ]
