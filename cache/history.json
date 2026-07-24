@@ -1,57 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-09T23:17:56.246Z",
-    "date_label": "Fri 10 July",
-    "headline": "Anthropic ships Claude Cowork on web and mobile — and 90% of usage isn't code",
-    "urls": [
-      "https://claude.com/blog/cowork-web-mobile",
-      "https://woyable.com/en/posts/claude-cowork-web-mobile-expansion"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-09T23:17:56.246Z",
-    "date_label": "Fri 10 July",
-    "headline": "Lenny's Newsletter: The 2026 tech workforce is splitting in two — and the divide is AI",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-09T23:17:56.246Z",
-    "date_label": "Fri 10 July",
-    "headline": "Fable 5 moves to usage-credits-only from 8 July — double the cost of Opus 4.8",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-8-2026",
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-7-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-10T23:03:19.680Z",
-    "date_label": "Sat 11 July",
-    "headline": "OpenAI ships GPT-5.6 GA with three-tier pricing — Sol, Terra, Luna",
-    "urls": [
-      "https://www.digitalapplied.com/blog/gpt-5-6-sol-terra-luna-public-ga",
-      "https://emergent.sh/news/gpt-5-6-release-date",
-      "https://coursiv.io/blog/chatgpt-5-6"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-10T23:03:19.681Z",
-    "date_label": "Sat 11 July",
-    "headline": "Anthropic ships Claude Reflect: a usage dashboard that audits your own AI dependency",
-    "urls": [
-      "https://releasebot.io/updates/anthropic"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-10T23:03:19.681Z",
-    "date_label": "Sat 11 July",
-    "headline": "Lenny's Podcast: Fiona Fung on what AI-pilled engineering teams actually look like in 2026",
-    "urls": [
-      "https://podcasts.apple.com/us/podcast/lennys-podcast-product-career-growth/id1627920305"
-    ]
-  },
-  {
     "shipped_at": "2026-07-11T22:56:39.415Z",
     "date_label": "Sun 12 July",
     "headline": "Free interactive Claude Code course teaches PMs to ship prototypes from a PRD in 20 minutes",
@@ -270,6 +218,30 @@
     "headline": "Substack integrates Pangram AI detection so readers can see how much of a newsletter is human-written",
     "urls": [
       "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-24T23:06:00.363Z",
+    "date_label": "Sat 25 July",
+    "headline": "Vertesia ships a no-code agent builder that writes, tests, and deploys agents from a plain-English description",
+    "urls": [
+      "https://vertesiahq.com/blog/product-news-july-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-24T23:06:00.363Z",
+    "date_label": "Sat 25 July",
+    "headline": "OpenAI launches Presence: an enterprise platform for governing agents in production",
+    "urls": [
+      "https://releasebot.io/updates/openai"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-24T23:06:00.363Z",
+    "date_label": "Sat 25 July",
+    "headline": "Build Fast with AI: model provenance and geopolitical risk are now PM decisions, not just engineering ones",
+    "urls": [
+      "https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026"
     ]
   }
 ]
