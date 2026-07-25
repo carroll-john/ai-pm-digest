@@ -1,31 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-11T22:56:39.415Z",
-    "date_label": "Sun 12 July",
-    "headline": "Free interactive Claude Code course teaches PMs to ship prototypes from a PRD in 20 minutes",
-    "urls": [
-      "https://ccforpms.com",
-      "https://claudeforpms.dev"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-11T22:56:39.415Z",
-    "date_label": "Sun 12 July",
-    "headline": "Agent frameworks cross into production: LangGraph, Claude Agent SDK, CrewAI ship durable primitives",
-    "urls": [
-      "https://alicelabs.ai/en/insights/best-ai-agent-frameworks-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-11T22:56:39.415Z",
-    "date_label": "Sun 12 July",
-    "headline": "Enterprise AI product launches show one pattern: agents embedded in a specific workflow, not generic assistants",
-    "urls": [
-      "https://agentic.ai/news",
-      "https://www.producthunt.com/categories/ai-agents"
-    ]
-  },
-  {
     "shipped_at": "2026-07-12T22:56:34.884Z",
     "date_label": "Mon 13 July",
     "headline": "OpenAI ships ChatGPT Work: AI moves from answering questions to finishing tasks",
@@ -242,6 +216,32 @@
     "headline": "Build Fast with AI: model provenance and geopolitical risk are now PM decisions, not just engineering ones",
     "urls": [
       "https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-25T22:59:51.171Z",
+    "date_label": "Sun 26 July",
+    "headline": "Anthropic and AMD announce $5B partnership to deploy 2 gigawatts of MI450 GPUs",
+    "urls": [
+      "https://newsroom.amd.com/news/amd-anthropic-strategic-partnership",
+      "https://www.cnbc.com/2026/07/22/amd-anthropic-ai-chip-investment.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-25T22:59:51.171Z",
+    "date_label": "Sun 26 July",
+    "headline": "HubSpot launches Agent Hub and Agent Builder for coordinated multi-agent CRM workflows",
+    "urls": [
+      "https://www.martechnotes.com/hubspot-launches-agent-hub-and-agent-builder-in-public-beta-on-july-23-2026",
+      "https://ppc.land/hubspot-agent-cuts-350-hours-a-year-for-ignite-reading-across-25-states"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-25T22:59:51.171Z",
+    "date_label": "Sun 26 July",
+    "headline": "Google forced to grant Claude and ChatGPT equal Android OS access under DMA enforcement",
+    "urls": [
+      "https://updatedbulletins.com/ai-news-july-2026-openai-google-anthropic-updates"
     ]
   }
 ]
