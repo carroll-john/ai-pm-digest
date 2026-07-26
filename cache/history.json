@@ -1,33 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-12T22:56:34.884Z",
-    "date_label": "Mon 13 July",
-    "headline": "OpenAI ships ChatGPT Work: AI moves from answering questions to finishing tasks",
-    "urls": [
-      "https://asanify.com/blog/news/agentic-workflow-automation-july-11-2026",
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-12T22:56:34.885Z",
-    "date_label": "Mon 13 July",
-    "headline": "OpenAI opens GPT-5.6 (Sol, Terra, Luna) to general availability with aggressive tier pricing",
-    "urls": [
-      "https://felloai.com/best-ai-models",
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-12T22:56:34.885Z",
-    "date_label": "Mon 13 July",
-    "headline": "The model-selection conversation is over — cost-per-finished-task is the new routing logic",
-    "urls": [
-      "https://costgoat.com/compare/llm-api",
-      "https://blog.exceeds.ai/ai-model-token-pricing-breakdown",
-      "https://www.layer3labs.io/ai-model-pricing"
-    ]
-  },
-  {
     "shipped_at": "2026-07-13T23:00:25.716Z",
     "date_label": "Tue 14 July",
     "headline": "OpenAI acquires Northslope to sell embedded integration, not just models",
@@ -242,6 +214,35 @@
     "headline": "Google forced to grant Claude and ChatGPT equal Android OS access under DMA enforcement",
     "urls": [
       "https://updatedbulletins.com/ai-news-july-2026-openai-google-anthropic-updates"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-26T23:03:42.865Z",
+    "date_label": "Mon 27 July",
+    "headline": "Anthropic ships Claude Opus 5: frontier-level reasoning at half the cost of its flagship",
+    "urls": [
+      "https://coursiv.io/blog/claude-opus-5",
+      "https://cruxdigits.nl/blog/claude-opus-5-benchmarks-use-cases",
+      "https://releasebot.io/updates/anthropic"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-26T23:03:42.865Z",
+    "date_label": "Mon 27 July",
+    "headline": "Kimi K3 open weights land today: the largest open-weight model ever, with real governance strings attached",
+    "urls": [
+      "https://www.techtimes.com/articles/321551/20260725/kimi-k3-open-weights-arrive-sunday-self-hosting-cuts-china-data-risk-the-api-never-can.htm",
+      "https://explainx.ai/blog/kimi-k3-run-locally-open-weights-desktop-july-2026",
+      "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-26T23:03:42.865Z",
+    "date_label": "Mon 27 July",
+    "headline": "Google ships three Gemini Flash variants, delays Gemini 3.5 Pro again, starts pre-training Gemini 4",
+    "urls": [
+      "https://singhajit.com/dev-weekly/2026/jul-20-26/claude-opus-5-gemini-flash-cursor-router-openai-voice-sharepoint-mrmustard",
+      "https://felloai.com/best-ai-models"
     ]
   }
 ]
