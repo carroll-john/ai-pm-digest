@@ -1,14 +1,15 @@
-Melbourne date: Tue 28 July 2026; freshness floor: 2026-07-26
+Melbourne date: Wed 29 July 2026; freshness floor: 2026-07-27
 History: 26 prior stories across 7 days; 34 unique URLs to exclude.
 Stage 1 (claude-haiku-4-5): prompt 11872 chars
-Stage 1 usage: input=90415, output=4625, web_search=8
-Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-  drop (stale 215h): "Lenny's Podcast: Elizabeth Stone on why Netflix hires systems thinkers, not specialists, in the AI era"
-  drop (stale 167h): "Block releases Buzz: agents as full team members with their own accounts, not bolted-on chatbots"
-  drop (stale 143h): "Vertesia ships Studio Assistant and Process Engine: agents that auto-build and self-test workflows from text"
-  drop (stale 311h): "Mean CEO: the July 2026 shift is demos to workflow replacement; real buyers demand boring ROI answers, not theater"
+Stage 1 usage: input=134363, output=4718, web_search=9
+Stage 1 complete: 5 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+Merged 1 holdover candidate(s) from previous run.
+  drop (stale 287h): "Vibe Coding Now Baseline PM Expectation: PMs who ship working prototypes outpace those who only spec"
+  drop (stale 983h): "Discovery Becomes the PM Leverage Lane: AI-moderated interviews replace surveys; 78% of PM teams now use AI in research"
+  drop (stale 1511h): "2026 CPO Insights Report: 75% of PMs use AI for prototyping; 'Product Builder' emerges as the new operator role"
+  drop (stale 287h): "Claude Code reaches production maturity for PM workflows: Solo PMs now run full products as 'two-slice teams'"
 Freshness filter: 4/6 candidates dropped (age > 96h)
-  drop (URL repeat): "Claude Opus 5 ships with 1M token context, 128k max output, thinking on by default, same price as 4.8" → https://releasebot.io/updates/anthropic
+  drop (URL repeat): "Model Context Protocol (MCP) 2026-07-28: Anthropic ships stateless core, scaling agents to production" → https://releasebot.io/updates/anthropic
 URL filter: 1/2 candidates dropped
 Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
 FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
