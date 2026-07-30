@@ -1,73 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-13T23:00:25.716Z",
-    "date_label": "Tue 14 July",
-    "headline": "OpenAI acquires Northslope to sell embedded integration, not just models",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-13T23:00:25.717Z",
-    "date_label": "Tue 14 July",
-    "headline": "Anthropic extends Claude Fable 5 access to July 19 — the second extension in a week",
-    "urls": [
-      "https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release",
-      "https://www.digitalapplied.com/blog/anthropic-fable-5-access-extended-july-12-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-13T23:00:25.717Z",
-    "date_label": "Tue 14 July",
-    "headline": "Gemini 3.5 Pro targets July 17 after Google scrapped its original build — no official specs confirmed",
-    "urls": [
-      "https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm",
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-15T23:02:19.384Z",
-    "date_label": "Thu 16 July",
-    "headline": "Anthropic ships Claude write access to Microsoft 365 — email, calendar, OneDrive, and SharePoint",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude",
-      "https://support.claude.com/en/articles/12138966-release-notes"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-15T23:02:19.384Z",
-    "date_label": "Thu 16 July",
-    "headline": "Microsoft ships 40+ Copilot updates and adds Claude as a selectable model inside Copilot Chat",
-    "urls": [
-      "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/cowork-in-progress/4511672",
-      "https://inews.zoombangla.com/microsoft-copilot-40-updates-july-2026-claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-15T23:02:19.384Z",
-    "date_label": "Thu 16 July",
-    "headline": "Claude Cowork adds computer use in research preview — agents click, navigate, and run tools on your screen",
-    "urls": [
-      "https://support.claude.com/en/articles/12138966-release-notes"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-15T23:02:19.384Z",
-    "date_label": "Thu 16 July",
-    "headline": "Lenny's Podcast: Annual AI sentiment survey finds tech workforce split exactly in half",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-tech-workers-actually-fe"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-15T23:02:19.384Z",
-    "date_label": "Thu 16 July",
-    "headline": "Scaler: How PMs are actually using AI across the full product lifecycle in 2026",
-    "urls": [
-      "https://www.scaler.com/blog/ai-in-product-management-how-pms-use-ai"
-    ]
-  },
-  {
     "shipped_at": "2026-07-17T22:55:02.833Z",
     "date_label": "Sat 18 July",
     "headline": "Moonshot AI launches Kimi K3 — 2.8 trillion-parameter open model with 1-million-token context",
@@ -243,6 +175,31 @@
     "urls": [
       "https://singhajit.com/dev-weekly/2026/jul-20-26/claude-opus-5-gemini-flash-cursor-router-openai-voice-sharepoint-mrmustard",
       "https://felloai.com/best-ai-models"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-30T23:12:59.030Z",
+    "date_label": "Fri 31 July",
+    "headline": "BridgeApp ships an orchestration layer that takes a task from definition to pull request with no tool-switching",
+    "urls": [
+      "https://agentic.ai/news",
+      "https://news.indianaheadlines.com/story/624343/bridgeapp-launches-ai-orchestration-layer-that-automates-the-full-software-development-cycle.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-30T23:12:59.030Z",
+    "date_label": "Fri 31 July",
+    "headline": "A pragmatic framework for moving AI agents from demos into production workflows",
+    "urls": [
+      "https://blog.mean.ceo/ai-agents-news-july-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-07-30T23:12:59.030Z",
+    "date_label": "Fri 31 July",
+    "headline": "Product explainability is becoming a PM responsibility as AI systems evaluate your product before humans do",
+    "urls": [
+      "https://amycmitchell.substack.com/p/product-management-trends"
     ]
   }
 ]
