@@ -1,38 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-17T22:55:02.833Z",
-    "date_label": "Sat 18 July",
-    "headline": "Moonshot AI launches Kimi K3 — 2.8 trillion-parameter open model with 1-million-token context",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-17-2026",
-      "https://www.digitalapplied.com/blog/open-weight-model-wave-july-2026-momentum-tracker"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-17T22:55:02.833Z",
-    "date_label": "Sat 18 July",
-    "headline": "Anthropic and Blackstone launch Ode — a $1.5B bet that implementation beats model capability",
-    "urls": [
-      "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-17T22:55:02.833Z",
-    "date_label": "Sat 18 July",
-    "headline": "Dovetail launches AI agents and digital twins for continuous customer intelligence",
-    "urls": [
-      "https://agilebrandguide.com/marketing-technology-ai-news-july-15-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-17T22:55:02.833Z",
-    "date_label": "Sat 18 July",
-    "headline": "Google renames NotebookLM to Gemini Notebook — syncs across Gemini app and Search",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-17-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-07-21T23:02:40.493Z",
     "date_label": "Wed 22 July",
     "headline": "Build Fast with AI: the industry stops benchmarking and starts measuring finished work",
@@ -200,6 +167,30 @@
     "headline": "Product explainability is becoming a PM responsibility as AI systems evaluate your product before humans do",
     "urls": [
       "https://amycmitchell.substack.com/p/product-management-trends"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-01T22:59:12.126Z",
+    "date_label": "Sun 2 Aug",
+    "headline": "Boston Institute of Analytics: AI shifts from experimentation to governed production agents",
+    "urls": [
+      "https://bostoninstituteofanalytics.org/blog/this-week-in-ai-new-models-agents-and-breakthroughs-from-july-27-august-2-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-01T22:59:12.126Z",
+    "date_label": "Sun 2 Aug",
+    "headline": "Berkeley Agentic AI Summit (Aug 1–2): research community aligns on evaluation and deployment standards",
+    "urls": [
+      "https://www.crossmint.com/learn/ai-agent-conference-calendar"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-01T22:59:12.126Z",
+    "date_label": "Sun 2 Aug",
+    "headline": "Industry letter backs open-weight AI; Anthropic holds out on safety grounds",
+    "urls": [
+      "https://www.marketingprofs.com/opinions/2026/55433/ai-update-july-31-2026-ai-news-and-views-from-the-past-week"
     ]
   }
 ]
