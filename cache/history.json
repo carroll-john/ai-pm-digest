@@ -192,5 +192,41 @@
     "urls": [
       "https://www.marketingprofs.com/opinions/2026/55433/ai-update-july-31-2026-ai-news-and-views-from-the-past-week"
     ]
+  },
+  {
+    "shipped_at": "2026-08-02T23:01:02.033Z",
+    "date_label": "Mon 3 Aug",
+    "headline": "Peter Yang & Claire Vo: From idea to shipped feature in 30 minutes using AI agents",
+    "urls": [
+      "https://creatoreconomy.so/p/from-idea-to-product-in-30min-using-ai-agents-claire-vo"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-02T23:01:02.033Z",
+    "date_label": "Mon 3 Aug",
+    "headline": "The generic AI feature era is ending — workflow integration and proprietary data are the only durable moats",
+    "urls": [
+      "https://blog.mean.ceo/ai-product-launches-news-august-2026",
+      "https://blog.mean.ceo/open-ai-news-august-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-02T23:01:02.033Z",
+    "date_label": "Mon 3 Aug",
+    "headline": "AI agent evaluation is now table stakes — 57% of orgs ship agents, 32% say quality is still the top blocker",
+    "urls": [
+      "https://www.confident-ai.com/knowledge-base/compare/best-ai-evaluation-tools-2026",
+      "https://www.getmaxim.ai/articles/top-5-ai-evaluation-platforms-in-2026-2",
+      "https://www.kunalganglani.com/blog/evaluate-ai-agents-production"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-02T23:01:02.033Z",
+    "date_label": "Mon 3 Aug",
+    "headline": "Agentic coding market splits by use case — Cursor owns the editor, Devin owns cloud tickets, Claude Code owns reasoning",
+    "urls": [
+      "https://www.morphllm.com/best-ai-coding-agents-2026",
+      "https://cursor.com"
+    ]
   }
 ]
