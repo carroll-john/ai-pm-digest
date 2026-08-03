@@ -228,5 +228,29 @@
       "https://www.morphllm.com/best-ai-coding-agents-2026",
       "https://cursor.com"
     ]
+  },
+  {
+    "shipped_at": "2026-08-03T23:08:13.172Z",
+    "date_label": "Tue 4 Aug",
+    "headline": "EU AI transparency obligations go live today — the deadline that didn't slip",
+    "urls": [
+      "https://datanorth.ai/blog/top-10-ai-tools-for-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-03T23:08:13.172Z",
+    "date_label": "Tue 4 Aug",
+    "headline": "Lenny's Podcast: Tom Verrilli on 'product theater' and what AI is making impossible to hide",
+    "urls": [
+      "https://x.com/lennysan"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-03T23:08:13.172Z",
+    "date_label": "Tue 4 Aug",
+    "headline": "Google embeds free video generation in Gemini — a signal about where workflow integration is heading",
+    "urls": [
+      "https://futuretools.io/news"
+    ]
   }
 ]
