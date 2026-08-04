@@ -1,0 +1,49 @@
+[
+  {
+    "headline_draft": "Ai4 2026 Conference (Aug 4–6): The shift from AI transparency to knowledge governance in production systems",
+    "summary": "The largest annual applied AI conference opened this week (Aug 4–6) in Las Vegas with 12,000+ attendees and 1,000 speakers. The dominant theme: AI systems fail not because of bad models but because of bad knowledge inputs—poor, ungoverned, or outdated information feeding the agents. eGain's keynote session argues that knowledge ops and AI governance are now table stakes. ServiceNow launched autonomous data analytics agents. Enterprise attendees are grappling with how to scale agents from pilots into core workflows while keeping data governance intact. The conference signals the end of model-focused obsession and the beginning of operational rigor.",
+    "why_pm": "PMs shipping agentic features must now own the knowledge layer and governance stack, not just the user interface. This reframes PM accountability from feature speed to agent reliability and trust in production.",
+    "key_facts": [
+      "12,000+ attendees, 1,000 speakers at Ai4 2026 (Aug 4–6, The Venetian, Las Vegas)",
+      "Keynote message: AI fails on bad instructions, not bad models; knowledge governance is the real blocker",
+      "ServiceNow introduced autonomous data analytics agents for conversational query resolution",
+      "Heavy enterprise focus on moving agents from pilots to core HR, finance, operations workflows",
+      "eGain claims AI knowledge ops can deliver 10x faster knowledge management tasks and 3x faster time-to-value"
+    ],
+    "sources": [
+      {
+        "url": "https://www.stocktitan.net/news/EGAN/e-gain-points-to-ai-knowledge-ops-as-key-to-ai-governance-at-ai4-p9ctrhrwk0r6.html",
+        "label": "eGain: Knowledge Governance at Ai4 2026 (Aug 3, 2026)",
+        "published_date": "2026-08-03"
+      },
+      {
+        "url": "https://biztechmagazine.com/media/video/knowledge-2026-how-workflow-automation-driving-efficiency-across-enterprise",
+        "label": "BizTech Magazine: Knowledge 2026 Workflow Automation (May 2026)",
+        "published_date": "2026-05-08"
+      },
+      {
+        "url": "https://markets.financialcontent.com/dowtheoryletters/article/accwirecq-2025-12-2-registration-now-open-for-ai4-2026-americas-largest-ai-conference-returns-to-las-vegas-august-4-6",
+        "label": "Ai4 2026 Conference Details (Dec 2, 2025)",
+        "published_date": "2025-12-02"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Andrew Ng on X: AI makes code cheap, so demand for PMs who write clear specs will surge—but most PMs aren't keeping pace",
+    "summary": "Andrew Ng (Stanford AI Index, AI Fund) shared a widely quoted thread arguing that as AI makes coding cheaper, the bottleneck shifts entirely to product definition. Teams will need more PM thinking (deciding what to build, why, and for whom) relative to engineering. However, software engineers are adopting AI faster than PMs, creating a mismatch. The thesis: given clear specifications, AI will build it fast and cheap. The constraint is now and will remain: can you articulate what's valuable? This aligns with broader 2026 pattern showing that **generic AI features get copied in weeks; defensible products sit at the edges of workflows, compliance, rights, and industry-specific use.**",
+    "why_pm": "Your scarcest resource is not engineering bandwidth anymore—it's clarity of vision. Invest in customer discovery, competitive insight, and taste. The PMs who thrive in 2026 are those who can articulate what to build in concrete terms, not those who can manage detailed roadmaps or negotiate feature scope.",
+    "key_facts": [
+      "Coding is becoming cheap; product definition is the bottleneck",
+      "Demand for specialized PMs (who can write clear, concrete specs) will outpace demand for generalist PMs",
+      "Engineer:PM ratio will shift as coding efficiency improves; more PM thinking needed per engineer",
+      "Software engineers embracing AI faster than PMs; widening capability gap in product development",
+      "Defensible advantage now sits in narrow workflows, compliance, rights management, not generic capabilities"
+    ],
+    "sources": [
+      {
+        "url": "https://x.com/AndrewYNg/status/1879939058211971420?lang=en",
+        "lang": "Andrew Ng on X: AI Product Management Has a Bright Future (dates to recent 2026)"
+      }
+    ]
+  }
+]
