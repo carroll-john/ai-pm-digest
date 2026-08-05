@@ -1,38 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-21T23:02:40.493Z",
-    "date_label": "Wed 22 July",
-    "headline": "Build Fast with AI: the industry stops benchmarking and starts measuring finished work",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026",
-      "https://www.zonetechify.com/blog/ai-news-july-2026-latest-ai-developments"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-21T23:02:40.493Z",
-    "date_label": "Wed 22 July",
-    "headline": "DeepSeek and Kimi K3 compress inference costs toward zero, forcing a build-vs-buy reset",
-    "urls": [
-      "https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-21T23:02:40.493Z",
-    "date_label": "Wed 22 July",
-    "headline": "Frigade launches Skills: in-product AI agents that take actions, not just answer questions",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-21T23:02:40.493Z",
-    "date_label": "Wed 22 July",
-    "headline": "PwC and OpenAI ship packaged agentic solutions, signaling that domain expertise beats raw model access",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
     "shipped_at": "2026-07-23T23:02:01.172Z",
     "date_label": "Fri 24 July",
     "headline": "Agents move from experiment to enterprise category as Anthropic and OpenAI ship competing products",
@@ -251,6 +218,40 @@
     "headline": "Google embeds free video generation in Gemini — a signal about where workflow integration is heading",
     "urls": [
       "https://futuretools.io/news"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-05T23:06:32.305Z",
+    "date_label": "Thu 6 Aug",
+    "headline": "Alibaba launches Qwen3.8-Max, a frontier-class model at a fraction of Anthropic's price",
+    "urls": [
+      "https://technode.global/2026/08/04/chinas-alibaba-launches-qwen3-8-max-ai-model-with-2-4t-parameters-1m-token-context-window",
+      "https://www.cnbc.com/2026/08/03/alibaba-ai-model-qwen-rival-anthropic.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-05T23:06:32.306Z",
+    "date_label": "Thu 6 Aug",
+    "headline": "Google ships Gemini Spark as a persistent 24/7 agent across Workspace — not a demo, a production rollout",
+    "urls": [
+      "https://gemini.google/overview/agent/spark"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-05T23:06:32.306Z",
+    "date_label": "Thu 6 Aug",
+    "headline": "Gartner: 40% of enterprise apps will ship task-specific AI agents by end of 2026, up from under 5% in 2025",
+    "urls": [
+      "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025",
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-05T23:06:32.306Z",
+    "date_label": "Thu 6 Aug",
+    "headline": "Ai4 2026 Conference: the real reason AI agents fail in production is bad knowledge, not bad models",
+    "urls": [
+      "https://www.stocktitan.net/news/EGAN/e-gain-points-to-ai-knowledge-ops-as-key-to-ai-governance-at-ai4-p9ctrhrwk0r6.html"
     ]
   }
 ]
