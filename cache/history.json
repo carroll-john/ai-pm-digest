@@ -1,38 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-23T23:02:01.172Z",
-    "date_label": "Fri 24 July",
-    "headline": "Agents move from experiment to enterprise category as Anthropic and OpenAI ship competing products",
-    "urls": [
-      "https://arrow-ai.us/blog/ai-news-july-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-23T23:02:01.172Z",
-    "date_label": "Fri 24 July",
-    "headline": "Anthropic ships Claude Fable 5 with usage-credit pricing — agentic cost models just got harder to ignore",
-    "urls": [
-      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
-      "https://www.digitalapplied.com/blog/claude-fable-5-usage-credits-july-7-pricing-guide-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-23T23:02:01.172Z",
-    "date_label": "Fri 24 July",
-    "headline": "OpenAI launches Presence governance framework alongside a small-business ChatGPT program",
-    "urls": [
-      "https://openai.com/news"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-23T23:02:01.172Z",
-    "date_label": "Fri 24 July",
-    "headline": "Substack integrates Pangram AI detection so readers can see how much of a newsletter is human-written",
-    "urls": [
-      "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai"
-    ]
-  },
-  {
     "shipped_at": "2026-07-24T23:06:00.363Z",
     "date_label": "Sat 25 July",
     "headline": "Vertesia ships a no-code agent builder that writes, tests, and deploys agents from a plain-English description",
@@ -252,6 +219,48 @@
     "headline": "Ai4 2026 Conference: the real reason AI agents fail in production is bad knowledge, not bad models",
     "urls": [
       "https://www.stocktitan.net/news/EGAN/e-gain-points-to-ai-knowledge-ops-as-key-to-ai-governance-at-ai4-p9ctrhrwk0r6.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-07T22:42:57.269Z",
+    "date_label": "Sat 8 Aug",
+    "headline": "OpenAI and Alibaba cut frontier model prices by 80–88% in 48 hours",
+    "urls": [
+      "https://www.aiapps.com/blog/ai-news-august-breakthroughs-launches-trends-cant-miss",
+      "https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-august"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-07T22:42:57.270Z",
+    "date_label": "Sat 8 Aug",
+    "headline": "88% of agent pilots never ship — governance before build yields 171% ROI",
+    "urls": [
+      "https://www.techstoriess.com/agentic-ai-implementation-guide-2026-from-pilot-to-production",
+      "https://vitaloralife.com/ai-agent-deployment"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-07T22:42:57.270Z",
+    "date_label": "Sat 8 Aug",
+    "headline": "Anthropic ships Claude Code with subagent spawn cap removed and self-hosted runners",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-07T22:42:57.270Z",
+    "date_label": "Sat 8 Aug",
+    "headline": "Productboard: 94% of PMs use AI daily, 98% are restructuring their teams",
+    "urls": [
+      "https://resources.rework.com/tools/ai-tools/best-ai-tools-for-product-managers-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-07T22:42:57.270Z",
+    "date_label": "Sat 8 Aug",
+    "headline": "SoundHound acquires LivePerson — bundled voice-plus-messaging platforms squeeze single-channel tools",
+    "urls": [
+      "https://blog.mean.ceo/latest-ai-announcements-news-august-2026"
     ]
   }
 ]
