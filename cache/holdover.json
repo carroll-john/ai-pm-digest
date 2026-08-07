@@ -1,0 +1,26 @@
+[
+  {
+    "headline_draft": "Productboard: 94% of PMs now use AI daily—time savings compound across core workflows",
+    "summary": "Productboard's latest AI in Product Management report shows 100% of surveyed product teams use AI tools, with 94% of product professionals using AI daily or often. PMs report saving an average of four hours per task on work like writing PRDs, competitive research, and roadmap creation. The report also finds that 98% of product teams have changed or are planning to change their team structure because of AI. Critically, 88% of product professionals now use two or more different AI models in their workflow, and 60% use two separate tools just for AI prototyping—a sign that specialization by use case, not consolidation, is winning.",
+    "why_pm": "As a PM, this tells you where the market is converging: multi-model portfolios beat single-model strategies, and the time you save on execution needs to flow directly into strategic judgment. The team structure shift confirms that your role is evolving faster than job descriptions.",
+    "key_facts": [
+      "100% of surveyed product teams use AI tools",
+      "94% of product professionals use AI daily or often",
+      "Average 4 hours saved per task (PRDs, research, roadmaps)",
+      "~33 hours total time savings across core functions",
+      "98% of product teams changing team structure due to AI",
+      "88% use two or more different AI models",
+      "60% use two separate tools just for AI prototyping"
+    ],
+    "quotes": [
+      "100% of surveyed product teams now use AI tools, and 94% of product professionals use AI daily or often, per Productboard's AI in Product Management report."
+    ],
+    "sources": [
+      {
+        "url": "https://resources.rework.com/tools/ai-tools/best-ai-tools-for-product-managers-2026",
+        "label": "Rework: Best AI Tools for Product Managers in 2026 (Productboard report)",
+        "published_date": "2026-08-07"
+      }
+    ]
+  }
+]
