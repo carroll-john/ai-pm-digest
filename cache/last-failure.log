@@ -1,18 +1,18 @@
-Melbourne date: Sun 9 Aug 2026; freshness floor: 2026-08-07
-History: 28 prior stories across 8 days; 44 unique URLs to exclude.
-Stage 1 (claude-haiku-4-5): prompt 12625 chars
-Stage 1 usage: input=142878, output=5192, web_search=9
-Stage 1 note: candidates string was truncated; salvaged 6 complete entries.
-Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-  drop (stale 743h): "PM role is reshaping: three to five product lines per PM, prototype-first workflows, judgment over documentation"
-  drop (stale 1607h): "The four archetypes of AI Product Manager in 2026 — and why 'we need an AI PM' job reqs fail"
-  drop (stale 2399h): "AI agents are moving from pilots to production governance — 40% of enterprise apps ship agents by end of 2026"
-  drop (stale 4775h): "AI code is cheap; product learning isn't — 'AI Product Manager agents' are the next phase of synthesis"
-  drop (stale 743h): "Lenny's Podcast: Adam Mosseri on how product team structure is breaking into lean pods of four to six generalists"
-Freshness filter: 5/6 candidates dropped (age > 96h)
-  close call (0.20): "Claude Opus 5 arrives at $5/$25 per million tokens — same price as Opus 4.8, frontier reasoning for everyday agentic work" ~~ "Anthropic ships Claude Opus 5: frontier-level reasoning at half the cost of its flagship"
-  drop (URL repeat): "Claude Opus 5 arrives at $5/$25 per million tokens — same price as Opus 4.8, frontier reasoning for everyday agentic work" → https://releasebot.io/updates/anthropic/claude-code
-URL filter: 1/1 candidates dropped
-FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 0 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
-HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above.  Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
-DETAIL: Candidates surviving filters: 0. See preceding log lines for what was dropped and why.
+Melbourne date: Mon 10 Aug 2026; freshness floor: 2026-08-08
+History: 25 prior stories across 7 days; 39 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 11909 chars
+Stage 1 usage: input=76068, output=4463, web_search=7
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 4295h): "AI Product Sense becomes the core hiring signal — Meta adds new interview loop to evaluate how candidates work with model uncertainty"
+  drop (stale 1799h): "Three-quarter of product leaders now use AI to accelerate prototyping; 75% of PMs are restructuring teams around AI workflows"
+Freshness filter: 2/7 candidates dropped (age > 96h)
+  drop (title overlap 0.53): "Anthropic ships Claude Code self-hosted environments and removes subagent spawn cap — production is the bottleneck now, not the model" ~~ "Anthropic ships Claude Code with subagent spawn cap removed and self-hosted runners"
+  close call (0.20): "Claude Opus 5 beats the frontier on reasoning efficiency; coding agents now outperform 88% of professional engineers on SWE-bench" ~~ "Anthropic ships Claude Opus 5: frontier-level reasoning at half the cost of its flagship"
+Title-overlap filter: 1/5 candidates dropped (Jaccard >= 0.3)
+  drop (URL repeat): "Buyer attention has shifted from flashy demos to working tools that cut friction and reduce manual work, says startup builders" → https://blog.mean.ceo/ai-product-launches-news-august-2026
+  drop (URL repeat): "Claude Opus 5 beats the frontier on reasoning efficiency; coding agents now outperform 88% of professional engineers on SWE-bench" → https://releasebot.io/updates/anthropic
+URL filter: 2/4 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
