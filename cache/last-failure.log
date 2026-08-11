@@ -1,0 +1,19 @@
+Melbourne date: Wed 12 Aug 2026; freshness floor: 2026-08-10
+History: 26 prior stories across 7 days; 36 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 11668 chars
+Stage 1 usage: input=77263, output=4126, web_search=7
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 119h): "Iwo Szapar tested 7 AI PM tools across real workflows—honest breakdown of where Dovetail, Claude, and Gamma actually add value"
+  drop (stale 143h): "Market moving away from flashy AI chat demos—buyer attention shifting to working tools that cut friction and boost team output"
+  drop (stale 167h): "Bubble's guide: Pick one backlog idea, build a prototype in Lovable or Replit, test the flow without blocking engineering"
+  no date — keeping: "Lenny's Podcast: Adam Mosseri (Meta) on how product teams are restructuring for the AI era—from specialist teams to lean pods of generalists"
+Freshness filter: 3/7 candidates dropped (age > 96h)
+  close call (0.22): "Anthropic ships Claude Code auto mode as default—teams deploying it ship 25% more code with no extra approval clicks" ~~ "Anthropic ships voice mode to all Claude tiers and puts Claude Code on your own infrastructure"
+  close call (0.22): "Self-hosted Claude Code now available—run AI agents on your own infrastructure with internal network access and custom tooling" ~~ "Anthropic ships voice mode to all Claude tiers and puts Claude Code on your own infrastructure"
+  drop (URL repeat): "Claude Compliance API now covers Cowork and Claude Code—audit trails and session controls for enterprise teams" → https://releasebot.io/updates/anthropic/claude
+  drop (URL repeat): "Self-hosted Claude Code now available—run AI agents on your own infrastructure with internal network access and custom tooling" → https://releasebot.io/updates/anthropic/claude
+URL filter: 2/4 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
