@@ -1,0 +1,55 @@
+[
+  {
+    "headline_draft": "Anthropic ships Claude Code auto mode as default—teams deploying it ship 25% more code with no extra approval clicks",
+    "summary": "Starting August 14, 2026, Anthropic is making auto mode the default in Claude Code for Pro, Max, and Team subscribers, allowing the coding agent to execute most actions without asking for permission at each step. The company tested the change on 1,053 users and found that the built-in classifier blocked 89% of harmful actions while users were previously rubber-stamping 97% of manual approval prompts anyway. Early adopters like Adobe, Nuro, Gusto, and Garner Health already run auto mode and report shipping about 25% more code. Anthropic is also dropping the extra token fee that the classifier previously cost, making auto mode free.",
+    "why_pm": "This directly impacts how much product you can ship without engineering bottlenecks. If your team adopts Claude Code with auto mode enabled, you get measurable throughput gains (25% more shipped code) without sacrificing safety—shifting the constraint from 'engineering capacity' to 'product strategy and prioritization.'",
+    "key_facts": [
+      "Auto mode becomes default for Pro, Max, Team plans on August 14, 2026",
+      "Classifier blocked 89% of harmful actions in testing",
+      "Users were rubber-stamping 97% of manual prompts before auto mode",
+      "Teams using auto mode ship approximately 25% more code",
+      "Adobe, Nuro, Gusto, Garner Health already use it as default",
+      "Anthropic dropping classifier token fee (making it free)"
+    ],
+    "quotes": [
+      "Teams using it ship about 25% more code.",
+      "The classifier is as safe or safer than an average user clicking through prompts."
+    ],
+    "sources": [
+      {
+        "url": "https://www.theregister.com/ai-and-ml/2026/08/10/claude-code-puts-auto-mode-in-the-drivers-seat/5285326",
+        "label": "The Register: Claude Code puts auto mode in the driver's seat",
+        "published_date": "2026-08-10"
+      },
+      {
+        "url": "https://buttondown.com/dailyaidigest/archive/dad-claude-code-will-start-acting-on-its-own-by/",
+        "label": "Daily AI Digest: Claude Code Will Start Acting on Its Own by Default",
+        "published_date": "2026-08-10"
+      },
+      {
+        "url": "https://techbriefly.com/2026/08/10/anthropic-claude-code-auto-mode-default/",
+        "label": "TechBriefly: Anthropic to make Claude Code auto mode default on August 14",
+        "published_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Lenny's Podcast: Adam Mosseri (Meta) on how product teams are restructuring for the AI era—from specialist teams to lean pods of generalists",
+    "summary": "In a recent episode of Lenny's Podcast (published last week), Adam Mosseri, Meta's head of product, discusses how the canonical product team structure is changing in 2026. Teams are moving from baker's-dozen specialist squads to lean pods of four to six generalists, with the emergence of a new 'product staff' role blending PM, design, data science, and research into one operator. Mosseri is bullish on designers even as functional boundaries dissolve and discusses which traditional PM roles are most at risk. The conversation also covers AI-generated content, creator identity in a synthetic-content world, and how AI is reshaping what product leaders need to know.",
+    "why_pm": "This directly shows how your organization is likely to restructure. The 'product staff' generalist role and the move away from specialist silos mirrors what other high-performing orgs are doing. It's practical career insight for PMs who want to understand how their role is evolving and what skills will matter most in a smaller, leaner product team.",
+    "key_facts": [
+      "Product teams shrinking from large specialist squads to lean generalist pods (4-6 people)",
+      "New 'product staff' role emerging (PM + design + data + research hybrid)",
+      "Designers remain valuable even as boundaries blur",
+      "Some traditional PM roles at risk due to restructuring",
+      "Speaker: Adam Mosseri, Meta head of product",
+      "Recent episode (last week)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lennysnewsletter.com/p/adam-mosseri-instagram",
+        "label": "Lenny's Podcast: Adam Mosseri (Meta) on product teams in the AI era"
+      }
+    ]
+  }
+]
