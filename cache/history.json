@@ -216,5 +216,30 @@
     "urls": [
       "https://www.institutepm.com/knowledge-hub/ai-product-management-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-08-12T22:48:19.881Z",
+    "date_label": "Thu 13 Aug",
+    "headline": "Anthropic makes Claude Code auto mode the default — teams ship 25% more code",
+    "urls": [
+      "https://www.theregister.com/ai-and-ml/2026/08/10/claude-code-puts-auto-mode-in-the-drivers-seat/5285326",
+      "https://techbriefly.com/2026/08/10/anthropic-claude-code-auto-mode-default"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-12T22:48:19.881Z",
+    "date_label": "Thu 13 Aug",
+    "headline": "Meta launches Muse Code — the coding-agent market moves from capability to governance",
+    "urls": [
+      "https://devops.com/meta-launches-ai-coding-agent-to-challenge-openai-and-anthropic"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-12T22:48:19.881Z",
+    "date_label": "Thu 13 Aug",
+    "headline": "Lenny's Podcast: Adam Mosseri on lean product pods and the emerging 'product staff' role",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/adam-mosseri-instagram"
+    ]
   }
 ]
