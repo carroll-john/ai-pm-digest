@@ -241,5 +241,29 @@
     "urls": [
       "https://www.lennysnewsletter.com/p/adam-mosseri-instagram"
     ]
+  },
+  {
+    "shipped_at": "2026-08-13T22:50:07.517Z",
+    "date_label": "Fri 14 Aug",
+    "headline": "xAI releases Grok 4.6: capable agentic AI is now accessible outside the OpenAI and Anthropic walled gardens",
+    "urls": [
+      "https://techstartups.com/2026/08/13/top-tech-news-today-august-13-2026-anthropic-deepmind-google-lenovo-microsoft-spacexai-more"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-13T22:50:07.518Z",
+    "date_label": "Fri 14 Aug",
+    "headline": "Novee Security at Black Hat: Claude Code and Gemini CLI vulnerabilities reframe agents as attack surface, not just tools",
+    "urls": [
+      "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-13T22:50:07.518Z",
+    "date_label": "Fri 14 Aug",
+    "headline": "OpenAI deprecates individual-user sync for ChatGPT Business: enterprise data governance moves to admins",
+    "urls": [
+      "https://releasebot.io/updates/openai"
+    ]
   }
 ]
