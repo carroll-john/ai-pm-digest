@@ -1,30 +1,5 @@
 [
   {
-    "shipped_at": "2026-07-30T23:12:59.030Z",
-    "date_label": "Fri 31 July",
-    "headline": "BridgeApp ships an orchestration layer that takes a task from definition to pull request with no tool-switching",
-    "urls": [
-      "https://agentic.ai/news",
-      "https://news.indianaheadlines.com/story/624343/bridgeapp-launches-ai-orchestration-layer-that-automates-the-full-software-development-cycle.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-30T23:12:59.030Z",
-    "date_label": "Fri 31 July",
-    "headline": "A pragmatic framework for moving AI agents from demos into production workflows",
-    "urls": [
-      "https://blog.mean.ceo/ai-agents-news-july-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-07-30T23:12:59.030Z",
-    "date_label": "Fri 31 July",
-    "headline": "Product explainability is becoming a PM responsibility as AI systems evaluate your product before humans do",
-    "urls": [
-      "https://amycmitchell.substack.com/p/product-management-trends"
-    ]
-  },
-  {
     "shipped_at": "2026-08-01T22:59:12.126Z",
     "date_label": "Sun 2 Aug",
     "headline": "Boston Institute of Analytics: AI shifts from experimentation to governed production agents",
@@ -264,6 +239,32 @@
     "headline": "OpenAI deprecates individual-user sync for ChatGPT Business: enterprise data governance moves to admins",
     "urls": [
       "https://releasebot.io/updates/openai"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-14T22:29:32.498Z",
+    "date_label": "Sat 15 Aug",
+    "headline": "Anthropic locks Claude Sonnet 5 pricing at $2/$10 per million tokens — September increase canceled",
+    "urls": [
+      "https://explainx.ai/blog/anthropic-sonnet-5-permanent-pricing-august-2026",
+      "https://www.anthropic.com/news/claude-sonnet-5"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-14T22:29:32.498Z",
+    "date_label": "Sat 15 Aug",
+    "headline": "Revise launches AI-native document editor with tracked changes and MCP integration",
+    "urls": [
+      "https://aithority.com/machine-learning/revise-launches-ai-document-editor-with-reviewable-tracked-changes",
+      "https://www.prweb.com/releases/revise-launches-ai-document-editor-with-reviewable-tracked-changes-302844708.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-14T22:29:32.498Z",
+    "date_label": "Sat 15 Aug",
+    "headline": "FloQast report: 85% of finance teams call AI a priority, but only 10% use it extensively",
+    "urls": [
+      "https://finance.yahoo.com/technology/ai/articles/floqast-study-reveals-wide-gap-130000189.html"
     ]
   }
 ]
