@@ -1,9 +1,9 @@
 {
-  "kind": "STAGE1_INSUFFICIENT_CANDIDATES",
-  "subject_tag": "NO-NEWS",
-  "stage": "Stage 1 → Stage 2 handoff",
-  "summary": "Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.",
-  "hint": "Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.",
-  "detail": "Candidates surviving filters: 2. See preceding log lines for what was dropped and why.",
-  "occurred_at": "2026-08-15T22:27:04.883Z"
+  "kind": "STAGE2_INVALID_OUTPUT",
+  "subject_tag": "BUG",
+  "stage": "Stage 2",
+  "summary": "Stage 2 did not call the submit_digest tool (stop_reason: end_turn).",
+  "hint": "The model returned text instead of a structured tool call. Re-dispatch the workflow once; if it persists, the prompt or schema may need adjusting.",
+  "detail": "Response content: [{\"type\":\"text\",\"text\":\"Looking at the research findings, I have 5 candidates to evaluate against the freshness floor of 2026-08-15. Let me check dates:\\n\\n- Kredily 3.0 / KAI: published 2026-08-14 — **below freshness floor, drop**\\n- VizNow Idea to Video: published 2026-08-14 — **below freshness floor, drop**\\n- Octane AI OS: published 2026-08-14 — **below freshness floor, drop**\\n- BCG Enterprise AI Control Plane: published 2026-08-14 — **below freshness floor, drop**\\n- Claude Code August hardening: two sources — `blog.mean.ceo` is 2026-08-08 (drop), `releasebot.io` is 2026-08-14 (drop)\\n\\nEvery candidate falls below the 2026-08-15 freshness floor. I cannot in good conscience include stories that fail the date requirement, and I have no web access to find fresher candidates. Rather than fabricate URLs or story details — which the instructions explicitly prohibit — I must flag this clearly.\\n\\n**I cannot submit a digest today.** Here is why, and what should happen next:\\n\\n---\\n\\n**Problem:** All 5 research candidates were published on **2026-08-14**, one day before the freshness floor of **2026-08-15**. The instructions require dropping any result whose publication date is earlier than the floor. With no candidates remaining, there is no valid content to compile.\\n\\n**What went wrong in the research stage:** The researcher appears to have pulled results from August 14 rather than August 15–17. The `agentic.ai/news` roundup was the dominant source for three of the five stories, and all three shared its August 14 date.\\n\\n**What to do:**\\n1. Re-run the research stage targeting `after:2026-08-15` to pull fresh results from August 15–17.\\n2. Prioritise primary sources (Anthropic blog, BCG publications, individual company announcements) over aggregator roundup pages, which tend to lag by a day.\\n3. Once fresh candidates are returned, pass them back here and I will compile and submit the digest immediately.\\n\\nI will not call `submit_digest` with inve",
+  "occurred_at": "2026-08-16T22:27:10.436Z"
 }
