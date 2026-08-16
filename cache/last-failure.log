@@ -1,16 +1,18 @@
-Melbourne date: Sun 16 Aug 2026; freshness floor: 2026-08-14
-History: 32 prior stories across 9 days; 44 unique URLs to exclude.
-Stage 1 (claude-haiku-4-5): prompt 13039 chars
-Stage 1 usage: input=74703, output=3857, web_search=7
+Melbourne date: Mon 17 Aug 2026; freshness floor: 2026-08-15
+History: 29 prior stories across 8 days; 41 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12431 chars
+Stage 1 usage: input=120136, output=4145, web_search=8
+Stage 1 note: candidates string was truncated; salvaged 6 complete entries.
 Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-  drop (stale 1246h): "Samet Ozkale: Strategic restraint is your superpower—PMs who say no to AI-generated roadmaps win in 2026"
-  drop (stale 2566h): "MIT & Gartner: 95% of AI projects deliver zero ROI—the gap isn't model capability, it's data readiness and governance"
-  drop (stale 5494h): "Amy Mitchell: Product explainability is the new PM leverage—products are evaluated by AI before people"
-Freshness filter: 3/6 candidates dropped (age > 96h)
+Merged 2 holdover candidate(s) from previous run.
+  drop (stale 5470h): "Metis Strategy: 2026 Is the Year of AI Proof, Not Experimentation—PMs Must Hold the Line on Outcomes"
+  drop (stale 382h): "Large Language Models Converge on Coding: Cursor and Claude Code Close Most of the Distance in 2026"
+Freshness filter: 2/8 candidates dropped (age > 96h)
   close call (0.21): "Claude Code hardening for daily production use signals the coding-agent market is moving from novelty to retained teams" ~~ "Agentic coding market splits by use case — Cursor owns the editor, Devin owns cloud tickets, Claude Code owns reasoning"
-  drop (URL repeat): "Latest AI model updates: Claude Opus 5 + Gemini 3.1 Pro reshape the PM's capability toolkit" → https://felloai.com/best-ai-models
-URL filter: 1/3 candidates dropped
-Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
-FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
-HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
-DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
+  drop (URL repeat): "AI Agents Move From Experiments to Enterprise Risk: Treat Agents as Potential Adversaries" → https://aiagentstore.ai/ai-agent-news/this-week
+URL filter: 1/6 candidates dropped
+Stage 2 (claude-sonnet-4-6): prompt 15691 chars
+Stage 2 usage: input=5096, output=546
+FAILURE [STAGE2_INVALID_OUTPUT] (Stage 2): Stage 2 did not call the submit_digest tool (stop_reason: end_turn).
+HINT: The model returned text instead of a structured tool call. Re-dispatch the workflow once; if it persists, the prompt or schema may need adjusting.
+DETAIL: Response content: [{"type":"text","text":"Looking at the research findings, I have 5 candidates to evaluate against the freshness floor of 2026-08-15. Let me check dates:\n\n- Kredily 3.0 / KAI: published 2026-08-14 — **below freshness floor, drop**\n- VizNow Idea to Video: published 2026-08-14 — **below freshness floor, drop**\n- Octane AI OS: published 2026-08-14 — **below freshness floor, drop**\n- BCG Enterprise AI Control Plane: published 2026-08-14 — **below freshness floor, drop**\n- Claude Code August hardening: two sources — `blog.mean.ceo` is 2026-08-08 (drop), `releasebot.io` is 2026-08-14 (drop)\n\nEvery candidate falls below the 2026-08-15 freshness floor. I cannot in good conscience include stories that fail the date requirement, and I have no web access to find fresher candidates. Rather than fabricate URLs or story details — which the instructions explicitly prohibit — I must flag this clearly.\n\n**I cannot submit a digest today.** Here is why, and what should happen next:\n\n---\n\n**Problem:** All 5 research candidates were published on **2026-08-14**, one day before the freshness floor of **2026-08-15**. The instructions require dropping any result whose publication date is earlier than the floor. With no candidates remaining, there is no valid content to compile.\n\n**What went wrong in the research stage:** The researcher appears to have pulled results from August 14 rather than August 15–17. The `agentic.ai/news` roundup was the dominant source for three of the five stories, and all three shared its August 14 date.\n\n**What to do:**\n1. Re-run the research stage targeting `after:2026-08-15` to pull fresh results from August 15–17.\n2. Prioritise primary sources (Anthropic blog, BCG publications, individual company announcements) over aggregator roundup pages, which tend to lag by a day.\n3. Once fresh candidates are returned, pass them back here and I will compile and submit the digest immediately.\n\nI will not call `submit_digest` with invented stories or modified URLs — that would silently corrupt the digest with fabricated information."}]
