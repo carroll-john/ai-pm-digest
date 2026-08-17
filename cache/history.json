@@ -1,65 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-01T22:59:12.126Z",
-    "date_label": "Sun 2 Aug",
-    "headline": "Boston Institute of Analytics: AI shifts from experimentation to governed production agents",
-    "urls": [
-      "https://bostoninstituteofanalytics.org/blog/this-week-in-ai-new-models-agents-and-breakthroughs-from-july-27-august-2-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-01T22:59:12.126Z",
-    "date_label": "Sun 2 Aug",
-    "headline": "Berkeley Agentic AI Summit (Aug 1–2): research community aligns on evaluation and deployment standards",
-    "urls": [
-      "https://www.crossmint.com/learn/ai-agent-conference-calendar"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-01T22:59:12.126Z",
-    "date_label": "Sun 2 Aug",
-    "headline": "Industry letter backs open-weight AI; Anthropic holds out on safety grounds",
-    "urls": [
-      "https://www.marketingprofs.com/opinions/2026/55433/ai-update-july-31-2026-ai-news-and-views-from-the-past-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-02T23:01:02.033Z",
-    "date_label": "Mon 3 Aug",
-    "headline": "Peter Yang & Claire Vo: From idea to shipped feature in 30 minutes using AI agents",
-    "urls": [
-      "https://creatoreconomy.so/p/from-idea-to-product-in-30min-using-ai-agents-claire-vo"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-02T23:01:02.033Z",
-    "date_label": "Mon 3 Aug",
-    "headline": "The generic AI feature era is ending — workflow integration and proprietary data are the only durable moats",
-    "urls": [
-      "https://blog.mean.ceo/ai-product-launches-news-august-2026",
-      "https://blog.mean.ceo/open-ai-news-august-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-02T23:01:02.033Z",
-    "date_label": "Mon 3 Aug",
-    "headline": "AI agent evaluation is now table stakes — 57% of orgs ship agents, 32% say quality is still the top blocker",
-    "urls": [
-      "https://www.confident-ai.com/knowledge-base/compare/best-ai-evaluation-tools-2026",
-      "https://www.getmaxim.ai/articles/top-5-ai-evaluation-platforms-in-2026-2",
-      "https://www.kunalganglani.com/blog/evaluate-ai-agents-production"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-02T23:01:02.033Z",
-    "date_label": "Mon 3 Aug",
-    "headline": "Agentic coding market splits by use case — Cursor owns the editor, Devin owns cloud tickets, Claude Code owns reasoning",
-    "urls": [
-      "https://www.morphllm.com/best-ai-coding-agents-2026",
-      "https://cursor.com"
-    ]
-  },
-  {
     "shipped_at": "2026-08-03T23:08:13.172Z",
     "date_label": "Tue 4 Aug",
     "headline": "EU AI transparency obligations go live today — the deadline that didn't slip",
@@ -265,6 +205,47 @@
     "headline": "FloQast report: 85% of finance teams call AI a priority, but only 10% use it extensively",
     "urls": [
       "https://finance.yahoo.com/technology/ai/articles/floqast-study-reveals-wide-gap-130000189.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-17T22:30:44.179Z",
+    "date_label": "Tue 18 Aug",
+    "headline": "Anthropic heads to IPO profitable; OpenAI still years from breakeven",
+    "urls": [
+      "https://www.wionews.com/world/anthropic-is-racing-openai-to-the-stock-market-and-it-is-arriving-profitable-1786906705377",
+      "https://unrot.co/blogs/ai-news-august-17-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-17T22:30:44.179Z",
+    "date_label": "Tue 18 Aug",
+    "headline": "Open-source watermark remover hits 11.7k stars in 6 days, exposing AI provenance as a governance gap",
+    "urls": [
+      "https://www.explainx.ai/blog/ai-watermark-removal-tool-openai-gemini-c2pa-august-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-17T22:30:44.179Z",
+    "date_label": "Tue 18 Aug",
+    "headline": "BCG: embedding governance into 'golden paths' collapses agent deployment from weeks to one day",
+    "urls": [
+      "https://www.bcg.com/publications/2026/how-cios-govern-ai-agents-at-scale"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-17T22:30:44.179Z",
+    "date_label": "Tue 18 Aug",
+    "headline": "Higgsfield AI video generation raises $400M at $5.4B valuation as enterprise overtakes creator revenue",
+    "urls": [
+      "https://techstartups.com/2026/08/17/top-tech-news-today-august-17-2026-ge-microsoft-nvidia-open-stripe-unitree-more"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-17T22:30:44.179Z",
+    "date_label": "Tue 18 Aug",
+    "headline": "Claude Code desktop ships auto-continue, signalling a design shift from demos to all-day retention",
+    "urls": [
+      "https://www.explainx.ai/blog/claude-usage-limits-2026-timeline-explained"
     ]
   }
 ]
