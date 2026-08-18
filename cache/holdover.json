@@ -1,0 +1,47 @@
+[
+  {
+    "headline_draft": "Kredily KAI: Payroll and HR execution moves from chat to autonomous back-office agent",
+    "summary": "Kredily announced Kredily 3.0 on August 14 and introduced KAI, an agentic AI system for payroll and HR execution. The company frames this as a move beyond conversational chat into high-compliance, mission-critical back-office work. KAI sits on top of Kredily's experience serving 25,000+ businesses and 1M+ employees, and the critical question is whether it can handle compliance-heavy tasks (taxes, deductions, regulations) well enough to earn trust from lean HR teams without requiring constant human oversight.",
+    "why_pm": "This marks a category shift: AI agents are now shipping not as demos or customer-service chatbots, but as autonomous executors of high-consequence, compliance-heavy workflows. For HR, payroll, and finance PMs, this reframes the value prop from \"faster chat\" to \"fewer errors + fewer headcount.\" The adoption bet rides on trust and error rates, not feature breadth.",
+    "key_facts": [
+      "Kredily 3.0 launched August 14, 2026 with KAI as agentic execution layer",
+      "KAI targets payroll and HR execution—high-compliance, mission-critical workflows",
+      "Kredily serves 25,000+ businesses and 1M+ employees (scale signal)",
+      "Positioning as autonomous executor, not chat assistant or analytics tool",
+      "Key risk: whether end-to-end compliance execution can be trusted without constant human review"
+    ],
+    "quotes": [
+      "For those tracking agentic AI products, this signals a move beyond chat into back-office work that companies need done correctly every pay cycle. The key question is whether KAI can handle compliance-heavy tasks well enough to win trust from lean HR teams."
+    ],
+    "sources": [
+      {
+        "url": "https://agentic.ai/news",
+        "label": "Agentic AI News — August 2026 Launches, Models & Research",
+        "published_date": "2026-08-16"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Metis Strategy: 40% of agentic AI projects will be scrapped by 2027—proof-of-value is now the survival filter",
+    "summary": "Metis Strategy analysis (August 2026) surfaces Gartner data: more than 40% of agentic AI projects will be killed by 2027, driven by escalating costs, unclear value, and inadequate controls. The memo reframes this not as a technology failure, but as a funding model catching up to reality—and as evidence that product managers' ability to measure, govern, and defend AI ROI has become make-or-break. The playbook: fund thin slices, prove value per cycle, reset what gets funded next based on evidence.",
+    "why_pm": "This is your operating manual for surviving the agentic AI reckoning. Traditional frameworks won't work—you need a tight three-cycle loop (Govern, Prototype, Measure) with clear expectations running through all three. Internal operational loops (feedback synthesis, launch prep) are easier targets than customer-facing agents; start there, measure hard, scale only after proof.",
+    "key_facts": [
+      "Gartner: 40% of agentic AI projects will be scrapped by 2027",
+      "Root causes: escalating costs, unclear value, inadequate controls",
+      "Only 17% of organizations have deployed agents; 60% plan to within two years—big opportunity gap",
+      "Recommended cycle: Govern → Prototype → Measure, reset funding based on evidence",
+      "Internal operational loops (HR, product ops) are easier proof targets than customer-facing agents"
+    ],
+    "quotes": [
+      "This pressure is already visible in the market. Gartner projects that more than 40% of agentic AI projects will be scrapped by 2027, driven by escalating costs, unclear value, and inadequate controls.",
+      "Run well, each feeds the next: evidence from measurement resets what gets funded, and clear expectations make that measurement credible."
+    ],
+    "sources": [
+      {
+        "url": "https://www.metisstrategy.com/product-management-ai-value-measurement/",
+        "label": "Product Management in 2026: From Experimentation to the Reckoning",
+        "published_date": "2026-08-15"
+      }
+    ]
+  }
+]
