@@ -1,0 +1,15 @@
+Melbourne date: Wed 19 Aug 2026; freshness floor: 2026-08-17
+History: 27 prior stories across 7 days; 36 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12092 chars
+Stage 1 usage: input=130856, output=4296, web_search=8
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 118h): "Ramp AI Index: Fable 5 adoption stalls—frontier-model pricing hits an adoption ceiling"
+  drop (stale 118h): "Anthropic embeds invisible watermarks in Claude outputs to comply with EU AI Act"
+  drop (stale 142h): "EU AI Act Article 50 enforcement goes live (Aug 2)—transparency obligations reshape product compliance roadmaps"
+Freshness filter: 3/6 candidates dropped (age > 96h)
+  drop (URL repeat): "Cognizant launches EMEA AI Unit—signals multi-agent enterprise deployment becomes channel-driven" → https://aiagentstore.ai/ai-agent-news/this-week
+URL filter: 1/3 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
