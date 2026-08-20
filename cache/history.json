@@ -1,63 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-03T23:08:13.172Z",
-    "date_label": "Tue 4 Aug",
-    "headline": "EU AI transparency obligations go live today — the deadline that didn't slip",
-    "urls": [
-      "https://datanorth.ai/blog/top-10-ai-tools-for-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-03T23:08:13.172Z",
-    "date_label": "Tue 4 Aug",
-    "headline": "Lenny's Podcast: Tom Verrilli on 'product theater' and what AI is making impossible to hide",
-    "urls": [
-      "https://x.com/lennysan"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-03T23:08:13.172Z",
-    "date_label": "Tue 4 Aug",
-    "headline": "Google embeds free video generation in Gemini — a signal about where workflow integration is heading",
-    "urls": [
-      "https://futuretools.io/news"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-05T23:06:32.305Z",
-    "date_label": "Thu 6 Aug",
-    "headline": "Alibaba launches Qwen3.8-Max, a frontier-class model at a fraction of Anthropic's price",
-    "urls": [
-      "https://technode.global/2026/08/04/chinas-alibaba-launches-qwen3-8-max-ai-model-with-2-4t-parameters-1m-token-context-window",
-      "https://www.cnbc.com/2026/08/03/alibaba-ai-model-qwen-rival-anthropic.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-05T23:06:32.306Z",
-    "date_label": "Thu 6 Aug",
-    "headline": "Google ships Gemini Spark as a persistent 24/7 agent across Workspace — not a demo, a production rollout",
-    "urls": [
-      "https://gemini.google/overview/agent/spark"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-05T23:06:32.306Z",
-    "date_label": "Thu 6 Aug",
-    "headline": "Gartner: 40% of enterprise apps will ship task-specific AI agents by end of 2026, up from under 5% in 2025",
-    "urls": [
-      "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025",
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-05T23:06:32.306Z",
-    "date_label": "Thu 6 Aug",
-    "headline": "Ai4 2026 Conference: the real reason AI agents fail in production is bad knowledge, not bad models",
-    "urls": [
-      "https://www.stocktitan.net/news/EGAN/e-gain-points-to-ai-knowledge-ops-as-key-to-ai-governance-at-ai4-p9ctrhrwk0r6.html"
-    ]
-  },
-  {
     "shipped_at": "2026-08-07T22:42:57.269Z",
     "date_label": "Sat 8 Aug",
     "headline": "OpenAI and Alibaba cut frontier model prices by 80–88% in 48 hours",
@@ -246,6 +188,47 @@
     "headline": "Claude Code desktop ships auto-continue, signalling a design shift from demos to all-day retention",
     "urls": [
       "https://www.explainx.ai/blog/claude-usage-limits-2026-timeline-explained"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-20T22:33:56.809Z",
+    "date_label": "Fri 21 Aug",
+    "headline": "Metis Strategy: 2026 is the year of proof — and PM judgment is the scarce skill",
+    "urls": [
+      "https://www.metisstrategy.com/product-management-ai-value-measurement"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-20T22:33:56.810Z",
+    "date_label": "Fri 21 Aug",
+    "headline": "Shreyas Doshi on X: LLMs catch their own reasoning errors — most humans don't",
+    "urls": [
+      "https://x.com/shreyas/status/1960385501023887744"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-20T22:33:56.810Z",
+    "date_label": "Fri 21 Aug",
+    "headline": "Anthropic ships production-ready Admin API, Files API, and self-hosted Claude Code for Enterprise",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-developer-platform",
+      "https://releasebot.io/updates/anthropic"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-20T22:33:56.810Z",
+    "date_label": "Fri 21 Aug",
+    "headline": "Cognizant launches EMEA AI Unit — multi-agent workflows are now the enterprise default expectation",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-20T22:33:56.810Z",
+    "date_label": "Fri 21 Aug",
+    "headline": "Kredily 3.0 and KAI: agentic AI moves into payroll execution, not just payroll chat",
+    "urls": [
+      "https://agentic.ai/news"
     ]
   }
 ]
