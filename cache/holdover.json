@@ -1,0 +1,32 @@
+[
+  {
+    "headline_draft": "Consensus: PMs must become 'AI-literate builders' — judgment and clear specs are now the scarcest skill",
+    "summary": "Multiple sources from August 2026 converge on a single message: the PM role has fundamentally shifted from feature delivery to systems thinking and judgment under AI acceleration. Andrew Ng frames it bluntly: 'As coding becomes cheaper, teams will need more product management work as a fraction of the total workforce. Given a clear specification for what to build, AI is making the building itself much faster and cheaper. This will significantly increase demand for people who can come up with clear specs for valuable things to build.' Astasia Myers adds: 'AI makes code cheap, but product learning isn't. The real bottleneck is knowing what to build next.' PMs who operate with pre-AI mental models—feature lists, consensus-driven roadmaps, spec by committee—are increasingly out of step with how AI-native teams execute.",
+    "why_pm": "If you're evaluating your PM toolkit and mindset, this is the forcing function. You can no longer compete on execution velocity (AI handles that). Your value is in judgment: what to build, why, for whom, and how to measure it. Spending time on POV development, customer signal synthesis, and hypothesis clarity will pay more than Jira mastery.",
+    "key_facts": [
+      "PM role shifting from feature delivery to systems thinking and judgment",
+      "Coding becoming faster and cheaper via AI acceleration",
+      "Product learning (knowing what to build) is now the bottleneck, not execution",
+      "Clear specs for valuable things to build is the scarcest PM skill",
+      "Pre-AI PM mental models (feature lists, consensus roadmaps) increasingly ineffective",
+      "Andrew Ng predicts increased demand for PMs who can specify what to build"
+    ],
+    "quotes": [
+      "As coding becomes more efficient, teams will need more product management work as a fraction of the total workforce.",
+      "Given a clear specification for what to build, AI is making the building itself much faster and cheaper. This will significantly increase demand for people who can come up with clear specs for valuable things to build.",
+      "AI makes code cheap, but product learning isn't. The real bottleneck is knowing what to build next."
+    ],
+    "sources": [
+      {
+        "url": "https://x.com/AndrewYNg/status/1879939058211971420",
+        "label": "Andrew Ng on X: Writing software is becoming cheaper; PM judgment is the constraint",
+        "published_date": "2026-08-21"
+      },
+      {
+        "url": "https://x.com/AstasiaMyers/status/2014395390389547055",
+        "label": "Astasia Myers on X: AI makes code cheap; product learning is the bottleneck",
+        "published_date": "2026-01-22"
+      }
+    ]
+  }
+]
