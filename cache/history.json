@@ -1,47 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-07T22:42:57.269Z",
-    "date_label": "Sat 8 Aug",
-    "headline": "OpenAI and Alibaba cut frontier model prices by 80–88% in 48 hours",
-    "urls": [
-      "https://www.aiapps.com/blog/ai-news-august-breakthroughs-launches-trends-cant-miss",
-      "https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-august"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-07T22:42:57.270Z",
-    "date_label": "Sat 8 Aug",
-    "headline": "88% of agent pilots never ship — governance before build yields 171% ROI",
-    "urls": [
-      "https://www.techstoriess.com/agentic-ai-implementation-guide-2026-from-pilot-to-production",
-      "https://vitaloralife.com/ai-agent-deployment"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-07T22:42:57.270Z",
-    "date_label": "Sat 8 Aug",
-    "headline": "Anthropic ships Claude Code with subagent spawn cap removed and self-hosted runners",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-07T22:42:57.270Z",
-    "date_label": "Sat 8 Aug",
-    "headline": "Productboard: 94% of PMs use AI daily, 98% are restructuring their teams",
-    "urls": [
-      "https://resources.rework.com/tools/ai-tools/best-ai-tools-for-product-managers-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-07T22:42:57.270Z",
-    "date_label": "Sat 8 Aug",
-    "headline": "SoundHound acquires LivePerson — bundled voice-plus-messaging platforms squeeze single-channel tools",
-    "urls": [
-      "https://blog.mean.ceo/latest-ai-announcements-news-august-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-08-10T22:43:53.362Z",
     "date_label": "Tue 11 Aug",
     "headline": "Anthropic ships voice mode to all Claude tiers and puts Claude Code on your own infrastructure",
@@ -229,6 +187,40 @@
     "headline": "Kredily 3.0 and KAI: agentic AI moves into payroll execution, not just payroll chat",
     "urls": [
       "https://agentic.ai/news"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-23T22:27:59.258Z",
+    "date_label": "Mon 24 Aug",
+    "headline": "Anthropic IPO incoming: run-rate revenue hits $30B, 1,000+ customers spending $1M+ annually",
+    "urls": [
+      "https://techstartups.com/2026/08/21/top-tech-news-today-august-21-2026-anthropic-apple-broadcom-google-nvidia-openai-tesla-more"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-23T22:27:59.258Z",
+    "date_label": "Mon 24 Aug",
+    "headline": "Claude Code v2.1.234 ships GitLab MR support, session continuation, and cross-session collaboration",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://www.havoptic.com/tools/claude-code"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-23T22:27:59.258Z",
+    "date_label": "Mon 24 Aug",
+    "headline": "Andrew Ng and Astasia Myers: clear specs are now the scarcest PM skill",
+    "urls": [
+      "https://x.com/AndrewYNg/status/1879939058211971420",
+      "https://x.com/AstasiaMyers/status/2014395390389547055"
+    ]
+  },
+  {
+    "shipped_at": "2026-08-23T22:27:59.258Z",
+    "date_label": "Mon 24 Aug",
+    "headline": "Lenny Rachitsky: build a Grok Bot trained on 500+ podcast episodes as your on-demand product advisor",
+    "urls": [
+      "https://x.com/lennysan"
     ]
   }
 ]
