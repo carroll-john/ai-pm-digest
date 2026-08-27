@@ -1,16 +1,6 @@
-Melbourne date: Wed 26 Aug 2026; freshness floor: 2026-08-24
-History: 23 prior stories across 6 days; 30 unique URLs to exclude.
-Stage 1 (claude-haiku-4-5): prompt 10946 chars
-Stage 1 usage: input=106862, output=4000, web_search=7
-Stage 1 note: candidates string was truncated; salvaged 6 complete entries.
-Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-  drop (URL repeat): "Google's A2A Protocol Joins the Agentic AI Foundation: Agent Interoperability Moves Under Neutral Governance" → https://aiagentstore.ai/ai-agent-news/this-week
-  drop (URL repeat): "AWS Moves Web Search to General Availability on Bedrock Agents: Cloud-Native Agent Knowledge Retrieval Gets Production-Ready" → https://aiagentstore.ai/ai-agent-news/this-week
-  drop (URL repeat): "Cloudflare Launches Kitesurf: Agent-Native Browser Runtime Cuts CPU/Memory Usage by 70%+, Introduces Autonomous Payment Protocol" → https://aiagentstore.ai/ai-agent-news/this-week
-  drop (URL repeat): "CellCog's August 2026 Agent Harness Rankings: Claude Code Leads Across Coding Agents, Highlighting Production Release Velocity as Competitive Differentiator" → https://aiagentstore.ai/ai-agent-news/this-week
-  drop (URL repeat): "Google Cloud State of AI Infrastructure Report: Agent Security Frameworks Move from Bolt-On to Platform-Native; Task-Level Provenance and Human-in-the-Loop Controls Become Gating Requirements" → https://aiagentstore.ai/ai-agent-news/this-week
-URL filter: 5/6 candidates dropped
-Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
-FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
-HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
-DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
+Melbourne date: Thu 27 Aug 2026; freshness floor: 2026-08-25
+History: 20 prior stories across 5 days; 26 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 10325 chars
+FAILURE [ANTHROPIC_CREDIT] (Stage 1): Stage 1 failed: Anthropic credit balance is exhausted.
+HINT: Top up at https://console.anthropic.com/settings/billing, then re-dispatch the workflow from the Actions tab.
+DETAIL: invalid_request_error: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.
