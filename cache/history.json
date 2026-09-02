@@ -109,5 +109,31 @@
     "urls": [
       "https://blog.mean.ceo/ai-product-launches-news-september-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-09-02T23:57:13.105Z",
+    "date_label": "Thu 3 Sept",
+    "headline": "Anthropic ships open-source commerce agent blueprints with live conversion data",
+    "urls": [
+      "https://claude.com/blog/claude-for-commerce-agents",
+      "https://github.com/anthropics/commerce-agents",
+      "https://tech.yahoo.com/ai/claude/articles/anthropic-launches-ai-agent-blueprints-160129368.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T23:57:13.106Z",
+    "date_label": "Thu 3 Sept",
+    "headline": "The PM role is splitting in 2026 — and the toolstack tells you which side you're on",
+    "urls": [
+      "https://userpilot.com/blog/product-management-trends"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T23:57:13.106Z",
+    "date_label": "Thu 3 Sept",
+    "headline": "prodmgmt.world: the realistic September 2026 AI toolstack for PMs is four tools, not ten",
+    "urls": [
+      "https://www.prodmgmt.world/resources/ai-tools-for-product-managers"
+    ]
   }
 ]
