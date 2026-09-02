@@ -1,9 +1,0 @@
-{
-  "kind": "ANTHROPIC_CREDIT",
-  "subject_tag": "CREDIT",
-  "stage": "Stage 1",
-  "summary": "Stage 1 failed: Anthropic credit balance is exhausted.",
-  "hint": "Top up at https://console.anthropic.com/settings/billing, then re-dispatch the workflow from the Actions tab.",
-  "detail": "invalid_request_error: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-  "occurred_at": "2026-09-02T11:57:38.868Z"
-}

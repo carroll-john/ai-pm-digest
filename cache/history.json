@@ -1,154 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-10T22:43:53.362Z",
-    "date_label": "Tue 11 Aug",
-    "headline": "Anthropic ships voice mode to all Claude tiers and puts Claude Code on your own infrastructure",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude",
-      "https://felloai.com/best-ai-models"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-10T22:43:53.362Z",
-    "date_label": "Tue 11 Aug",
-    "headline": "OpenAI deprecates Atlas, absorbs browser automation directly into ChatGPT and Codex",
-    "urls": [
-      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-10T22:43:53.362Z",
-    "date_label": "Tue 11 Aug",
-    "headline": "Lenny's Podcast: Adam Ward (Cursor Head of Talent) on killing the funnel of doom",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/the-playbook-for-building-high-talent"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-10T22:43:53.362Z",
-    "date_label": "Tue 11 Aug",
-    "headline": "MCP becomes the connective tissue for PM workflows — and changes what you can ship without engineering",
-    "urls": [
-      "https://www.institutepm.com/knowledge-hub/ai-product-management-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-12T22:48:19.881Z",
-    "date_label": "Thu 13 Aug",
-    "headline": "Anthropic makes Claude Code auto mode the default — teams ship 25% more code",
-    "urls": [
-      "https://www.theregister.com/ai-and-ml/2026/08/10/claude-code-puts-auto-mode-in-the-drivers-seat/5285326",
-      "https://techbriefly.com/2026/08/10/anthropic-claude-code-auto-mode-default"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-12T22:48:19.881Z",
-    "date_label": "Thu 13 Aug",
-    "headline": "Meta launches Muse Code — the coding-agent market moves from capability to governance",
-    "urls": [
-      "https://devops.com/meta-launches-ai-coding-agent-to-challenge-openai-and-anthropic"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-12T22:48:19.881Z",
-    "date_label": "Thu 13 Aug",
-    "headline": "Lenny's Podcast: Adam Mosseri on lean product pods and the emerging 'product staff' role",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/adam-mosseri-instagram"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-13T22:50:07.517Z",
-    "date_label": "Fri 14 Aug",
-    "headline": "xAI releases Grok 4.6: capable agentic AI is now accessible outside the OpenAI and Anthropic walled gardens",
-    "urls": [
-      "https://techstartups.com/2026/08/13/top-tech-news-today-august-13-2026-anthropic-deepmind-google-lenovo-microsoft-spacexai-more"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-13T22:50:07.518Z",
-    "date_label": "Fri 14 Aug",
-    "headline": "Novee Security at Black Hat: Claude Code and Gemini CLI vulnerabilities reframe agents as attack surface, not just tools",
-    "urls": [
-      "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-13T22:50:07.518Z",
-    "date_label": "Fri 14 Aug",
-    "headline": "OpenAI deprecates individual-user sync for ChatGPT Business: enterprise data governance moves to admins",
-    "urls": [
-      "https://releasebot.io/updates/openai"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-14T22:29:32.498Z",
-    "date_label": "Sat 15 Aug",
-    "headline": "Anthropic locks Claude Sonnet 5 pricing at $2/$10 per million tokens — September increase canceled",
-    "urls": [
-      "https://explainx.ai/blog/anthropic-sonnet-5-permanent-pricing-august-2026",
-      "https://www.anthropic.com/news/claude-sonnet-5"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-14T22:29:32.498Z",
-    "date_label": "Sat 15 Aug",
-    "headline": "Revise launches AI-native document editor with tracked changes and MCP integration",
-    "urls": [
-      "https://aithority.com/machine-learning/revise-launches-ai-document-editor-with-reviewable-tracked-changes",
-      "https://www.prweb.com/releases/revise-launches-ai-document-editor-with-reviewable-tracked-changes-302844708.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-14T22:29:32.498Z",
-    "date_label": "Sat 15 Aug",
-    "headline": "FloQast report: 85% of finance teams call AI a priority, but only 10% use it extensively",
-    "urls": [
-      "https://finance.yahoo.com/technology/ai/articles/floqast-study-reveals-wide-gap-130000189.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-17T22:30:44.179Z",
-    "date_label": "Tue 18 Aug",
-    "headline": "Anthropic heads to IPO profitable; OpenAI still years from breakeven",
-    "urls": [
-      "https://www.wionews.com/world/anthropic-is-racing-openai-to-the-stock-market-and-it-is-arriving-profitable-1786906705377",
-      "https://unrot.co/blogs/ai-news-august-17-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-17T22:30:44.179Z",
-    "date_label": "Tue 18 Aug",
-    "headline": "Open-source watermark remover hits 11.7k stars in 6 days, exposing AI provenance as a governance gap",
-    "urls": [
-      "https://www.explainx.ai/blog/ai-watermark-removal-tool-openai-gemini-c2pa-august-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-17T22:30:44.179Z",
-    "date_label": "Tue 18 Aug",
-    "headline": "BCG: embedding governance into 'golden paths' collapses agent deployment from weeks to one day",
-    "urls": [
-      "https://www.bcg.com/publications/2026/how-cios-govern-ai-agents-at-scale"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-17T22:30:44.179Z",
-    "date_label": "Tue 18 Aug",
-    "headline": "Higgsfield AI video generation raises $400M at $5.4B valuation as enterprise overtakes creator revenue",
-    "urls": [
-      "https://techstartups.com/2026/08/17/top-tech-news-today-august-17-2026-ge-microsoft-nvidia-open-stripe-unitree-more"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-17T22:30:44.179Z",
-    "date_label": "Tue 18 Aug",
-    "headline": "Claude Code desktop ships auto-continue, signalling a design shift from demos to all-day retention",
-    "urls": [
-      "https://www.explainx.ai/blog/claude-usage-limits-2026-timeline-explained"
-    ]
-  },
-  {
     "shipped_at": "2026-08-20T22:33:56.809Z",
     "date_label": "Fri 21 Aug",
     "headline": "Metis Strategy: 2026 is the year of proof — and PM judgment is the scarce skill",
@@ -221,6 +72,42 @@
     "headline": "Lenny Rachitsky: build a Grok Bot trained on 500+ podcast episodes as your on-demand product advisor",
     "urls": [
       "https://x.com/lennysan"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T12:15:22.265Z",
+    "date_label": "Wed 2 Sept",
+    "headline": "Anthropic ships Claude Fable 5.1: 75% cheaper cache reads, stronger agentic reasoning, three breaking changes",
+    "urls": [
+      "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+      "https://roo.beehiiv.com/p/claude-fable-5-1-mythos-5-1-whats-new",
+      "https://www.marktechpost.com/2026/09/01/anthropic-releases-claude-fable-5-1-and-claude-mythos-5-1-52-6-on-terminal-bench-science-and-75-cheaper-cache-reads"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T12:15:22.266Z",
+    "date_label": "Wed 2 Sept",
+    "headline": "Anthropic: Claude memory now syncs across chat, Cowork, and Code sessions",
+    "urls": [
+      "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context",
+      "https://www.engadget.com/2243753/claude-memory-now-works-across-both-chats-and-cowork-sessions",
+      "https://claudefa.st/blog/guide/mechanics/session-memory"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T12:15:22.266Z",
+    "date_label": "Wed 2 Sept",
+    "headline": "Lenny's Newsletter: Anshu Chimala (ex-Apple) on building production UIs in three prompts",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-02T12:15:22.266Z",
+    "date_label": "Wed 2 Sept",
+    "headline": "Mean CEO: Stop chasing model releases — buy on workflow fit instead",
+    "urls": [
+      "https://blog.mean.ceo/ai-product-launches-news-september-2026"
     ]
   }
 ]
