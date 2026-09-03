@@ -1,0 +1,17 @@
+Melbourne date: Fri 4 Sept 2026; freshness floor: 2026-09-02
+History: 11 prior stories across 3 days; 19 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 8807 chars
+Stage 1 usage: input=136140, output=4475, web_search=9
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 2904h): "AI agents are moving from experiments to production—40% of enterprise apps to embed task-specific agents by end of 2026"
+  drop (stale 1584h): "The PM role is being redefined around AI orchestration—Claude Code and Cursor let PMs prototype without engineers"
+  drop (stale 1608h): "Peter Yang: AI is not replacing strong PMs—it's ruthlessly eliminating average ones"
+Freshness filter: 3/6 candidates dropped (age > 96h)
+  drop (title overlap 0.33): "Stop buying AI tools on hype—evaluate on workflow fit instead, says Violetta Bonenkamp (Mean CEO)" ~~ "Mean CEO: Stop chasing model releases — buy on workflow fit instead"
+Title-overlap filter: 1/3 candidates dropped (Jaccard >= 0.3)
+  drop (URL repeat): "Over 70% of PMs now use AI tools daily—but most make the same mistake: buying all-in-one platforms instead of best-of-breed by workflow" → https://www.prodmgmt.world/resources/ai-tools-for-product-managers
+URL filter: 1/2 candidates dropped
+Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
