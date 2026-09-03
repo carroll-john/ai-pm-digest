@@ -1,0 +1,29 @@
+[
+  {
+    "headline_draft": "OpenAI ships GPT-6 Astra to business users with superhuman context handling and computer use",
+    "summary": "OpenAI released GPT-6 Astra on September 3, 2026, to a limited set of organizations in its Daybreak program for early testers. The model represents a significant jump in capabilities for computer use, scientific research, coding, math, and professional work like presentation creation. Astra is the first OpenAI model to meet the Critical threshold on cybersecurity under their Preparedness Framework. The company is rolling it out slowly to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the API and AWS over the coming days. Key distinguishing features include best-in-class context handling (superhuman at ingesting enormous amounts of context) and context switching.",
+    "why_pm": "PMs building AI-powered products or using AI agents for product operations need to understand GPT-6 Astra's capabilities—especially its computer-use and reasoning abilities—to inform decisions about which models to integrate into their roadmap and which workflows to automate next.",
+    "key_facts": [
+      "GPT-6 Astra rolled out Sept 3, 2026 to Daybreak program testers",
+      "First OpenAI model to meet Critical cybersecurity capability threshold",
+      "Superb at ingesting enormous context, best-in-class at computer use and context switching",
+      "Rolling out to Plus, Pro, Business, Enterprise users and API over coming days",
+      "Positioned as significant milestone toward artificial general intelligence"
+    ],
+    "quotes": [
+      "it is superhuman at ingesting enormous amounts of context. so patient. so relentless. so good at context switching."
+    ],
+    "sources": [
+      {
+        "url": "https://www.bloomberg.com/news/articles/2026-09-03/openai-rolls-out-gpt-6-astra-model-with-added-cyber-guardrails",
+        "label": "Bloomberg — OpenAI Launches GPT-6 Astra With Enhanced Cybersecurity Safeguards",
+        "published_date": "2026-09-03"
+      },
+      {
+        "url": "https://9to5mac.com/2026/09/03/openai-releasing-major-upgrade-to-chatgpt-and-codex-with-gpt-6-astra-details-here/",
+        "label": "9to5Mac — OpenAI releasing major upgrade to ChatGPT and Codex with GPT-6 Astra",
+        "published_date": "2026-09-03"
+      }
+    ]
+  }
+]
