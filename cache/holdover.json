@@ -1,5 +1,40 @@
 [
   {
+    "headline_draft": "Model pricing wars and agentic AI are redefining the PM toolkit in September 2026",
+    "summary": "Four frontier AI models launched in 72 hours (Claude Fable 5.1, Gemini 3.8 Flash, Muse Spark 1.3, OpenAI Astra), with dramatic pricing shifts: Luna fell 80% to $0.20/million input tokens, while output pricing remains a hidden multiplier (5–6× input). Claude Fable 5.1 took the Agentic Index lead with 75% cheaper cache reads and stronger reasoning. The real story: as frontier models compete on price and agentic capability, the $2 input tier is now a blood bath, with Claude Sonnet 5, GPT-5.6 Terra, and Gemini 3.1 Pro all bunched at exactly that price. Model choice is now the biggest line item on any AI budget.",
+    "why_pm": "PMs who pick models by hype rather than total cost of ownership face budget overruns. The shift to agentic capability and cache optimization means specs, prototyping workflows, and stack decisions need to account for hidden multipliers in output tokens and context reuse.",
+    "key_facts": [
+      "Four frontier launches in 72 hours: Claude Fable 5.1 (Sept 1), Gemini 3.8 Flash, Muse Spark 1.3, OpenAI Astra announced",
+      "Claude Fable 5.1: 75% cheaper cache reads, Agentic Index 61 vs Opus 5's 59",
+      "Luna (GPT-5.6): 80% price cut to $0.20/$1.20 per 1M tokens; cache reads at $0.02",
+      "Terra (GPT-5.6): 20% cut to $2/$12 per 1M tokens",
+      "$2 input tier now saturated with three models (Sonnet 5, Terra, Gemini 3.1 Pro)",
+      "Output pricing is 5–6× input cost—verbose models carry hidden multiplier",
+      "Anthropic cancelled a Sonnet price hike mid-month"
+    ],
+    "quotes": [
+      "The floor for mainstream APIs now sits near $0.20 per million input tokens, held by GPT-5.6 Luna since July 30—a price that used to mean 'budget legacy model' and now means 'current flagship family.'",
+      "Output remains the hidden multiplier—5× input at Anthropic, 6× at OpenAI—so verbose models quietly cost more than their input price suggests."
+    ],
+    "sources": [
+      {
+        "url": "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
+        "label": "Local AI Zone: September 2026 AI Model Dispatch",
+        "published_date": "2026-09-04"
+      },
+      {
+        "url": "https://felloai.com/best-ai-models/",
+        "label": "FelloAI: Best AI Models September 2026",
+        "published_date": "2026-09-04"
+      },
+      {
+        "url": "https://llm-stats.com/llm-updates",
+        "label": "LLM Stats: AI Updates Today September 2026",
+        "published_date": "2026-09-04"
+      }
+    ]
+  },
+  {
     "headline_draft": "OpenAI ships GPT-6 Astra to business users with superhuman context handling and computer use",
     "summary": "OpenAI released GPT-6 Astra on September 3, 2026, to a limited set of organizations in its Daybreak program for early testers. The model represents a significant jump in capabilities for computer use, scientific research, coding, math, and professional work like presentation creation. Astra is the first OpenAI model to meet the Critical threshold on cybersecurity under their Preparedness Framework. The company is rolling it out slowly to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the API and AWS over the coming days. Key distinguishing features include best-in-class context handling (superhuman at ingesting enormous amounts of context) and context switching.",
     "why_pm": "PMs building AI-powered products or using AI agents for product operations need to understand GPT-6 Astra's capabilities—especially its computer-use and reasoning abilities—to inform decisions about which models to integrate into their roadmap and which workflows to automate next.",
