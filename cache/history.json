@@ -1,46 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-20T22:33:56.809Z",
-    "date_label": "Fri 21 Aug",
-    "headline": "Metis Strategy: 2026 is the year of proof — and PM judgment is the scarce skill",
-    "urls": [
-      "https://www.metisstrategy.com/product-management-ai-value-measurement"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-20T22:33:56.810Z",
-    "date_label": "Fri 21 Aug",
-    "headline": "Shreyas Doshi on X: LLMs catch their own reasoning errors — most humans don't",
-    "urls": [
-      "https://x.com/shreyas/status/1960385501023887744"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-20T22:33:56.810Z",
-    "date_label": "Fri 21 Aug",
-    "headline": "Anthropic ships production-ready Admin API, Files API, and self-hosted Claude Code for Enterprise",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-developer-platform",
-      "https://releasebot.io/updates/anthropic"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-20T22:33:56.810Z",
-    "date_label": "Fri 21 Aug",
-    "headline": "Cognizant launches EMEA AI Unit — multi-agent workflows are now the enterprise default expectation",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-20T22:33:56.810Z",
-    "date_label": "Fri 21 Aug",
-    "headline": "Kredily 3.0 and KAI: agentic AI moves into payroll execution, not just payroll chat",
-    "urls": [
-      "https://agentic.ai/news"
-    ]
-  },
-  {
     "shipped_at": "2026-08-23T22:27:59.258Z",
     "date_label": "Mon 24 Aug",
     "headline": "Anthropic IPO incoming: run-rate revenue hits $30B, 1,000+ customers spending $1M+ annually",
@@ -134,6 +93,52 @@
     "headline": "prodmgmt.world: the realistic September 2026 AI toolstack for PMs is four tools, not ten",
     "urls": [
       "https://www.prodmgmt.world/resources/ai-tools-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-05T23:42:26.990Z",
+    "date_label": "Sun 6 Sept",
+    "headline": "OpenAI ships GPT-6 Astra: computer use, perfect cybersecurity benchmark, staged rollout begins",
+    "urls": [
+      "https://9to5mac.com/2026/09/04/openai-releasing-major-upgrade-to-chatgpt-and-codex-with-gpt-6-astra-details-here",
+      "https://openai.com/index/path-to-astra",
+      "https://www.bloomberg.com/news/articles/2026-09-03/openai-rolls-out-gpt-6-astra-model-with-added-cyber-guardrails"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-05T23:42:26.990Z",
+    "date_label": "Sun 6 Sept",
+    "headline": "McKinsey State of AI 2026: 32% of orgs skipped a software purchase because they built it with agents instead",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-05T23:42:26.990Z",
+    "date_label": "Sun 6 Sept",
+    "headline": "Google Gemini Spark takes write access to Google Photos: the agent permission design template",
+    "urls": [
+      "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library",
+      "https://9to5google.com/2026/09/03/gemini-spark-google-photos"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-05T23:42:26.990Z",
+    "date_label": "Sun 6 Sept",
+    "headline": "September model pricing: the $2 input tier is now a three-way tie and output tokens are the hidden cost",
+    "urls": [
+      "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
+      "https://felloai.com/best-ai-models",
+      "https://llm-stats.com/llm-updates"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-05T23:42:26.990Z",
+    "date_label": "Sun 6 Sept",
+    "headline": "Industry consensus, September 2026: human-supervised agents outperform fully autonomous ones in production",
+    "urls": [
+      "https://blog.mean.ceo/ai-industry-trends-september-2026",
+      "https://blog.mean.ceo/ai-trends-september-2026"
     ]
   }
 ]
