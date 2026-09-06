@@ -1,0 +1,61 @@
+[
+  {
+    "headline_draft": "Pepper Launches Agent Atlas: The First Marketing Agent That Acts, Not Just Reports (September 4, 2026)",
+    "summary": "Pepper has launched Agent Atlas, an AI agent that actually executes generative engine optimization work instead of just surfacing insights. The agent reasons across all connected data—AI-search visibility, rankings, analytics, content—takes natural-language requests from marketers, diagnoses problems, recommends actions in order of impact, and executes them with team approval. It's live across all 250+ enterprise customers immediately. This exemplifies the shift from dashboards and reports to agents that own workflow outcomes.",
+    "why_pm": "Agent Atlas shows the product pattern that will define 2026: tools that close the insight-to-action gap by taking ownership of the workflow, not delegating it back to the user. Study how Pepper handles permissions, approval gates, and reversible edits—these are the new PM requirements for shipping agents.",
+    "key_facts": [
+      "Launched September 4, 2026; live across all Pepper customer accounts immediately",
+      "Reasons across AI-search visibility, rankings, analytics, and content in a single workflow",
+      "Marketer speaks in natural language; agent diagnoses, recommends, and executes with approval",
+      "No self-serve launch: Pepper's growth teams operate the agent on behalf of customers",
+      "Targets the gap between insight (dashboards) and action (manual work)",
+      "Operates as 'agents for scale, humans for judgment' — no full autonomy"
+    ],
+    "quotes": [
+      "We are trying to engineer organic growth for an AI era. Our understanding of organic growth has moved from SEO to Search Everywhere Optimization, and that needs strategy, agents and human subject matter experts working together.",
+      "You tell it what you want in plain language, it does the work with your team in control, and we hold ourselves to the number it moves.",
+      "A tool that only reports was never going to be enough."
+    ],
+    "sources": [
+      {
+        "url": "https://aninews.in/news/business/pepper-launches-agent-atlas-an-ai-agent-that-runs-geo-work-instead-of-reporting-on-it20260904155426/",
+        "label": "Pepper Launches Agent Atlas, ANI News, September 4, 2026",
+        "published_date": "2026-09-04"
+      },
+      {
+        "url": "https://martechseries.com/content/pepper-launches-agent-atlas-an-ai-agent-that-runs-organic-growth-work-not-just-reporting/",
+        "label": "Pepper Agent Atlas Launch, MarTech Series",
+        "published_date": "2026-09-04"
+      }
+    ]
+  },
+  {
+    "headline_draft": "BiomX Zorronet: No-Code AI Agents Move Into Physical-World Operations (September 4, 2026)",
+    "summary": "BiomX's Zorronet launched a no-code visual builder that lets operational teams connect cameras, sensors, drones, and physical systems into autonomous response workflows without programming or developer support. Operators assemble site-specific logic from predefined capability blocks, modify it on screen, and run multiple workflows in parallel. The platform unifies diverse devices into one AI-managed layer that interprets activity, coordinates responses in real time, and can operate autonomously or with human-in-the-loop approvals. This is agentic AI moving from software into the physical world.",
+    "why_pm": "This shows the PM challenge expanding from digital workflows into physical operations. Expect questions about safety, liability, reversibility, and audit trails. Study Zorronet's approach to operator control, approval gates, and human-in-the-loop design — these patterns will become table stakes for agent products.",
+    "key_facts": [
+      "Launched September 4, 2026 by BiomX (rebranding to Tessera Defense and Homeland Security)",
+      "No-code visual builder lets operators design autonomous response workflows without programming",
+      "Connects cameras, sensors, drones, gates, and other on-site systems in parallel workflows",
+      "Operates autonomously or with human-in-the-loop approvals",
+      "Can run on-premises inside hardened networks or through the cloud",
+      "Designed for defense, security, critical infrastructure, and municipal operations"
+    ],
+    "quotes": [
+      "The real value would come not from any single device, but from the ability to understand the full operational picture. Zorronet brings those inputs together through a unified AI/ML autonomous decision layer, allowing the system to understand context, coordinate assets and determine the appropriate response.",
+      "Operational teams connect existing cameras, sensors and physical systems into site-specific response logic and change it on screen without code, software releases or developer support."
+    ],
+    "sources": [
+      {
+        "url": "https://www.globenewswire.com/news-release/2026/09/04/3356598/0/en/biomx-zorronet-launches-no-code-control-over-ai-powered-autonomous-response-workflows.html",
+        "label": "BiomX Zorronet Launches No-Code AI Workflows, September 4, 2026",
+        "published_date": "2026-09-04"
+      },
+      {
+        "url": "https://agentic.ai/news",
+        "label": "Agentic AI News — September 2026",
+        "published_date": "2026-09-05"
+      }
+    ]
+  }
+]
