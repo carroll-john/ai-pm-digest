@@ -1,39 +1,5 @@
 [
   {
-    "shipped_at": "2026-08-23T22:27:59.258Z",
-    "date_label": "Mon 24 Aug",
-    "headline": "Anthropic IPO incoming: run-rate revenue hits $30B, 1,000+ customers spending $1M+ annually",
-    "urls": [
-      "https://techstartups.com/2026/08/21/top-tech-news-today-august-21-2026-anthropic-apple-broadcom-google-nvidia-openai-tesla-more"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-23T22:27:59.258Z",
-    "date_label": "Mon 24 Aug",
-    "headline": "Claude Code v2.1.234 ships GitLab MR support, session continuation, and cross-session collaboration",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code",
-      "https://www.havoptic.com/tools/claude-code"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-23T22:27:59.258Z",
-    "date_label": "Mon 24 Aug",
-    "headline": "Andrew Ng and Astasia Myers: clear specs are now the scarcest PM skill",
-    "urls": [
-      "https://x.com/AndrewYNg/status/1879939058211971420",
-      "https://x.com/AstasiaMyers/status/2014395390389547055"
-    ]
-  },
-  {
-    "shipped_at": "2026-08-23T22:27:59.258Z",
-    "date_label": "Mon 24 Aug",
-    "headline": "Lenny Rachitsky: build a Grok Bot trained on 500+ podcast episodes as your on-demand product advisor",
-    "urls": [
-      "https://x.com/lennysan"
-    ]
-  },
-  {
     "shipped_at": "2026-09-02T12:15:22.265Z",
     "date_label": "Wed 2 Sept",
     "headline": "Anthropic ships Claude Fable 5.1: 75% cheaper cache reads, stronger agentic reasoning, three breaking changes",
@@ -139,6 +105,40 @@
     "urls": [
       "https://blog.mean.ceo/ai-industry-trends-september-2026",
       "https://blog.mean.ceo/ai-trends-september-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-08T23:58:48.321Z",
+    "date_label": "Wed 9 Sept",
+    "headline": "Lenny's Podcast: Anish Acharya on why companies are becoming a series of loops, not dashboards",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/why-companies-are-becoming-a-series",
+      "https://podcasts.apple.com/us/podcast/lennys-podcast-why-ai-companies-will-become-loops-not/id1848404899?i=1000788144679"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-08T23:58:48.321Z",
+    "date_label": "Wed 9 Sept",
+    "headline": "Anthropic ships Claude Code hybrid agent orchestration — scaffolding time drops from days to hours",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-08T23:58:48.321Z",
+    "date_label": "Wed 9 Sept",
+    "headline": "Anthropic ships Claude Code diagnostics update: skill checks, larger output buffers, and VS Code polish",
+    "urls": [
+      "https://releasebot.io/updates/anthropic"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-08T23:58:48.321Z",
+    "date_label": "Wed 9 Sept",
+    "headline": "BiomX launches Zorronet: no-code agent builder for physical-world operations",
+    "urls": [
+      "https://www.globenewswire.com/news-release/2026/09/04/3356598/0/en/biomx-zorronet-launches-no-code-control-over-ai-powered-autonomous-response-workflows.html"
     ]
   }
 ]
