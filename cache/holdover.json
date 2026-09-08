@@ -1,31 +1,24 @@
 [
   {
-    "headline_draft": "Pepper Launches Agent Atlas: The First Marketing Agent That Acts, Not Just Reports (September 4, 2026)",
-    "summary": "Pepper has launched Agent Atlas, an AI agent that actually executes generative engine optimization work instead of just surfacing insights. The agent reasons across all connected data—AI-search visibility, rankings, analytics, content—takes natural-language requests from marketers, diagnoses problems, recommends actions in order of impact, and executes them with team approval. It's live across all 250+ enterprise customers immediately. This exemplifies the shift from dashboards and reports to agents that own workflow outcomes.",
-    "why_pm": "Agent Atlas shows the product pattern that will define 2026: tools that close the insight-to-action gap by taking ownership of the workflow, not delegating it back to the user. Study how Pepper handles permissions, approval gates, and reversible edits—these are the new PM requirements for shipping agents.",
+    "headline_draft": "Anthropic ships Claude Code update: skill diagnostics, VS Code workflows, and larger output buffers (Sept 5)",
+    "summary": "Anthropic released a broad Claude Code update on or around September 5, 2026 focused on production reliability and developer workflow polish. The update includes new policy and skill diagnostics (helping PMs understand which skills will run correctly against their data), larger inline command and task output limits (reducing truncation issues when working with large research files or complex prototypes), smoother prompt and session handling, and improved VS Code integration for users who work inside their IDE. The update also improves model selection, Remote Control reliability, and startup performance while fixing numerous bugs. This release signals that Claude Code is moving from experimental tool to production-ready product development platform.",
+    "why_pm": "As PMs start using Claude Code to prototype, these reliability and diagnostics improvements matter: you can now validate that your workflows won't fail silently, handle multi-step research synthesis without losing context midway, and integrate seamlessly into the VS Code environment where many product-focused engineers already live. The diagnostics feature is specifically valuable for PMs iterating with non-technical stakeholders.",
     "key_facts": [
-      "Launched September 4, 2026; live across all Pepper customer accounts immediately",
-      "Reasons across AI-search visibility, rankings, analytics, and content in a single workflow",
-      "Marketer speaks in natural language; agent diagnoses, recommends, and executes with approval",
-      "No self-serve launch: Pepper's growth teams operate the agent on behalf of customers",
-      "Targets the gap between insight (dashboards) and action (manual work)",
-      "Operates as 'agents for scale, humans for judgment' — no full autonomy"
+      "Broader Claude Code update shipped ~September 5, 2026",
+      "New skill diagnostics help PMs understand what will/won't work before execution",
+      "Larger output buffers reduce truncation when synthesizing long documents or research",
+      "VS Code workflows improved for IDE-native development",
+      "Policy diagnostics embedded for enterprise/compliance checks",
+      "Remote Control and startup reliability improved alongside session handling"
     ],
     "quotes": [
-      "We are trying to engineer organic growth for an AI era. Our understanding of organic growth has moved from SEO to Search Everywhere Optimization, and that needs strategy, agents and human subject matter experts working together.",
-      "You tell it what you want in plain language, it does the work with your team in control, and we hold ourselves to the number it moves.",
-      "A tool that only reports was never going to be enough."
+      "Claude Code ships a broad update with new policy and skill diagnostics, larger inline command and task output limits, and smoother prompt and session handling. It also improves VS Code workflows, model selection, Remote Control, and startup reliability while fixing many bugs and performance issues."
     ],
     "sources": [
       {
-        "url": "https://aninews.in/news/business/pepper-launches-agent-atlas-an-ai-agent-that-runs-geo-work-instead-of-reporting-on-it20260904155426/",
-        "label": "Pepper Launches Agent Atlas, ANI News, September 4, 2026",
-        "published_date": "2026-09-04"
-      },
-      {
-        "url": "https://martechseries.com/content/pepper-launches-agent-atlas-an-ai-agent-that-runs-organic-growth-work-not-just-reporting/",
-        "label": "Pepper Agent Atlas Launch, MarTech Series",
-        "published_date": "2026-09-04"
+        "url": "https://releasebot.io/updates/anthropic",
+        "label": "Releasebot: Anthropic Release Notes — September 2026",
+        "published_date": "2026-09-05"
       }
     ]
   },
