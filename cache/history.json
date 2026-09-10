@@ -140,5 +140,43 @@
     "urls": [
       "https://www.globenewswire.com/news-release/2026/09/04/3356598/0/en/biomx-zorronet-launches-no-code-control-over-ai-powered-autonomous-response-workflows.html"
     ]
+  },
+  {
+    "shipped_at": "2026-09-10T23:53:58.489Z",
+    "date_label": "Fri 11 Sept",
+    "headline": "Meta launches Muse: a personal AI agent that executes tasks, not just answers questions",
+    "urls": [
+      "https://techbriefly.com/2026/09/09/meta-muse-ai-agent-shopping-email-trips",
+      "https://tech.yahoo.com/ai/meta-ai/articles/meta-launches-ai-agent-access-190605563.html",
+      "https://tech-insider.org/what-meta-actually-shipped-with-muse"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-10T23:53:58.489Z",
+    "date_label": "Fri 11 Sept",
+    "headline": "Harvey raises $550M at $15.5B valuation — vertical AI's clearest proof point yet",
+    "urls": [
+      "https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b",
+      "https://www.bloomberg.com/news/articles/2026-09-09/legal-ai-startup-harvey-hits-15-6-billion-value-with-550-million-round",
+      "https://techstartups.com/2026/09/09/legal-ai-startup-harvey-raises-550m-at-15-6b-valuation-as-revenue-tops-400m"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-10T23:53:58.489Z",
+    "date_label": "Fri 11 Sept",
+    "headline": "Lovable turns 800,000 freelancers into a certified partner sales force",
+    "urls": [
+      "https://alphasignal.ai/news/lovable-turns-800-000-freelancers-into-a-paid-partner-sales-force",
+      "https://lovable.dev/blog"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-10T23:53:58.489Z",
+    "date_label": "Fri 11 Sept",
+    "headline": "Apple's iPhone 16 event: AI as the headline, delayed delivery as the footnote",
+    "urls": [
+      "https://techcrunch.com/snippet/2892121/september-the-iphone-16-event",
+      "https://www.phonearena.com/news/Insider-surprised-by-Apples-unusual-pre-launch-move-ahead-of-iPhone-16-release_id161770"
+    ]
   }
 ]
