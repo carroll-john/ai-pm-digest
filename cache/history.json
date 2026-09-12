@@ -178,5 +178,30 @@
       "https://techcrunch.com/snippet/2892121/september-the-iphone-16-event",
       "https://www.phonearena.com/news/Insider-surprised-by-Apples-unusual-pre-launch-move-ahead-of-iPhone-16-release_id161770"
     ]
+  },
+  {
+    "shipped_at": "2026-09-12T00:01:07.478Z",
+    "date_label": "Sat 12 Sept",
+    "headline": "GitHub Copilot HydraFusion: multi-model routing cuts costs 67% per benchmark",
+    "urls": [
+      "https://releasebot.io/updates/github"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-12T00:01:07.478Z",
+    "date_label": "Sat 12 Sept",
+    "headline": "Agent UX patterns have solidified: planning surface, tool stream, memory panel, trust signals",
+    "urls": [
+      "https://www.aydesign.ai/blog/best-ai-agent-interfaces-2026",
+      "https://fuselabcreative.com/ui-design-for-ai-agents"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-12T00:01:07.478Z",
+    "date_label": "Sat 12 Sept",
+    "headline": "AI Dispatch: the accountability layer, not the model, is now the product bottleneck",
+    "urls": [
+      "https://hipther.com/news/2026/09/11/129962/ai-dispatch-daily-trends-and-innovations-september-11-2026-chinese-ai-labs-gemini-for-windows-gpt-li"
+    ]
   }
 ]
