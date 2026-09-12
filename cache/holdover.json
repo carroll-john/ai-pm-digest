@@ -1,0 +1,24 @@
+[
+  {
+    "headline_draft": "Visa, Mastercard, Ant International align on Know-Your-Agent standard for AI shoppers",
+    "summary": "Visa, Mastercard, and Ant International announced the Know-Your-Agent (KYA) interoperability framework on September 12, 2026, unifying three previously competing protocols: Visa's Trusted Agent Protocol, Mastercard Verifiable Intent, and Ant's Agentic Mobile Protocol. The framework allows card networks, wallets, agent platforms, and marketplaces to recognize trusted AI shoppers across ecosystems. This represents the first major industry alignment on agent identity and trustworthiness standards, directly addressing the friction of agents acting on behalf of users in payment and commerce workflows.",
+    "why_pm": "If you're building commerce, fintech, or multi-agent products, this standard simplifies cross-platform agent deployment and reduces compliance friction. PMs shipping AI-powered shopping experiences now have a clear interop layer to reference when pitching to payment partners and enterprises.",
+    "key_facts": [
+      "Know-Your-Agent (KYA) framework unifies Visa, Mastercard, and Ant protocols",
+      "Announced September 12, 2026 in São Paulo",
+      "Enables agents to be recognized as trusted across card networks and wallets",
+      "Aligns three competing standards into single interoperability layer",
+      "Applies to card networks, wallets, agent platforms, and marketplaces"
+    ],
+    "quotes": [
+      "Visa's Trusted Agent Protocol, Mastercard Verifiable Intent and Ant's Agentic Mobile Protocol — so card networks, wallets, agent platforms and marketplaces can recognize trusted AI shoppers across ecosystems"
+    ],
+    "sources": [
+      {
+        "url": "https://aiweekly.co/ai-news-today",
+        "label": "AI News Today, September 12: Top Stories",
+        "published_date": "2026-09-12"
+      }
+    ]
+  }
+]
