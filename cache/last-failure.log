@@ -1,0 +1,18 @@
+Melbourne date: Sun 13 Sept 2026; freshness floor: 2026-09-11
+History: 23 prior stories across 6 days; 44 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12145 chars
+Stage 1 usage: input=163153, output=4832, web_search=9
+Stage 1 complete: 7 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 3144h): "AI Agents for Product Ops: Workflow-by-workflow deployment with ROI guardrails, not blanket rollout"
+  drop (stale 936h): "Sid Saladi: The PM's winning stack isn't 12 tools, it's one tool per job wired into a workflow"
+  drop (stale 264h): "Cost-per-token is not your only AI budget line—output verbosity and model choice create 5-150× variance in total spend"
+Freshness filter: 3/7 candidates dropped (age > 96h)
+  close call (0.24): "Claude commerce agent blueprint ships with reference implementations, live demos, and Claude Code integration" ~~ "Anthropic ships open-source commerce agent blueprints with live conversion data"
+  drop (URL repeat): "Claude in Chrome now GA on all paid plans with autonomous browser actions" → https://releasebot.io/updates/anthropic/claude
+  drop (URL repeat): "Beyond the Chatbox: AI agent UX frameworks move from opaque chat to task-specific interfaces with approval checkpoints" → https://aiagentstore.ai/ai-agent-news/this-week
+  drop (URL repeat): "Claude commerce agent blueprint ships with reference implementations, live demos, and Claude Code integration" → https://releasebot.io/updates/anthropic/claude
+URL filter: 3/4 candidates dropped
+Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
