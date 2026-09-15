@@ -203,5 +203,40 @@
     "urls": [
       "https://hipther.com/news/2026/09/11/129962/ai-dispatch-daily-trends-and-innovations-september-11-2026-chinese-ai-labs-gemini-for-windows-gpt-li"
     ]
+  },
+  {
+    "shipped_at": "2026-09-15T00:26:05.724Z",
+    "date_label": "Tue 15 Sept",
+    "headline": "OpenAI ships the Agents API in public beta — the Codex harness is now a product anyone can call",
+    "urls": [
+      "https://openai.com/index/introducing-the-agents-api",
+      "https://cellcog.ai/blog/openai-agents-api",
+      "https://tech-insider.org/openai-agents-api-tutorial-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-15T00:26:05.724Z",
+    "date_label": "Tue 15 Sept",
+    "headline": "OpenAI launches GPT-Live: end-to-end voice model, sub-300ms latency, emotional context retained",
+    "urls": [
+      "https://artificialintelligenceherald.com/ai-news-today"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-15T00:26:05.724Z",
+    "date_label": "Tue 15 Sept",
+    "headline": "Visa, Mastercard, and Ant International align on Know-Your-Agent standard for AI shoppers",
+    "urls": [
+      "https://aiweekly.co/ai-news-today"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-15T00:26:05.724Z",
+    "date_label": "Tue 15 Sept",
+    "headline": "Anthropic's revenue hits $65B run rate; IPO prospectus due late September, listing before November",
+    "urls": [
+      "https://www.bighatgroup.com/blog/claude-weekly-2026-09-13",
+      "https://www.mexc.com/news/219347"
+    ]
   }
 ]
