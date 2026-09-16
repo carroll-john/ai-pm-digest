@@ -238,5 +238,46 @@
       "https://www.bighatgroup.com/blog/claude-weekly-2026-09-13",
       "https://www.mexc.com/news/219347"
     ]
+  },
+  {
+    "shipped_at": "2026-09-16T00:05:04.922Z",
+    "date_label": "Wed 16 Sept",
+    "headline": "Anthropic preparing Claude Money: bank-linked financial AI for iOS",
+    "urls": [
+      "https://www.cryptointegrat.com/p/ai-news-september-15-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-16T00:05:04.922Z",
+    "date_label": "Wed 16 Sept",
+    "headline": "Shanghai AI Lab's Atria Dawn: 769-person study shows one-third of tasks infeasible without AI",
+    "urls": [
+      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-16T00:05:04.922Z",
+    "date_label": "Wed 16 Sept",
+    "headline": "Sakana's Fugu Max routes requests to the cheapest sufficient model — 40-60% below frontier output pricing",
+    "urls": [
+      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-16T00:05:04.922Z",
+    "date_label": "Wed 16 Sept",
+    "headline": "Cline Desktop launches: autonomous coding agent goes standalone, stays open-source",
+    "urls": [
+      "https://www.producthunt.com/products/cline-4",
+      "https://www.cryptointegrat.com/p/ai-news-september-15-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-16T00:05:04.922Z",
+    "date_label": "Wed 16 Sept",
+    "headline": "Apple's rebuilt Siri enters public beta with Gemini inside and a hybrid on-device/cloud architecture",
+    "urls": [
+      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
+    ]
   }
 ]
