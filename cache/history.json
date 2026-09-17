@@ -1,67 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-02T12:15:22.265Z",
-    "date_label": "Wed 2 Sept",
-    "headline": "Anthropic ships Claude Fable 5.1: 75% cheaper cache reads, stronger agentic reasoning, three breaking changes",
-    "urls": [
-      "https://platform.claude.com/docs/en/models/fable-5-1/overview",
-      "https://roo.beehiiv.com/p/claude-fable-5-1-mythos-5-1-whats-new",
-      "https://www.marktechpost.com/2026/09/01/anthropic-releases-claude-fable-5-1-and-claude-mythos-5-1-52-6-on-terminal-bench-science-and-75-cheaper-cache-reads"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T12:15:22.266Z",
-    "date_label": "Wed 2 Sept",
-    "headline": "Anthropic: Claude memory now syncs across chat, Cowork, and Code sessions",
-    "urls": [
-      "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context",
-      "https://www.engadget.com/2243753/claude-memory-now-works-across-both-chats-and-cowork-sessions",
-      "https://claudefa.st/blog/guide/mechanics/session-memory"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T12:15:22.266Z",
-    "date_label": "Wed 2 Sept",
-    "headline": "Lenny's Newsletter: Anshu Chimala (ex-Apple) on building production UIs in three prompts",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T12:15:22.266Z",
-    "date_label": "Wed 2 Sept",
-    "headline": "Mean CEO: Stop chasing model releases — buy on workflow fit instead",
-    "urls": [
-      "https://blog.mean.ceo/ai-product-launches-news-september-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T23:57:13.105Z",
-    "date_label": "Thu 3 Sept",
-    "headline": "Anthropic ships open-source commerce agent blueprints with live conversion data",
-    "urls": [
-      "https://claude.com/blog/claude-for-commerce-agents",
-      "https://github.com/anthropics/commerce-agents",
-      "https://tech.yahoo.com/ai/claude/articles/anthropic-launches-ai-agent-blueprints-160129368.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T23:57:13.106Z",
-    "date_label": "Thu 3 Sept",
-    "headline": "The PM role is splitting in 2026 — and the toolstack tells you which side you're on",
-    "urls": [
-      "https://userpilot.com/blog/product-management-trends"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-02T23:57:13.106Z",
-    "date_label": "Thu 3 Sept",
-    "headline": "prodmgmt.world: the realistic September 2026 AI toolstack for PMs is four tools, not ten",
-    "urls": [
-      "https://www.prodmgmt.world/resources/ai-tools-for-product-managers"
-    ]
-  },
-  {
     "shipped_at": "2026-09-05T23:42:26.990Z",
     "date_label": "Sun 6 Sept",
     "headline": "OpenAI ships GPT-6 Astra: computer use, perfect cybersecurity benchmark, staged rollout begins",
@@ -278,6 +216,46 @@
     "headline": "Apple's rebuilt Siri enters public beta with Gemini inside and a hybrid on-device/cloud architecture",
     "urls": [
       "https://aiweekly.co/ai-news-today/edition/2026-09-15"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-17T00:15:19.050Z",
+    "date_label": "Thu 17 Sept",
+    "headline": "Salesforce ships Koa: a CRM reasoning model reporting 3x fewer errors than frontier models",
+    "urls": [
+      "https://blog.buildfastwithai.com/ai-news-today-september-16-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-17T00:15:19.050Z",
+    "date_label": "Thu 17 Sept",
+    "headline": "Factory raises $200M at $5B valuation — coding agents are now a market category",
+    "urls": [
+      "https://blog.buildfastwithai.com/ai-news-today-september-16-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-17T00:15:19.050Z",
+    "date_label": "Thu 17 Sept",
+    "headline": "Cloudflare adds granular AI bot controls — Search, Agent, and Training crawlers now managed separately",
+    "urls": [
+      "https://www.crescendo.ai/news/latest-ai-news-and-breakthroughs-that-matter-most"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-17T00:15:19.050Z",
+    "date_label": "Thu 17 Sept",
+    "headline": "Instacart launches Clementine: recipe photos and prompts become ready-to-buy shopping carts",
+    "urls": [
+      "https://ai-weekly.ai/newsletter-09-15-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-17T00:15:19.050Z",
+    "date_label": "Thu 17 Sept",
+    "headline": "California launches AskCA: Claude-powered assistant routes residents to jobs, benefits, and disaster recovery",
+    "urls": [
+      "https://ai-weekly.ai/newsletter-09-15-2026"
     ]
   }
 ]
