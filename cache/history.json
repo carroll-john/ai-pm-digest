@@ -257,5 +257,38 @@
     "urls": [
       "https://ai-weekly.ai/newsletter-09-15-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-09-18T00:01:36.987Z",
+    "date_label": "Fri 18 Sept",
+    "headline": "OpenAI ships Sponsored Agents in ChatGPT — Wayfair and Angi are first in",
+    "urls": [
+      "https://releasebot.io/updates/openai",
+      "https://aiweekly.co/ai-news-today/openai-news"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-18T00:01:36.987Z",
+    "date_label": "Fri 18 Sept",
+    "headline": "Metis Strategy: 2026 is the year PMs prove AI ROI — Gartner says 40% of agentic pilots will be cut",
+    "urls": [
+      "https://www.metisstrategy.com/product-management-ai-value-measurement"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-18T00:01:36.987Z",
+    "date_label": "Fri 18 Sept",
+    "headline": "Mistral powers Firefox Smart Window — Mozilla skips OpenAI and Google entirely",
+    "urls": [
+      "https://www.cryptointegrat.com/p/ai-news-september-17-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-18T00:01:36.987Z",
+    "date_label": "Fri 18 Sept",
+    "headline": "Profound raises $180M Series D at $1.8B — vertical AI platforms attract institutional conviction",
+    "urls": [
+      "https://www.cryptointegrat.com/p/ai-news-september-17-2026"
+    ]
   }
 ]
