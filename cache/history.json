@@ -290,5 +290,30 @@
     "urls": [
       "https://www.cryptointegrat.com/p/ai-news-september-17-2026"
     ]
+  },
+  {
+    "shipped_at": "2026-09-19T00:03:12.764Z",
+    "date_label": "Sat 19 Sept",
+    "headline": "Anthropic ships its first transparency report: Claude leads 26% of internal R&D, 30,000 agents running simultaneously",
+    "urls": [
+      "https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version",
+      "https://www.cp24.com/news/world/2026/09/18/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-19T00:03:12.764Z",
+    "date_label": "Sat 19 Sept",
+    "headline": "OpenAI launches Astra for Law — its first vertical edition of a flagship model",
+    "urls": [
+      "https://blog.buildfastwithai.com/ai-news-today-september-18-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-19T00:03:12.764Z",
+    "date_label": "Sat 19 Sept",
+    "headline": "Z.ai deploys GLM-5.3-Flash on 100,000 Chinese accelerators at Nvidia-parity cost — the inference price war goes global",
+    "urls": [
+      "https://blog.buildfastwithai.com/ai-news-today-september-18-2026"
+    ]
   }
 ]
