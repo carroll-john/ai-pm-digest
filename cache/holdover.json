@@ -1,5 +1,32 @@
 [
   {
+    "headline_draft": "Claude Code compiler improvements: Agent map visualization, permissions dialog, improved telemetry in VSCode",
+    "summary": "Claude Code shipped a series of developer experience improvements in the week of September 20–21, 2026, including an agent map footer pill in VSCode that shows all sub-agents in a session with per-agent transcripts and stop controls. The update also added a Hooks dialog in the command menu for viewing and editing hooks (user, project, and local settings), improved first-party sessions with telemetry disabled, and batched telemetry row optimization. These changes make it easier for PMs and developers to see and control agent orchestration, especially in complex multi-agent workflows.",
+    "why_pm": "These are UX enhancements for agentic engineering—the pattern PMs will increasingly adopt. An agent map is a new UI primitive for reasoning about distributed agent systems. If you're building products with agents, watch Claude Code's UX choices as a template for how to make agent flows transparent and controllable.",
+    "key_facts": [
+      "Agent map footer pill shows all sub-agents in a session with read-only transcripts",
+      "Hooks dialog added to command menu (view, add, edit, remove hooks)",
+      "Telemetry now batches rows and serves only built-in plugins",
+      "Improved first-party sessions with telemetry disabled",
+      "VSCode plugin interface refinements as of Sept 20–21, 2026"
+    ],
+    "quotes": [
+      "Added an agent map: an N agents footer pill opens a map of the session's sub-agents with per-agent cards, Stop agent, and read-only transcripts"
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/stevenko2002/agents-radar/issues/1363",
+        "label": "GitHub: AI CLI Tools Digest 2026-09-21",
+        "published_date": "2026-09-21"
+      },
+      {
+        "url": "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-september-20-2026-2fg1",
+        "label": "DEV Community: This week in Claude Code, Codex and Gemini CLI (week of September 20, 2026)",
+        "published_date": "2026-09-21"
+      }
+    ]
+  },
+  {
     "headline_draft": "OpenAI retires Custom GPTs, migrates users to plugins as GPT Store strategy shifts",
     "summary": "OpenAI quietly closed Custom GPT creation and publishing on September 19, 2026, restricting creation and public deployment to business accounts only. With 3 million GPTs in total but only 159,000 public and active, the policy fundamentally reframes the three-way platform choice: OpenAI's plugin model versus Anthropic's Claude Skills versus Google's Gemini Gems. The move signals OpenAI's shift away from user-generated content toward managed, vetted plugins with reusable instructions and connected apps. This leaves teams that relied on Custom GPTs to either migrate to plugins or switch platforms.",
     "why_pm": "As a PM evaluating AI agent customization platforms, you need to understand which ecosystem you're actually betting on. This retirement fundamentally changes the playbook for building personalized agents on ChatGPT and raises the question: is plugin adoption the future, or should teams prototype on Claude Skills or Gemini instead?",
@@ -24,34 +51,6 @@
     ],
     "quotes": [
       "Since August 16, 2026, personal ChatGPT accounts on Free, Go, Plus, and even the $200-a-month Pro tier can no longer create a new Custom GPT or publish one to the GPT Store"
-    ]
-  },
-  {
-    "headline_draft": "GPT-6 Astra launches at $2.50/$50 per million tokens on Claude Skills platform choice becomes existential",
-    "summary": "OpenAI's flagship GPT-6 Astra model launched September 3, 2026 at $2.50 per million input tokens and $50 per million output tokens on the standard API tier (per CloudZero). This is the new frontier model baseline. Meanwhile, the agent framework landscape has crystallized into three distinct platforms: OpenAI (API-first, GPT-centric), Anthropic (Skills + Computer Use + Files), and Google (Gemini with custom workflows). The pricing and feature set of each now determines not just how fast you can prototype, but which agent behaviors you can afford to run at scale—multi-agent loops on Astra add up fast.",
-    "why_pm": "Token economics now directly impact your agent design. Multi-agent workflows with high reasoning steps can exceed your cost budget quickly on frontier models. You need to understand your platform's pricing structure, token usage per trace, and fallback models (smaller, cheaper, less capable) before committing to an agent architecture. A well-designed agent that routes expensive thinking work to cheaper models can cut costs 40–60%.",
-    "key_facts": [
-      "GPT-6 Astra: $2.50 per million input tokens, $50 per million output tokens",
-      "Launched September 3, 2026",
-      "Multi-agent workflows accumulate token costs quickly across model calls",
-      "Teams should instrument token usage per trace early to avoid surprises at scale",
-      "Route inference to cheaper models where possible (similar to Sakana Fugu Max 40–60% savings in earlier digest)"
-    ],
-    "sources": [
-      {
-        "url": "https://tech-insider.org/gpt-store-vs-claude-skills-vs-gemini-gems-2026/",
-        "label": "Tech Insider: GPT-6 Astra pricing breakdown and platform comparison",
-        "published_date": "2026-09-19"
-      },
-      {
-        "url": "https://www.langchain.com/resources/ai-agent-frameworks",
-        "label": "LangChain: The best AI agent frameworks in 2026",
-        "published_date": "2026-06-09"
-      }
-    ],
-    "quotes": [
-      "GPT-6 Astra, launched September 3, 2026, at $10 per million input tokens and $50 per million output tokens on the standard API tier",
-      "Multi-agent workflows that chain multiple model calls can accumulate costs quickly"
     ]
   }
 ]
