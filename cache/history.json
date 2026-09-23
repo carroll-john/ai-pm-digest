@@ -1,85 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-05T23:42:26.990Z",
-    "date_label": "Sun 6 Sept",
-    "headline": "OpenAI ships GPT-6 Astra: computer use, perfect cybersecurity benchmark, staged rollout begins",
-    "urls": [
-      "https://9to5mac.com/2026/09/04/openai-releasing-major-upgrade-to-chatgpt-and-codex-with-gpt-6-astra-details-here",
-      "https://openai.com/index/path-to-astra",
-      "https://www.bloomberg.com/news/articles/2026-09-03/openai-rolls-out-gpt-6-astra-model-with-added-cyber-guardrails"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-05T23:42:26.990Z",
-    "date_label": "Sun 6 Sept",
-    "headline": "McKinsey State of AI 2026: 32% of orgs skipped a software purchase because they built it with agents instead",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-05T23:42:26.990Z",
-    "date_label": "Sun 6 Sept",
-    "headline": "Google Gemini Spark takes write access to Google Photos: the agent permission design template",
-    "urls": [
-      "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library",
-      "https://9to5google.com/2026/09/03/gemini-spark-google-photos"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-05T23:42:26.990Z",
-    "date_label": "Sun 6 Sept",
-    "headline": "September model pricing: the $2 input tier is now a three-way tie and output tokens are the hidden cost",
-    "urls": [
-      "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
-      "https://felloai.com/best-ai-models",
-      "https://llm-stats.com/llm-updates"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-05T23:42:26.990Z",
-    "date_label": "Sun 6 Sept",
-    "headline": "Industry consensus, September 2026: human-supervised agents outperform fully autonomous ones in production",
-    "urls": [
-      "https://blog.mean.ceo/ai-industry-trends-september-2026",
-      "https://blog.mean.ceo/ai-trends-september-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-08T23:58:48.321Z",
-    "date_label": "Wed 9 Sept",
-    "headline": "Lenny's Podcast: Anish Acharya on why companies are becoming a series of loops, not dashboards",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/why-companies-are-becoming-a-series",
-      "https://podcasts.apple.com/us/podcast/lennys-podcast-why-ai-companies-will-become-loops-not/id1848404899?i=1000788144679"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-08T23:58:48.321Z",
-    "date_label": "Wed 9 Sept",
-    "headline": "Anthropic ships Claude Code hybrid agent orchestration — scaffolding time drops from days to hours",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude-code",
-      "https://releasebot.io/updates/anthropic/claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-08T23:58:48.321Z",
-    "date_label": "Wed 9 Sept",
-    "headline": "Anthropic ships Claude Code diagnostics update: skill checks, larger output buffers, and VS Code polish",
-    "urls": [
-      "https://releasebot.io/updates/anthropic"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-08T23:58:48.321Z",
-    "date_label": "Wed 9 Sept",
-    "headline": "BiomX launches Zorronet: no-code agent builder for physical-world operations",
-    "urls": [
-      "https://www.globenewswire.com/news-release/2026/09/04/3356598/0/en/biomx-zorronet-launches-no-code-control-over-ai-powered-autonomous-response-workflows.html"
-    ]
-  },
-  {
     "shipped_at": "2026-09-10T23:53:58.489Z",
     "date_label": "Fri 11 Sept",
     "headline": "Meta launches Muse: a personal AI agent that executes tasks, not just answers questions",
@@ -314,6 +234,50 @@
     "headline": "Z.ai deploys GLM-5.3-Flash on 100,000 Chinese accelerators at Nvidia-parity cost — the inference price war goes global",
     "urls": [
       "https://blog.buildfastwithai.com/ai-news-today-september-18-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-23T00:12:44.969Z",
+    "date_label": "Wed 23 Sept",
+    "headline": "OpenAI cuts GPT-6 Sol and Luna prices 50% — cost-per-task is now the main competitive axis",
+    "urls": [
+      "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna",
+      "https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more",
+      "https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-23T00:12:44.969Z",
+    "date_label": "Wed 23 Sept",
+    "headline": "Anthropic ships Claude Opus 5.5 the same night as OpenAI — model benchmarking is now a fortnight job",
+    "urls": [
+      "https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-23T00:12:44.969Z",
+    "date_label": "Wed 23 Sept",
+    "headline": "Google ships Antigravity Agent 09-2026 with a Credentials API — agents can now call real services without seeing your secrets",
+    "urls": [
+      "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials?e=0",
+      "https://releasebot.io/updates/google"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-23T00:12:44.969Z",
+    "date_label": "Wed 23 Sept",
+    "headline": "The production agent bottleneck is infrastructure, not models — and ops teams will feel it first",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-23T00:12:44.970Z",
+    "date_label": "Wed 23 Sept",
+    "headline": "Claude Code ships an agent map UI — a new primitive for making multi-agent sessions visible and controllable",
+    "urls": [
+      "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-september-20-2026-2fg1",
+      "https://github.com/stevenko2002/agents-radar/issues/1363"
     ]
   }
 ]
