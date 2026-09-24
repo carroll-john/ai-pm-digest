@@ -279,5 +279,32 @@
       "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-september-20-2026-2fg1",
       "https://github.com/stevenko2002/agents-radar/issues/1363"
     ]
+  },
+  {
+    "shipped_at": "2026-09-24T00:20:53.704Z",
+    "date_label": "Thu 24 Sept",
+    "headline": "Anthropic ships Claude Opus 5.5: 40% cheaper, 30% faster, agentic-first",
+    "urls": [
+      "https://www.anthropic.com/claude/opus",
+      "https://finance.yahoo.com/technology/ai/articles/anthropic-claude-5-5-release-185148663.html",
+      "https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-24T00:20:53.704Z",
+    "date_label": "Thu 24 Sept",
+    "headline": "Google open-sources Intrinsic Core: production robotics infrastructure, Apache 2.0, free",
+    "urls": [
+      "https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots",
+      "https://byteiota.com/intrinsic-core-open-source-robotics"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-24T00:20:53.704Z",
+    "date_label": "Thu 24 Sept",
+    "headline": "Kroger's AI shopping assistant shrinks friction and grows baskets — the opposite of what the CDO expected",
+    "urls": [
+      "https://www.theaimarketers.ai/news-09-23-26"
+    ]
   }
 ]
