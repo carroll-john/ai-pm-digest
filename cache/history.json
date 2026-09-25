@@ -1,43 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-10T23:53:58.489Z",
-    "date_label": "Fri 11 Sept",
-    "headline": "Meta launches Muse: a personal AI agent that executes tasks, not just answers questions",
-    "urls": [
-      "https://techbriefly.com/2026/09/09/meta-muse-ai-agent-shopping-email-trips",
-      "https://tech.yahoo.com/ai/meta-ai/articles/meta-launches-ai-agent-access-190605563.html",
-      "https://tech-insider.org/what-meta-actually-shipped-with-muse"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-10T23:53:58.489Z",
-    "date_label": "Fri 11 Sept",
-    "headline": "Harvey raises $550M at $15.5B valuation — vertical AI's clearest proof point yet",
-    "urls": [
-      "https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b",
-      "https://www.bloomberg.com/news/articles/2026-09-09/legal-ai-startup-harvey-hits-15-6-billion-value-with-550-million-round",
-      "https://techstartups.com/2026/09/09/legal-ai-startup-harvey-raises-550m-at-15-6b-valuation-as-revenue-tops-400m"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-10T23:53:58.489Z",
-    "date_label": "Fri 11 Sept",
-    "headline": "Lovable turns 800,000 freelancers into a certified partner sales force",
-    "urls": [
-      "https://alphasignal.ai/news/lovable-turns-800-000-freelancers-into-a-paid-partner-sales-force",
-      "https://lovable.dev/blog"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-10T23:53:58.489Z",
-    "date_label": "Fri 11 Sept",
-    "headline": "Apple's iPhone 16 event: AI as the headline, delayed delivery as the footnote",
-    "urls": [
-      "https://techcrunch.com/snippet/2892121/september-the-iphone-16-event",
-      "https://www.phonearena.com/news/Insider-surprised-by-Apples-unusual-pre-launch-move-ahead-of-iPhone-16-release_id161770"
-    ]
-  },
-  {
     "shipped_at": "2026-09-12T00:01:07.478Z",
     "date_label": "Sat 12 Sept",
     "headline": "GitHub Copilot HydraFusion: multi-model routing cuts costs 67% per benchmark",
@@ -305,6 +267,35 @@
     "headline": "Kroger's AI shopping assistant shrinks friction and grows baskets — the opposite of what the CDO expected",
     "urls": [
       "https://www.theaimarketers.ai/news-09-23-26"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-25T00:23:44.875Z",
+    "date_label": "Fri 25 Sept",
+    "headline": "Amazon opens Seller Central to outside AI agents via Claude and Quick plugins",
+    "urls": [
+      "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-seller-ai-graduates-from-chatbot-operating-system",
+      "https://finance.yahoo.com/technology/ai/articles/amazon-ai-supply-chain-agents-130000892.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-25T00:23:44.875Z",
+    "date_label": "Fri 25 Sept",
+    "headline": "Salesforce at Dreamforce 2026: AIforce reframes the platform as governance layer, not UI",
+    "urls": [
+      "https://www.salesforce.com/news/stories/five-dreamforce-2026-takeaways",
+      "https://uctoday.com/dreamforce-2026-keynote-aiforce-the-end-of-the-salesforce-interface",
+      "https://cloudodyssey.com/blog/dreamforce-2026-key-takeaways-aiforce-koa-and-the-next-stage-of-the-agentic-enterprise"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-25T00:23:44.875Z",
+    "date_label": "Fri 25 Sept",
+    "headline": "The interface is optional now: what Amazon and Salesforce are both telling you about platform strategy",
+    "urls": [
+      "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude",
+      "https://www.salesforce.com/news/stories/five-dreamforce-2026-takeaways"
     ]
   }
 ]
