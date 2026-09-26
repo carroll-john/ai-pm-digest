@@ -1,0 +1,16 @@
+Melbourne date: Sat 26 Sept 2026; freshness floor: 2026-09-24
+History: 32 prior stories across 8 days; 40 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 13309 chars
+Stage 1 usage: input=84648, output=3745, web_search=7
+Stage 1 complete: 5 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 96h): "Claude Code Becomes the Standard PM Automation Workbench: Workspace Agents Now the Baseline for Feature Synthesis"
+  drop (stale 4728h): "Over 70% of PMs Now Use AI Daily; the 2026 Shift from 'Can I Use AI?' to 'What Stays Human?'"
+Freshness filter: 2/5 candidates dropped (age > 96h)
+  close call (0.20): "Anthropic Releases Claude for Financial Advisors: Domain-First AI Agents Show How PMs Should Design Vertical AI Workflows" ~~ "Anthropic preparing Claude Money: bank-linked financial AI for iOS"
+  close call (0.23): "Google Expands Gemini API Managed Agents: New CC Logistics Agent and Antigravity Harness Bring Credentials API and Multi-Agent Coordination to Studio" ~~ "Google ships Antigravity Agent 09-2026 with a Credentials API — agents can now call real services without seeing your secrets"
+  drop (URL repeat): "Google Expands Gemini API Managed Agents: New CC Logistics Agent and Antigravity Harness Bring Credentials API and Multi-Agent Coordination to Studio" → https://aiagentstore.ai/ai-agent-news/this-week
+URL filter: 1/3 candidates dropped
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
