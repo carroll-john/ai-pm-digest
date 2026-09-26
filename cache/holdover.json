@@ -1,0 +1,56 @@
+[
+  {
+    "headline_draft": "Dataiku Ships Agent Management: Cross-Platform AI Agent Governance Arrives as Enterprises Lose Track of Sprawl",
+    "summary": "Dataiku announced Agent Management on September 24, 2026, a standalone product launching in October that discovers, measures, and flags risk for every AI agent an enterprise runs across any platform—Salesforce, Microsoft, AWS, Google, Databricks, and more. The product addresses a critical gap: while organisations build agents faster than they can observe them, most have no central visibility into which agents are delivering business value versus technical debt. Priced per instance annually with metering per agent, it competes with native governance layers but bets on cross-platform transparency as the differentiator. The launch directly signals that agent sprawl is now a material business problem for product and ops teams.",
+    "why_pm": "As a PM deploying or governing agents across your tech stack, you now need a way to answer: which agents are actually delivering ROI? Dataiku's product reframes agent management as a portfolio question, not a platform question—directly relevant if you're building agents internally or integrating agent-native products into your roadmap.",
+    "key_facts": [
+      "Dataiku Agent Management announced September 24, 2026; generally available October 2026",
+      "Connects to Salesforce Agentforce, Microsoft Copilot Studio, AWS Bedrock, Google Cloud, Databricks, Snowflake, and custom environments",
+      "Discovers all agents, measures business and technical performance, flags highest-risk agents",
+      "Priced per instance annually, with monitoring metered per agent",
+      "Addresses the gap between agent creation velocity and organisations' ability to observe and govern them"
+    ],
+    "quotes": [
+      "Every large company already keeps an account of the software it runs: who owns it, what it costs, and when it renews. Almost none can say the same about the AI agents."
+    ],
+    "sources": [
+      {
+        "url": "https://www.helpnetsecurity.com/2026/09/25/dataiku-agent-management/",
+        "label": "Help Net Security — Dataiku Agent Management reveals unmonitored AI agents",
+        "published_date": "2026-09-25"
+      },
+      {
+        "url": "https://www.dataiku.com/company/news/dataiku-agent-management-general-availability",
+        "label": "Dataiku — Dataiku Launches Agent Management for enterprise AI agents",
+        "published_date": "2026-09-24"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Anthropic Releases Claude for Financial Advisors: Domain-First AI Agents Show How PMs Should Design Vertical AI Workflows",
+    "summary": "Anthropic released Claude for Financial Advisors on September 14, 2026, a plugin that wraps Claude Cowork with connectors to BlackRock, Schwab, Addepar, Envestnet, iCapital, Orion, and Zocks, plus built-in workflow skills for research, meeting prep, and compliance checks. The product is fundamentally a workflow orchestration layer that brings siloed data (custodial info, portfolio analysis, client context) into a single reasoning space without exposing credentials or API keys to the model. Priced at an estimated $70–$120 per user per month on Enterprise plans, it signals that vertical AI products are no longer chatbot skins but governance-first orchestration of existing enterprise systems. The underlying pattern—connectors + skills + human approval gates—is directly applicable to how PMs should architect agents for their own domains.",
+    "why_pm": "Claude for Financial Advisors is a masterclass in the workflow-layer pattern: it doesn't replace existing tools, it orchestrates them. If you're designing AI agents for your product, this template shows how to wire approval gates, separate data flows from reasoning, and keep compliance visible—the operational design choices that make agents trustworthy in regulated domains.",
+    "key_facts": [
+      "Claude for Financial Advisors released September 14, 2026 via Anthropic Cowork plugin",
+      "Bundles connectors to 9+ financial platforms (BlackRock, Schwab, Addepar, Envestnet, iCapital, Orion, SS&C Black Diamond, Wealthbox, Zocks)",
+      "Workflow skills: research, meeting prep, portfolio analysis, compliance checks, follow-up documentation",
+      "Estimated cost: $70–$120 per user per month on Enterprise plans with audit logs",
+      "Advisor retains approval loop on all actions that write back to external systems (CRM updates, client drafts)"
+    ],
+    "quotes": [
+      "Claude for Financial Advisors is the first thing I've seen that sits on top of the whole stack and does that work across it, with the compliance controls we need built in."
+    ],
+    "sources": [
+      {
+        "url": "https://www.unite.ai/anthropic-launches-claude-for-financial-advisors-with-partner-connectors/",
+        "label": "Unite.AI — Anthropic Launches Claude for Financial Advisors With Partner Connectors",
+        "published_date": "2026-09-14"
+      },
+      {
+        "url": "https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors",
+        "label": "Wealth Management — Anthropic Launches Claude for Financial Advisors Tool",
+        "published_date": "2026-09-26"
+      }
+    ]
+  }
+]
