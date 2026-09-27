@@ -1,30 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-12T00:01:07.478Z",
-    "date_label": "Sat 12 Sept",
-    "headline": "GitHub Copilot HydraFusion: multi-model routing cuts costs 67% per benchmark",
-    "urls": [
-      "https://releasebot.io/updates/github"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-12T00:01:07.478Z",
-    "date_label": "Sat 12 Sept",
-    "headline": "Agent UX patterns have solidified: planning surface, tool stream, memory panel, trust signals",
-    "urls": [
-      "https://www.aydesign.ai/blog/best-ai-agent-interfaces-2026",
-      "https://fuselabcreative.com/ui-design-for-ai-agents"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-12T00:01:07.478Z",
-    "date_label": "Sat 12 Sept",
-    "headline": "AI Dispatch: the accountability layer, not the model, is now the product bottleneck",
-    "urls": [
-      "https://hipther.com/news/2026/09/11/129962/ai-dispatch-daily-trends-and-innovations-september-11-2026-chinese-ai-labs-gemini-for-windows-gpt-li"
-    ]
-  },
-  {
     "shipped_at": "2026-09-15T00:26:05.724Z",
     "date_label": "Tue 15 Sept",
     "headline": "OpenAI ships the Agents API in public beta — the Codex harness is now a product anyone can call",
@@ -296,6 +271,41 @@
     "urls": [
       "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude",
       "https://www.salesforce.com/news/stories/five-dreamforce-2026-takeaways"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-27T00:24:05.391Z",
+    "date_label": "Sun 27 Sept",
+    "headline": "Anthropic ships Claude for Financial Advisors — a blueprint for vertical agent design",
+    "urls": [
+      "https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors",
+      "https://www.unite.ai/anthropic-launches-claude-for-financial-advisors-with-partner-connectors"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-27T00:24:05.391Z",
+    "date_label": "Sun 27 Sept",
+    "headline": "Dataiku launches Agent Management — an inventory layer for enterprise agent sprawl",
+    "urls": [
+      "https://www.dataiku.com/company/news/dataiku-agent-management-general-availability",
+      "https://siliconangle.com/2026/09/24/dataiku-debuts-cross-platform-agent-management-expands-cobuild-building-agent"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-27T00:24:05.391Z",
+    "date_label": "Sun 27 Sept",
+    "headline": "Ando launches agent-native team messaging, raising $20M to challenge Slack",
+    "urls": [
+      "https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together",
+      "https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/ando-launches-agent-native-messaging-platform-announces-20-million-seed.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-27T00:24:05.391Z",
+    "date_label": "Sun 27 Sept",
+    "headline": "Mean CEO Blog: stop buying AI on hype, start buying on workflow fit",
+    "urls": [
+      "https://blog.mean.ceo/ai-product-launches-news-september-2026"
     ]
   }
 ]
