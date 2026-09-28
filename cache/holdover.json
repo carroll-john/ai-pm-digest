@@ -1,0 +1,31 @@
+[
+  {
+    "headline_draft": "Anthropic launches Claude Plugin Directory: developers can now submit MCP extensions with directory analytics",
+    "summary": "Anthropic opened a directory submission portal on September 25, 2026, allowing developers on paid Claude plans to submit plugins (packaged MCP connectors and Agent Skills) to a curated Claude directory. Once approved, plugins appear in the directory with post-launch usage analytics visible to developers. The portal accepts either single MCP connectors pointing to remote servers or bundled plugins hosted on GitHub. Plugins can include LSPs, commands, hooks, and agents in Claude Code. This formalized extension ecosystem sits atop MCP 2.0 and Enterprise Managed Auth.",
+    "why_pm": "This is the first time Claude extensions have a discoverable, curated marketplace with published metrics—meaning PMs building Claude integrations can now measure adoption and market demand through a single hub rather than fragmented installations, creating a new data stream for build-vs-buy and partner decisions.",
+    "key_facts": [
+      "Portal opened September 25, 2026",
+      "Available to paid Claude plan developers",
+      "Plugins are MCP connectors, Agent Skills, or bundled combinations",
+      "Supports MCP 2.0 specification (2026-07-28)",
+      "Post-launch analytics available to plugin owners",
+      "Two submission paths: single connector or GitHub-hosted bundle",
+      "In Claude Code, plugins can include LSPs, commands, hooks, agents"
+    ],
+    "quotes": [
+      "Every day, millions of people connect Claude to their apps, work tools, and data. Today, we're making it easier for developers to reach them."
+    ],
+    "sources": [
+      {
+        "url": "https://claude.com/blog/build-plugins-for-claude",
+        "label": "Anthropic official blog: Build plugins for Claude",
+        "published_date": "2026-09-25"
+      },
+      {
+        "url": "https://www.unite.ai/anthropic-opens-directory-submission-portal-for-claude-plugins/",
+        "label": "Unite.AI: Anthropic Opens Directory Submission Portal",
+        "published_date": "2026-09-25"
+      }
+    ]
+  }
+]
