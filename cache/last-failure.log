@@ -1,15 +1,15 @@
-Melbourne date: Mon 28 Sept 2026; freshness floor: 2026-09-26
-History: 36 prior stories across 9 days; 47 unique URLs to exclude.
-Stage 1 (claude-haiku-4-5): prompt 14422 chars
-Stage 1 usage: input=127008, output=4228, web_search=8
-Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
-  drop (stale 288h): "Anthropic merges Claude Chat and Cowork: unified interface removes tab confusion for product teams"
-  drop (stale 240h): "Metis Strategy: 2026 is proof year, not pilot year—PMs must prove AI ROI or lose funding"
-  drop (stale 5472h): "AI product sense is now Meta's core PM interview skill—understanding model limits under uncertainty"
-  drop (stale 4008h): "66% of organizations report tangible AI gains, but PMs must now separate hype from durable advantage"
-  drop (stale 10104h): "Claire Vo on rapid AI feature development: build a 30-minute prototype with AI agents, measure organic feedback"
-Freshness filter: 5/6 candidates dropped (age > 96h)
-Wrote 1 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
-FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 1 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
+Melbourne date: Tue 29 Sept 2026; freshness floor: 2026-09-27
+History: 32 prior stories across 8 days; 40 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 13638 chars
+Stage 1 usage: input=189754, output=4030, web_search=9
+Stage 1 complete: 5 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+Merged 1 holdover candidate(s) from previous run.
+  drop (stale 146h): "Anthropic's Claude discovers novel CRISPR-like enzyme system via autonomous research workflow"
+  drop (stale 506h): "From adoption hype to ROI accountability: The 2026 PM reckoning with measurable AI value"
+  drop (stale 1178h): "Spotify teams up with Sony, Universal, Warner on 'responsible AI' music products — artist-first design as table stakes"
+  drop (stale 98h): "Anthropic launches Claude Plugin Directory: developers can now submit MCP extensions with directory analytics"
+Freshness filter: 4/6 candidates dropped (age > 96h)
+Wrote 2 survivor(s) to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/holdover.json for next run.
+FAILURE [STAGE1_INSUFFICIENT_CANDIDATES] (Stage 1 → Stage 2 handoff): Only 2 candidate(s) survived the freshness + dedup filters; Stage 2 needs at least 3.
 HINT: Either today genuinely had thin news, or Stage 1's web_search returned stale results. Check the per-candidate drop reasons in the log above. The surviving candidate(s) have been held over to tomorrow's run. Re-dispatching may help if news has since broken; otherwise tune MAX_AGE_HOURS or strengthen the Stage 1 prompt's recency emphasis.
-DETAIL: Candidates surviving filters: 1. See preceding log lines for what was dropped and why.
+DETAIL: Candidates surviving filters: 2. See preceding log lines for what was dropped and why.
