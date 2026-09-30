@@ -1,81 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-15T00:26:05.724Z",
-    "date_label": "Tue 15 Sept",
-    "headline": "OpenAI ships the Agents API in public beta — the Codex harness is now a product anyone can call",
-    "urls": [
-      "https://openai.com/index/introducing-the-agents-api",
-      "https://cellcog.ai/blog/openai-agents-api",
-      "https://tech-insider.org/openai-agents-api-tutorial-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-15T00:26:05.724Z",
-    "date_label": "Tue 15 Sept",
-    "headline": "OpenAI launches GPT-Live: end-to-end voice model, sub-300ms latency, emotional context retained",
-    "urls": [
-      "https://artificialintelligenceherald.com/ai-news-today"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-15T00:26:05.724Z",
-    "date_label": "Tue 15 Sept",
-    "headline": "Visa, Mastercard, and Ant International align on Know-Your-Agent standard for AI shoppers",
-    "urls": [
-      "https://aiweekly.co/ai-news-today"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-15T00:26:05.724Z",
-    "date_label": "Tue 15 Sept",
-    "headline": "Anthropic's revenue hits $65B run rate; IPO prospectus due late September, listing before November",
-    "urls": [
-      "https://www.bighatgroup.com/blog/claude-weekly-2026-09-13",
-      "https://www.mexc.com/news/219347"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-16T00:05:04.922Z",
-    "date_label": "Wed 16 Sept",
-    "headline": "Anthropic preparing Claude Money: bank-linked financial AI for iOS",
-    "urls": [
-      "https://www.cryptointegrat.com/p/ai-news-september-15-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-16T00:05:04.922Z",
-    "date_label": "Wed 16 Sept",
-    "headline": "Shanghai AI Lab's Atria Dawn: 769-person study shows one-third of tasks infeasible without AI",
-    "urls": [
-      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-16T00:05:04.922Z",
-    "date_label": "Wed 16 Sept",
-    "headline": "Sakana's Fugu Max routes requests to the cheapest sufficient model — 40-60% below frontier output pricing",
-    "urls": [
-      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-16T00:05:04.922Z",
-    "date_label": "Wed 16 Sept",
-    "headline": "Cline Desktop launches: autonomous coding agent goes standalone, stays open-source",
-    "urls": [
-      "https://www.producthunt.com/products/cline-4",
-      "https://www.cryptointegrat.com/p/ai-news-september-15-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-16T00:05:04.922Z",
-    "date_label": "Wed 16 Sept",
-    "headline": "Apple's rebuilt Siri enters public beta with Gemini inside and a hybrid on-device/cloud architecture",
-    "urls": [
-      "https://aiweekly.co/ai-news-today/edition/2026-09-15"
-    ]
-  },
-  {
     "shipped_at": "2026-09-17T00:15:19.050Z",
     "date_label": "Thu 17 Sept",
     "headline": "Salesforce ships Koa: a CRM reasoning model reporting 3x fewer errors than frontier models",
@@ -306,6 +230,38 @@
     "headline": "Mean CEO Blog: stop buying AI on hype, start buying on workflow fit",
     "urls": [
       "https://blog.mean.ceo/ai-product-launches-news-september-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-30T01:11:28.775Z",
+    "date_label": "Wed 30 Sept",
+    "headline": "OpenAI agents bypassed third-party controls; Australia opens formal government review",
+    "urls": [
+      "https://www.infotech.com/software-reviews/vendor-technology-notes/big-5-ai-vendor-roundup-week-of-september-21-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-30T01:11:28.775Z",
+    "date_label": "Wed 30 Sept",
+    "headline": "Microsoft Azure ships persistent agents and per-workflow AI cost controls",
+    "urls": [
+      "https://www.infotech.com/software-reviews/vendor-technology-notes/big-5-ai-vendor-roundup-week-of-september-21-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-30T01:11:28.775Z",
+    "date_label": "Wed 30 Sept",
+    "headline": "Lenny's Podcast: Claire tests TypeSafe AI's Jev on real PM tasks — 200,000 classifications for $4",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/how-i-ai-jev-for-beginners-i-left"
+    ]
+  },
+  {
+    "shipped_at": "2026-09-30T01:11:28.775Z",
+    "date_label": "Wed 30 Sept",
+    "headline": "Multiply's Ad Spend Recovery Agent: a blueprint for human-in-the-loop agent design",
+    "urls": [
+      "https://agilehrandguide.com/yesterdays-martech-ai-cx-news-september-29-2026"
     ]
   }
 ]
