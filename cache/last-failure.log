@@ -1,0 +1,10 @@
+Melbourne date: Thu 1 Oct 2026; freshness floor: 2026-09-29
+History: 26 prior stories across 7 days; 37 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 12724 chars
+Stage 1 usage: input=175434, output=4574, web_search=8
+FAILURE [STAGE1_INVALID_OUTPUT] (Stage 1): Stage 1 emitted candidates as a string the script could not parse or salvage.
+HINT: Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.
+DETAIL: First 500 chars of candidates string: [
+  {
+    "headline_draft": "OpenAI launches Dots: always-on AI agents with persistent cloud computers and 4,000+ app integrations",
+    "summary": "OpenAI unveiled Dots at DevDay 2026 on September 29, a new class of persistent AI agents powered by GPT-6 Astra. Each Dot runs on its own cloud computer, maintains context across ChatGPT, Slack, and Microsoft Teams, and can autonomously pursue user goals—tracking metrics, refreshing decks, monitoring customer feedback, or scoping fixes. Users define
