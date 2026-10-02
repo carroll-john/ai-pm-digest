@@ -1,9 +1,0 @@
-{
-  "kind": "STAGE1_INVALID_OUTPUT",
-  "subject_tag": "BUG",
-  "stage": "Stage 1",
-  "summary": "Stage 1 emitted candidates as a string the script could not parse or salvage.",
-  "hint": "Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.",
-  "detail": "First 500 chars of candidates string: [\n  {\n    \"headline_draft\": \"OpenAI launches Dots: always-on AI agents with persistent cloud computers and 4,000+ app integrations\",\n    \"summary\": \"OpenAI unveiled Dots at DevDay 2026 on September 29, a new class of persistent AI agents powered by GPT-6 Astra. Each Dot runs on its own cloud computer, maintains context across ChatGPT, Slack, and Microsoft Teams, and can autonomously pursue user goals—tracking metrics, refreshing decks, monitoring customer feedback, or scoping fixes. Users define",
-  "occurred_at": "2026-10-01T01:10:25.444Z"
-}

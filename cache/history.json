@@ -1,78 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-17T00:15:19.050Z",
-    "date_label": "Thu 17 Sept",
-    "headline": "Salesforce ships Koa: a CRM reasoning model reporting 3x fewer errors than frontier models",
-    "urls": [
-      "https://blog.buildfastwithai.com/ai-news-today-september-16-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-17T00:15:19.050Z",
-    "date_label": "Thu 17 Sept",
-    "headline": "Factory raises $200M at $5B valuation — coding agents are now a market category",
-    "urls": [
-      "https://blog.buildfastwithai.com/ai-news-today-september-16-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-17T00:15:19.050Z",
-    "date_label": "Thu 17 Sept",
-    "headline": "Cloudflare adds granular AI bot controls — Search, Agent, and Training crawlers now managed separately",
-    "urls": [
-      "https://www.crescendo.ai/news/latest-ai-news-and-breakthroughs-that-matter-most"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-17T00:15:19.050Z",
-    "date_label": "Thu 17 Sept",
-    "headline": "Instacart launches Clementine: recipe photos and prompts become ready-to-buy shopping carts",
-    "urls": [
-      "https://ai-weekly.ai/newsletter-09-15-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-17T00:15:19.050Z",
-    "date_label": "Thu 17 Sept",
-    "headline": "California launches AskCA: Claude-powered assistant routes residents to jobs, benefits, and disaster recovery",
-    "urls": [
-      "https://ai-weekly.ai/newsletter-09-15-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-18T00:01:36.987Z",
-    "date_label": "Fri 18 Sept",
-    "headline": "OpenAI ships Sponsored Agents in ChatGPT — Wayfair and Angi are first in",
-    "urls": [
-      "https://releasebot.io/updates/openai",
-      "https://aiweekly.co/ai-news-today/openai-news"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-18T00:01:36.987Z",
-    "date_label": "Fri 18 Sept",
-    "headline": "Metis Strategy: 2026 is the year PMs prove AI ROI — Gartner says 40% of agentic pilots will be cut",
-    "urls": [
-      "https://www.metisstrategy.com/product-management-ai-value-measurement"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-18T00:01:36.987Z",
-    "date_label": "Fri 18 Sept",
-    "headline": "Mistral powers Firefox Smart Window — Mozilla skips OpenAI and Google entirely",
-    "urls": [
-      "https://www.cryptointegrat.com/p/ai-news-september-17-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-18T00:01:36.987Z",
-    "date_label": "Fri 18 Sept",
-    "headline": "Profound raises $180M Series D at $1.8B — vertical AI platforms attract institutional conviction",
-    "urls": [
-      "https://www.cryptointegrat.com/p/ai-news-september-17-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-09-19T00:03:12.764Z",
     "date_label": "Sat 19 Sept",
     "headline": "Anthropic ships its first transparency report: Claude leads 26% of internal R&D, 30,000 agents running simultaneously",
@@ -262,6 +189,38 @@
     "headline": "Multiply's Ad Spend Recovery Agent: a blueprint for human-in-the-loop agent design",
     "urls": [
       "https://agilehrandguide.com/yesterdays-martech-ai-cx-news-september-29-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-02T01:29:18.687Z",
+    "date_label": "Fri 2 Oct",
+    "headline": "AI News: Building for Production Means Building for Model-Switching, Not Model Selection",
+    "urls": [
+      "https://artificialintelligence-news.com/news/generative-ai-development-building-for-production-in-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-02T01:29:18.688Z",
+    "date_label": "Fri 2 Oct",
+    "headline": "Perspective AI: 80% of Researchers Now Use AI in Workflows — Discovery Speed Has Become a Competitive Variable",
+    "urls": [
+      "https://getperspective.ai/blog/2026-product-discovery-trends-what-300-teams-changed"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-02T01:29:18.688Z",
+    "date_label": "Fri 2 Oct",
+    "headline": "Presta: \"Learning Velocity\" Is Replacing \"Release Velocity\" as the Core PM Optimization",
+    "urls": [
+      "https://wearepresta.com/ai-product-strategy-2026-the-founders-guide-to-ai-native-growth"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-02T01:29:18.688Z",
+    "date_label": "Fri 2 Oct",
+    "headline": "EnterpriseZone on Lenny Rachitsky: Meta Rewrites Its PM Interview Around AI Product Sense",
+    "urls": [
+      "https://enterprisezone.cc/ai-product-sense-the-new-core-skill-for-product-managers-according-to-lenny-rachitsky"
     ]
   }
 ]
