@@ -1,30 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-19T00:03:12.764Z",
-    "date_label": "Sat 19 Sept",
-    "headline": "Anthropic ships its first transparency report: Claude leads 26% of internal R&D, 30,000 agents running simultaneously",
-    "urls": [
-      "https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version",
-      "https://www.cp24.com/news/world/2026/09/18/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-19T00:03:12.764Z",
-    "date_label": "Sat 19 Sept",
-    "headline": "OpenAI launches Astra for Law — its first vertical edition of a flagship model",
-    "urls": [
-      "https://blog.buildfastwithai.com/ai-news-today-september-18-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-19T00:03:12.764Z",
-    "date_label": "Sat 19 Sept",
-    "headline": "Z.ai deploys GLM-5.3-Flash on 100,000 Chinese accelerators at Nvidia-parity cost — the inference price war goes global",
-    "urls": [
-      "https://blog.buildfastwithai.com/ai-news-today-september-18-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-09-23T00:12:44.969Z",
     "date_label": "Wed 23 Sept",
     "headline": "OpenAI cuts GPT-6 Sol and Luna prices 50% — cost-per-task is now the main competitive axis",
@@ -221,6 +196,51 @@
     "headline": "EnterpriseZone on Lenny Rachitsky: Meta Rewrites Its PM Interview Around AI Product Sense",
     "urls": [
       "https://enterprisezone.cc/ai-product-sense-the-new-core-skill-for-product-managers-according-to-lenny-rachitsky"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-03T01:02:09.023Z",
+    "date_label": "Sat 3 Oct",
+    "headline": "OpenAI ships Dots: persistent agents that keep working after you close the tab",
+    "urls": [
+      "https://openai.com/index/introducing-dots",
+      "https://www.latent.space/p/ainews-openai-devday-2026-dots-61",
+      "https://aiweekly.co/alerts/openai-unveils-dots-always-on-chatgpt-agents-at-devday"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-03T01:02:09.024Z",
+    "date_label": "Sat 3 Oct",
+    "headline": "Amazon Ads Agent collapses three ad tools into one four-step agentic workflow",
+    "urls": [
+      "https://advertising.amazon.com/en-us/library/news/amazon-ads-agent/?ref_=a20m_us_libr",
+      "https://www.relevantaudience.com/ecommerce-marketing/amazon-ads-agent-unboxed-2026-full-funnel-dva-plus",
+      "https://ppc.land/amazon-ads-puts-4-step-dva-campaign-builder-in-us-closed-beta"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-03T01:02:09.024Z",
+    "date_label": "Sat 3 Oct",
+    "headline": "Microsoft Copilot adds cost controls and an autonomous Autopilot agent — the second-order problems are now the product",
+    "urls": [
+      "https://marketingprofs.com/opinions/2026/56056/ai-update-october-02-2026-ai-news-and-views-from-the-past-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-03T01:02:09.024Z",
+    "date_label": "Sat 3 Oct",
+    "headline": "Meta Neural Band brings sEMG wrist-based gesture input to AR — input modality is the new moat",
+    "urls": [
+      "https://blog.mean.ceo/ai-product-launches-news-october-2026",
+      "https://vrarwiki.com/wiki/Meta_Neural_Band"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-03T01:02:09.024Z",
+    "date_label": "Sat 3 Oct",
+    "headline": "Propel survey: 400 manufacturing leaders have moved from AI curiosity to MCP integration as the productivity driver",
+    "urls": [
+      "https://itbrief.com.au/story/manufacturers-back-mcp-linked-ai-for-productivity-gains"
     ]
   }
 ]
