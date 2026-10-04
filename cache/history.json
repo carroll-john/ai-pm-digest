@@ -242,5 +242,32 @@
     "urls": [
       "https://itbrief.com.au/story/manufacturers-back-mcp-linked-ai-for-productivity-gains"
     ]
+  },
+  {
+    "shipped_at": "2026-10-04T00:26:12.755Z",
+    "date_label": "Sun 4 Oct",
+    "headline": "Anthropic ships Claude Opus 5.5 and reframes Claude as a task-routing family, not a single product",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx",
+      "https://blog.mean.ceo/anthropic-claude-news-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-04T00:26:12.756Z",
+    "date_label": "Sun 4 Oct",
+    "headline": "Claude Tag (beta) adds personal connectors to Slack: individuals can now wire their own calendar and CRM without an IT ticket",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-04T00:26:12.756Z",
+    "date_label": "Sun 4 Oct",
+    "headline": "ProductSide: the 2026 agentic PM stack is crystallising around three workflows you can start this week",
+    "urls": [
+      "https://productside.com/the-ai-product-management-workflows-2026",
+      "https://www.knowledgehut.com/blog/artificial-intelligence/agentic-ai-for-product-managers"
+    ]
   }
 ]
