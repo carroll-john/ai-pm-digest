@@ -1,0 +1,30 @@
+[
+  {
+    "headline_draft": "Meta Muse Spark co-authors six mathematics papers: five solve previously open problems",
+    "summary": "<cite index=\"74-2\">Meta released six mathematics papers co-authored with human mathematicians using Muse Spark 1.1 and 1.2 in Thinking Mode via the standard Meta.ai chat interface.</cite> <cite index=\"77-10\">Mathematicians chose problems, directed exploration and verified arguments, with the work using the model through Meta.ai's standard chat interface without a custom research system.</cite> <cite index=\"76-1,76-3\">Muse Spark models helped mathematicians crack six research-level problems spanning probability, differential equations, group theory, optimization, arithmetic physics, and non-associative algebra, with five of the six papers answering questions that had been open in their respective fields.</cite> <cite index=\"77-5,77-6\">In one example, the chatbot wrote a search program for GAP, a mathematical software system, and mathematicians checked the counterexample and completed the argument; the model did not certify its own result.</cite>",
+    "why_pm": "This demonstrates that frontier models can contribute meaningfully to open-ended research without custom scaffolding—just through a chat interface. For PMs, this is a proof point that AI works best when humans guide discovery, verify rigor, and own conclusions. Understanding the collaboration model (where the AI excels at code generation and exploration, humans at validation and synthesis) informs how to design AI-assisted workflows that ship to users.",
+    "key_facts": [
+      "Six papers published October 2, 2026 via research.meta.ai",
+      "Five papers answer previously unsolved open problems in pure and applied math",
+      "Used Muse Spark 1.1 and 1.2 Thinking Mode through standard chat—no custom research harness",
+      "Mathematicians chose problems, directed work, and reviewed proofs",
+      "Muse Spark contributions: code generation (GAP search program), proof exploration, proof refinement",
+      "Some results overlap with concurrent independent work (acknowledged by Meta)"
+    ],
+    "quotes": [
+      "Those results inspired us to see whether AI could also help scientists solve open research problems."
+    ],
+    "sources": [
+      {
+        "url": "https://research.meta.ai/blog/solving-open-research-problems-together",
+        "label": "Meta Research: Solving Open Research Problems Together",
+        "published_date": "2026-10-02"
+      },
+      {
+        "url": "https://tech-insider.org/meta-muse-spark-6-math-problems-esp32-2026/",
+        "label": "Tech Insider: Meta Muse Spark Cracks 6 Math Problems",
+        "published_date": "2026-10-02"
+      }
+    ]
+  }
+]
