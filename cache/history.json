@@ -1,49 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-23T00:12:44.969Z",
-    "date_label": "Wed 23 Sept",
-    "headline": "OpenAI cuts GPT-6 Sol and Luna prices 50% — cost-per-task is now the main competitive axis",
-    "urls": [
-      "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna",
-      "https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more",
-      "https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-23T00:12:44.969Z",
-    "date_label": "Wed 23 Sept",
-    "headline": "Anthropic ships Claude Opus 5.5 the same night as OpenAI — model benchmarking is now a fortnight job",
-    "urls": [
-      "https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-23T00:12:44.969Z",
-    "date_label": "Wed 23 Sept",
-    "headline": "Google ships Antigravity Agent 09-2026 with a Credentials API — agents can now call real services without seeing your secrets",
-    "urls": [
-      "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials?e=0",
-      "https://releasebot.io/updates/google"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-23T00:12:44.969Z",
-    "date_label": "Wed 23 Sept",
-    "headline": "The production agent bottleneck is infrastructure, not models — and ops teams will feel it first",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-23T00:12:44.970Z",
-    "date_label": "Wed 23 Sept",
-    "headline": "Claude Code ships an agent map UI — a new primitive for making multi-agent sessions visible and controllable",
-    "urls": [
-      "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-september-20-2026-2fg1",
-      "https://github.com/stevenko2002/agents-radar/issues/1363"
-    ]
-  },
-  {
     "shipped_at": "2026-09-24T00:20:53.704Z",
     "date_label": "Thu 24 Sept",
     "headline": "Anthropic ships Claude Opus 5.5: 40% cheaper, 30% faster, agentic-first",
@@ -268,6 +224,48 @@
     "urls": [
       "https://productside.com/the-ai-product-management-workflows-2026",
       "https://www.knowledgehut.com/blog/artificial-intelligence/agentic-ai-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-07T01:20:07.311Z",
+    "date_label": "Wed 7 Oct",
+    "headline": "Lenny's Podcast: OpenAI's Head of ChatGPT says hand-built agent loops are a passing phase",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering",
+      "https://podcasts.apple.com/us/podcast/openais-head-of-chatgpt-were-entering-a-new-era/id1627920305?i=1000793099277",
+      "https://getscuttlebutt.substack.com/p/openais-head-of-chatgpt-most-actions"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-07T01:20:07.311Z",
+    "date_label": "Wed 7 Oct",
+    "headline": "Claire Vo on X: ChatGPT Space is underhyped, Dots is not the real prize",
+    "urls": [
+      "https://x.com/clairevo/status/2104984499717353958"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-07T01:20:07.311Z",
+    "date_label": "Wed 7 Oct",
+    "headline": "GitLab 19.4: Duo agents get model governance and per-user cost metering",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-07T01:20:07.311Z",
+    "date_label": "Wed 7 Oct",
+    "headline": "Mean CEO blog: AI amplifies broken fundamentals, not fixes them",
+    "urls": [
+      "https://blog.mean.ceo/ai-news-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-07T01:20:07.311Z",
+    "date_label": "Wed 7 Oct",
+    "headline": "ServiceNow launches AI Workflow Factory for continuous agentic improvement loops",
+    "urls": [
+      "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-AI-Workflow-Factory-to-turn-workflow-improvement-into-a-continuous-agentic-AI-powered-loop/default.aspx"
     ]
   }
 ]
