@@ -1,32 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-24T00:20:53.704Z",
-    "date_label": "Thu 24 Sept",
-    "headline": "Anthropic ships Claude Opus 5.5: 40% cheaper, 30% faster, agentic-first",
-    "urls": [
-      "https://www.anthropic.com/claude/opus",
-      "https://finance.yahoo.com/technology/ai/articles/anthropic-claude-5-5-release-185148663.html",
-      "https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-24T00:20:53.704Z",
-    "date_label": "Thu 24 Sept",
-    "headline": "Google open-sources Intrinsic Core: production robotics infrastructure, Apache 2.0, free",
-    "urls": [
-      "https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots",
-      "https://byteiota.com/intrinsic-core-open-source-robotics"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-24T00:20:53.704Z",
-    "date_label": "Thu 24 Sept",
-    "headline": "Kroger's AI shopping assistant shrinks friction and grows baskets — the opposite of what the CDO expected",
-    "urls": [
-      "https://www.theaimarketers.ai/news-09-23-26"
-    ]
-  },
-  {
     "shipped_at": "2026-09-25T00:23:44.875Z",
     "date_label": "Fri 25 Sept",
     "headline": "Amazon opens Seller Central to outside AI agents via Claude and Quick plugins",
@@ -266,6 +239,40 @@
     "headline": "ServiceNow launches AI Workflow Factory for continuous agentic improvement loops",
     "urls": [
       "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-AI-Workflow-Factory-to-turn-workflow-improvement-into-a-continuous-agentic-AI-powered-loop/default.aspx"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-08T01:40:43.900Z",
+    "date_label": "Thu 8 Oct",
+    "headline": "Anthropic ships Claude for Google Workspace in public beta, taking the fight directly to Gemini",
+    "urls": [
+      "https://venturebeat.com/technology/you-can-now-open-claude-directly-in-google-docs-sheets-and-slides-and-vice-versa-open-and-edit-the-files-in-claude",
+      "https://www.androidheadlines.com/2026/10/claude-challenges-gemini-google-workspace-integration.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-08T01:40:43.900Z",
+    "date_label": "Thu 8 Oct",
+    "headline": "McDonald's faces federal antitrust suit over an AI pricing tool that shares data across franchisees",
+    "urls": [
+      "https://www.qsrweb.com/news/mcdonalds-sued-over-ai-powered-menu-pricing-system",
+      "https://www.actionnewsjax.com/news/business/mcdonalds-sued-over/M2DHII6ES4YFVJIOGFT7B44AY4"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-08T01:40:43.900Z",
+    "date_label": "Thu 8 Oct",
+    "headline": "Microsoft Copilot Studio adds Hooks to make AI agent behavior predictable in production",
+    "urls": [
+      "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-6-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-08T01:40:43.900Z",
+    "date_label": "Thu 8 Oct",
+    "headline": "Reshape Automation study: general-purpose AI models answer fewer than half of specialized domain questions correctly",
+    "urls": [
+      "https://mdm.com/news/technology/ai/study-ai-models-top-out-at-52-on-industrial-parts-questions"
     ]
   }
 ]
