@@ -1,34 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-25T00:23:44.875Z",
-    "date_label": "Fri 25 Sept",
-    "headline": "Amazon opens Seller Central to outside AI agents via Claude and Quick plugins",
-    "urls": [
-      "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude",
-      "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-seller-ai-graduates-from-chatbot-operating-system",
-      "https://finance.yahoo.com/technology/ai/articles/amazon-ai-supply-chain-agents-130000892.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-25T00:23:44.875Z",
-    "date_label": "Fri 25 Sept",
-    "headline": "Salesforce at Dreamforce 2026: AIforce reframes the platform as governance layer, not UI",
-    "urls": [
-      "https://www.salesforce.com/news/stories/five-dreamforce-2026-takeaways",
-      "https://uctoday.com/dreamforce-2026-keynote-aiforce-the-end-of-the-salesforce-interface",
-      "https://cloudodyssey.com/blog/dreamforce-2026-key-takeaways-aiforce-koa-and-the-next-stage-of-the-agentic-enterprise"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-25T00:23:44.875Z",
-    "date_label": "Fri 25 Sept",
-    "headline": "The interface is optional now: what Amazon and Salesforce are both telling you about platform strategy",
-    "urls": [
-      "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude",
-      "https://www.salesforce.com/news/stories/five-dreamforce-2026-takeaways"
-    ]
-  },
-  {
     "shipped_at": "2026-09-27T00:24:05.391Z",
     "date_label": "Sun 27 Sept",
     "headline": "Anthropic ships Claude for Financial Advisors — a blueprint for vertical agent design",
@@ -273,6 +244,33 @@
     "headline": "Reshape Automation study: general-purpose AI models answer fewer than half of specialized domain questions correctly",
     "urls": [
       "https://mdm.com/news/technology/ai/study-ai-models-top-out-at-52-on-industrial-parts-questions"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-09T01:54:13.082Z",
+    "date_label": "Fri 9 Oct",
+    "headline": "OpenAI ships GPT-6 with Intelligent UI — the model now picks its own response format",
+    "urls": [
+      "https://openai.com/index/gpt-6-for-everyone",
+      "https://dev.to/alifar/openai-rolls-out-gpt-6-and-intelligent-ui-across-chatgpt-tiers-47b4"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-09T01:54:13.083Z",
+    "date_label": "Fri 9 Oct",
+    "headline": "Anthropic ships Claude Haiku 5.5 — 75% cheaper, fastest model yet, built for agent subwork",
+    "urls": [
+      "https://www.anthropic.com/claude-haiku-5-5",
+      "https://www.unite.ai/anthropic-releases-claude-haiku-5-5-cutting-small-model-api-prices"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-09T01:54:13.083Z",
+    "date_label": "Fri 9 Oct",
+    "headline": "Simulation-first product validation: test concepts against AI personas in minutes, not weeks",
+    "urls": [
+      "https://www.syntheticusers.com",
+      "https://x.com/lennysan/status/1847200000000000000"
     ]
   }
 ]
