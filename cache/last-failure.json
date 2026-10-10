@@ -1,0 +1,9 @@
+{
+  "kind": "STAGE1_INVALID_OUTPUT",
+  "subject_tag": "BUG",
+  "stage": "Stage 1",
+  "summary": "Stage 1 emitted candidates as a string the script could not parse or salvage.",
+  "hint": "Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.",
+  "detail": "First 500 chars of candidates string: [\n  {\n    \"headline_draft\": \"Mistral Large 4 in public preview: a 1T-parameter alternative to closed models for enterprises betting on open-weight AI\",\n    \"summary\": \"Mistral AI released Large 4 (Le Chonk) on October 6, 2026, a 1.05-trillion-parameter multimodal mixture-of-experts model with 49 billion active parameters per token, 1.6B vision encoder, and 1M context window. The model is live on API in public preview at competitive pricing ($1.36 per 1M input tokens, $4.18 per 1M output), with o",
+  "occurred_at": "2026-10-10T01:35:51.609Z"
+}
