@@ -1,40 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-27T00:24:05.391Z",
-    "date_label": "Sun 27 Sept",
-    "headline": "Anthropic ships Claude for Financial Advisors — a blueprint for vertical agent design",
-    "urls": [
-      "https://www.wealthmanagement.com/artificial-intelligence/anthropic-launches-claude-for-financial-advisors",
-      "https://www.unite.ai/anthropic-launches-claude-for-financial-advisors-with-partner-connectors"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-27T00:24:05.391Z",
-    "date_label": "Sun 27 Sept",
-    "headline": "Dataiku launches Agent Management — an inventory layer for enterprise agent sprawl",
-    "urls": [
-      "https://www.dataiku.com/company/news/dataiku-agent-management-general-availability",
-      "https://siliconangle.com/2026/09/24/dataiku-debuts-cross-platform-agent-management-expands-cobuild-building-agent"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-27T00:24:05.391Z",
-    "date_label": "Sun 27 Sept",
-    "headline": "Ando launches agent-native team messaging, raising $20M to challenge Slack",
-    "urls": [
-      "https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together",
-      "https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/ando-launches-agent-native-messaging-platform-announces-20-million-seed.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-27T00:24:05.391Z",
-    "date_label": "Sun 27 Sept",
-    "headline": "Mean CEO Blog: stop buying AI on hype, start buying on workflow fit",
-    "urls": [
-      "https://blog.mean.ceo/ai-product-launches-news-september-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-09-30T01:11:28.775Z",
     "date_label": "Wed 30 Sept",
     "headline": "OpenAI agents bypassed third-party controls; Australia opens formal government review",
@@ -271,6 +236,51 @@
     "urls": [
       "https://www.syntheticusers.com",
       "https://x.com/lennysan/status/1847200000000000000"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-11T00:46:52.254Z",
+    "date_label": "Sun 11 Oct",
+    "headline": "Satya Nadella: Treat AI models as insider threats and build the brakes outside the model",
+    "urls": [
+      "https://www.bloomberg.com/news/articles/2026-10-10/microsoft-ceo-nadella-calls-for-emergency-brake-on-advanced-ai",
+      "https://fourweekmba.com/ai-nadella-says-treat-frontier-ai-models-like-insider-risks",
+      "https://runtimewire.com/article/satya-nadella-emergency-brake-enterprise-ai"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-11T00:46:52.254Z",
+    "date_label": "Sun 11 Oct",
+    "headline": "TypeSafe AI raises $870M Series A: Jev replaces LLMs with a structured decision engine for production workflows",
+    "urls": [
+      "https://a16z.com/announcement/investing-in-typesafe-ai",
+      "https://ccleaks.com/news/typesafe-series-a-a16z-oct-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-11T00:46:52.254Z",
+    "date_label": "Sun 11 Oct",
+    "headline": "Google launches Gemini agent with its own email, calendar, and cryptographic identity inside Workspace",
+    "urls": [
+      "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work",
+      "https://thenextweb.com/news/gemini-agent-workspace-identity-europe",
+      "https://www.bloomberg.com/news/articles/2026-10-08/google-launches-universal-gemini-ai-agent-for-workplace"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-11T00:46:52.254Z",
+    "date_label": "Sun 11 Oct",
+    "headline": "Atlassian and OpenAI expand partnership: ChatGPT and Codex connect to Jira's project graph, agents may soon assign work",
+    "urls": [
+      "https://solutionsreview.com/ai-news-for-the-week-of-october-9-updates-from-honeycomb-io-ninjatech-ai-oracle-more"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-11T00:46:52.254Z",
+    "date_label": "Sun 11 Oct",
+    "headline": "OpenSwarm tops Product Hunt with 383 votes: ambient multi-agent coordination in a shared workspace",
+    "urls": [
+      "https://github.com/duanyytop/agents-radar/issues/3706"
     ]
   }
 ]
