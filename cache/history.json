@@ -316,5 +316,39 @@
       "https://maven.com/peter-yang/become-an-ai-powered-product-leader",
       "https://creatoreconomy.so/p/how-to-become-ai-native-in-5-levels"
     ]
+  },
+  {
+    "shipped_at": "2026-10-13T02:56:49.569Z",
+    "date_label": "Tue 13 Oct",
+    "headline": "Product Mindset: The Model Stopped Being the Product — Six Shifts in Agentic PM Economics",
+    "urls": [
+      "https://productmindset.substack.com/p/state-of-agentic-product-manager"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-13T02:56:49.570Z",
+    "date_label": "Tue 13 Oct",
+    "headline": "Lenny's Podcast: Josh Woodward (Google Labs) — Every Company Needs to Operate Like a Lab Team",
+    "urls": [
+      "https://podcasts.apple.com/us/podcast/lennys-podcast-product-career-growth/id1627920305",
+      "https://x.com/lennysan/status/2109803584957726769"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-13T02:56:49.570Z",
+    "date_label": "Tue 13 Oct",
+    "headline": "Herve Cuviliez: Tier-1 Capital Is Pricing the Orchestration Layer, Not the Model",
+    "urls": [
+      "https://hervecuviliez.substack.com/p/market-news-monday-12-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-13T02:56:49.570Z",
+    "date_label": "Tue 13 Oct",
+    "headline": "PM Job Postings Up 12%, But CPO Survey Predicts Role Obsolescence by 2030",
+    "urls": [
+      "https://www.einnews.com/pr_news/947168683/product-manager-job-postings-are-up-12-amid-concerns-over-ai-threatening-the-workforce",
+      "https://www.prnewswire.com/news-releases/2026-cpo-insights-report-predicts-product-managers-will-disappear-by-2030-302782732.html"
+    ]
   }
 ]
