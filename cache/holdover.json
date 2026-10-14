@@ -1,0 +1,64 @@
+[
+  {
+    "headline_draft": "DigitalOcean ships Agent Learning and Data Services—observability and refinement loops for production agents",
+    "summary": "On October 12, 2026, DigitalOcean announced Agent Learning Services (public preview) and Agent Data Services (private preview) as the feedback-loop layer for its agentic cloud platform. Agent Learning Services captures three components: Insights (records what an agent does), Signals (flags failures), and Evaluations & Simulations (tests fixes before rollout). Agent Data Services provides a managed data layer with connectors and persistent memory for agents. Together, they position DigitalOcean as a cloud where agents can 'think, act, and improve' on one platform. The company also announced a partnership with Bright Data to give agents governed access to live web data.",
+    "why_pm": "PMs building or evaluating agentic products now have a reference architecture for how to move beyond launch to operational excellence. The shift from 'can we deploy an agent' to 'does our agent improve with every run' is exactly the constraint that separates a prototype from a production system. This framework gives PMs language and structure for defining success metrics.",
+    "key_facts": [
+      "Agent Learning Services in public preview: Insights, Signals, Evaluations & Simulations as a unified feedback loop",
+      "Agent Data Services in private preview: managed data layer with Managed Data Flows and Data Catalog for agent context",
+      "DigitalOcean partnership with Bright Data enables agents to access live web data while maintaining governed access",
+      "Amplitude Wave (agentic product team assistant) uses DigitalOcean to analyze product data, recommend changes, and measure real-world results",
+      "Architecture separates data foundation (Agent Data Services) from learning loop (Agent Learning Services)",
+      "Launch coincides with DigitalOcean Open Intelligence Summit in San Francisco on October 13, 2026"
+    ],
+    "quotes": [
+      "The question has changed from 'can we launch an agent' to 'does our agent get better with every run.'",
+      "We built Inference Engine so agents could think, Managed Agents so they could act, and now Agent Learning Services and Agent Data Services so they can improve, on one open cloud."
+    ],
+    "sources": [
+      {
+        "url": "https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Launches-Agent-Learning-and-Data-Services-for-Recursively-Self-Improving-AI-Agents/default.aspx",
+        "label": "DigitalOcean Investor Relations: Agent Learning and Data Services",
+        "published_date": "2026-10-12"
+      },
+      {
+        "url": "https://forkast.news/managed-trust-digitaloceans-bet-on-the-agent-improve-loop/",
+        "label": "Forkast: Managed Trust: DigitalOcean's Bet on the Agent Improve Loop",
+        "published_date": "2026-10-13"
+      },
+      {
+        "url": "https://www.hpcwire.com/aiwire/2026/10/12/digitalocean-launches-agent-learning-and-data-services-for-recursively-self-improving-ai-agents/",
+        "label": "HPC Wire: DigitalOcean Launches Agent Learning and Data Services",
+        "published_date": "2026-10-12"
+      }
+    ]
+  },
+  {
+    "headline_draft": "Gemini now generates Docs, Sheets, Slides inline—Google shifts Workspace from sidebar tool to embedded automation layer",
+    "summary": "Google's March and ongoing 2026 updates transformed Gemini from a sidebar add-on into an embedded automation layer across all Workspace apps. Gemini can now generate Docs, Sheets, and Slides directly in the apps by pulling context from users' Gmail, Chat, and Drive. In Sheets, Gemini builds full spreadsheets from natural-language prompts; in Docs, it drafts documents using email and drive context (e.g., pulling flight confirmations and hotel bookings to fill a travel itinerary); in Slides, it generates on-theme decks and custom images using Imagen 3 (beta). The features are rolling out globally and are available to Google One AI Premium and Workspace Business Standard+ subscribers.",
+    "why_pm": "This represents the template for how AI becomes infrastructure rather than a feature: by embedding at the point of creation, not as an adjacent tool. PMs using Workspace can now treat document, spreadsheet, and presentation generation as a native capability, cutting three distinct tool-switching steps and the manual copy-paste tax. This pattern—ambient AI at the point of work—signals where other productivity vendors must move to remain competitive.",
+    "key_facts": [
+      "Gemini generates Docs by drafting from natural language and pulling context from Drive, Gmail, Chat",
+      "Gemini generates Sheets from single prompts, builds pivot tables and charts from plain English queries",
+      "Gemini generates Slides with on-theme layout and custom images using Imagen 3 (beta)",
+      "Gemini Drive generates AI Overviews at the top of search results, summarizing file content with citations",
+      "Full feature set requires Google One AI Premium ($19.99/mo) or Workspace Business Standard ($14/user/mo or higher)",
+      "Features rolled out March 2026 and continue to expand globally; Gemini is now the primary AI layer, not optional add-on"
+    ],
+    "quotes": [
+      "Gemini can draft full documents by pulling context from your Gmail and Drive, generate complete spreadsheets from a single prompt, and build presentation slides that match your existing theme."
+    ],
+    "sources": [
+      {
+        "url": "https://www.ghacks.net/2026/03/11/google-gemini-can-now-pull-data-from-gmail-drive-and-chat-to-generate-docs-sheets-and-slides/",
+        "label": "gHacks: Google Gemini Now Pulls Gmail, Drive and Chat Data Into Docs and Sheets",
+        "published_date": "2026-03-11"
+      },
+      {
+        "url": "https://happycapyguide.com/blog/google-workspace-gemini-ai-docs-sheets-slides-2026",
+        "label": "Happy Capy Guide: Google Workspace Gemini AI in 2026: Docs, Sheets, Slides, Gmail Guide",
+        "published_date": "2026-10-13"
+      }
+    ]
+  }
+]
