@@ -1,37 +1,5 @@
 [
   {
-    "shipped_at": "2026-09-30T01:11:28.775Z",
-    "date_label": "Wed 30 Sept",
-    "headline": "OpenAI agents bypassed third-party controls; Australia opens formal government review",
-    "urls": [
-      "https://www.infotech.com/software-reviews/vendor-technology-notes/big-5-ai-vendor-roundup-week-of-september-21-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-30T01:11:28.775Z",
-    "date_label": "Wed 30 Sept",
-    "headline": "Microsoft Azure ships persistent agents and per-workflow AI cost controls",
-    "urls": [
-      "https://www.infotech.com/software-reviews/vendor-technology-notes/big-5-ai-vendor-roundup-week-of-september-21-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-30T01:11:28.775Z",
-    "date_label": "Wed 30 Sept",
-    "headline": "Lenny's Podcast: Claire tests TypeSafe AI's Jev on real PM tasks — 200,000 classifications for $4",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/how-i-ai-jev-for-beginners-i-left"
-    ]
-  },
-  {
-    "shipped_at": "2026-09-30T01:11:28.775Z",
-    "date_label": "Wed 30 Sept",
-    "headline": "Multiply's Ad Spend Recovery Agent: a blueprint for human-in-the-loop agent design",
-    "urls": [
-      "https://agilehrandguide.com/yesterdays-martech-ai-cx-news-september-29-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-10-02T01:29:18.687Z",
     "date_label": "Fri 2 Oct",
     "headline": "AI News: Building for Production Means Building for Model-Switching, Not Model Selection",
@@ -349,6 +317,41 @@
     "urls": [
       "https://www.einnews.com/pr_news/947168683/product-manager-job-postings-are-up-12-amid-concerns-over-ai-threatening-the-workforce",
       "https://www.prnewswire.com/news-releases/2026-cpo-insights-report-predicts-product-managers-will-disappear-by-2030-302782732.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-15T00:23:33.228Z",
+    "date_label": "Thu 15 Oct",
+    "headline": "DigitalOcean ships Agent Learning Services — the PM question shifts from launch to improvement",
+    "urls": [
+      "https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Launches-Agent-Learning-and-Data-Services-for-Recursively-Self-Improving-AI-Agents/default.aspx",
+      "https://forkast.news/managed-trust-digitaloceans-bet-on-the-agent-improve-loop"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-15T00:23:33.228Z",
+    "date_label": "Thu 15 Oct",
+    "headline": "The frontier model stack is now a routing problem, not a selection problem",
+    "urls": [
+      "https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025",
+      "https://tech-insider.org/claude-vs-chatgpt-vs-gemini-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-15T00:23:33.228Z",
+    "date_label": "Thu 15 Oct",
+    "headline": "Google embeds Gemini directly into Docs, Sheets, and Slides — ambient AI at the point of creation",
+    "urls": [
+      "https://happycapyguide.com/blog/google-workspace-gemini-ai-docs-sheets-slides-2026",
+      "https://www.ghacks.net/2026/03/11/google-gemini-can-now-pull-data-from-gmail-drive-and-chat-to-generate-docs-sheets-and-slides"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-15T00:23:33.228Z",
+    "date_label": "Thu 15 Oct",
+    "headline": "Shreyas Doshi: taste and critical discernment are the PM skills AI cannot absorb",
+    "urls": [
+      "https://maven.com/shreyas-doshi/taste"
     ]
   }
 ]
