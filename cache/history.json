@@ -353,5 +353,29 @@
     "urls": [
       "https://maven.com/shreyas-doshi/taste"
     ]
+  },
+  {
+    "shipped_at": "2026-10-16T00:10:57.993Z",
+    "date_label": "Fri 16 Oct",
+    "headline": "Anthropic discloses $16.8B Q3 revenue and positive cash flow ahead of November IPO",
+    "urls": [
+      "https://hervecuviliez.substack.com/p/market-news-thursday-15-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-16T00:10:57.993Z",
+    "date_label": "Fri 16 Oct",
+    "headline": "Komprise survey: Enterprise data is not AI-ready, and ROI shows it",
+    "urls": [
+      "https://globenewswire.com/news-release/2026/10/15/3381565/0/en/komprise-survey-of-unstructured-data-and-ai-reveals-wide-gap-between-perceived-ai-maturity-and-ai-results.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-16T00:10:57.993Z",
+    "date_label": "Fri 16 Oct",
+    "headline": "Ant Murphy on Medium: 94% of PMs use AI, but individual productivity gains aren't closing the enterprise ROI gap",
+    "urls": [
+      "https://antmurphy.medium.com/how-product-is-changing-in-2026-78a08f150aca"
+    ]
   }
 ]
