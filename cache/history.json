@@ -1,77 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-03T01:02:09.023Z",
-    "date_label": "Sat 3 Oct",
-    "headline": "OpenAI ships Dots: persistent agents that keep working after you close the tab",
-    "urls": [
-      "https://openai.com/index/introducing-dots",
-      "https://www.latent.space/p/ainews-openai-devday-2026-dots-61",
-      "https://aiweekly.co/alerts/openai-unveils-dots-always-on-chatgpt-agents-at-devday"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-03T01:02:09.024Z",
-    "date_label": "Sat 3 Oct",
-    "headline": "Amazon Ads Agent collapses three ad tools into one four-step agentic workflow",
-    "urls": [
-      "https://advertising.amazon.com/en-us/library/news/amazon-ads-agent/?ref_=a20m_us_libr",
-      "https://www.relevantaudience.com/ecommerce-marketing/amazon-ads-agent-unboxed-2026-full-funnel-dva-plus",
-      "https://ppc.land/amazon-ads-puts-4-step-dva-campaign-builder-in-us-closed-beta"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-03T01:02:09.024Z",
-    "date_label": "Sat 3 Oct",
-    "headline": "Microsoft Copilot adds cost controls and an autonomous Autopilot agent — the second-order problems are now the product",
-    "urls": [
-      "https://marketingprofs.com/opinions/2026/56056/ai-update-october-02-2026-ai-news-and-views-from-the-past-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-03T01:02:09.024Z",
-    "date_label": "Sat 3 Oct",
-    "headline": "Meta Neural Band brings sEMG wrist-based gesture input to AR — input modality is the new moat",
-    "urls": [
-      "https://blog.mean.ceo/ai-product-launches-news-october-2026",
-      "https://vrarwiki.com/wiki/Meta_Neural_Band"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-03T01:02:09.024Z",
-    "date_label": "Sat 3 Oct",
-    "headline": "Propel survey: 400 manufacturing leaders have moved from AI curiosity to MCP integration as the productivity driver",
-    "urls": [
-      "https://itbrief.com.au/story/manufacturers-back-mcp-linked-ai-for-productivity-gains"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-04T00:26:12.755Z",
-    "date_label": "Sun 4 Oct",
-    "headline": "Anthropic ships Claude Opus 5.5 and reframes Claude as a task-routing family, not a single product",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude",
-      "https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx",
-      "https://blog.mean.ceo/anthropic-claude-news-october-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-04T00:26:12.756Z",
-    "date_label": "Sun 4 Oct",
-    "headline": "Claude Tag (beta) adds personal connectors to Slack: individuals can now wire their own calendar and CRM without an IT ticket",
-    "urls": [
-      "https://releasebot.io/updates/anthropic/claude"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-04T00:26:12.756Z",
-    "date_label": "Sun 4 Oct",
-    "headline": "ProductSide: the 2026 agentic PM stack is crystallising around three workflows you can start this week",
-    "urls": [
-      "https://productside.com/the-ai-product-management-workflows-2026",
-      "https://www.knowledgehut.com/blog/artificial-intelligence/agentic-ai-for-product-managers"
-    ]
-  },
-  {
     "shipped_at": "2026-10-07T01:20:07.311Z",
     "date_label": "Wed 7 Oct",
     "headline": "Lenny's Podcast: OpenAI's Head of ChatGPT says hand-built agent loops are a passing phase",
@@ -370,6 +298,32 @@
     "headline": "Metis Strategy: 95% of enterprise AI pilots show no P&L impact — measurement is now the differentiator",
     "urls": [
       "https://www.metisstrategy.com/product-management-ai-value-measurement"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-20T01:00:23.335Z",
+    "date_label": "Tue 20 Oct",
+    "headline": "Aakash Gupta on X: Four AI PM Jobs Now Exist — and They Don't Pay the Same",
+    "urls": [
+      "https://x.com/aakashgupta/status/2111669103886995688"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-20T01:00:23.336Z",
+    "date_label": "Tue 20 Oct",
+    "headline": "DeepSeek V4.1-Flash adds live web search and slashes KV cache — commodity agentic inference gets cheaper",
+    "urls": [
+      "https://aiweekly.co/ai-news-today",
+      "https://llmgateway.io/timeline"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-20T01:00:23.336Z",
+    "date_label": "Tue 20 Oct",
+    "headline": "Auros/Talker Research: 43% of US consumers feel duped by AI ads; 44% avoid brands that use them",
+    "urls": [
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-17-2026",
+      "https://talkerresearch.com/over-60-believe-brands-use-misleading-ai-in-marketing"
     ]
   }
 ]
