@@ -325,5 +325,41 @@
       "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-17-2026",
       "https://talkerresearch.com/over-60-believe-brands-use-misleading-ai-in-marketing"
     ]
+  },
+  {
+    "shipped_at": "2026-10-21T00:29:08.416Z",
+    "date_label": "Wed 21 Oct",
+    "headline": "Lenny's Podcast: Emmanuel Ameisen (Anthropic) on how AI models actually think",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/a-mind-expanding-conversation-on",
+      "https://podcasts.apple.com/us/podcast/inside-the-black-box-of-ai-how-ai-models-actually/id1627920305?i=1000796921555"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-21T00:29:08.417Z",
+    "date_label": "Wed 21 Oct",
+    "headline": "Cisco Webex ships agentic AI framework: agents now join meetings live and execute work mid-call",
+    "urls": [
+      "https://tech.yahoo.com/ai/copilot/articles/cisco-webex-ships-agentic-ai-133711432.html",
+      "https://forkast.news/cisco-webex-ships-agentic-ai-framework-and-agents-just-entered-the-meeting-room",
+      "https://investor.cisco.com/news/news-details/2026/Cisco-Unveils-New-Agentic-Collaboration-Experiences/default.aspx"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-21T00:29:08.417Z",
+    "date_label": "Wed 21 Oct",
+    "headline": "Optimove launches Content Studio: AI agents governed by brand guardrails at the execution layer",
+    "urls": [
+      "https://www.globenewswire.com/news-release/2026/10/19/3383849/0/en/optimove-launches-content-studio-to-help-marketers-keep-ai-era-content-on-brand-and-personalized-at-scale.html",
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-20-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-21T00:29:08.417Z",
+    "date_label": "Wed 21 Oct",
+    "headline": "Zillow, Optimove, and Proof reveal the new PM moat: owning the layer agents cannot skip",
+    "urls": [
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-20-2026"
+    ]
   }
 ]
