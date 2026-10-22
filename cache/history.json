@@ -1,47 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-07T01:20:07.311Z",
-    "date_label": "Wed 7 Oct",
-    "headline": "Lenny's Podcast: OpenAI's Head of ChatGPT says hand-built agent loops are a passing phase",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering",
-      "https://podcasts.apple.com/us/podcast/openais-head-of-chatgpt-were-entering-a-new-era/id1627920305?i=1000793099277",
-      "https://getscuttlebutt.substack.com/p/openais-head-of-chatgpt-most-actions"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-07T01:20:07.311Z",
-    "date_label": "Wed 7 Oct",
-    "headline": "Claire Vo on X: ChatGPT Space is underhyped, Dots is not the real prize",
-    "urls": [
-      "https://x.com/clairevo/status/2104984499717353958"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-07T01:20:07.311Z",
-    "date_label": "Wed 7 Oct",
-    "headline": "GitLab 19.4: Duo agents get model governance and per-user cost metering",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-07T01:20:07.311Z",
-    "date_label": "Wed 7 Oct",
-    "headline": "Mean CEO blog: AI amplifies broken fundamentals, not fixes them",
-    "urls": [
-      "https://blog.mean.ceo/ai-news-october-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-07T01:20:07.311Z",
-    "date_label": "Wed 7 Oct",
-    "headline": "ServiceNow launches AI Workflow Factory for continuous agentic improvement loops",
-    "urls": [
-      "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-AI-Workflow-Factory-to-turn-workflow-improvement-into-a-continuous-agentic-AI-powered-loop/default.aspx"
-    ]
-  },
-  {
     "shipped_at": "2026-10-08T01:40:43.900Z",
     "date_label": "Thu 8 Oct",
     "headline": "Anthropic ships Claude for Google Workspace in public beta, taking the fight directly to Gemini",
@@ -360,6 +318,35 @@
     "headline": "Zillow, Optimove, and Proof reveal the new PM moat: owning the layer agents cannot skip",
     "urls": [
       "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-20-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-22T00:32:08.833Z",
+    "date_label": "Thu 22 Oct",
+    "headline": "Notion rebuilds Agents for 24-hour workflows and 90% lower cost",
+    "urls": [
+      "https://www.notion.com/blog/notion-ai-more-for-less",
+      "https://forkast.news/notion-launches-gen-6-agent-harness-to-enable-24-hour-autonomous-workflows"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-22T00:32:08.833Z",
+    "date_label": "Thu 22 Oct",
+    "headline": "Webflow repositions as an agentic web marketing platform with Source in limited preview",
+    "urls": [
+      "https://blog.mean.ceo/webflow-news-october-2026",
+      "https://webflow.com/blog/webflow-conf-2026-announcements",
+      "https://diginomica.com/new-workspace-marketing-webflow-takes-agentic-ides-source"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-22T00:32:08.833Z",
+    "date_label": "Thu 22 Oct",
+    "headline": "Motive launches Agents that convert fleet safety data into autonomous actions",
+    "urls": [
+      "https://www.truckinginfo.com/news/motive-adds-ai-agents-for-fleet-operations",
+      "https://www.trucknews.com/technology/motive-launches-ai-agents-to-automate-fleet-safety-maintenance-actions/1003222930",
+      "https://siliconangle.com/2026/10/19/motive-technologies-revs-up-new-ai-agents-to-automate-fleet-management"
     ]
   }
 ]
