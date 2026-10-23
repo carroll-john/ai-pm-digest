@@ -1,39 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-08T01:40:43.900Z",
-    "date_label": "Thu 8 Oct",
-    "headline": "Anthropic ships Claude for Google Workspace in public beta, taking the fight directly to Gemini",
-    "urls": [
-      "https://venturebeat.com/technology/you-can-now-open-claude-directly-in-google-docs-sheets-and-slides-and-vice-versa-open-and-edit-the-files-in-claude",
-      "https://www.androidheadlines.com/2026/10/claude-challenges-gemini-google-workspace-integration.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-08T01:40:43.900Z",
-    "date_label": "Thu 8 Oct",
-    "headline": "McDonald's faces federal antitrust suit over an AI pricing tool that shares data across franchisees",
-    "urls": [
-      "https://www.qsrweb.com/news/mcdonalds-sued-over-ai-powered-menu-pricing-system",
-      "https://www.actionnewsjax.com/news/business/mcdonalds-sued-over/M2DHII6ES4YFVJIOGFT7B44AY4"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-08T01:40:43.900Z",
-    "date_label": "Thu 8 Oct",
-    "headline": "Microsoft Copilot Studio adds Hooks to make AI agent behavior predictable in production",
-    "urls": [
-      "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-6-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-08T01:40:43.900Z",
-    "date_label": "Thu 8 Oct",
-    "headline": "Reshape Automation study: general-purpose AI models answer fewer than half of specialized domain questions correctly",
-    "urls": [
-      "https://mdm.com/news/technology/ai/study-ai-models-top-out-at-52-on-industrial-parts-questions"
-    ]
-  },
-  {
     "shipped_at": "2026-10-09T01:54:13.082Z",
     "date_label": "Fri 9 Oct",
     "headline": "OpenAI ships GPT-6 with Intelligent UI — the model now picks its own response format",
@@ -347,6 +313,51 @@
       "https://www.truckinginfo.com/news/motive-adds-ai-agents-for-fleet-operations",
       "https://www.trucknews.com/technology/motive-launches-ai-agents-to-automate-fleet-safety-maintenance-actions/1003222930",
       "https://siliconangle.com/2026/10/19/motive-technologies-revs-up-new-ai-agents-to-automate-fleet-management"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-23T00:30:34.679Z",
+    "date_label": "Fri 23 Oct",
+    "headline": "Anthropic launches Claude Duet: a proactive agent that comes to you",
+    "urls": [
+      "https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist",
+      "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+      "https://cellcog.ai/blog/claude-duet"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-23T00:30:34.679Z",
+    "date_label": "Fri 23 Oct",
+    "headline": "Claire Vo on Lenny's Newsletter: \"Claude Duet is beautiful. I still forgot to use it.\"",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-23T00:30:34.679Z",
+    "date_label": "Fri 23 Oct",
+    "headline": "Walmart opens Agent Gateway: MCP server lets AI agents shop with spend caps and approval flows",
+    "urls": [
+      "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat",
+      "https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers",
+      "https://www.unite.ai/walmart-introduces-agent-profiles-gateway-for-ai-shopping-agents"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-23T00:30:34.679Z",
+    "date_label": "Fri 23 Oct",
+    "headline": "Frontier model benchmarks converge to 1.7 points; the PM competition shifts to caching and routing",
+    "urls": [
+      "https://tech-insider.org/gemini-vs-chatgpt-vs-claude-api-cache-pricing-2026",
+      "https://tech-insider.org/llm-leaderboard-claude-opus-5-5-gpt-6-1-sol-gemini-4-argon-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-23T00:30:34.679Z",
+    "date_label": "Fri 23 Oct",
+    "headline": "Kognitos ships 61 SOP-backed AI Employees for finance: deterministic agents beat prompt-driven ones in regulated work",
+    "urls": [
+      "https://aiagentstore.ai/ai-agent-news/this-week"
     ]
   }
 ]
