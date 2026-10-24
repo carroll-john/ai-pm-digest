@@ -1,32 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-09T01:54:13.082Z",
-    "date_label": "Fri 9 Oct",
-    "headline": "OpenAI ships GPT-6 with Intelligent UI — the model now picks its own response format",
-    "urls": [
-      "https://openai.com/index/gpt-6-for-everyone",
-      "https://dev.to/alifar/openai-rolls-out-gpt-6-and-intelligent-ui-across-chatgpt-tiers-47b4"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-09T01:54:13.083Z",
-    "date_label": "Fri 9 Oct",
-    "headline": "Anthropic ships Claude Haiku 5.5 — 75% cheaper, fastest model yet, built for agent subwork",
-    "urls": [
-      "https://www.anthropic.com/claude-haiku-5-5",
-      "https://www.unite.ai/anthropic-releases-claude-haiku-5-5-cutting-small-model-api-prices"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-09T01:54:13.083Z",
-    "date_label": "Fri 9 Oct",
-    "headline": "Simulation-first product validation: test concepts against AI personas in minutes, not weeks",
-    "urls": [
-      "https://www.syntheticusers.com",
-      "https://x.com/lennysan/status/1847200000000000000"
-    ]
-  },
-  {
     "shipped_at": "2026-10-11T00:46:52.254Z",
     "date_label": "Sun 11 Oct",
     "headline": "Satya Nadella: Treat AI models as insider threats and build the brakes outside the model",
@@ -358,6 +331,32 @@
     "headline": "Kognitos ships 61 SOP-backed AI Employees for finance: deterministic agents beat prompt-driven ones in regulated work",
     "urls": [
       "https://aiagentstore.ai/ai-agent-news/this-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-24T00:25:36.653Z",
+    "date_label": "Sat 24 Oct",
+    "headline": "The frontier model race is now a routing problem, not a capability problem",
+    "urls": [
+      "https://tech-insider.org/claude-vs-chatgpt-vs-gemini-vs-grok-usage-share-2026",
+      "https://note.com/tomo_0514/n/nc29c949a590d?hl=en"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-24T00:25:36.653Z",
+    "date_label": "Sat 24 Oct",
+    "headline": "Enterprise agent pricing: six vendors, six billing models, zero consensus",
+    "urls": [
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-23-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-24T00:25:36.653Z",
+    "date_label": "Sat 24 Oct",
+    "headline": "Hyro becomes Care OnCue: 300M healthcare agent interactions signal the move from pilot to infrastructure",
+    "urls": [
+      "https://www.globenewswire.com/news-release/2026/10/21/3385438/0/en/hyro-s-new-brand-identity-champions-agentic-care-communications-rallying-the-healthcare-industry-around-delivering-care-oncue.html",
+      "https://aiagentstore.ai/ai-agent-news/daily/2026-10-22"
     ]
   }
 ]
