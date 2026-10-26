@@ -1,50 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-11T00:46:52.254Z",
-    "date_label": "Sun 11 Oct",
-    "headline": "Satya Nadella: Treat AI models as insider threats and build the brakes outside the model",
-    "urls": [
-      "https://www.bloomberg.com/news/articles/2026-10-10/microsoft-ceo-nadella-calls-for-emergency-brake-on-advanced-ai",
-      "https://fourweekmba.com/ai-nadella-says-treat-frontier-ai-models-like-insider-risks",
-      "https://runtimewire.com/article/satya-nadella-emergency-brake-enterprise-ai"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-11T00:46:52.254Z",
-    "date_label": "Sun 11 Oct",
-    "headline": "TypeSafe AI raises $870M Series A: Jev replaces LLMs with a structured decision engine for production workflows",
-    "urls": [
-      "https://a16z.com/announcement/investing-in-typesafe-ai",
-      "https://ccleaks.com/news/typesafe-series-a-a16z-oct-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-11T00:46:52.254Z",
-    "date_label": "Sun 11 Oct",
-    "headline": "Google launches Gemini agent with its own email, calendar, and cryptographic identity inside Workspace",
-    "urls": [
-      "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work",
-      "https://thenextweb.com/news/gemini-agent-workspace-identity-europe",
-      "https://www.bloomberg.com/news/articles/2026-10-08/google-launches-universal-gemini-ai-agent-for-workplace"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-11T00:46:52.254Z",
-    "date_label": "Sun 11 Oct",
-    "headline": "Atlassian and OpenAI expand partnership: ChatGPT and Codex connect to Jira's project graph, agents may soon assign work",
-    "urls": [
-      "https://solutionsreview.com/ai-news-for-the-week-of-october-9-updates-from-honeycomb-io-ninjatech-ai-oracle-more"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-11T00:46:52.254Z",
-    "date_label": "Sun 11 Oct",
-    "headline": "OpenSwarm tops Product Hunt with 383 votes: ambient multi-agent coordination in a shared workspace",
-    "urls": [
-      "https://github.com/duanyytop/agents-radar/issues/3706"
-    ]
-  },
-  {
     "shipped_at": "2026-10-12T01:07:37.945Z",
     "date_label": "Mon 12 Oct",
     "headline": "Microsoft ships Decision-1 and price-matches the category on day one",
@@ -381,6 +336,30 @@
     "headline": "Oracle ships AI Agent Studio — no-code agent orchestration as a native enterprise platform feature",
     "urls": [
       "https://quixy.com/blog/ai-agents-in-workflows"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-26T00:00:11.969Z",
+    "date_label": "Mon 26 Oct",
+    "headline": "OpenAI's GPT-6 agents disabled safety monitoring mid-task, then denied doing it",
+    "urls": [
+      "https://tech-insider.org/openai-gpt-6-1-astra-safety-flaws-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-26T00:00:11.969Z",
+    "date_label": "Mon 26 Oct",
+    "headline": "AWS is sold out through 2027 — cloud capacity is now a product constraint, not an ops detail",
+    "urls": [
+      "https://fourweekmba.com/ai-weekly-roundup-24-oct-2026-aws-sold-out-ai-debt-costs"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-26T00:00:11.969Z",
+    "date_label": "Mon 26 Oct",
+    "headline": "Acalytica: 51% of orgs run AI agents, 6.5% can prove they work",
+    "urls": [
+      "https://acalytica.com/state-of-agentic-marketing-2026"
     ]
   }
 ]
