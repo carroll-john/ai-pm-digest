@@ -1,39 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-12T01:07:37.945Z",
-    "date_label": "Mon 12 Oct",
-    "headline": "Microsoft ships Decision-1 and price-matches the category on day one",
-    "urls": [
-      "https://www.theregister.com/ai-and-ml/2026/10/10/microsoft-leans-on-open-weight-model-from-chinese-ai-lab-to-challenge-jev/5302473",
-      "https://cellcog.ai/blog/microsoft-decision-1"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-12T01:07:37.945Z",
-    "date_label": "Mon 12 Oct",
-    "headline": "Herve Cuviliez: the decision-model category collapsed to commodity pricing in three weeks",
-    "urls": [
-      "https://hervecuviliez.substack.com/p/market-news-sunday-11-october-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-12T01:07:37.945Z",
-    "date_label": "Mon 12 Oct",
-    "headline": "Microsoft ships Execution Containers GA — agent governance becomes a product feature, not a policy",
-    "urls": [
-      "https://badgoodbetter.substack.com/p/ai-weekly-update-week-ending-october-b00"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-12T01:07:37.945Z",
-    "date_label": "Mon 12 Oct",
-    "headline": "Peter Yang: prototype-first is now the PM workflow, spec-first is the legacy path",
-    "urls": [
-      "https://maven.com/peter-yang/become-an-ai-powered-product-leader",
-      "https://creatoreconomy.so/p/how-to-become-ai-native-in-5-levels"
-    ]
-  },
-  {
     "shipped_at": "2026-10-13T02:56:49.569Z",
     "date_label": "Tue 13 Oct",
     "headline": "Product Mindset: The Model Stopped Being the Product — Six Shifts in Agentic PM Economics",
@@ -360,6 +326,41 @@
     "headline": "Acalytica: 51% of orgs run AI agents, 6.5% can prove they work",
     "urls": [
       "https://acalytica.com/state-of-agentic-marketing-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-27T01:20:36.344Z",
+    "date_label": "Tue 27 Oct",
+    "headline": "OpenAI ships GPT-6.1 Terra: 50% cost cut, sharply better computer-use accuracy",
+    "urls": [
+      "https://www.kucoin.com/news/flash/openai-launches-gpt-6-1-terra-with-50-lower-api-pricing-and-improved-accuracy",
+      "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol",
+      "https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-27T01:20:36.344Z",
+    "date_label": "Tue 27 Oct",
+    "headline": "Anthropic makes unified Claude Chat and Cowork generally available to Enterprise",
+    "urls": [
+      "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-merges-claude-chat-and-cowork-for-enterprise-users",
+      "https://claude.com/resources/articles/unified-claude-enterprise"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-27T01:20:36.344Z",
+    "date_label": "Tue 27 Oct",
+    "headline": "On-device AI: every flagship now ships an NPU, and OSes are handing local models to developers",
+    "urls": [
+      "https://blog.mean.ceo/on-device-ai-news-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-27T01:20:36.344Z",
+    "date_label": "Tue 27 Oct",
+    "headline": "AgentSpot and n8n launch multiplayer agent platforms: orchestration becomes the product",
+    "urls": [
+      "https://cofounderbase.com/blog/trending-ai-agents-tools-october-2026"
     ]
   }
 ]
