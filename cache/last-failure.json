@@ -1,0 +1,9 @@
+{
+  "kind": "STAGE1_INVALID_OUTPUT",
+  "subject_tag": "BUG",
+  "stage": "Stage 1",
+  "summary": "Stage 1 emitted candidates as a string the script could not parse or salvage.",
+  "hint": "Likely a code change is needed: tighten the Stage 1 prompt or extend the salvage helper in send-digest.mjs. The raw model output is in the log tail below.",
+  "detail": "First 500 chars of candidates string: [\n  {\n    \"headline_draft\": \"OpenAI partners with Google Cloud: Multi-model enterprise environments become default\",\n    \"summary\": \"OpenAI announced a partnership with Google Cloud to bring GPT-6 Astra, GPT-6 Sol, and Codex tools into Google Cloud's Model Garden on October 21. Customers can now purchase OpenAI models through Google Cloud Marketplace, with charges appearing on a single invoice and counting toward existing Google Cloud spending commitments and Flexible Savings Plans. The integrat",
+  "occurred_at": "2026-10-28T01:03:44.420Z"
+}
