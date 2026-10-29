@@ -1,74 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-13T02:56:49.569Z",
-    "date_label": "Tue 13 Oct",
-    "headline": "Product Mindset: The Model Stopped Being the Product — Six Shifts in Agentic PM Economics",
-    "urls": [
-      "https://productmindset.substack.com/p/state-of-agentic-product-manager"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-13T02:56:49.570Z",
-    "date_label": "Tue 13 Oct",
-    "headline": "Lenny's Podcast: Josh Woodward (Google Labs) — Every Company Needs to Operate Like a Lab Team",
-    "urls": [
-      "https://podcasts.apple.com/us/podcast/lennys-podcast-product-career-growth/id1627920305",
-      "https://x.com/lennysan/status/2109803584957726769"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-13T02:56:49.570Z",
-    "date_label": "Tue 13 Oct",
-    "headline": "Herve Cuviliez: Tier-1 Capital Is Pricing the Orchestration Layer, Not the Model",
-    "urls": [
-      "https://hervecuviliez.substack.com/p/market-news-monday-12-october-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-13T02:56:49.570Z",
-    "date_label": "Tue 13 Oct",
-    "headline": "PM Job Postings Up 12%, But CPO Survey Predicts Role Obsolescence by 2030",
-    "urls": [
-      "https://www.einnews.com/pr_news/947168683/product-manager-job-postings-are-up-12-amid-concerns-over-ai-threatening-the-workforce",
-      "https://www.prnewswire.com/news-releases/2026-cpo-insights-report-predicts-product-managers-will-disappear-by-2030-302782732.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-15T00:23:33.228Z",
-    "date_label": "Thu 15 Oct",
-    "headline": "DigitalOcean ships Agent Learning Services — the PM question shifts from launch to improvement",
-    "urls": [
-      "https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Launches-Agent-Learning-and-Data-Services-for-Recursively-Self-Improving-AI-Agents/default.aspx",
-      "https://forkast.news/managed-trust-digitaloceans-bet-on-the-agent-improve-loop"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-15T00:23:33.228Z",
-    "date_label": "Thu 15 Oct",
-    "headline": "The frontier model stack is now a routing problem, not a selection problem",
-    "urls": [
-      "https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025",
-      "https://tech-insider.org/claude-vs-chatgpt-vs-gemini-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-15T00:23:33.228Z",
-    "date_label": "Thu 15 Oct",
-    "headline": "Google embeds Gemini directly into Docs, Sheets, and Slides — ambient AI at the point of creation",
-    "urls": [
-      "https://happycapyguide.com/blog/google-workspace-gemini-ai-docs-sheets-slides-2026",
-      "https://www.ghacks.net/2026/03/11/google-gemini-can-now-pull-data-from-gmail-drive-and-chat-to-generate-docs-sheets-and-slides"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-15T00:23:33.228Z",
-    "date_label": "Thu 15 Oct",
-    "headline": "Shreyas Doshi: taste and critical discernment are the PM skills AI cannot absorb",
-    "urls": [
-      "https://maven.com/shreyas-doshi/taste"
-    ]
-  },
-  {
     "shipped_at": "2026-10-16T00:10:57.993Z",
     "date_label": "Fri 16 Oct",
     "headline": "Anthropic discloses $16.8B Q3 revenue and positive cash flow ahead of November IPO",
@@ -361,6 +292,31 @@
     "headline": "AgentSpot and n8n launch multiplayer agent platforms: orchestration becomes the product",
     "urls": [
       "https://cofounderbase.com/blog/trending-ai-agents-tools-october-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-29T01:40:15.887Z",
+    "date_label": "Thu 29 Oct",
+    "headline": "Amazon memo: stop measuring AI by tokens and code volume, measure outcomes instead",
+    "urls": [
+      "https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html",
+      "https://www.gurufocus.com/news/9146865/amazon-questions-token-metrics-as-ai-integration-evolves-ticker-amzn-reacts"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-29T01:40:15.887Z",
+    "date_label": "Thu 29 Oct",
+    "headline": "LinkedIn retires its APM program and replaces it with a Full Stack Builder role",
+    "urls": [
+      "https://promptledproduct.substack.com/p/why-ai-will-make-developers-and-product"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-29T01:40:15.887Z",
+    "date_label": "Thu 29 Oct",
+    "headline": "Front ships agent-human handoff workflows, evaluation tools, and feedback loop via Modem",
+    "urls": [
+      "https://community.front.com/product-updates/what-s-new-in-front-october-2026-ai-agents-proactive-account-tools-richer-reporting-4136"
     ]
   }
 ]
