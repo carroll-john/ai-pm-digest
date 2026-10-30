@@ -1,29 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-16T00:10:57.993Z",
-    "date_label": "Fri 16 Oct",
-    "headline": "Anthropic discloses $16.8B Q3 revenue and positive cash flow ahead of November IPO",
-    "urls": [
-      "https://hervecuviliez.substack.com/p/market-news-thursday-15-october-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-16T00:10:57.993Z",
-    "date_label": "Fri 16 Oct",
-    "headline": "Komprise survey: Enterprise data is not AI-ready, and ROI shows it",
-    "urls": [
-      "https://globenewswire.com/news-release/2026/10/15/3381565/0/en/komprise-survey-of-unstructured-data-and-ai-reveals-wide-gap-between-perceived-ai-maturity-and-ai-results.html"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-16T00:10:57.993Z",
-    "date_label": "Fri 16 Oct",
-    "headline": "Ant Murphy on Medium: 94% of PMs use AI, but individual productivity gains aren't closing the enterprise ROI gap",
-    "urls": [
-      "https://antmurphy.medium.com/how-product-is-changing-in-2026-78a08f150aca"
-    ]
-  },
-  {
     "shipped_at": "2026-10-17T00:14:15.587Z",
     "date_label": "Sat 17 Oct",
     "headline": "Stripe CEO Patrick Collison: AI shopping agents will reward product quality over marketing",
@@ -317,6 +293,48 @@
     "headline": "Front ships agent-human handoff workflows, evaluation tools, and feedback loop via Modem",
     "urls": [
       "https://community.front.com/product-updates/what-s-new-in-front-october-2026-ai-agents-proactive-account-tools-richer-reporting-4136"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-30T01:46:37.456Z",
+    "date_label": "Fri 30 Oct",
+    "headline": "Fragment launches with $56M: AI agents resolve procurement exceptions without replacing your ERP",
+    "urls": [
+      "https://www.globenewswire.com/news-release/2026/10/28/3390260/0/en/fragment-launches-with-56-million-to-automate-the-work-enterprise-software-leaves-behind.html",
+      "https://hoodline.com/2026/10/san-francisco-procurement-startup-fragment-launches-with-56m-claims-90-touchless-rate"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-30T01:46:37.456Z",
+    "date_label": "Fri 30 Oct",
+    "headline": "Three CPOs rethink product org structure for the AI era — QA shrinks, data absorbs into product, Product Builder rises",
+    "urls": [
+      "https://timfrin.substack.com/p/comment-3-cpos-repensent-lorganisation"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-30T01:46:37.456Z",
+    "date_label": "Fri 30 Oct",
+    "headline": "AlixPartners: Only 10% of consumers start product discovery with AI — but the split by income is coming fast",
+    "urls": [
+      "https://retaildive.com/news/most-consumers-arent-using-ai-for-product-discovery/833604"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-30T01:46:37.456Z",
+    "date_label": "Fri 30 Oct",
+    "headline": "Guideline pipes US digital ad pricing into Claude, ChatGPT, Gemini, and Copilot via MCP — live today",
+    "urls": [
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-29-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-30T01:46:37.456Z",
+    "date_label": "Fri 30 Oct",
+    "headline": "Google announces Gemini 4 Carbon with restricted early access — federated release strategy replaces open betas",
+    "urls": [
+      "https://tech-insider.org/ca/gemini-4-carbon-vs-gpt-6-1-terra-vs-deepseek-v4-1-flash-2026",
+      "https://slash-digital.io/en/insights/ai-models-2026"
     ]
   }
 ]
