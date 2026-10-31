@@ -1,31 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-17T00:14:15.587Z",
-    "date_label": "Sat 17 Oct",
-    "headline": "Stripe CEO Patrick Collison: AI shopping agents will reward product quality over marketing",
-    "urls": [
-      "https://linas.substack.com/p/patrick-collison-ai-agents-better-products",
-      "https://www.marketingprofs.com/opinions/2026/56192/ai-update-october-16-2026-ai-news-and-views-from-the-past-week"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-17T00:14:15.587Z",
-    "date_label": "Sat 17 Oct",
-    "headline": "Shopify opens its billion-product catalog to any AI agent via Shop MCP",
-    "urls": [
-      "https://fintechnize.substack.com/p/shopify-opens-its-billion-product",
-      "https://nohacks.co/blog/shopify-products-more-reviews-come-back-higher"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-17T00:14:15.587Z",
-    "date_label": "Sat 17 Oct",
-    "headline": "Metis Strategy: 95% of enterprise AI pilots show no P&L impact — measurement is now the differentiator",
-    "urls": [
-      "https://www.metisstrategy.com/product-management-ai-value-measurement"
-    ]
-  },
-  {
     "shipped_at": "2026-10-20T01:00:23.335Z",
     "date_label": "Tue 20 Oct",
     "headline": "Aakash Gupta on X: Four AI PM Jobs Now Exist — and They Don't Pay the Same",
@@ -335,6 +309,42 @@
     "urls": [
       "https://tech-insider.org/ca/gemini-4-carbon-vs-gpt-6-1-terra-vs-deepseek-v4-1-flash-2026",
       "https://slash-digital.io/en/insights/ai-models-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-31T01:29:24.660Z",
+    "date_label": "Sat 31 Oct",
+    "headline": "Meta Rebuilds Ad Ranking With LLMs — 18.9% Conversion Lift, Zero Manual Controls",
+    "urls": [
+      "https://www.contentgrip.com/meta-andromeda-ad-retrieval-billion",
+      "https://engineering.fb.com/2026/10/19/ml-applications/genrecs-tokenization-transforming-ads-recommendation-at-meta-with-stable-model-vocabulary"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-31T01:29:24.660Z",
+    "date_label": "Sat 31 Oct",
+    "headline": "Cresta Opens Self-Service Agent Building for Enterprises — One Week to Production",
+    "urls": [
+      "https://finance.yahoo.com/technology/ai/articles/cresta-opens-ai-agent-platform-130100428.html",
+      "https://aiagentstore.ai/ai-agent-news/daily/2026-10-30"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-31T01:29:24.660Z",
+    "date_label": "Sat 31 Oct",
+    "headline": "Persona AI Brings Supervised Agents to Identity Ops — 30+ Customers, Hundreds of Thousands of Decisions in Production",
+    "urls": [
+      "https://finance.yahoo.com/technology/ai/articles/persona-introduces-persona-ai-advancing-160000456.html",
+      "https://aiagentstore.ai/ai-agent-news/daily/2026-10-30"
+    ]
+  },
+  {
+    "shipped_at": "2026-10-31T01:29:24.660Z",
+    "date_label": "Sat 31 Oct",
+    "headline": "SAP Sets the Enterprise Agent Template — 70 Models, Ontologies, No-Code and Pro-Code Paths",
+    "urls": [
+      "https://news.sap.com/2026/10/ai-release-highlights-q3-2026",
+      "https://aiagentstore.ai/ai-agent-news/daily/2026-10-30"
     ]
   }
 ]
