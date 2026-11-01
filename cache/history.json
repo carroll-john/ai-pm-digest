@@ -346,5 +346,46 @@
       "https://news.sap.com/2026/10/ai-release-highlights-q3-2026",
       "https://aiagentstore.ai/ai-agent-news/daily/2026-10-30"
     ]
+  },
+  {
+    "shipped_at": "2026-11-01T00:51:49.001Z",
+    "date_label": "Sun 1 Nov",
+    "headline": "UXCam 2026 Survey: 99% of product professionals use AI, but only 6% have set AI OKRs",
+    "urls": [
+      "https://youngurbanproject.com/ai-tools-for-product-managers"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-01T00:51:49.001Z",
+    "date_label": "Sun 1 Nov",
+    "headline": "Anthropic Updates Claude Usage Policy: Election rules tightened, new abuse clause, effective Nov 12",
+    "urls": [
+      "https://www.anthropic.com/news/2026-usage-policy-update"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-01T00:51:49.001Z",
+    "date_label": "Sun 1 Nov",
+    "headline": "Claude Code updates: Idle session compression, effort-level fixes, and an Opus 4.8 deadline you need to calendar now",
+    "urls": [
+      "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-november-1-2026-15pn"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-01T00:51:49.001Z",
+    "date_label": "Sun 1 Nov",
+    "headline": "Akeneo Autumn 2026: AI agents run the full product data pipeline, humans approve before anything publishes",
+    "urls": [
+      "https://finance.yahoo.com/technology/ai/articles/akeneo-puts-ai-agents-across-130000385.html",
+      "https://retailtimes.co.uk/akeneo-puts-ai-agents-to-work-across-product-data-with-enterprise-control-built-in"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-01T00:51:49.001Z",
+    "date_label": "Sun 1 Nov",
+    "headline": "H Company releases Holo 3: Computer-use agents that navigate any UI without needing an API",
+    "urls": [
+      "https://en.wikipedia.org/wiki/H_(company)"
+    ]
   }
 ]
