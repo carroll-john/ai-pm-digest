@@ -387,5 +387,39 @@
     "urls": [
       "https://en.wikipedia.org/wiki/H_(company)"
     ]
+  },
+  {
+    "shipped_at": "2026-11-02T01:24:43.244Z",
+    "date_label": "Mon 2 Nov",
+    "headline": "Anthropic ships a silent server-side guardrail in Claude Code — and catches collateral damage",
+    "urls": [
+      "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games",
+      "https://mixed-news.com/en/anthropic-claude-code-opus-game-cloning-rule",
+      "https://aiweekly.co/alerts/anthropic-tells-claude-code-to-stop-cloning-video-games"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-02T01:24:43.245Z",
+    "date_label": "Mon 2 Nov",
+    "headline": "Anthropic: Claude Opus 5.5 costs 20% less, runs 30% faster — and is now the recommended default",
+    "urls": [
+      "https://blog.mean.ceo/claude-opus-5-5-news-november-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-02T01:24:43.245Z",
+    "date_label": "Mon 2 Nov",
+    "headline": "Userpilot: The PM role is splitting — AI-focused roles now average $245K vs $123K for traditional PMs",
+    "urls": [
+      "https://userpilot.com/blog/product-management-trends"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-02T01:24:43.245Z",
+    "date_label": "Mon 2 Nov",
+    "headline": "GA4 goes agentic: AI agents can now query your analytics directly via MCP server",
+    "urls": [
+      "https://blog.mean.ceo/google-analytics-news-november-2026"
+    ]
   }
 ]
