@@ -1,31 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-20T01:00:23.335Z",
-    "date_label": "Tue 20 Oct",
-    "headline": "Aakash Gupta on X: Four AI PM Jobs Now Exist — and They Don't Pay the Same",
-    "urls": [
-      "https://x.com/aakashgupta/status/2111669103886995688"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-20T01:00:23.336Z",
-    "date_label": "Tue 20 Oct",
-    "headline": "DeepSeek V4.1-Flash adds live web search and slashes KV cache — commodity agentic inference gets cheaper",
-    "urls": [
-      "https://aiweekly.co/ai-news-today",
-      "https://llmgateway.io/timeline"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-20T01:00:23.336Z",
-    "date_label": "Tue 20 Oct",
-    "headline": "Auros/Talker Research: 43% of US consumers feel duped by AI ads; 44% avoid brands that use them",
-    "urls": [
-      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-17-2026",
-      "https://talkerresearch.com/over-60-believe-brands-use-misleading-ai-in-marketing"
-    ]
-  },
-  {
     "shipped_at": "2026-10-21T00:29:08.416Z",
     "date_label": "Wed 21 Oct",
     "headline": "Lenny's Podcast: Emmanuel Ameisen (Anthropic) on how AI models actually think",
@@ -420,6 +394,48 @@
     "headline": "GA4 goes agentic: AI agents can now query your analytics directly via MCP server",
     "urls": [
       "https://blog.mean.ceo/google-analytics-news-november-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-03T03:23:54.782Z",
+    "date_label": "Tue 3 Nov",
+    "headline": "Anthropic ships message threads: 35% latency cut for long-running agents",
+    "urls": [
+      "https://claude.com/resources/articles/message-threads",
+      "https://thenextweb.com/news/anthropic-message-threads-beta-claude-api-agents"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-03T03:23:54.782Z",
+    "date_label": "Tue 3 Nov",
+    "headline": "OpenAI merges ChatGPT and Codex into one shared token pool from December 2026",
+    "urls": [
+      "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-2-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-03T03:23:54.782Z",
+    "date_label": "Tue 3 Nov",
+    "headline": "Forbes Tech Council: Everyone can build now — PMs must become judges, not coordinators",
+    "urls": [
+      "https://www.forbes.com/councils/forbestechcouncil/2026/11/02/congratulations-everyone-can-build-allegedly-now-what"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-03T03:23:54.782Z",
+    "date_label": "Tue 3 Nov",
+    "headline": "Tsinghua research: AI coding agents cut costs 26% by optimizing scaffolding, not models",
+    "urls": [
+      "https://agentic.ai/news"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-03T03:23:54.782Z",
+    "date_label": "Tue 3 Nov",
+    "headline": "Wonderful launches AI Gateway: cost-per-task tracking for agent deployments",
+    "urls": [
+      "https://business-review.eu/tech/it/wonderful-launches-ai-gateway-a-solution-to-control-the-costs-of-ai-usage-302597",
+      "https://www.wonderful.ai/blog-articles/announcing-wonderful-ai-gateway"
     ]
   }
 ]
