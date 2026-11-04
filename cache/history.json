@@ -1,41 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-21T00:29:08.416Z",
-    "date_label": "Wed 21 Oct",
-    "headline": "Lenny's Podcast: Emmanuel Ameisen (Anthropic) on how AI models actually think",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/a-mind-expanding-conversation-on",
-      "https://podcasts.apple.com/us/podcast/inside-the-black-box-of-ai-how-ai-models-actually/id1627920305?i=1000796921555"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-21T00:29:08.417Z",
-    "date_label": "Wed 21 Oct",
-    "headline": "Cisco Webex ships agentic AI framework: agents now join meetings live and execute work mid-call",
-    "urls": [
-      "https://tech.yahoo.com/ai/copilot/articles/cisco-webex-ships-agentic-ai-133711432.html",
-      "https://forkast.news/cisco-webex-ships-agentic-ai-framework-and-agents-just-entered-the-meeting-room",
-      "https://investor.cisco.com/news/news-details/2026/Cisco-Unveils-New-Agentic-Collaboration-Experiences/default.aspx"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-21T00:29:08.417Z",
-    "date_label": "Wed 21 Oct",
-    "headline": "Optimove launches Content Studio: AI agents governed by brand guardrails at the execution layer",
-    "urls": [
-      "https://www.globenewswire.com/news-release/2026/10/19/3383849/0/en/optimove-launches-content-studio-to-help-marketers-keep-ai-era-content-on-brand-and-personalized-at-scale.html",
-      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-20-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-21T00:29:08.417Z",
-    "date_label": "Wed 21 Oct",
-    "headline": "Zillow, Optimove, and Proof reveal the new PM moat: owning the layer agents cannot skip",
-    "urls": [
-      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-20-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-10-22T00:32:08.833Z",
     "date_label": "Thu 22 Oct",
     "headline": "Notion rebuilds Agents for 24-hour workflows and 90% lower cost",
@@ -436,6 +400,55 @@
     "urls": [
       "https://business-review.eu/tech/it/wonderful-launches-ai-gateway-a-solution-to-control-the-costs-of-ai-usage-302597",
       "https://www.wonderful.ai/blog-articles/announcing-wonderful-ai-gateway"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-04T02:03:32.048Z",
+    "date_label": "Wed 4 Nov",
+    "headline": "Goldman Sachs Pulls AI Coding Tools From Traders and Bankers, Retreats to Engineer-Only Access",
+    "urls": [
+      "https://www.gurufocus.com/news/9163065/goldman-sachs-gs-limits-ai-coding-tools-to-engineering-staff-amid-cautious-tech-integration",
+      "https://qz.com/goldman-sachs-restricts-ai-coding-tools-traders-bankers-110226",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-benches-its-vibe-coders-while-bny-lets-everyone-build"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-04T02:03:32.048Z",
+    "date_label": "Wed 4 Nov",
+    "headline": "Revolut Cuts AI Coding Costs 90% by Moving 2,000 Engineers to Self-Hosted GLM-5.3",
+    "urls": [
+      "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345",
+      "https://aiweekly.co/alerts/revolut-cuts-ai-coding-costs-90-with-self-hosted-glm-on-56-b200s",
+      "https://x.com/linasbeliunas/status/2117555510702453059"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-04T02:03:32.048Z",
+    "date_label": "Wed 4 Nov",
+    "headline": "Canva Cuts 22% of Staff as AI Costs and Slowing Growth Force a Restructure",
+    "urls": [
+      "https://www.bloomberg.com/news/articles/2026-11-03/canva-announces-layoffs-job-changes-for-about-22-of-workforce",
+      "https://www.implicator.ai/canva-says-restructuring-which-will-impact-1-271-workers-22",
+      "https://www.abc.net.au/news/2026-11-04/canva-restructure-job-losses/107344304"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-04T02:03:32.048Z",
+    "date_label": "Wed 4 Nov",
+    "headline": "Salesforce Acquires Voice-AI Specialist Cresta for $2.7B",
+    "urls": [
+      "https://aragonresearch.com/salesforce-buys-cresta-the-2-7b-voice-agent-bet",
+      "https://fintechnize.substack.com/p/salesforce-moves-to-acquire-cresta",
+      "https://aiweekly.co/alerts/salesforce-agrees-to-acquire-voice-ai-contact-center-startup-cresta-for-27b"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-04T02:03:32.048Z",
+    "date_label": "Wed 4 Nov",
+    "headline": "OpenAI Deprecates Agent Builder Platform, Shutting Down November 30",
+    "urls": [
+      "https://developers.openai.com/api/docs/guides/agent-builder",
+      "https://www.ayautomate.com/blog/best-ai-workflow-automation-platforms"
     ]
   }
 ]
