@@ -1,34 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-22T00:32:08.833Z",
-    "date_label": "Thu 22 Oct",
-    "headline": "Notion rebuilds Agents for 24-hour workflows and 90% lower cost",
-    "urls": [
-      "https://www.notion.com/blog/notion-ai-more-for-less",
-      "https://forkast.news/notion-launches-gen-6-agent-harness-to-enable-24-hour-autonomous-workflows"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-22T00:32:08.833Z",
-    "date_label": "Thu 22 Oct",
-    "headline": "Webflow repositions as an agentic web marketing platform with Source in limited preview",
-    "urls": [
-      "https://blog.mean.ceo/webflow-news-october-2026",
-      "https://webflow.com/blog/webflow-conf-2026-announcements",
-      "https://diginomica.com/new-workspace-marketing-webflow-takes-agentic-ides-source"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-22T00:32:08.833Z",
-    "date_label": "Thu 22 Oct",
-    "headline": "Motive launches Agents that convert fleet safety data into autonomous actions",
-    "urls": [
-      "https://www.truckinginfo.com/news/motive-adds-ai-agents-for-fleet-operations",
-      "https://www.trucknews.com/technology/motive-launches-ai-agents-to-automate-fleet-safety-maintenance-actions/1003222930",
-      "https://siliconangle.com/2026/10/19/motive-technologies-revs-up-new-ai-agents-to-automate-fleet-management"
-    ]
-  },
-  {
     "shipped_at": "2026-10-23T00:30:34.679Z",
     "date_label": "Fri 23 Oct",
     "headline": "Anthropic launches Claude Duet: a proactive agent that comes to you",
@@ -449,6 +420,40 @@
     "urls": [
       "https://developers.openai.com/api/docs/guides/agent-builder",
       "https://www.ayautomate.com/blog/best-ai-workflow-automation-platforms"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-05T02:06:32.324Z",
+    "date_label": "Thu 5 Nov",
+    "headline": "Stripe PM at Hello, World!: Rebuilding Checkout for AI Agents",
+    "urls": [
+      "https://x.com/elliott__potter/status/2116655864408875403"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-05T02:06:32.324Z",
+    "date_label": "Thu 5 Nov",
+    "headline": "Smartsheet ENGAGE 2026: AI Agents That Monitor Execution Against Strategy",
+    "urls": [
+      "https://www.joplinglobe.com/region/national_business/smartsheet-adds-new-ai-agents-integrations-and-security-advancements-at-engage-2026/article_b713f9e7-2687-5893-b373-d0f07b18b9de.html",
+      "https://siliconangle.com/2026/11/04/smartsheet-ai-powered-platform-bridges-gap-between-planning-and-results"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-05T02:06:32.324Z",
+    "date_label": "Thu 5 Nov",
+    "headline": "Gemini 4 Argon: Google's Pricing Cliff Hits December 1",
+    "urls": [
+      "https://ai.google.dev/gemini-api/docs/latest-model"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-05T02:06:32.324Z",
+    "date_label": "Thu 5 Nov",
+    "headline": "CrowdStrike Ships an AI Kill Switch — Rogue Agent Governance Becomes a Product Feature",
+    "urls": [
+      "https://riorundown.substack.com/p/ai-news-nov-04-2026-ai-infrastructure",
+      "https://blog.mean.ceo/latest-ai-advancements-news-november-2026"
     ]
   }
 ]
