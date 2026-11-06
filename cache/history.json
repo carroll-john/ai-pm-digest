@@ -1,50 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-23T00:30:34.679Z",
-    "date_label": "Fri 23 Oct",
-    "headline": "Anthropic launches Claude Duet: a proactive agent that comes to you",
-    "urls": [
-      "https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist",
-      "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
-      "https://cellcog.ai/blog/claude-duet"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-23T00:30:34.679Z",
-    "date_label": "Fri 23 Oct",
-    "headline": "Claire Vo on Lenny's Newsletter: \"Claude Duet is beautiful. I still forgot to use it.\"",
-    "urls": [
-      "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-23T00:30:34.679Z",
-    "date_label": "Fri 23 Oct",
-    "headline": "Walmart opens Agent Gateway: MCP server lets AI agents shop with spend caps and approval flows",
-    "urls": [
-      "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat",
-      "https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers",
-      "https://www.unite.ai/walmart-introduces-agent-profiles-gateway-for-ai-shopping-agents"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-23T00:30:34.679Z",
-    "date_label": "Fri 23 Oct",
-    "headline": "Frontier model benchmarks converge to 1.7 points; the PM competition shifts to caching and routing",
-    "urls": [
-      "https://tech-insider.org/gemini-vs-chatgpt-vs-claude-api-cache-pricing-2026",
-      "https://tech-insider.org/llm-leaderboard-claude-opus-5-5-gpt-6-1-sol-gemini-4-argon-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-23T00:30:34.679Z",
-    "date_label": "Fri 23 Oct",
-    "headline": "Kognitos ships 61 SOP-backed AI Employees for finance: deterministic agents beat prompt-driven ones in regulated work",
-    "urls": [
-      "https://aiagentstore.ai/ai-agent-news/this-week"
-    ]
-  },
-  {
     "shipped_at": "2026-10-24T00:25:36.653Z",
     "date_label": "Sat 24 Oct",
     "headline": "The frontier model race is now a routing problem, not a capability problem",
@@ -454,6 +409,33 @@
     "urls": [
       "https://riorundown.substack.com/p/ai-news-nov-04-2026-ai-infrastructure",
       "https://blog.mean.ceo/latest-ai-advancements-news-november-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-06T02:07:15.229Z",
+    "date_label": "Fri 6 Nov",
+    "headline": "Microsoft Clarity launches Agentic Analytics: test whether AI agents can complete key tasks on your site",
+    "urls": [
+      "https://searchengineland.com/microsoft-clarity-gains-agentic-analytics-brand-agents-and-ask-clarity-500515",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-clarity-helps-merchants-welcome-ai-shopping-agents",
+      "https://theaimarketers.ai/news-110526"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-06T02:07:15.230Z",
+    "date_label": "Fri 6 Nov",
+    "headline": "Quantum Metric: AI agent commerce sessions grew 25x in a year — shoppers are skipping peak sales entirely",
+    "urls": [
+      "https://globenewswire.com/news-release/2026/11/05/3396521/0/en/quantum-metric-research-finds-shoppers-are-tuning-out-peak-sales-as-ai-decides-where-and-when-they-buy.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-06T02:07:15.230Z",
+    "date_label": "Fri 6 Nov",
+    "headline": "Zapier repositions as an AI orchestration platform with a self-healing agent for every workflow",
+    "urls": [
+      "https://blog.mean.ceo/zapier-news-november-2026",
+      "https://zapier.com"
     ]
   }
 ]
