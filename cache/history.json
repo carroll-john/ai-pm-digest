@@ -1,31 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-24T00:25:36.653Z",
-    "date_label": "Sat 24 Oct",
-    "headline": "The frontier model race is now a routing problem, not a capability problem",
-    "urls": [
-      "https://tech-insider.org/claude-vs-chatgpt-vs-gemini-vs-grok-usage-share-2026",
-      "https://note.com/tomo_0514/n/nc29c949a590d?hl=en"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-24T00:25:36.653Z",
-    "date_label": "Sat 24 Oct",
-    "headline": "Enterprise agent pricing: six vendors, six billing models, zero consensus",
-    "urls": [
-      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-23-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-24T00:25:36.653Z",
-    "date_label": "Sat 24 Oct",
-    "headline": "Hyro becomes Care OnCue: 300M healthcare agent interactions signal the move from pilot to infrastructure",
-    "urls": [
-      "https://www.globenewswire.com/news-release/2026/10/21/3385438/0/en/hyro-s-new-brand-identity-champions-agentic-care-communications-rallying-the-healthcare-industry-around-delivering-care-oncue.html",
-      "https://aiagentstore.ai/ai-agent-news/daily/2026-10-22"
-    ]
-  },
-  {
     "shipped_at": "2026-10-25T00:08:49.831Z",
     "date_label": "Sun 25 Oct",
     "headline": "Claire Vo: The roadmap is dead — ideation is now the bottleneck, not engineering",
@@ -436,6 +410,54 @@
     "urls": [
       "https://blog.mean.ceo/zapier-news-november-2026",
       "https://zapier.com"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-07T01:51:19.834Z",
+    "date_label": "Sat 7 Nov",
+    "headline": "Perplexity ships Teammates: persistent AI agents that own ongoing work",
+    "urls": [
+      "https://webutility.io/tool-news/perplexity-teammates-ai-agents-ongoing-work-max",
+      "https://emergent.sh/news/perplexity-launches-teammates-ai-agents-work",
+      "https://cellcog.ai/blog/perplexity-teammates"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-07T01:51:19.834Z",
+    "date_label": "Sat 7 Nov",
+    "headline": "Visa benchmark: AI shopping agents fail 42.8% of runs and still purchase anyway",
+    "urls": [
+      "https://investor.visa.com/news/news-details/2026/Visa-Releases-First-of-Its-Kind-Industry-Benchmark-for-AI-Shopping-Almost-Half-of-Test-Runs-Fail/default.aspx",
+      "https://shopassociation.org/ai-agentic-shopping-not-yet-delivering-the-goods-visa-finds",
+      "https://fourweekmba.com/ai-visa-ai-shopping-agents-fail-42-8-of-runs-often-still-buy"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-07T01:51:19.834Z",
+    "date_label": "Sat 7 Nov",
+    "headline": "Five9 acquires Level AI for $325M: buying the agent layer instead of building it",
+    "urls": [
+      "https://investors.five9.com/news-releases/news-release-details/five9-acquire-level-ai-advancing-ai-powered-cx-platform",
+      "https://www.unite.ai/five9-agrees-to-buy-level-ai-and-broaden-cx-ai-distribution",
+      "https://siliconangle.com/2026/11/05/five9-buys-contact-center-intelligence-startup-level-ai-after-posting-narrow-earnings-beat"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-07T01:51:19.834Z",
+    "date_label": "Sat 7 Nov",
+    "headline": "Meta acquires Conductor: multi-agent coordination becomes a competitive moat",
+    "urls": [
+      "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-6-2026",
+      "https://www.marketingprofs.com/opinions/2026/56257/ai-update-november-6-2026-ai-news-and-views-from-the-past-week"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-07T01:51:19.834Z",
+    "date_label": "Sat 7 Nov",
+    "headline": "MCP reaches escape velocity: 10,000 production servers, 97M SDK downloads a month",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Model_Context_Protocol",
+      "https://zenity.io/blog/current-events/model-context-protocol"
     ]
   }
 ]
