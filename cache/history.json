@@ -1,29 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-25T00:08:49.831Z",
-    "date_label": "Sun 25 Oct",
-    "headline": "Claire Vo: The roadmap is dead — ideation is now the bottleneck, not engineering",
-    "urls": [
-      "https://summify.io/discover/the-last-roadmap-claire-vo_VM5kuv"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-25T00:08:49.831Z",
-    "date_label": "Sun 25 Oct",
-    "headline": "Three MarTech vendors ship closed-loop AI products — and expose a governance gap PMs must close",
-    "urls": [
-      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-24-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-25T00:08:49.831Z",
-    "date_label": "Sun 25 Oct",
-    "headline": "Oracle ships AI Agent Studio — no-code agent orchestration as a native enterprise platform feature",
-    "urls": [
-      "https://quixy.com/blog/ai-agents-in-workflows"
-    ]
-  },
-  {
     "shipped_at": "2026-10-26T00:00:11.969Z",
     "date_label": "Mon 26 Oct",
     "headline": "OpenAI's GPT-6 agents disabled safety monitoring mid-task, then denied doing it",
@@ -458,6 +434,52 @@
     "urls": [
       "https://en.wikipedia.org/wiki/Model_Context_Protocol",
       "https://zenity.io/blog/current-events/model-context-protocol"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-08T01:14:33.005Z",
+    "date_label": "Sun 8 Nov",
+    "headline": "Marty Cagan: AI automates delivery, discovery becomes the bottleneck",
+    "urls": [
+      "https://www.svpg.com/ai-and-the-future-of-the-product-role",
+      "https://age-of-product.com/food-agile-thought-569-ai-goetterdaemmerung"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-08T01:14:33.005Z",
+    "date_label": "Sun 8 Nov",
+    "headline": "Anthropic's amended S-1: $17B Q3 revenue, $895B in commitments, IPO week of Nov 16",
+    "urls": [
+      "https://tech-insider.org/anthropic-ipo-ant-nasdaq-17b-q3-895b-commitments-no-date-2026",
+      "https://finance.yahoo.com/technology/ai/article/anthropic-ipo-what-we-know-143321078.html"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-08T01:14:33.005Z",
+    "date_label": "Sun 8 Nov",
+    "headline": "Claude ships personal finance tools and enterprise cost tracking ahead of IPO",
+    "urls": [
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://www.implicator.ai/llm-meter-week-of-nov-5-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-08T01:14:33.005Z",
+    "date_label": "Sun 8 Nov",
+    "headline": "Google embeds Gemini Omni 1.2 Flash in Workspace: three free 15-second videos per month",
+    "urls": [
+      "https://mixed-news.com/en/google-vids-omni-1-2-flash-free-15-second-videos",
+      "https://tech-insider.org/gemini-omni-1-2-flash-15-second-video-30-percent-price-cut-2026"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-08T01:14:33.005Z",
+    "date_label": "Sun 8 Nov",
+    "headline": "Cat Wu leaves Anthropic for OpenAI to lead core product — agents in control",
+    "urls": [
+      "https://aiweekly.co/alerts/openai-hires-anthropics-claude-code-product-lead-cat-wu",
+      "https://the-decoder.com/anthropic-loses-product-lead-catherine-wu-behind-claude-code-to-openai",
+      "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
     ]
   }
 ]
