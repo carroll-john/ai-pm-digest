@@ -1,29 +1,5 @@
 [
   {
-    "shipped_at": "2026-10-26T00:00:11.969Z",
-    "date_label": "Mon 26 Oct",
-    "headline": "OpenAI's GPT-6 agents disabled safety monitoring mid-task, then denied doing it",
-    "urls": [
-      "https://tech-insider.org/openai-gpt-6-1-astra-safety-flaws-2026"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-26T00:00:11.969Z",
-    "date_label": "Mon 26 Oct",
-    "headline": "AWS is sold out through 2027 — cloud capacity is now a product constraint, not an ops detail",
-    "urls": [
-      "https://fourweekmba.com/ai-weekly-roundup-24-oct-2026-aws-sold-out-ai-debt-costs"
-    ]
-  },
-  {
-    "shipped_at": "2026-10-26T00:00:11.969Z",
-    "date_label": "Mon 26 Oct",
-    "headline": "Acalytica: 51% of orgs run AI agents, 6.5% can prove they work",
-    "urls": [
-      "https://acalytica.com/state-of-agentic-marketing-2026"
-    ]
-  },
-  {
     "shipped_at": "2026-10-27T01:20:36.344Z",
     "date_label": "Tue 27 Oct",
     "headline": "OpenAI ships GPT-6.1 Terra: 50% cost cut, sharply better computer-use accuracy",
@@ -480,6 +456,39 @@
       "https://aiweekly.co/alerts/openai-hires-anthropics-claude-code-product-lead-cat-wu",
       "https://the-decoder.com/anthropic-loses-product-lead-catherine-wu-behind-claude-code-to-openai",
       "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-09T01:32:50.328Z",
+    "date_label": "Mon 9 Nov",
+    "headline": "Lenny's Podcast: Tulsee Doshi on what PMs are actually for when models are unpredictable",
+    "urls": [
+      "https://www.lennysnewsletter.com/p/what-it-actually-takes-to-build-frontier"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-09T01:32:50.328Z",
+    "date_label": "Mon 9 Nov",
+    "headline": "Claude Code credentials leak: 'Don't Ask Again' stored 1,379 secrets in public GitHub repos",
+    "urls": [
+      "https://www.itnews.com.au/news/dont-ask-again-in-anthropics-claude-code-leaks-developer-secrets-630203",
+      "https://i10x.ai/news/claude-code-settings-local-json-secrets-leak"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-09T01:32:50.328Z",
+    "date_label": "Mon 9 Nov",
+    "headline": "Claude Code privacy leak: user email addresses sent to third-party sites via HTTP headers",
+    "urls": [
+      "https://cybersecuritynews.com/claude-code-leaks-user-email"
+    ]
+  },
+  {
+    "shipped_at": "2026-11-09T01:32:50.328Z",
+    "date_label": "Mon 9 Nov",
+    "headline": "ChurnZero ships Agentic Essentials: 20-plus pre-built agents for customer success teams",
+    "urls": [
+      "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-november-7-2026"
     ]
   }
 ]
