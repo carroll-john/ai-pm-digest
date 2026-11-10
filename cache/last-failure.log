@@ -1,0 +1,13 @@
+Melbourne date: Tue 10 Nov 2026; freshness floor: 2026-11-08
+History: 52 prior stories across 12 days; 91 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 19607 chars
+Stage 1 usage: input=109452, output=4581, web_search=8
+Stage 1 note: candidates string was truncated; salvaged 6 complete entries.
+Stage 1 complete: 6 candidate stories. Cached to /home/runner/work/ai-pm-digest/ai-pm-digest/cache/last-research.json
+  drop (stale 124h): "Box Architect: Enterprise workflow builder for agentic systems launches beta"
+Freshness filter: 1/6 candidates dropped (age > 96h)
+  close call (0.29): "Anthropic ships Claude Fable 5.2 and Mythos 5.2: 30% faster, 20% cheaper for agentic work" ~~ "Anthropic: Claude Opus 5.5 costs 20% less, runs 30% faster — and is now the recommended default"
+Stage 2 (claude-sonnet-4-6): prompt 16436 chars
+FAILURE [ANTHROPIC_CREDIT] (Stage 2): Stage 2 failed: Anthropic credit balance is exhausted.
+HINT: Top up at https://console.anthropic.com/settings/billing, then re-dispatch the workflow from the Actions tab.
+DETAIL: invalid_request_error: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.
