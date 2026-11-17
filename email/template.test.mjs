@@ -43,6 +43,17 @@ test("sample digest keeps allowed inline tags", () => {
   assert.equal(html.includes("<script"), false);
 });
 
+test("unterminated disallowed tag is escaped in the fully rendered document", () => {
+  // Regression: tagRe required a closing `>`, so `<img …` with no `>` was
+  // returned unchanged and the template's following `</div>` completed it.
+  const { html } = renderQuiet(digestWith({
+    body_html: 'Hello <img src=x onerror="alert(1)"',
+  }));
+  assert.equal(html.includes("<img"), false);
+  assert.equal(html.includes('onerror="'), false);
+  assert.match(html, /&lt;img src=x onerror=&quot;alert\(1\)&quot;/);
+});
+
 test("body_html with a disallowed tag is escaped to text", () => {
   const { html, warnings } = renderQuiet(digestWith({
     body_html: 'Hello <script>alert(1)</script> world',

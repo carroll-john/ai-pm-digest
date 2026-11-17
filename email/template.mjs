@@ -61,6 +61,13 @@ function rejectBodyHtml(html, reason) {
 
 function safeBodyHtml(html) {
   const source = String(html);
+  // A tag start with no `>` before EOF is completed by the next `>` in the
+  // template (the `</div>` after body_html). The previous tag-name scan
+  // caught that; requiring `>` in tagRe made unterminated `<img …` a
+  // regression. Also covers `</…`, `<!--`, and `<?`.
+  if (/<\/?[a-zA-Z!?/][^>]*$/.test(source)) {
+    return rejectBodyHtml(html, "unterminated tag in body_html");
+  }
   const tagRe = /<\/?([a-zA-Z][a-zA-Z0-9]*)\b([^>]*)>/g;
   const attrRe = /([^\s=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g;
   let tagMatch;
