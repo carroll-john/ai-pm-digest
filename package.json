@@ -10,9 +10,10 @@
     "preview:research": "node scripts/send-digest.mjs --from-research-cache --preview && open cache/preview.html",
     "preview:fresh": "node scripts/send-digest.mjs --preview && open cache/preview.html",
     "send:cache": "node scripts/send-digest.mjs --from-cache",
-    "send:research": "node scripts/send-digest.mjs --from-research-cache"
+    "send:research": "node scripts/send-digest.mjs --from-research-cache",
+    "test": "node --test email/template.test.mjs scripts/redact-pii.test.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.115.0"
+    "@anthropic-ai/sdk": "^1.9.0"
   }
 }
