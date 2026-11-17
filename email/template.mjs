@@ -37,29 +37,67 @@ function escapeHtml(s) {
 // fragment to plain text rather than breaking the surrounding email layout.
 const ALLOWED_BODY_TAGS = new Set(["strong", "em", "a", "code"]);
 
-// Only http(s) and mailto hrefs survive. javascript:, data:, vbscript:, etc.
-// are XSS vectors if a model ever emits them — Gmail-class clients often
-// neutralise them, but the trust boundary belongs here, not at the recipient.
-const SAFE_HREF = /^(https?:|mailto:)/i;
+// javascript:, data:, vbscript:, and protocol-relative URLs are XSS vectors
+// if a model ever emits them. Gmail-class clients often neutralize them, but
+// the trust boundary belongs here — including source URLs interpolated into
+// href, not just body_html. Decode entities / strip C0 controls first so
+// `javascript&colon;…` and `java\nscript:` don't slip past the scheme check.
+function isSafeHref(href) {
+  const decoded = decodeEntities(String(href ?? ""))
+    .replace(/[\u0000-\u001f\u007f]/g, "")
+    .trim();
+  try {
+    const protocol = new URL(decoded).protocol;
+    return protocol === "https:" || protocol === "http:" || protocol === "mailto:";
+  } catch {
+    return false;
+  }
+}
+
+function rejectBodyHtml(html, reason) {
+  console.warn(`template: ${reason} — escaping fragment to plain text.`);
+  return escapeHtml(html);
+}
 
 function safeBodyHtml(html) {
-  const tags = [...String(html).matchAll(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b/g)].map((m) => m[1].toLowerCase());
-  const bad = tags.find((t) => !ALLOWED_BODY_TAGS.has(t));
-  if (bad) {
-    console.warn(`template: disallowed tag <${bad}> in body_html — escaping fragment to plain text.`);
-    return escapeHtml(html);
+  const source = String(html);
+  const tagRe = /<\/?([a-zA-Z][a-zA-Z0-9]*)\b([^>]*)>/g;
+  const attrRe = /([^\s=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g;
+  let tagMatch;
+  while ((tagMatch = tagRe.exec(source))) {
+    const name = tagMatch[1].toLowerCase();
+    const isClose = tagMatch[0].startsWith("</");
+    const rawAttrs = tagMatch[2].trim().replace(/\/$/, "").trim();
+    if (!ALLOWED_BODY_TAGS.has(name)) {
+      return rejectBodyHtml(html, `disallowed tag <${name}> in body_html`);
+    }
+    if (isClose) {
+      if (rawAttrs) return rejectBodyHtml(html, `attributes on closing </${name}> in body_html`);
+      continue;
+    }
+    // <strong>/<em>/<code> carry no attributes — an onclick/style on any of
+    // them is an XSS vector the previous tag-name-only check would miss.
+    if (name !== "a") {
+      if (rawAttrs) return rejectBodyHtml(html, `attributes on <${name}> in body_html`);
+      continue;
+    }
+    attrRe.lastIndex = 0;
+    const attrs = [];
+    let attrMatch;
+    while ((attrMatch = attrRe.exec(rawAttrs))) {
+      attrs.push({ name: attrMatch[1].toLowerCase(), value: attrMatch[2] ?? attrMatch[3] ?? attrMatch[4] ?? "" });
+    }
+    if (attrs.length !== 1 || attrs[0].name !== "href") {
+      const extra = attrs.find((a) => a.name !== "href");
+      return rejectBodyHtml(html, extra
+        ? `disallowed <a> attribute ${extra.name} in body_html`
+        : "missing href on <a> in body_html");
+    }
+    if (!isSafeHref(attrs[0].value)) {
+      return rejectBodyHtml(html, `disallowed href "${attrs[0].value}" in body_html`);
+    }
   }
-  // Match all three href syntaxes — double-quoted, single-quoted, and
-  // unquoted (HTML5 valid) — so `<a href=javascript:...>` and
-  // `<a href='javascript:...'>` don't sneak past the double-quote check.
-  const hrefs = [...String(html).matchAll(/href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
-    .map((m) => m[1] ?? m[2] ?? m[3]);
-  const badHref = hrefs.find((h) => !SAFE_HREF.test(h));
-  if (badHref) {
-    console.warn(`template: disallowed href "${badHref}" in body_html — escaping fragment to plain text.`);
-    return escapeHtml(html);
-  }
-  return html;
+  return source;
 }
 
 function formatSourceDate(iso) {
@@ -73,8 +111,17 @@ function renderSources(sources) {
   if (!sources?.length) return "";
   const links = sources
     .map((s) => {
-      const link = `<a href="${escapeHtml(s.url)}" style="color: ${T.accentColor}; text-decoration: underline;">${escapeHtml(s.label)}</a>`;
+      const label = escapeHtml(s.label);
       const date = formatSourceDate(s.published_date);
+      const dated = date ? `${label}, ${escapeHtml(date)}` : label;
+      // Same scheme allowlist as body_html. escapeHtml does not neutralize
+      // javascript: (no special characters), so a model-supplied source URL
+      // must be rejected before it is placed in href.
+      if (!isSafeHref(s.url)) {
+        console.warn(`template: disallowed source URL "${s.url}" — rendering label only.`);
+        return dated;
+      }
+      const link = `<a href="${escapeHtml(s.url)}" style="color: ${T.accentColor}; text-decoration: underline;">${label}</a>`;
       return date ? `${link}, ${escapeHtml(date)}` : link;
     })
     .join(" &nbsp;·&nbsp; ");
@@ -125,13 +172,21 @@ function renderHtml(d) {
 // ─── Plain-text rendering ──────────────────────────────────────────────────
 // Only the 6 entities escapeHtml emits — the model writes prose using Unicode
 // chars directly (— … ’ etc), so we don't need a wider table.
-const NAMED_ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+const NAMED_ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", colon: ":" };
+
+function codePoint(n, radix) {
+  try {
+    return String.fromCodePoint(parseInt(n, radix));
+  } catch {
+    return "";
+  }
+}
 
 function decodeEntities(s) {
   return s
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(parseInt(n, 10)))
-    .replace(/&([a-zA-Z]+);/g, (m, name) => NAMED_ENTITIES[name] ?? m);
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => codePoint(n, 16))
+    .replace(/&#(\d+);/g, (_, n) => codePoint(n, 10))
+    .replace(/&([a-zA-Z]+);/g, (m, name) => NAMED_ENTITIES[name.toLowerCase()] ?? m);
 }
 
 function stripTags(html) {

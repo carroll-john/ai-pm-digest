@@ -4,6 +4,8 @@
 
 const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const BEARER_RE = /Bearer\s+[a-zA-Z0-9._-]+/gi;
+const ANTHROPIC_KEY_RE = /sk-ant-[a-zA-Z0-9_-]+/g;
+const RESEND_KEY_RE = /\bre_[a-zA-Z0-9]+/g;
 const GREETING_RE = /(Good morning|Hi|Hello|Dear),?\s+[A-Z][\w'-]*/g;
 const DETAIL_MAX_LEN = 2000;
 
@@ -18,6 +20,11 @@ export function redactPii(text) {
   }
   out = out.replace(EMAIL_RE, "[REDACTED_EMAIL]");
   out = out.replace(BEARER_RE, "Bearer [REDACTED_TOKEN]");
+  // SDK 1.x sends the Anthropic key as Authorization: Bearer, which BEARER_RE
+  // already covers — but error bodies and CLI dumps still print the raw
+  // `sk-ant-…` / `re_…` values. Sweep those before the log is committed.
+  out = out.replace(ANTHROPIC_KEY_RE, "[REDACTED_TOKEN]");
+  out = out.replace(RESEND_KEY_RE, "[REDACTED_TOKEN]");
   out = out.replace(GREETING_RE, "$1 [REDACTED]");
   out = out.replace(/"greeting"\s*:\s*"[^"]*"/g, '"greeting": "[REDACTED]"');
   out = out.replace(

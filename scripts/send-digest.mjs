@@ -271,7 +271,15 @@ function recordFailure({ kind, subjectTag, stage, summary, hint, detail }) {
 // dedicated error type.
 function isTimeoutError(err) {
   const name = err?.name ?? err?.cause?.name;
-  if (name === "AbortError" || name === "TimeoutError") return true;
+  // SDK 1.x wraps AbortSignal.timeout in APIUserAbortError / connection
+  // timeouts in APIConnectionTimeoutError. Keep the DOM names too so a
+  // raw AbortError from fetch still classifies as TIMEOUT.
+  if (
+    name === "AbortError" ||
+    name === "TimeoutError" ||
+    name === "APIUserAbortError" ||
+    name === "APIConnectionTimeoutError"
+  ) return true;
   const msg = String(err?.message ?? "");
   return /aborted|timeout/i.test(msg);
 }
@@ -279,8 +287,10 @@ function isTimeoutError(err) {
 function classifyAnthropicError(err, stage) {
   const status = err?.status;
   const apiError = err?.error?.error ?? err?.error ?? {};
-  const message = apiError.message ?? err?.message ?? String(err);
-  const type = apiError.type ?? err?.name ?? "unknown";
+  // SDK 1.x exposes the body fields as `apiMessage` / `type` on APIError.
+  // Fall back to the nested body (0.x shape) and then the Error message.
+  const message = err?.apiMessage ?? apiError.message ?? err?.message ?? String(err);
+  const type = err?.type ?? apiError.type ?? err?.name ?? "unknown";
   const detail = `${type}: ${message}`;
   const lower = message.toLowerCase();
 
