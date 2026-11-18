@@ -1,6 +1,6 @@
-Melbourne date: Tue 17 Nov 2026; freshness floor: 2026-11-15
-History: 26 prior stories across 6 days; 55 unique URLs to exclude.
-Stage 1 (claude-haiku-4-5): prompt 13624 chars
+Melbourne date: Wed 18 Nov 2026; freshness floor: 2026-11-16
+History: 21 prior stories across 5 days; 41 unique URLs to exclude.
+Stage 1 (claude-haiku-4-5): prompt 11848 chars
 FAILURE [ANTHROPIC_CREDIT] (Stage 1): Stage 1 failed: Anthropic credit balance is exhausted.
 HINT: Top up at https://console.anthropic.com/settings/billing, then re-dispatch the workflow from the Actions tab.
 DETAIL: invalid_request_error: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.
