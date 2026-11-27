@@ -14,6 +14,6 @@
     "test": "node --test email/template.test.mjs scripts/redact-pii.test.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^1.9.0"
+    "@anthropic-ai/sdk": "^1.12.0"
   }
 }
